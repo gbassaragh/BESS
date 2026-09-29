@@ -1,0 +1,1285 @@
+Received: from MW6PR02MB9789.namprd02.prod.outlook.com (2603:10b6:303:239::14)
+ by DS4PR02MB11117.namprd02.prod.outlook.com with HTTPS; Tue, 8 Sep 2026
+ 19:49:56 +0000
+Received: from SN1PR02MB3773.namprd02.prod.outlook.com (2603:10b6:802:28::27)
+ by MW6PR02MB9789.namprd02.prod.outlook.com (2603:10b6:303:239::14) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.21.360.6; Tue, 8 Sep 2026
+ 19:49:52 +0000
+Received: from SN1PR02MB3773.namprd02.prod.outlook.com
+ ([fe80::9bb4:9da0:d951:b074]) by SN1PR02MB3773.namprd02.prod.outlook.com
+ ([fe80::9bb4:9da0:d951:b074%4]) with mapi id 15.21.0382.014; Tue, 8 Sep 2026
+ 19:49:52 +0000
+From: "Herman, Robert F" <robert.herman@eversource.com>
+To: "Roche, Brian J" <brian.roche@eversource.com>
+Subject: Re: Revised estimates for Hyde Park BESS
+Thread-Topic: Revised estimates for Hyde Park BESS
+Thread-Index: Ad063k7cYa7kM1oHT7GcXxe6B26J4QAI36S4AC5F0OUAB8BpqwAkMhHxANfynfU=
+Date: Tue, 8 Sep 2026 19:49:52 +0000
+Message-ID:
+	<SN1PR02MB37736BA5F2F8006CC60227EF83B12@SN1PR02MB3773.namprd02.prod.outlook.com>
+References:
+	<DS4PR02MB11117DB2F2FB9E8F590B5E49987B72@DS4PR02MB11117.namprd02.prod.outlook.com>
+ <SN1PR02MB377303F2956AA38196BD0A7483B72@SN1PR02MB3773.namprd02.prod.outlook.com>
+ <DS4PR02MB11117EDE6CEE07B634F6C525687B62@DS4PR02MB11117.namprd02.prod.outlook.com>
+ <SN1PR02MB3773B0683ED61AAB9389378683B62@SN1PR02MB3773.namprd02.prod.outlook.com>
+ <DS4PR02MB11117B4B4F0FC39CCC773832887B52@DS4PR02MB11117.namprd02.prod.outlook.com>
+In-Reply-To:
+	<DS4PR02MB11117B4B4F0FC39CCC773832887B52@DS4PR02MB11117.namprd02.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 04
+X-MS-Exchange-Organization-AuthSource: SN1PR02MB3773.namprd02.prod.outlook.com
+X-MS-Exchange-Organization-SupervisoryReview-OcrResultLocation:
+	{"Status":"OcrRequired","CorrelationId":null,"Locations":null}
+X-MS-Has-Attach: yes
+X-MS-Exchange-Organization-Network-Message-Id:
+	48a5081c-6c3f-4ab1-c43c-08df0de259b5
+X-MS-Exchange-Organization-SCL: 1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+msip_labels:
+x-ms-publictraffictype: Email
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=eversource.com;
+x-ms-office365-filtering-correlation-id: 48a5081c-6c3f-4ab1-c43c-08df0de259b5
+x-ms-traffictypediagnostic:
+	SN1PR02MB3773:EE_|MW6PR02MB9789:EE_|DS4PR02MB11117:EE_
+x-microsoft-antispam:
+	BCL:0;ARA:13230040|39142699007|366016|31052699007|23010399003|6049299003|55112099003|22082099003|56012099006|11063799006|18002099003|8096899003|4013099003|4143699003|10067099003|6133799003|41050700001;
+x-forefront-antispam-report:
+	CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:SN1PR02MB3773.namprd02.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230040)(39142699007)(366016)(31052699007)(23010399003)(6049299003)(55112099003)(22082099003)(56012099006)(11063799006)(18002099003)(8096899003)(4013099003)(4143699003)(10067099003)(6133799003)(41050700001);DIR:INT;
+x-ms-exchange-crosstenant-network-message-id:
+	48a5081c-6c3f-4ab1-c43c-08df0de259b5
+x-ms-exchange-crosstenant-originalarrivaltime: 08 Sep 2026 19:49:52.8149 (UTC)
+x-ms-exchange-crosstenant-fromentityheader: Hosted
+x-ms-exchange-crosstenant-id: b6915f8a-d838-47d0-931a-40297c4931bd
+x-ms-exchange-crosstenant-mailboxtype: HOSTED
+x-ms-exchange-crosstenant-userprincipalname:
+	3cRtVQmHvET+3cOJ7NN3WUD5E8DlAWo7ZFk002sImey3CGeN3AHVWLbndl4Hd3TZ4zqmNX05Z20SqV40Myt0gDBQPmxwEKy2hVrQE5y0MtA=
+x-ms-exchange-transport-crosstenantheadersstamped: MW6PR02MB9789
+x-ms-exchange-transport-endtoendlatency: 00:00:03.2966747
+x-ms-exchange-processed-by-bccfoldering: 15.21.0382.004
+x-ms-exchange-crosstenant-authsource: SN1PR02MB3773.namprd02.prod.outlook.com
+x-ms-exchange-crosstenant-authas: Internal
+x-ms-exchange-atpmessageproperties: SL
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(920097)(425001)(930201)(20251009189)(140003);
+X-Microsoft-Antispam-Message-Info:
+	sT5kYCpJS/CjWZpDORSxJI7/3ML/oCLaO6yb9zUXUGAIgYzvXYn5fJE85dYIE6jhQTo0CQJoYHal8WGsfsBcc3r2PqzymS4do2pb0mdnIksbR4JnIiA7NsE0jMGE6iETLsXLchdpQA+xdEizzRbqBWMaEmG29eQhV0ovCkBEa17C0fKxj7UJeA+e1l9ngmguNdaqaWNSYuG+jIFXq9m4HSLcfKbh8dVZnv7xVBoaCc7RtrzQ7alalXqYjucsSi30GFeWohJzaOb8YaBdRq5AOmBOfYxH5VZtRyZK3WPnzsW4CqyrS/s0MJUgU3tOX08HI1K0C/qQsfSjTbTbZcEqn8829nXRhVEZwWW1GZkbFZTI4cgjGZeeLbpryMgnmFetnYxErOgOIIVr+0HNHn9y5yqmSxWsy3W4Dl5Hb1bS0AbAWgqVQDHr5w0XniXsh1ahqX2S3uI8lbxPGhoSP/etvRC4fh99OC8rIP8BdK8p1VSvjwWDWDlUDYjFJb1J9LGeKQHpLX5OExLcCYBZCDAMPmDvYTcbkBvbvec4vAJyBx7psrjVhmJWRPnRaKGBRuK7q5sFfVfSIs80Nm0dqGyVRjJkBHlM+PSLDaWBx1BQzaZVAOYu4weqiQJyjhutoRYWb13kil1I/St6FvdIRPw4x8uAEvWNkB63rBdeIlNWbPJaP6idMwtDgrnFhUM2baRLAtK36woa+de/uoqVvDTBU6rJdg06CR1XMxUPkaeJPQaFt4NgH8MASZ5ngkoRi1Qb/QTREHGi+gwDKLy5yviteQ336EYnoovOtOFLxtAFn/Qx5Ts7U8C0f8sgtcNnKrYY+ECybbc7+mReSGrvA8+TvIqjkVquI1J7ufgAL3D/awM=
+Content-Type: multipart/related;
+	boundary="_006_SN1PR02MB37736BA5F2F8006CC60227EF83B12SN1PR02MB3773namp_";
+	type="multipart/alternative"
+MIME-Version: 1.0
+
+--_006_SN1PR02MB37736BA5F2F8006CC60227EF83B12SN1PR02MB3773namp_
+Content-Type: multipart/alternative;
+	boundary="_000_SN1PR02MB37736BA5F2F8006CC60227EF83B12SN1PR02MB3773namp_"
+
+--_000_SN1PR02MB37736BA5F2F8006CC60227EF83B12SN1PR02MB3773namp_
+Content-Type: text/plain; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Brian-
+
+It does still look low to me on the material side- with the Battery BESS at=
+ 12.1M .
+
+I think we would be fine If you can just change the battery cost (line 71) =
+ from 6 to 12.1M- everything else looks close.
+
+Please feel free to reach out with any questions.
+
+Thanks for your assistance.
+
+
+Robert Herman
+Senior Project Manager
+Eversource, Springfield MA
+413 885-6400
+
+[cid:f6d4c827-4728-4f89-992f-ff64af97985a]
+
+________________________________
+From: Roche, Brian J <brian.roche@eversource.com>
+Sent: Friday, September 4, 2026 9:01 AM
+To: Herman, Robert F <robert.herman@eversource.com>
+Subject: Re: Revised estimates for Hyde Park BESS
+
+Good morning
+
+See ESF - Overview tab
+Materials are at $12.1M - line 14
+See line 15 - Construction for $8.7M - this includes labor and additional m=
+aterials.
+Line 15 includes costs for Station Service transf.  UG power cable, UG cond=
+uit and duct bank, retaining wall,  4-15 kV breakers, grounding and other i=
+tems.
+
+So, the total of lines 14 and 15 is $20.9M . This sum includes construction=
+ materials and labor for the entire project.
+
+$20.9M Does not include cost for testing, Eng, Siting, PM services, Indirec=
+t/overheads, risk/contingency and AFUDC,
+
+If this amount is low, let me know and I can revise the estimate.
+
+
+________________________________
+From: Herman, Robert F <robert.herman@eversource.com>
+Sent: Thursday, September 3, 2026 3:29 PM
+To: Roche, Brian J <brian.roche@eversource.com>
+Subject: Re: Revised estimates for Hyde Park BESS
+
+
+Hi Brian- you may have heard our leadership is not happy with the high cost=
+ of the revised estimate as the changes were supposed to decrease the overa=
+ll cost. With the time lapse and increased market conditions- I was not sur=
+prised however, I am also concerned that the revised estimate does not cove=
+r the cost actual cost of materials.  Whereas your most recent covers 12 mi=
+llion for all materials but we know the BESS system itself is 12- am I miss=
+ing something?
+
+
+
+
+
+From: Fitzgerald, Patrick J <patrick.fitzgerald@eversource.com<mailto:patri=
+ck.fitzgerald@eversource.com>>
+Sent: Wednesday, August 12, 2026 4:34 PM
+To: Roche, Brian J <brian.roche@eversource.com<mailto:brian.roche@eversourc=
+e.com>>
+Cc: Herman, Robert F <robert.herman@eversource.com<mailto:robert.herman@eve=
+rsource.com>>; Rosenburg, Michael P <michael.rosenburg@eversource.com<mailt=
+o:michael.rosenburg@eversource.com>>; Sojan, Rosa <rosa.sojan@eversource.co=
+m<mailto:rosa.sojan@eversource.com>>
+Subject: STA 360 Estimate Questions
+
+
+
+Brian,
+
+
+
+Got some questions fired at me for the STA 360 estimate, see responses belo=
+w.  I=92m sure you=92ll have more, feel free to give me a call.
+
+
+
+Also =96 Working with Siemens on the breaker estimate, they gave a +/-30% e=
+stimate at 300k each.  That would be for the breaker, frame, disconnects, P=
+Ts, relays, and battery.
+
+
+
+Questions from ES Estimating Group as the PM team has requested a revised e=
+stimate based on the most recent scope :
+
+Please check the dollar amount below, all from previous estimate E-23-373.
+
+  1.  Battery System - $12,106,850.  - no  this is for the 12 Nomad Voyager=
+ Eagle LFP BESS Systems $12 million.
+
+     *   Assuming this is the DC Battery for Control this will be captured =
+in the Breaker estimate
+  1.  Transportation/Spare Parts - $585,688. - I will remove from estimate
+     *   unknown
+
+  1.  Battery labor - $2,553,828, 16,801 mhrs is this for the entire new SS=
+ or just for the batteries?
+
+     *   Not sure what this is - Estimate E-23-373, labor amount 16,801 man=
+-hours for installation.  Are the 16,801 man-hours for the install of the b=
+atteries only or for the install of the entire SS.   Does not say in the es=
+timate.  I have the labor man-hours for the SS equipment, but I do not know=
+ how much labor man-hours to charge to the install of the batteries.
+
+  1.  PCS Units - $832,022 is this for the batteries or is this the cost fo=
+r the five outdoor standalone feeder cabinets?
+
+     *   Not sure what this is =96 may be a carry over for the PCS for the =
+BESS - ok will remove from the estimate.  I do have costs for the five feed=
+er control cabinets.
+
+  1.  Step up transformers - $630,371.
+
+     *   Is this Station Service Transformers or GSUs? - GSUs is this amoun=
+t correct?  E-23-373 estimate had this amount.
+
+  1.  Site Sound Mitigation - $466,766 - is this done? Do I need to include=
+ the estimate?
+
+     *   I would carry this as a risk item if its needed or not - OK
+
+  1.  Rental - Spot Generator - $139,700 - Did not see in scope but is incl=
+uded in est. E-23-373, Include in Est. or not?
+
+     *   I don=92t this this is needed =96 we are going to put station serv=
+ice transforms in first so we should be good - I will remove from estimate.
+
+Other questions:
+
+  1.  Is it an overhead cable or bus from the wood riser pole to the Siemen=
+s Breaker? Size and length?
+     *   Overhead cable -25=92 per phase should cover us on both sides of t=
+he breaker - Thank you!
+  2.  The three SSVT pad mount transformers, I added three riser structures=
+ with foundations. Also add UG cable, 500LF per SSVT.  Let me know if you a=
+gree with this.
+
+     *   Should be down to 1 Station Service Transformer pad mount.  500=92=
+ is plenty - Ok, scope has two pad mount SSVT at 1500 kVA each and one pad =
+mount SSVT 125kVA.  I will reduce to one.
+
+  1.  On the eight wood riser poles, are the breaker disconnect switches lo=
+cated on these poles?
+
+     *   Breaker Disconnects are on the skid for the breaker - Excellent th=
+ank you
+
+  1.  PTs (8 locations each side of the Siemens breaker, 24 total) - are th=
+ey installed on the wood riser poles? or on their own steel supports?
+
+     *   PTs are on the breaker skid - Thank you
+
+
+Robert Herman
+Senior Project Manager
+Eversource, Springfield MA
+413 885-6400
+
+[cid:342792d3-ebc3-443d-ac14-05d7be995369]
+
+________________________________
+From: Roche, Brian J <brian.roche@eversource.com>
+Sent: Thursday, September 3, 2026 11:43 AM
+To: Herman, Robert F <robert.herman@eversource.com>
+Subject: Re: Revised estimates for Hyde Park BESS
+
+Whats up?
+
+
+________________________________
+From: Herman, Robert F <robert.herman@eversource.com>
+Sent: Wednesday, September 2, 2026 1:38 PM
+To: Roche, Brian J <brian.roche@eversource.com>
+Subject: Re: Revised estimates for Hyde Park BESS
+
+Hi Brian- do you have a few mins to discuss this estimate?
+
+
+Robert Herman
+Senior Project Manager
+Eversource, Springfield MA
+413 885-6400
+
+[cid:6953767b-a1d8-4d00-9b38-c767807ab24f]
+
+________________________________
+From: Roche, Brian J <brian.roche@eversource.com>
+Sent: Wednesday, September 2, 2026 9:24 AM
+To: Herman, Robert F <robert.herman@eversource.com>
+Subject: Revised estimates for Hyde Park BESS
+
+
+Good morning
+
+
+
+See attached approved estimates for Hyde Park BESS.
+
+
+
+
+
+--_000_SN1PR02MB37736BA5F2F8006CC60227EF83B12SN1PR02MB3773namp_
+Content-Type: text/html; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DWindows-1=
+252">
+<style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;margin-bo=
+ttom:0;} </style>
+</head>
+<body dir=3D"ltr">
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+Hi Brian-&nbsp;</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+<br>
+</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+It does still look low to me on the material side- with the Battery BESS at=
+ 12.1M .</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+<br>
+</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+I think we would be fine If you can just change the battery cost (line 71)&=
+nbsp; from 6 to 12.1M- everything else looks close.</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+<br>
+</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+Please feel free to reach out with any questions.</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+<br>
+</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+Thanks for your assistance.</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+<br>
+</div>
+<div id=3D"Signature" class=3D"elementToProof">
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+<br>
+</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+Robert Herman</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+Senior Project Manager</div>
+<div class=3D"elementToProof" style=3D"text-align: left; text-indent: 0px; =
+margin: 0px; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, C=
+alibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+Eversource, Springfield MA</div>
+<div class=3D"elementToProof" style=3D"text-align: left; text-indent: 0px; =
+margin: 0px; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, C=
+alibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+413 885-6400</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+<br>
+</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+<img style=3D"max-width: 446px;" size=3D"6823" data-outlook-trace=3D"F:1|T:=
+1" src=3D"cid:f6d4c827-4728-4f89-992f-ff64af97985a"></div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+<br>
+</div>
+</div>
+<div id=3D"appendonsend"></div>
+<hr style=3D"display:inline-block;width:98%" tabindex=3D"-1">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" st=
+yle=3D"font-size:11pt" color=3D"#000000"><b>From:</b> Roche, Brian J &lt;br=
+ian.roche@eversource.com&gt;<br>
+<b>Sent:</b> Friday, September 4, 2026 9:01 AM<br>
+<b>To:</b> Herman, Robert F &lt;robert.herman@eversource.com&gt;<br>
+<b>Subject:</b> Re: Revised estimates for Hyde Park BESS</font>
+<div>&nbsp;</div>
+</div>
+<style type=3D"text/css" style=3D"display:none">
+<!--
+p
+	{margin-top:0;
+	margin-bottom:0}
+-->
+</style>
+<div dir=3D"ltr">
+<div class=3D"x_elementToProof" style=3D"font-family:Aptos,Aptos_EmbeddedFo=
+nt,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:=
+rgb(0,0,0)">
+Good morning</div>
+<div class=3D"x_elementToProof" style=3D"font-family:Aptos,Aptos_EmbeddedFo=
+nt,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:=
+rgb(0,0,0)">
+<br>
+</div>
+<div class=3D"x_elementToProof" style=3D"font-family:Aptos,Aptos_EmbeddedFo=
+nt,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:=
+rgb(0,0,0)">
+See ESF - Overview tab</div>
+<div class=3D"x_elementToProof" style=3D"font-family:Aptos,Aptos_EmbeddedFo=
+nt,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:=
+rgb(0,0,0)">
+Materials are at $12.1M - line 14</div>
+<div class=3D"x_elementToProof" style=3D"font-family:Aptos,Aptos_EmbeddedFo=
+nt,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:=
+rgb(0,0,0)">
+See line 15 - Construction for $8.7M - this includes labor and additional m=
+aterials.</div>
+<div class=3D"x_elementToProof" style=3D"font-family:Aptos,Aptos_EmbeddedFo=
+nt,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:=
+rgb(0,0,0)">
+Line 15 includes costs for Station Service transf.&nbsp; UG power cable, UG=
+ conduit and duct bank, retaining wall,&nbsp; 4-15 kV breakers, grounding a=
+nd other items.</div>
+<div class=3D"x_elementToProof" style=3D"font-family:Aptos,Aptos_EmbeddedFo=
+nt,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:=
+rgb(0,0,0)">
+<br>
+</div>
+<div class=3D"x_elementToProof" style=3D"font-family:Aptos,Aptos_EmbeddedFo=
+nt,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:=
+rgb(0,0,0)">
+So, the total of lines 14 and 15 is $20.9M . This sum includes construction=
+ materials and labor for the entire project.</div>
+<div class=3D"x_elementToProof" style=3D"font-family:Aptos,Aptos_EmbeddedFo=
+nt,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:=
+rgb(0,0,0)">
+<br>
+</div>
+<div class=3D"x_elementToProof" style=3D"font-family:Aptos,Aptos_EmbeddedFo=
+nt,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:=
+rgb(0,0,0)">
+$20.9M Does not include cost for testing, Eng, Siting, PM services, Indirec=
+t/overheads, risk/contingency and AFUDC,</div>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div class=3D"x_elementToProof" style=3D"font-family:Aptos,Aptos_EmbeddedFo=
+nt,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:=
+rgb(0,0,0)">
+If this amount is low, let me know and I can revise the estimate.</div>
+<div class=3D"x_elementToProof" style=3D"font-family:Aptos,Aptos_EmbeddedFo=
+nt,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:=
+rgb(0,0,0)">
+<br>
+</div>
+<div style=3D"font-family:Calibri,Arial,Helvetica,sans-serif; font-size:12p=
+t; color:rgb(0,0,0)">
+<br>
+</div>
+<hr style=3D"display:inline-block; width:98%">
+<div style=3D"font-family:Calibri,Arial,Helvetica,sans-serif; font-size:12p=
+t; color:rgb(0,0,0)">
+<b>From:</b> Herman, Robert F &lt;robert.herman@eversource.com&gt;<br>
+<b>Sent:</b> Thursday, September 3, 2026 3:29 PM<br>
+<b>To:</b> Roche, Brian J &lt;brian.roche@eversource.com&gt;<br>
+<b>Subject:</b> Re: Revised estimates for Hyde Park BESS </div>
+<div style=3D"font-family:Calibri,Arial,Helvetica,sans-serif; font-size:12p=
+t; color:rgb(0,0,0)">
+<br>
+</div>
+<p style=3D"direction:ltr; text-align:left; text-indent:0px; background-col=
+or:rgb(255,255,255); margin-top:0px; margin-bottom:0px">
+<span style=3D"font-family:Calibri,sans-serif; font-size:15px; color:black"=
+>Hi Brian- you may have heard our leadership is not happy with the high cos=
+t of the revised estimate as the changes were supposed to decrease the over=
+all cost. With the time lapse and
+ increased market conditions- I was not surprised however, I am also concer=
+ned that the revised estimate does not cover the cost actual cost of materi=
+als.&nbsp; Whereas your most recent covers 12 million for all materials but=
+ we know the BESS system itself is 12-
+ am I missing something?</span></p>
+<div style=3D"direction:ltr; text-align:left; text-indent:0px; background-c=
+olor:rgb(255,255,255); margin-top:0px; margin-bottom:0px; font-family:Calib=
+ri,sans-serif; font-size:15px; color:black">
+<b><br>
+</b></div>
+<div style=3D"direction:ltr; text-align:left; text-indent:0px; background-c=
+olor:rgb(255,255,255); margin-top:0px; margin-bottom:0px; font-family:Calib=
+ri,sans-serif; font-size:15px; color:black">
+<b><br>
+</b></div>
+<div style=3D"direction:ltr; text-align:left; text-indent:0px; background-c=
+olor:rgb(255,255,255); margin-top:0px; margin-bottom:0px; font-family:Calib=
+ri,sans-serif; font-size:15px; color:black">
+<b><br>
+</b></div>
+<div style=3D"direction:ltr; text-align:left; text-indent:0px; background-c=
+olor:rgb(255,255,255); margin-top:0px; margin-bottom:0px; font-family:Calib=
+ri,sans-serif; font-size:15px; color:black">
+<b><br>
+</b></div>
+<div style=3D"direction:ltr; text-align:left; text-indent:0px; background-c=
+olor:rgb(255,255,255); margin-top:0px; margin-bottom:0px; font-family:Calib=
+ri,sans-serif; font-size:15px; color:black">
+<b><br>
+</b></div>
+<div style=3D"direction:ltr; text-align:left; text-indent:0px; background-c=
+olor:rgb(255,255,255); margin-top:0px; margin-bottom:0px; font-family:Calib=
+ri,sans-serif; font-size:15px">
+<span style=3D"color:black"><b>From:</b>&nbsp;Fitzgerald, Patrick J &lt;</s=
+pan><span style=3D"color:blue"><a href=3D"mailto:patrick.fitzgerald@eversou=
+rce.com" id=3D"OWA88aabba5-2e8c-7d6e-7da2-fa3c62fe689f" class=3D"x_x_OWAAut=
+oLink" title=3D"mailto:patrick.fitzgerald@eversource.com" data-linkindex=3D=
+"0" style=3D"margin:0px">patrick.fitzgerald@eversource.com</a></span><span =
+style=3D"color:black">&gt;<br>
+<b>Sent:</b>&nbsp;Wednesday, August 12, 2026 4:34 PM<br>
+<b>To:</b>&nbsp;Roche, Brian J &lt;</span><span style=3D"color:blue"><a hre=
+f=3D"mailto:brian.roche@eversource.com" id=3D"OWA2c2ce2c7-96a2-17bb-4446-02=
+1a982ec5dd" class=3D"x_x_OWAAutoLink" title=3D"mailto:brian.roche@eversourc=
+e.com" data-linkindex=3D"1" style=3D"margin:0px">brian.roche@eversource.com=
+</a></span><span style=3D"color:black">&gt;<br>
+<b>Cc:</b>&nbsp;Herman, Robert F &lt;</span><span style=3D"color:blue"><a h=
+ref=3D"mailto:robert.herman@eversource.com" id=3D"OWA48cdefdc-caa0-28fc-75a=
+e-3a0b637ab0fd" class=3D"x_x_OWAAutoLink" title=3D"mailto:robert.herman@eve=
+rsource.com" data-linkindex=3D"2" style=3D"margin:0px">robert.herman@everso=
+urce.com</a></span><span style=3D"color:black">&gt;;
+ Rosenburg, Michael P &lt;</span><span style=3D"color:blue"><a href=3D"mail=
+to:michael.rosenburg@eversource.com" id=3D"OWA2939a257-53ea-61d7-df2b-7590e=
+9127d86" class=3D"x_x_OWAAutoLink" title=3D"mailto:michael.rosenburg@everso=
+urce.com" data-linkindex=3D"3" style=3D"margin:0px">michael.rosenburg@evers=
+ource.com</a></span><span style=3D"color:black">&gt;;
+ Sojan, Rosa &lt;</span><span style=3D"color:blue"><a href=3D"mailto:rosa.s=
+ojan@eversource.com" id=3D"OWAa5b5a401-64ff-69fc-53b3-b92f37ae06e7" class=
+=3D"x_x_OWAAutoLink" title=3D"mailto:rosa.sojan@eversource.com" data-linkin=
+dex=3D"4" style=3D"margin:0px">rosa.sojan@eversource.com</a></span><span st=
+yle=3D"color:black">&gt;<br>
+<b>Subject:</b>&nbsp;STA 360 Estimate Questions</span></div>
+<p style=3D"direction:ltr; text-align:left; text-indent:0px; background-col=
+or:rgb(255,255,255); margin-top:0px; margin-bottom:0px">
+<span style=3D"font-family:Calibri,sans-serif; font-size:15px; color:black"=
+>&nbsp;</span></p>
+<p style=3D"direction:ltr; text-align:left; text-indent:0px; background-col=
+or:rgb(255,255,255); margin:0px 0px 12pt">
+<span style=3D"font-family:&quot;Segoe UI&quot;,&quot;Segoe UI Web (West Eu=
+ropean)&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&=
+quot;,sans-serif; font-size:15px; color:rgb(36,36,36)">Brian,</span></p>
+<p style=3D"direction:ltr; text-align:left; text-indent:0px; background-col=
+or:rgb(255,255,255); margin:0px 0px 12pt">
+<span style=3D"font-family:&quot;Segoe UI&quot;,&quot;Segoe UI Web (West Eu=
+ropean)&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&=
+quot;,sans-serif; font-size:15px; color:rgb(36,36,36)">&nbsp;</span></p>
+<p style=3D"direction:ltr; text-align:left; text-indent:0px; background-col=
+or:rgb(255,255,255); margin:0px 0px 12pt">
+<span style=3D"font-family:&quot;Segoe UI&quot;,&quot;Segoe UI Web (West Eu=
+ropean)&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&=
+quot;,sans-serif; font-size:15px; color:rgb(36,36,36)">Got some questions f=
+ired at me for the STA 360 estimate, see responses below.&nbsp; I=92m sure
+ you=92ll have more, feel free to give me a call.</span></p>
+<p style=3D"direction:ltr; text-align:left; text-indent:0px; background-col=
+or:rgb(255,255,255); margin:0px 0px 12pt">
+<span style=3D"font-family:&quot;Segoe UI&quot;,&quot;Segoe UI Web (West Eu=
+ropean)&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&=
+quot;,sans-serif; font-size:15px; color:rgb(36,36,36)">&nbsp;</span></p>
+<p style=3D"direction:ltr; text-align:left; text-indent:0px; background-col=
+or:rgb(255,255,255); margin:0px 0px 12pt">
+<span style=3D"font-family:&quot;Segoe UI&quot;,&quot;Segoe UI Web (West Eu=
+ropean)&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&=
+quot;,sans-serif; font-size:15px; color:rgb(36,36,36)">Also =96 Working wit=
+h Siemens on the breaker estimate, they gave a +/-30% estimate at
+ 300k each.&nbsp; That would be for the breaker, frame, disconnects, PTs, r=
+elays, and battery.</span></p>
+<p style=3D"direction:ltr; text-align:left; text-indent:0px; background-col=
+or:rgb(255,255,255); margin:0px 0px 12pt">
+<span style=3D"font-family:&quot;Segoe UI&quot;,&quot;Segoe UI Web (West Eu=
+ropean)&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&=
+quot;,sans-serif; font-size:15px; color:rgb(36,36,36)">&nbsp;</span></p>
+<p style=3D"direction:ltr; text-align:left; text-indent:0px; background-col=
+or:rgb(255,255,255); margin:0px 0px 12pt">
+<span style=3D"font-family:&quot;Segoe UI&quot;,&quot;Segoe UI Web (West Eu=
+ropean)&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&=
+quot;,sans-serif; font-size:15px; color:rgb(36,36,36)">Questions from ES Es=
+timating Group as the PM team has requested a revised estimate based
+ on the most recent scope :</span></p>
+<p style=3D"direction:ltr; text-align:left; text-indent:0px; background-col=
+or:rgb(255,255,255); margin:0px 0px 12pt">
+<span style=3D"font-family:&quot;Segoe UI&quot;,&quot;Segoe UI Web (West Eu=
+ropean)&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&=
+quot;,sans-serif; font-size:15px; color:rgb(36,36,36)">Please check the dol=
+lar amount below, all from previous estimate E-23-373.</span></p>
+<ol start=3D"1" style=3D"direction:ltr; text-align:left; margin-top:0px; ma=
+rgin-bottom:0px; background-color:rgb(255,255,255)">
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+Battery System - $12,106,850. &nbsp;<span role=3D"presentation" style=3D"co=
+lor:rgb(200,38,19)">- no&nbsp; this is for the 12 Nomad Voyager Eagle LFP B=
+ESS Systems $12 million.</span></li></ol>
+<ol start=3D"1" style=3D"direction:ltr; text-align:left; margin-top:0px; ma=
+rgin-bottom:0px; background-color:rgb(255,255,255)">
+<ol start=3D"1" style=3D"direction:ltr; margin-top:0px; margin-bottom:0px">
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+Assuming this is the DC Battery for Control this will be captured in the Br=
+eaker estimate</li></ol>
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+Transportation/Spare Parts - $585,688. -<span role=3D"presentation" style=
+=3D"color:rgb(200,38,19)">&nbsp;I will remove from estimate</span></li><ol =
+start=3D"1" style=3D"direction:ltr; margin-top:0px; margin-bottom:0px">
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+unknown</li></ol>
+</ol>
+<ol start=3D"3" style=3D"direction:ltr; text-align:left; margin-top:0px; ma=
+rgin-bottom:0px; background-color:rgb(255,255,255)">
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+Battery labor - $2,553,828, 16,801 mhrs is this for the entire new SS or ju=
+st for the batteries?</li></ol>
+<ol start=3D"3" style=3D"direction:ltr; text-align:left; margin-top:0px; ma=
+rgin-bottom:0px; background-color:rgb(255,255,255)">
+<ol start=3D"1" style=3D"direction:ltr; margin-top:0px; margin-bottom:0px">
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+Not sure what this is - <span role=3D"presentation" style=3D"color:rgb(200,=
+38,19)">Estimate E-23-373, labor amount 16,801 man-hours for installation.&=
+nbsp; Are the 16,801 man-hours for the install of the batteries only or for=
+ the install of the entire SS.&nbsp; &nbsp;Does not
+ say in the estimate.&nbsp; I have the labor man-hours for the SS equipment=
+, but I do not know how much labor man-hours to charge to the install of th=
+e batteries.&nbsp;</span></li></ol>
+</ol>
+<ol start=3D"4" style=3D"direction:ltr; text-align:left; margin-top:0px; ma=
+rgin-bottom:0px; background-color:rgb(255,255,255)">
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+PCS Units - $832,022 is this for the batteries or is this the cost for the =
+five outdoor standalone feeder cabinets?</li></ol>
+<ol start=3D"4" style=3D"direction:ltr; text-align:left; margin-top:0px; ma=
+rgin-bottom:0px; background-color:rgb(255,255,255)">
+<ol start=3D"1" style=3D"direction:ltr; margin-top:0px; margin-bottom:0px">
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+Not sure what this is =96 may be a carry over for the PCS for the BESS - <s=
+pan role=3D"presentation" style=3D"color:rgb(200,38,19)">
+ok will remove from the estimate.&nbsp; I do have costs for the five feeder=
+ control cabinets.</span></li></ol>
+</ol>
+<ol start=3D"5" style=3D"direction:ltr; text-align:left; margin-top:0px; ma=
+rgin-bottom:0px; background-color:rgb(255,255,255)">
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+Step up transformers - $630,371.</li></ol>
+<ol start=3D"5" style=3D"direction:ltr; text-align:left; margin-top:0px; ma=
+rgin-bottom:0px; background-color:rgb(255,255,255)">
+<ol start=3D"1" style=3D"direction:ltr; margin-top:0px; margin-bottom:0px">
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+Is this Station Service Transformers or GSUs? -<span role=3D"presentation" =
+style=3D"color:rgb(200,38,19)">&nbsp;GSUs is this amount correct?&nbsp; E-2=
+3-373 estimate had this amount.</span></li></ol>
+</ol>
+<ol start=3D"6" style=3D"direction:ltr; text-align:left; margin-top:0px; ma=
+rgin-bottom:0px; background-color:rgb(255,255,255)">
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+Site Sound Mitigation - $466,766 - is this done? Do I need to include the e=
+stimate?</li></ol>
+<ol start=3D"6" style=3D"direction:ltr; text-align:left; margin-top:0px; ma=
+rgin-bottom:0px; background-color:rgb(255,255,255)">
+<ol start=3D"1" style=3D"direction:ltr; margin-top:0px; margin-bottom:0px">
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+I would carry this as a risk item if its needed or not - <span role=3D"pres=
+entation" style=3D"color:rgb(200,38,19)">
+OK</span></li></ol>
+</ol>
+<ol start=3D"7" style=3D"direction:ltr; text-align:left; margin-top:0px; ma=
+rgin-bottom:0px; background-color:rgb(255,255,255)">
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+Rental - Spot Generator - $139,700 - Did not see in scope but is included i=
+n est. E-23-373, Include in Est. or not?</li></ol>
+<ol start=3D"7" style=3D"direction:ltr; text-align:left; margin-top:0px; ma=
+rgin-bottom:0px; background-color:rgb(255,255,255)">
+<ol start=3D"1" style=3D"direction:ltr; margin-top:0px; margin-bottom:0px">
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+I don=92t this this is needed =96 we are going to put station service trans=
+forms in first so we should be good -<span role=3D"presentation" style=3D"c=
+olor:rgb(200,38,19)">&nbsp;I will remove from estimate.</span></li></ol>
+</ol>
+<p style=3D"direction:ltr; text-align:left; text-indent:0px; background-col=
+or:rgb(255,255,255); margin:0px 0px 12pt">
+<span style=3D"font-family:&quot;Segoe UI&quot;,&quot;Segoe UI Web (West Eu=
+ropean)&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&=
+quot;,sans-serif; font-size:15px; color:rgb(36,36,36)">Other questions:</sp=
+an></p>
+<ol start=3D"1" style=3D"direction:ltr; text-align:left; margin-top:0px; ma=
+rgin-bottom:0px; background-color:rgb(255,255,255)">
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+Is it an overhead cable or bus from the wood riser pole to the Siemens Brea=
+ker? Size and length?</li><ol start=3D"1" style=3D"direction:ltr; margin-to=
+p:0px; margin-bottom:0px">
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+Overhead cable -25=92 per phase should cover us on both sides of the breake=
+r - <span role=3D"presentation" style=3D"color:rgb(200,38,19)">
+Thank you!</span></li></ol>
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+The three SSVT pad mount transformers, I added three riser structures with =
+foundations. Also add UG cable, 500LF per SSVT.&nbsp; Let me know if you ag=
+ree with this.</li></ol>
+<ol start=3D"2" style=3D"direction:ltr; text-align:left; margin-top:0px; ma=
+rgin-bottom:0px; background-color:rgb(255,255,255)">
+<ol start=3D"1" style=3D"direction:ltr; margin-top:0px; margin-bottom:0px">
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+Should be down to 1 Station Service Transformer pad mount.&nbsp; 500=92 is =
+plenty - <span role=3D"presentation" style=3D"color:rgb(200,38,19)">
+Ok, scope has two pad mount SSVT at 1500 kVA each and one pad mount SSVT 12=
+5kVA.&nbsp; I will reduce to one.&nbsp;&nbsp;</span></li></ol>
+</ol>
+<ol start=3D"3" style=3D"direction:ltr; text-align:left; margin-top:0px; ma=
+rgin-bottom:0px; background-color:rgb(255,255,255)">
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+On the eight wood riser poles, are the breaker disconnect switches located =
+on these poles?</li></ol>
+<ol start=3D"3" style=3D"direction:ltr; text-align:left; margin-top:0px; ma=
+rgin-bottom:0px; background-color:rgb(255,255,255)">
+<ol start=3D"1" style=3D"direction:ltr; margin-top:0px; margin-bottom:0px">
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+Breaker Disconnects are on the skid for the breaker -<span role=3D"presenta=
+tion" style=3D"color:rgb(200,38,19)">&nbsp;Excellent thank you</span></li><=
+/ol>
+</ol>
+<ol start=3D"4" style=3D"direction:ltr; text-align:left; margin-top:0px; ma=
+rgin-bottom:0px; background-color:rgb(255,255,255)">
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+PTs (8 locations each side of the Siemens breaker, 24 total) - are they ins=
+talled on the wood riser poles? or on their own steel supports?</li></ol>
+<ol start=3D"4" style=3D"direction:ltr; text-align:left; margin-top:0px; ma=
+rgin-bottom:0px; background-color:rgb(255,255,255)">
+<ol start=3D"1" style=3D"direction:ltr; margin-top:0px; margin-bottom:0px">
+<li style=3D"font-family:Aptos,sans-serif; font-size:12pt; color:rgb(36,36,=
+36); direction:ltr; margin:0px">
+PTs are on the breaker skid - <span role=3D"presentation" style=3D"color:rg=
+b(200,38,19)">
+Thank you</span></li></ol>
+</ol>
+<div style=3D"direction:ltr; font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSF=
+ontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div id=3D"x_x_Signature">
+<div style=3D"direction:ltr; font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSF=
+ontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div style=3D"direction:ltr; font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSF=
+ontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)">
+Robert Herman</div>
+<div style=3D"direction:ltr; font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSF=
+ontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)">
+Senior Project Manager</div>
+<div style=3D"direction:ltr; text-align:left; text-indent:0px; margin:0px; =
+font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,=
+sans-serif; font-size:12pt; color:rgb(0,0,0)">
+Eversource, Springfield MA</div>
+<div style=3D"direction:ltr; text-align:left; text-indent:0px; margin:0px; =
+font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,=
+sans-serif; font-size:12pt; color:rgb(0,0,0)">
+413 885-6400</div>
+<div style=3D"direction:ltr; font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSF=
+ontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div style=3D"direction:ltr; font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSF=
+ontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)">
+<img size=3D"6823" style=3D"max-width:446px" data-outlook-trace=3D"F:3|T:3"=
+ src=3D"cid:342792d3-ebc3-443d-ac14-05d7be995369"></div>
+<div style=3D"direction:ltr; font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSF=
+ontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)">
+<br>
+</div>
+</div>
+<hr style=3D"direction:ltr; display:inline-block; width:98%">
+<div id=3D"x_x_divRplyFwdMsg">
+<div style=3D"direction:ltr; font-family:Calibri,sans-serif; font-size:11pt=
+; color:rgb(0,0,0)">
+<b>From:</b> Roche, Brian J &lt;brian.roche@eversource.com&gt;<br>
+<b>Sent:</b> Thursday, September 3, 2026 11:43 AM<br>
+<b>To:</b> Herman, Robert F &lt;robert.herman@eversource.com&gt;<br>
+<b>Subject:</b> Re: Revised estimates for Hyde Park BESS</div>
+<div style=3D"direction:ltr">&nbsp;</div>
+</div>
+<div style=3D"direction:ltr; font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSF=
+ontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+Whats up?</div>
+<div style=3D"direction:ltr"><br>
+</div>
+<div style=3D"direction:ltr; font-family:Calibri,Arial,Helvetica,sans-serif=
+; font-size:12pt; color:rgb(0,0,0)">
+<br>
+</div>
+<hr style=3D"direction:ltr; display:inline-block; width:98%">
+<div style=3D"direction:ltr; font-family:Calibri,Arial,Helvetica,sans-serif=
+; font-size:12pt; color:rgb(0,0,0)">
+<b>From:</b> Herman, Robert F &lt;robert.herman@eversource.com&gt;<br>
+<b>Sent:</b> Wednesday, September 2, 2026 1:38 PM<br>
+<b>To:</b> Roche, Brian J &lt;brian.roche@eversource.com&gt;<br>
+<b>Subject:</b> Re: Revised estimates for Hyde Park BESS</div>
+<div style=3D"direction:ltr; font-family:Calibri,Arial,Helvetica,sans-serif=
+; font-size:12pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div style=3D"direction:ltr; font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSF=
+ontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)">
+Hi Brian- do you have a few mins to discuss this estimate?</div>
+<div style=3D"direction:ltr; font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSF=
+ontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div id=3D"x_x_x_x_Signature">
+<div style=3D"direction:ltr; font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSF=
+ontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div style=3D"direction:ltr; font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSF=
+ontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)">
+Robert Herman</div>
+<div style=3D"direction:ltr; font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSF=
+ontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)">
+Senior Project Manager</div>
+<div style=3D"direction:ltr; text-align:left; text-indent:0px; margin:0px; =
+font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,=
+sans-serif; font-size:12pt; color:rgb(0,0,0)">
+Eversource, Springfield MA</div>
+<div style=3D"direction:ltr; text-align:left; text-indent:0px; margin:0px; =
+font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,=
+sans-serif; font-size:12pt; color:rgb(0,0,0)">
+413 885-6400</div>
+<div style=3D"direction:ltr; font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSF=
+ontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div style=3D"direction:ltr; font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSF=
+ontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)">
+<img size=3D"6823" style=3D"max-width:446px" data-outlook-trace=3D"F:5|T:5"=
+ src=3D"cid:6953767b-a1d8-4d00-9b38-c767807ab24f"></div>
+<div style=3D"direction:ltr; font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSF=
+ontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)">
+<br>
+</div>
+</div>
+<hr style=3D"direction:ltr; display:inline-block; width:98%">
+<div id=3D"x_x_x_x_divRplyFwdMsg">
+<div style=3D"direction:ltr; font-family:Calibri,sans-serif; font-size:11pt=
+; color:rgb(0,0,0)">
+<b>From:</b> Roche, Brian J &lt;brian.roche@eversource.com&gt;<br>
+<b>Sent:</b> Wednesday, September 2, 2026 9:24 AM<br>
+<b>To:</b> Herman, Robert F &lt;robert.herman@eversource.com&gt;<br>
+<b>Subject:</b> Revised estimates for Hyde Park BESS</div>
+<div style=3D"direction:ltr">&nbsp;</div>
+</div>
+<p style=3D"direction:ltr; margin:0in; font-family:Aptos,sans-serif; font-s=
+ize:12pt">
+Good morning</p>
+<p style=3D"direction:ltr; margin:0in; font-family:Aptos,sans-serif; font-s=
+ize:12pt">
+&nbsp;</p>
+<p style=3D"direction:ltr; margin:0in; font-family:Aptos,sans-serif; font-s=
+ize:12pt">
+See attached approved estimates for Hyde Park BESS.</p>
+<p style=3D"direction:ltr; margin:0in; font-family:Aptos,sans-serif; font-s=
+ize:12pt">
+&nbsp;</p>
+<p style=3D"direction:ltr; margin:0in; font-family:Aptos,sans-serif; font-s=
+ize:12pt">
+&nbsp;</p>
+</div>
+</body>
+</html>
+
+--_000_SN1PR02MB37736BA5F2F8006CC60227EF83B12SN1PR02MB3773namp_--
+
+--_006_SN1PR02MB37736BA5F2F8006CC60227EF83B12SN1PR02MB3773namp_
+Content-Type: image/png; name="image.png"
+Content-Description: image.png
+Content-Disposition: inline; filename="image.png"; size=6823;
+	creation-date="Wed, 02 Sep 2026 17:38:02 GMT";
+	modification-date="Tue, 08 Sep 2026 19:49:56 GMT"
+Content-ID: <6953767b-a1d8-4d00-9b38-c767807ab24f>
+Content-Transfer-Encoding: base64
+
+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
+N4/A/wG2X1iKWJH2oAAAAABJRU5ErkJggg==
+
+--_006_SN1PR02MB37736BA5F2F8006CC60227EF83B12SN1PR02MB3773namp_
+Content-Type: image/png; name="image.png"
+Content-Description: image.png
+Content-Disposition: inline; filename="image.png"; size=6823;
+	creation-date="Thu, 03 Sep 2026 19:24:55 GMT";
+	modification-date="Tue, 08 Sep 2026 19:49:56 GMT"
+Content-ID: <342792d3-ebc3-443d-ac14-05d7be995369>
+Content-Transfer-Encoding: base64
+
+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
+N4/A/wG2X1iKWJH2oAAAAABJRU5ErkJggg==
+
+--_006_SN1PR02MB37736BA5F2F8006CC60227EF83B12SN1PR02MB3773namp_
+Content-Type: image/png; name="image.png"
+Content-Description: image.png
+Content-Disposition: inline; filename="image.png"; size=6823;
+	creation-date="Tue, 08 Sep 2026 19:44:34 GMT";
+	modification-date="Tue, 08 Sep 2026 19:49:56 GMT"
+Content-ID: <f6d4c827-4728-4f89-992f-ff64af97985a>
+Content-Transfer-Encoding: base64
+
+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
+N4/A/wG2X1iKWJH2oAAAAABJRU5ErkJggg==
+
+--_006_SN1PR02MB37736BA5F2F8006CC60227EF83B12SN1PR02MB3773namp_--

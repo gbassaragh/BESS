@@ -1,0 +1,455 @@
+Received: from CY5PR02MB8920.namprd02.prod.outlook.com (2603:10b6:930:38::10)
+ by DS4PR02MB11117.namprd02.prod.outlook.com with HTTPS; Thu, 20 Aug 2026
+ 02:45:31 +0000
+Received: from SA5PR02MB11218.namprd02.prod.outlook.com
+ (2603:10b6:806:47b::20) by CY5PR02MB8920.namprd02.prod.outlook.com
+ (2603:10b6:930:38::10) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.21.339.8; Thu, 20 Aug
+ 2026 02:45:29 +0000
+Received: from SA5PR02MB11218.namprd02.prod.outlook.com
+ ([fe80::6bc6:e6:999b:d1c7]) by SA5PR02MB11218.namprd02.prod.outlook.com
+ ([fe80::6bc6:e6:999b:d1c7%5]) with mapi id 15.21.0339.007; Thu, 20 Aug 2026
+ 02:45:29 +0000
+From: "Fitzgerald, Patrick J" <patrick.fitzgerald@eversource.com>
+To: "Roche, Brian J" <brian.roche@eversource.com>
+CC: "Herman, Robert F" <robert.herman@eversource.com>, "Rosenburg, Michael P"
+	<michael.rosenburg@eversource.com>, "Sojan, Rosa" <rosa.sojan@eversource.com>
+Subject: RE: STA 360 Estimate Questions
+Thread-Topic: STA 360 Estimate Questions
+Thread-Index: Ad0qkmBaYajCgjpaQ76B9/gBUcmWtAACAIQFAVERnO8AANUEUA==
+Date: Thu, 20 Aug 2026 02:45:29 +0000
+Message-ID:
+	<SA5PR02MB1121842B077F88845BE724205ECA42@SA5PR02MB11218.namprd02.prod.outlook.com>
+References:
+	<SA5PR02MB11218C1C3D4B21CBAD0150FD1ECDC2@SA5PR02MB11218.namprd02.prod.outlook.com>
+ <DS4PR02MB111170ABDB43C7DB4C4EA6E7587DC2@DS4PR02MB11117.namprd02.prod.outlook.com>
+ <DS4PR02MB11117B52D7D70E5013DE2B63987A52@DS4PR02MB11117.namprd02.prod.outlook.com>
+In-Reply-To:
+	<DS4PR02MB11117B52D7D70E5013DE2B63987A52@DS4PR02MB11117.namprd02.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 04
+X-MS-Exchange-Organization-AuthSource:
+	SA5PR02MB11218.namprd02.prod.outlook.com
+X-MS-Exchange-Organization-SupervisoryReview-OcrResultLocation:
+	{"Status":"OcrRequired","CorrelationId":null,"Locations":null}
+X-MS-Has-Attach:
+X-MS-Exchange-Organization-Network-Message-Id:
+	c990d6c0-724e-43a5-e105-08defe6518be
+X-MS-Exchange-Organization-SCL: 1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+msip_labels:
+x-ms-publictraffictype: Email
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=eversource.com;
+x-ms-office365-filtering-correlation-id: c990d6c0-724e-43a5-e105-08defe6518be
+x-ms-traffictypediagnostic:
+	SA5PR02MB11218:EE_|CY5PR02MB8920:EE_|DS4PR02MB11117:EE_
+x-microsoft-antispam:
+	BCL:0;ARA:13230040|23010399003|366016|56012099006|11063799006|10067099003|8096899003|4143699003|6133799003|55112099003|22082099003|18002099003|41050700001;
+x-forefront-antispam-report:
+	CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:SA5PR02MB11218.namprd02.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230040)(23010399003)(366016)(56012099006)(11063799006)(10067099003)(8096899003)(4143699003)(6133799003)(55112099003)(22082099003)(18002099003)(41050700001);DIR:INT;
+x-ms-exchange-crosstenant-network-message-id:
+	c990d6c0-724e-43a5-e105-08defe6518be
+x-ms-exchange-crosstenant-originalarrivaltime: 20 Aug 2026 02:45:29.3470 (UTC)
+x-ms-exchange-crosstenant-fromentityheader: Hosted
+x-ms-exchange-crosstenant-id: b6915f8a-d838-47d0-931a-40297c4931bd
+x-ms-exchange-crosstenant-mailboxtype: HOSTED
+x-ms-exchange-crosstenant-userprincipalname:
+	TA/AVoJFVTJ9sxVIT+qXhewzmxFFyYSA3qk+8SBJxwdBs/GbR1Jr4fBXSCACn0H8jadrmvpMmStU3AAfQ1AnEn6juidBrlHg5QEUW/5MhMVdWlznrXtTGrVZGMTvObEq
+x-ms-exchange-transport-crosstenantheadersstamped: CY5PR02MB8920
+x-ms-exchange-transport-endtoendlatency: 00:00:01.7502145
+x-ms-exchange-processed-by-bccfoldering: 15.21.0339.004
+x-ms-exchange-crosstenant-authsource: SA5PR02MB11218.namprd02.prod.outlook.com
+x-ms-exchange-crosstenant-authas: Internal
+x-ms-exchange-atpmessageproperties: SL
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(920097)(425001)(930201)(20251009189)(140003);
+X-Microsoft-Antispam-Message-Info:
+	mN2gn1NcP8eZ+BjvZMBzvHCO9EjCz7KRORA2igJIz2QZw+T8OhKdDewKst3ZPv8XjdIJ48XpOmYNzyJmg9Ln4gS75nEpa21w/0Y8OSbAdjlce4/7d73NEhlU3AKxK3wFCW3XllugviEVev+aZbenvN/ZEIAI1Rnats6GNtKWO3YJqJNO0BTD+joxcckjV+YxHdqVIzOuCVdMgPChp+EH0p2+/cDJ/HCKN3riLovxvw9m5RRbGpz2IaFuGiiXEw3tdr+gwvAafsTJxZI7t32iGanHAr4Yv6dFLF95GLuieaf7UcjhB6LDCvJiRskyxGnWhgXoriD7LPoljxyNd4P8DfTuZ6B4Vr053KXC3dI3nmsr9PXIwvIrayjKNQ1Yx3mm7OLFQdvKJIt2CoG/q2mFAP0k7movlj7nOlyZDpQw+1tzsYJ8phZosQNCtIGGUH5x8pI69UX+E+wNg+Qjz5biW3w0uuXEFH5bVDBa+Bu5nHrhdZoq/MbFb8vKp8SCAXgt3Uyq53ZF2PNftpqkiXdb+GfKBXk1DOGU2T+/PcGxda7EB3SfVTk0inyo/lGfxHwK+SyTK737eNElumjH7I6jByPdHncn/ygf7ejiUrG1h/HvY3DDOOIYe/iB+MJugqFnZvZzV8QUJV7hbc/EVaVgJSjPD88awkj6Ma3HPs9JJ21HT0AtXq1N3IyEX7aFrW0kkxWPidkdz6Tyrg47k9kKfQHwZhkxHTK4hhuKAnkGPwWDS62yVd7splBepiBHZrsADWYOfAhvrdE79+q9E9eh615zfnZn4ByZcaujrmhAFFjHwwsvCioM9gy2Unomrz47
+Content-Type: multipart/alternative;
+	boundary="_000_SA5PR02MB1121842B077F88845BE724205ECA42SA5PR02MB11218na_"
+MIME-Version: 1.0
+
+--_000_SA5PR02MB1121842B077F88845BE724205ECA42SA5PR02MB11218na_
+Content-Type: text/plain; charset="us-ascii"
+
+No Control house.  We are working on the quote still, but they gave us an estimate of 300k per breaker.  That would include the relays, DC battery, PTs, Hook sticks.
+
+
+Thanks,
+
+Patrick Fitzgerald
+Manager - Substations Solutions Engineering
+Eversource
+247 Station Drive (SE-3032)
+Westwood, MA 02090
+Office - 781-441-8112
+Cell - 774 813 5144
+Patrick.Fitzgerald@Eversource.com<mailto:Patrick.Fitzgerald@Eversource.com>
+
+From: Roche, Brian J <brian.roche@eversource.com>
+Sent: Wednesday, August 19, 2026 9:32 AM
+To: Fitzgerald, Patrick J <patrick.fitzgerald@eversource.com>
+Cc: Herman, Robert F <robert.herman@eversource.com>; Rosenburg, Michael P <michael.rosenburg@eversource.com>; Sojan, Rosa <rosa.sojan@eversource.com>
+Subject: Re: STA 360 Estimate Questions
+
+Good morning
+
+More questions
+
+1.) Is there a control house?  If so, do you know the size?
+2.) The four breaker skids, do you quote or cost for each skid?
+
+Thank you
+
+
+
+________________________________
+From: Roche, Brian J <brian.roche@eversource.com<mailto:brian.roche@eversource.com>>
+Sent: Wednesday, August 12, 2026 5:29 PM
+To: Fitzgerald, Patrick J <patrick.fitzgerald@eversource.com<mailto:patrick.fitzgerald@eversource.com>>
+Cc: Herman, Robert F <robert.herman@eversource.com<mailto:robert.herman@eversource.com>>; Rosenburg, Michael P <michael.rosenburg@eversource.com<mailto:michael.rosenburg@eversource.com>>; Sojan, Rosa <rosa.sojan@eversource.com<mailto:rosa.sojan@eversource.com>>
+Subject: Re: STA 360 Estimate Questions
+
+Thank you
+
+Can we have a conference call for 30 minutes with everyone involved.  To go over the questions I have.
+
+See my commits in red.
+________________________________
+From: Fitzgerald, Patrick J <patrick.fitzgerald@eversource.com<mailto:patrick.fitzgerald@eversource.com>>
+Sent: Wednesday, August 12, 2026 4:34 PM
+To: Roche, Brian J <brian.roche@eversource.com<mailto:brian.roche@eversource.com>>
+Cc: Herman, Robert F <robert.herman@eversource.com<mailto:robert.herman@eversource.com>>; Rosenburg, Michael P <michael.rosenburg@eversource.com<mailto:michael.rosenburg@eversource.com>>; Sojan, Rosa <rosa.sojan@eversource.com<mailto:rosa.sojan@eversource.com>>
+Subject: STA 360 Estimate Questions
+
+
+Brian,
+
+
+
+Got some questions fired at me for the STA 360 estimate, see responses below.  I'm sure you'll have more, feel free to give me a call.
+
+
+
+Also - Working with Siemens on the breaker estimate, they gave a +/-30% estimate at 300k each.  That would be for the breaker, frame, disconnects, PTs, relays, and battery.
+
+
+
+Questions from ES Estimating Group as the PM team has requested a revised estimate based on the most recent scope :
+
+Please check the dollar amount below, all from previous estimate E-23-373.
+
+  1.  Battery System - $12,106,850.  - no  this is for the 12 Nomad Voyager Eagle LFP BESS Systems $12 million.
+
+     *   Assuming this is the DC Battery for Control this will be captured in the Breaker estimate
+  1.  Transportation/Spare Parts - $585,688. - I will remove from estimate
+
+     *   unknown
+
+  1.  Battery labor - $2,553,828, 16,801 mhrs is this for the entire new SS or just for the batteries?
+
+     *   Not sure what this is - Estimate E-23-373, labor amount 16,801 man-hours for installation.  Are the 16,801 man-hours for the install of the batteries only or for the install of the entire SS.   Does not say in the estimate.  I have the labor man-hours for the SS equipment, but I do not know how much labor man-hours to charge to the install of the batteries.
+
+  1.  PCS Units - $832,022 is this for the batteries or is this the cost for the five outdoor standalone feeder cabinets?
+
+     *   Not sure what this is - may be a carry over for the PCS for the BESS - ok will remove from the estimate.  I do have costs for the five feeder control cabinets.
+
+  1.  Step up transformers - $630,371.
+
+     *   Is this Station Service Transformers or GSUs? - GSUs is this amount correct?  E-23-373 estimate had this amount.
+
+  1.  Site Sound Mitigation - $466,766 - is this done? Do I need to include the estimate?
+
+     *   I would carry this as a risk item if its needed or not - OK
+
+  1.  Rental - Spot Generator - $139,700 - Did not see in scope but is included in est. E-23-373, Include in Est. or not?
+
+     *   I don't this this is needed - we are going to put station service transforms in first so we should be good - I will remove from estimate.
+
+Other questions:
+
+  1.  Is it an overhead cable or bus from the wood riser pole to the Siemens Breaker? Size and length?
+     *   Overhead cable -25' per phase should cover us on both sides of the breaker - Thank you!
+
+  1.  The three SSVT pad mount transformers, I added three riser structures with foundations. Also add UG cable, 500LF per SSVT.  Let me know if you agree with this.
+
+     *   Should be down to 1 Station Service Transformer pad mount.  500' is plenty - Ok, scope has two pad mount SSVT at 1500 kVA each and one pad mount SSVT 125kVA.  I will reduce to one.
+
+  1.  On the eight wood riser poles, are the breaker disconnect switches located on these poles?
+
+     *   Breaker Disconnects are on the skid for the breaker - Excellent thank you
+
+  1.  PTs (8 locations each side of the Siemens breaker, 24 total) - are they installed on the wood riser poles? or on their own steel supports?
+
+     *   PTs are on the breaker skid - Thank you
+
+
+
+Thanks,
+
+
+
+Patrick Fitzgerald
+
+Manager - Substations Solutions Engineering
+
+Eversource
+
+247 Station Drive (SE-3032)
+
+Westwood, MA 02090
+
+Office - 781-441-8112
+
+Cell - 774 813 5144
+
+Patrick.Fitzgerald@Eversource.com<mailto:Patrick.Fitzgerald@Eversource.com>
+
+
+
+--_000_SA5PR02MB1121842B077F88845BE724205ECA42SA5PR02MB11218na_
+Content-Type: text/html; charset="us-ascii"
+
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="Generator" content="Microsoft Word 15 (filtered medium)">
+<!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Aptos;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:12.0pt;
+	font-family:"Aptos",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+span.EmailStyle20
+	{mso-style-type:personal-reply;
+	font-family:"Aptos",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;
+	mso-ligatures:none;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+/* List Definitions */
+@list l0
+	{mso-list-id:30958232;
+	mso-list-template-ids:1619186262;}
+@list l1
+	{mso-list-id:1827621908;
+	mso-list-template-ids:-880911964;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext="edit" spidmax="1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext="edit">
+<o:idmap v:ext="edit" data="1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang="EN-US" link="blue" vlink="purple" style="word-wrap:break-word">
+<div class="WordSection1">
+<p class="MsoNormal">No Control house.&nbsp; We are working on the quote still, but they gave us an estimate of 300k per breaker.&nbsp; That would include the relays, DC battery, PTs, Hook sticks.<o:p></o:p></p>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+<div>
+<p class="MsoNormal"><span style="mso-ligatures:standardcontextual"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;mso-ligatures:standardcontextual">Thanks,<o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;mso-ligatures:standardcontextual"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;mso-ligatures:standardcontextual">Patrick Fitzgerald<o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;mso-ligatures:standardcontextual">Manager &#8211; Substations Solutions Engineering<b><o:p></o:p></b></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;mso-ligatures:standardcontextual">Eversource<o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;mso-ligatures:standardcontextual">247 Station Drive (SE-3032)<o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;mso-ligatures:standardcontextual">Westwood, MA 02090<o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;mso-ligatures:standardcontextual">Office - 781-441-8112<o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;mso-ligatures:standardcontextual">Cell - 774 813 5144<o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;mso-ligatures:standardcontextual"><a href="mailto:Patrick.Fitzgerald@Eversource.com"><span style="color:#467886">Patrick.Fitzgerald@Eversource.com</span></a><o:p></o:p></span></p>
+</div>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+<div>
+<div style="border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in 0in 0in">
+<p class="MsoNormal"><b><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">From:</span></b><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif"> Roche, Brian J &lt;brian.roche@eversource.com&gt;
+<br>
+<b>Sent:</b> Wednesday, August 19, 2026 9:32 AM<br>
+<b>To:</b> Fitzgerald, Patrick J &lt;patrick.fitzgerald@eversource.com&gt;<br>
+<b>Cc:</b> Herman, Robert F &lt;robert.herman@eversource.com&gt;; Rosenburg, Michael P &lt;michael.rosenburg@eversource.com&gt;; Sojan, Rosa &lt;rosa.sojan@eversource.com&gt;<br>
+<b>Subject:</b> Re: STA 360 Estimate Questions<o:p></o:p></span></p>
+</div>
+</div>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;color:black">Good morning<o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;color:black"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;color:black">More questions&nbsp;<o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;color:black"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;color:black">1.) Is there a control house?&nbsp; If so, do you know the size?<o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;color:black">2.) The four breaker skids, do you quote or cost for each skid?<o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;color:black"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;color:black">Thank you<o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;color:black">&nbsp;&nbsp;<o:p></o:p></span></p>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><span style="font-family:&quot;Calibri&quot;,sans-serif;color:black"><o:p>&nbsp;</o:p></span></p>
+<div class="MsoNormal" align="center" style="text-align:center">
+<hr size="2" width="98%" align="center">
+</div>
+<p class="MsoNormal"><b><span style="font-family:&quot;Calibri&quot;,sans-serif;color:black">From:</span></b><span style="font-family:&quot;Calibri&quot;,sans-serif;color:black"> Roche, Brian J &lt;<a href="mailto:brian.roche@eversource.com">brian.roche@eversource.com</a>&gt;<br>
+<b>Sent:</b> Wednesday, August 12, 2026 5:29 PM<br>
+<b>To:</b> Fitzgerald, Patrick J &lt;<a href="mailto:patrick.fitzgerald@eversource.com">patrick.fitzgerald@eversource.com</a>&gt;<br>
+<b>Cc:</b> Herman, Robert F &lt;<a href="mailto:robert.herman@eversource.com">robert.herman@eversource.com</a>&gt;; Rosenburg, Michael P &lt;<a href="mailto:michael.rosenburg@eversource.com">michael.rosenburg@eversource.com</a>&gt;; Sojan, Rosa &lt;<a href="mailto:rosa.sojan@eversource.com">rosa.sojan@eversource.com</a>&gt;<br>
+<b>Subject:</b> Re: STA 360 Estimate Questions <o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-family:&quot;Calibri&quot;,sans-serif;color:black"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;color:black">Thank you<o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;color:black"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;color:black">Can we have a conference call for 30 minutes with everyone involved.&nbsp; To go over the questions I have.<o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:11.0pt;color:black"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span style="font-family:&quot;Calibri&quot;,sans-serif;color:black">See my commits in red.&nbsp;&nbsp;<o:p></o:p></span></p>
+<div class="MsoNormal" align="center" style="text-align:center">
+<hr size="2" width="98%" align="center">
+</div>
+<p class="MsoNormal"><b><span style="font-family:&quot;Calibri&quot;,sans-serif;color:black">From:</span></b><span style="font-family:&quot;Calibri&quot;,sans-serif;color:black"> Fitzgerald, Patrick J &lt;<a href="mailto:patrick.fitzgerald@eversource.com">patrick.fitzgerald@eversource.com</a>&gt;<br>
+<b>Sent:</b> Wednesday, August 12, 2026 4:34 PM<br>
+<b>To:</b> Roche, Brian J &lt;<a href="mailto:brian.roche@eversource.com">brian.roche@eversource.com</a>&gt;<br>
+<b>Cc:</b> Herman, Robert F &lt;<a href="mailto:robert.herman@eversource.com">robert.herman@eversource.com</a>&gt;; Rosenburg, Michael P &lt;<a href="mailto:michael.rosenburg@eversource.com">michael.rosenburg@eversource.com</a>&gt;; Sojan, Rosa &lt;<a href="mailto:rosa.sojan@eversource.com">rosa.sojan@eversource.com</a>&gt;<br>
+<b>Subject:</b> STA 360 Estimate Questions<o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-family:&quot;Calibri&quot;,sans-serif;color:black"><o:p>&nbsp;</o:p></span></p>
+<p>Brian,<o:p></o:p></p>
+<p>&nbsp;<o:p></o:p></p>
+<p>Got some questions fired at me for the STA 360 estimate, see responses below.&nbsp; I&#8217;m sure you&#8217;ll have more, feel free to give me a call.<o:p></o:p></p>
+<p>&nbsp;<o:p></o:p></p>
+<p>Also &#8211; Working with Siemens on the breaker estimate, they gave a +/-30% estimate at 300k each.&nbsp; That would be for the breaker, frame, disconnects, PTs, relays, and battery.<o:p></o:p></p>
+<p>&nbsp;<o:p></o:p></p>
+<p>Questions from ES Estimating Group as the PM team has requested a revised estimate based on the most recent scope :<o:p></o:p></p>
+<p>Please check the dollar amount below, all from previous estimate E-23-373.<o:p></o:p></p>
+<div>
+<ol style="margin-top:0in" start="1" type="1">
+<li class="MsoNormal" style="mso-list:l1 level1 lfo1">Battery System - $12,106,850.&nbsp;
+<span style="color:#C82613">- no&nbsp; this is for the 12 Nomad Voyager Eagle LFP BESS Systems $12 million.</span><o:p></o:p></li></ol>
+</div>
+<ol style="margin-top:0in" start="1" type="1">
+<ol style="margin-top:0in" start="1" type="1">
+<li class="MsoNormal" style="mso-list:l1 level2 lfo1">Assuming this is the DC Battery for Control this will be captured in the Breaker estimate<o:p></o:p></li></ol>
+<div>
+<li class="MsoNormal" style="mso-list:l1 level1 lfo1">Transportation/Spare Parts - $585,688. -<span style="color:#C82613"> I will remove from estimate</span><o:p></o:p></li></div>
+</ol>
+<ol style="margin-top:0in" start="2" type="1">
+<ol style="margin-top:0in" start="1" type="1">
+<li class="MsoNormal" style="mso-list:l1 level2 lfo2">unknown<o:p></o:p></li></ol>
+</ol>
+<ol style="margin-top:0in" start="3" type="1">
+<li class="MsoNormal" style="mso-list:l1 level1 lfo1">Battery labor - $2,553,828, 16,801 mhrs is this for the entire new SS or just for the batteries?<o:p></o:p></li></ol>
+<div>
+<ol style="margin-top:0in" start="3" type="1">
+<ol style="margin-top:0in" start="1" type="1">
+<li class="MsoNormal" style="mso-list:l1 level2 lfo3">Not sure what this is - <span style="color:#C82613">
+Estimate E-23-373, labor amount 16,801 man-hours for installation.&nbsp; Are the 16,801 man-hours for the install of the batteries only or for the install of the entire SS.&nbsp; &nbsp;Does not say in the estimate.&nbsp; I have the labor man-hours for the SS equipment, but I do
+ not know how much labor man-hours to charge to the install of the batteries.&nbsp;</span><o:p></o:p></li></ol>
+</ol>
+</div>
+<ol style="margin-top:0in" start="4" type="1">
+<li class="MsoNormal" style="mso-list:l1 level1 lfo1">PCS Units - $832,022 is this for the batteries or is this the cost for the five outdoor standalone feeder cabinets?<o:p></o:p></li></ol>
+<div>
+<ol style="margin-top:0in" start="4" type="1">
+<ol style="margin-top:0in" start="1" type="1">
+<li class="MsoNormal" style="mso-list:l1 level2 lfo4">Not sure what this is &#8211; may be a carry over for the PCS for the BESS -
+<span style="color:#C82613">ok will remove from the estimate.&nbsp; I do have costs for the five feeder control cabinets.</span><o:p></o:p></li></ol>
+</ol>
+</div>
+<ol style="margin-top:0in" start="5" type="1">
+<li class="MsoNormal" style="mso-list:l1 level1 lfo1">Step up transformers - $630,371.<o:p></o:p></li></ol>
+<div>
+<ol style="margin-top:0in" start="5" type="1">
+<ol style="margin-top:0in" start="1" type="1">
+<li class="MsoNormal" style="mso-list:l1 level2 lfo5">Is this Station Service Transformers or GSUs? -<span style="color:#C82613"> GSUs is this amount correct?&nbsp; E-23-373 estimate had this amount.</span><o:p></o:p></li></ol>
+</ol>
+</div>
+<ol style="margin-top:0in" start="6" type="1">
+<li class="MsoNormal" style="mso-list:l1 level1 lfo1">Site Sound Mitigation - $466,766 - is this done? Do I need to include the estimate?<o:p></o:p></li></ol>
+<div>
+<ol style="margin-top:0in" start="6" type="1">
+<ol style="margin-top:0in" start="1" type="1">
+<li class="MsoNormal" style="mso-list:l1 level2 lfo6">I would carry this as a risk item if its needed or not -
+<span style="color:#C82613">OK</span><o:p></o:p></li></ol>
+</ol>
+</div>
+<ol style="margin-top:0in" start="7" type="1">
+<li class="MsoNormal" style="mso-list:l1 level1 lfo1">Rental - Spot Generator - $139,700 - Did not see in scope but is included in est. E-23-373, Include in Est. or not?<o:p></o:p></li></ol>
+<div>
+<ol style="margin-top:0in" start="7" type="1">
+<ol style="margin-top:0in" start="1" type="1">
+<li class="MsoNormal" style="mso-list:l1 level2 lfo7">I don&#8217;t this this is needed &#8211; we are going to put station service transforms in first so we should be good -<span style="color:#C82613"> I will remove from estimate.</span><o:p></o:p></li></ol>
+</ol>
+</div>
+<p>Other questions:<o:p></o:p></p>
+<ol style="margin-top:0in" start="1" type="1">
+<li class="MsoNormal" style="mso-list:l0 level1 lfo8">Is it an overhead cable or bus from the wood riser pole to the Siemens Breaker? Size and length?<o:p></o:p></li><div>
+<ol style="margin-top:0in" start="1" type="1">
+<li class="MsoNormal" style="mso-list:l0 level2 lfo8">Overhead cable -25&#8217; per phase should cover us on both sides of the breaker -
+<span style="color:#C82613">Thank you!</span><o:p></o:p></li></ol>
+</div>
+</ol>
+<ol style="margin-top:0in" start="2" type="1">
+<li class="MsoNormal" style="mso-list:l0 level1 lfo8">The three SSVT pad mount transformers, I added three riser structures with foundations. Also add UG cable, 500LF per SSVT.&nbsp; Let me know if you agree with this.<o:p></o:p></li></ol>
+<div>
+<ol style="margin-top:0in" start="2" type="1">
+<ol style="margin-top:0in" start="1" type="1">
+<li class="MsoNormal" style="mso-list:l0 level2 lfo9">Should be down to 1 Station Service Transformer pad mount.&nbsp; 500&#8217; is plenty -
+<span style="color:#C82613">Ok, scope has two pad mount SSVT at 1500 kVA each and one pad mount SSVT 125kVA.&nbsp; I will reduce to one.&nbsp;&nbsp;</span><o:p></o:p></li></ol>
+</ol>
+</div>
+<ol style="margin-top:0in" start="3" type="1">
+<li class="MsoNormal" style="mso-list:l0 level1 lfo8">On the eight wood riser poles, are the breaker disconnect switches located on these poles?<o:p></o:p></li></ol>
+<div>
+<ol style="margin-top:0in" start="3" type="1">
+<ol style="margin-top:0in" start="1" type="1">
+<li class="MsoNormal" style="mso-list:l0 level2 lfo10">Breaker Disconnects are on the skid for the breaker -<span style="color:#C82613"> Excellent thank you</span><o:p></o:p></li></ol>
+</ol>
+</div>
+<ol style="margin-top:0in" start="4" type="1">
+<li class="MsoNormal" style="mso-list:l0 level1 lfo8">PTs (8 locations each side of the Siemens breaker, 24 total) - are they installed on the wood riser poles? or on their own steel supports?<o:p></o:p></li></ol>
+<div>
+<ol style="margin-top:0in" start="4" type="1">
+<ol style="margin-top:0in" start="1" type="1">
+<li class="MsoNormal" style="mso-list:l0 level2 lfo11">PTs are on the breaker skid -
+<span style="color:#C82613">Thank you</span><o:p></o:p></li></ol>
+</ol>
+</div>
+<p>&nbsp;<o:p></o:p></p>
+<p><span style="font-size:11.0pt">Thanks,</span><o:p></o:p></p>
+<p><span style="font-size:11.0pt">&nbsp;</span><o:p></o:p></p>
+<p><span style="font-size:11.0pt">Patrick Fitzgerald</span><o:p></o:p></p>
+<p><span style="font-size:11.0pt">Manager &#8211; Substations Solutions Engineering</span><o:p></o:p></p>
+<p><span style="font-size:11.0pt">Eversource</span><o:p></o:p></p>
+<p><span style="font-size:11.0pt">247 Station Drive (SE-3032)</span><o:p></o:p></p>
+<p><span style="font-size:11.0pt">Westwood, MA 02090</span><o:p></o:p></p>
+<p><span style="font-size:11.0pt">Office - 781-441-8112</span><o:p></o:p></p>
+<p><span style="font-size:11.0pt">Cell - 774 813 5144</span><o:p></o:p></p>
+<p><span style="font-size:11.0pt;color:#467886"><a href="mailto:Patrick.Fitzgerald@Eversource.com"><span style="color:#467886">Patrick.Fitzgerald@Eversource.com</span></a></span><o:p></o:p></p>
+<p>&nbsp;<o:p></o:p></p>
+</div>
+</body>
+</html>
+
+--_000_SA5PR02MB1121842B077F88845BE724205ECA42SA5PR02MB11218na_--
