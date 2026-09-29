@@ -11,6 +11,7 @@ Basis of record: `1) Estimate Summary Form/ESF - Hyde Park BESS Total Rev 3.xlsm
 | `Hyde Park BESS - Cost Analysis Workbook.xlsx` | Traceable data source: README, Layers (SUMIFS over 292 line items), Unit Costs, Timeline, Sept 2026 Walk, 2023 Indicative, Benchmarks, Line Items. 400 formulas, zero errors (LibreOffice recalc). Blue font = keyed inputs. | Anyone who needs to tie a slide number to a cell |
 | `Hyde Park BESS - Unit Cost Ladder One-Pager.docx` (+ `.pdf`) | One page for the regulatory narrative: the seven cost boundaries, $/kW and $/kWh at each, what each boundary adds, and the rule for reading a published benchmark against it. | Regulatory narrative, PAF exhibit |
 | `Hyde Park BESS - Statistical Benchmarking Memo.docx` | Can the number be defended statistically: reference class of 13 utility-owned projects, log-log regression on 26 public projects (size and duration elasticities, 80% prediction interval), Monte Carlo on the thirteen cost layers (base and Class 5-like calibrations), estimate-to-actual uplift on comparables, ISO interconnection references, AACE/Flyvbjerg method citations, and how to use each in the argument. | Estimating, leadership, regulatory prep |
+| `Hyde Park BESS - Red Team Report.docx` | Independent challenge of the package: steelman, three kill shots (Haugland reconciliation, siting float, estimate class), 14-item challenge register, where to be more aggressive, base-rate check, seven stress tests, risk-register audit, pre-mortem with five early-warning indicators, what would change our mind, certification (ready with repairs). | Digaunto prep, full-funding gate |
 | `build/` | Python scripts that generate every file above from the repository (`analysis.py` classifies the ESF line items; `stats_model.py` and `mc_model.py` run the regression and Monte Carlo; the others build the deck, documents and workbook). `benchmarks.json` is the curated benchmark set; `benchmark_research_log.md` is the research log. `build/data/` holds the 44-project public cost dataset (`bess_projects.csv`, sourcing notes) and the ISO / FERC / state-PUC reference log. | Reproducibility |
 
 ## Headline numbers (10 MW / 20 MWh)
@@ -31,6 +32,13 @@ Battery supply contract = 21% of the project. Station, site and feeder interconn
 - Regression (n = 26, R-squared 0.65): size elasticity -0.17, duration elasticity -0.29, year not significant. Prediction for 20 MWh / 2-h / 2028: $1,116/kWh, 80% interval $611 to $2,037. Use as a bracket, not a price.
 - Monte Carlo on the layers (20,000 trials): P80 $53.0M base / $55.9M wide against $57.2M approval; reserve needed to reach P80 $3.4M / $6.2M vs $7.6M carried. Uncertainty concentrates in the landfill platform, Station 496 and owner soft costs; the battery contract contributes almost nothing.
 - Estimate-to-actual uplift on comparable small utility BESS: +9% to +64%, median about +31%.
+
+## Red team (29 Sep 2026)
+
+- Verdict: defensible as a station cost, not yet as a full-funding number. Ready with repairs.
+- Kill shots: (1) Haugland Class 3 base $19.2M vs Rev 3 construction layers $8.3M direct, unmapped, likely points up; (2) siting chain has no float and an 18-24 month EFSB fallback; (3) maturity is Class 4, not Class 3.
+- Defensible reductions about $3M, conditional on the Haugland reconciliation closing first.
+- Combination downside (HEG midpoint plus 12-month slip): about +$13M, to ~$70M.
 
 ## Caveats
 
