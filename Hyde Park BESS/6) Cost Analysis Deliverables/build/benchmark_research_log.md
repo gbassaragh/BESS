@@ -1,0 +1,292 @@
+# Published Cost Benchmarks for U.S. Utility-Scale LFP BESS
+## Reference case: 10 MW / 20 MWh (2-hour), distribution-connected, Boston MA, in-service Dec-2028
+
+Prepared 2026-09-29.
+
+### How to read this document
+
+- **Equipment/pack-only** prices (BNEF pack survey, cell prices, DC-block quotes) are NOT comparable to **installed/all-in** costs (NREL ATB, EIA-860, Lazard, utility filings). Each figure below is labelled with which it is and what scope is included.
+- **Confidence tags**: `High` = figure appears in text of the primary source (NREL/EIA/LBNL/PNNL/CPUC/utility/regulator) as indexed by search; `Medium` = figure reported by a reputable secondary source (Utility Dive, Energy-Storage.News, pv magazine, ESS News, law-firm alerts) quoting the primary; `Low` = uncertain, unverified derivation, or trade-blog origin.
+- **Access limitation (important)**: the research environment's egress proxy blocked direct fetches of nrel.gov, atb.nrel.gov, eia.gov, lazard.com, bnef.com, pnnl.gov, lbl.gov, mass.gov, sec.gov, cpuc.ca.gov, utilitydive.com, energy-storage.news, pv-magazine and most other hosts. All numbers were therefore retrieved from search-engine excerpts of those pages, not by reading the PDFs page-by-page. Page/table numbers are given only where the excerpt supplied them. Anything marked "NOT RETRIEVED" should be pulled directly from the cited URL before use in a filing.
+- Derived $/kWh or $/kW values that I computed from a source's $ total and MW/MWh are marked **(derived)**.
+
+---
+
+## 0. One-page summary table (installed / all-in unless noted)
+
+| Source (year) | Metric | Value | Duration / size | $ basis | Scope | Conf. |
+|---|---|---|---|---|---|---|
+| NREL Cole et al. 2025 Update | Total installed, bottom-up | **$334/kWh** (= $1,336/kW derived) | 4-h, 60 MW | 2024 (likely 2024$; verify) | Pack + PCS + BOS + EPC + developer/owner + interconnection (NREL PVSCM standalone model) | High |
+| NREL ATB 2024 | Base-year installed | NOT RETRIEVED (numbers live in ATB workbook) | 2-,4-,6-,8-,10-h; 60 MW | 2022$ | Same NREL model (Ramasamy 2023) | – |
+| EIA Form 860 (installed 2023) | Capacity-weighted avg construction cost | **$1,361/kW** | Mixed durations (not stated); 6,841 MW | Nominal 2023 | Reported construction cost incl. everything the owner capitalized | High |
+| EIA/S&L AEO2025 capital cost study (Jan 2024) | Overnight capital cost | **$1,744/kW = $436/kWh** | 150 MW / 600 MWh (4-h) | 2023$ | EPC + owner's costs, overnight (no AFUDC); interconnection scope to be verified | High |
+| Lazard LCOS v11 (Jun 2025) | LCOS (not capex) unsubsidized | 4-h: $115–254/MWh; 2-h: $129–277/MWh | 100 MW | 2025 | Capex inside LCOS = storage module + BOS + PCS + equipment + EPC | Medium |
+| Lazard LCOS v10 (Jun 2024) | LCOS unsubsidized | 4-h: $170–296/MWh | 100 MW / 400 MWh | 2024 | as above | Medium |
+| Lazard 2026 (Jul 2026) | LCOS unsubsidized | 4-h: ~$210–292/MWh | 100 MW | 2026 | as above; cites FEOC-driven supply-chain shift | Medium |
+| BNEF pack survey 2025 | **Pack only** | **$108/kWh** all-segment avg; **$70/kWh stationary storage** | n/a | real 2025 USD | Cells + pack hardware only, ex-works | Medium |
+| BNEF pack survey 2024 | Pack only | $115/kWh avg; China $94; US ≈31% above China (≈$123 derived) | n/a | real 2024 USD | as above | Medium |
+| BNEF pack survey 2023 / 2022 | Pack only | $139/kWh (2023); $151/kWh (2022, +7%, LFP +27%) | n/a | real | as above | Medium |
+| BNEF ESS cost survey 2025 | **Turnkey system** (equipment + integration; excludes grid connection/land/dev) | Global **$117/kWh**; **US $219/kWh**; Europe $177; China $73 | 4-h reference | 2025 | see scope note in §4 | Medium |
+| BNEF ESS cost survey 2024 | Turnkey system | Global $165/kWh (−40%); US $236/kWh; China $101 | 4-h | 2024 | | Medium |
+| BNEF ESS cost survey 2023 | Turnkey system | Global $263/kWh (−24%), range $135–580 | 4-h | 2023 | | Medium |
+| LBNL Utility-Scale Solar 2025 ed. | All-in battery capex (hybrid PV+BESS plants) | **$458/kWh** in 2024 | avg 3.3 h, ratio 0.57 | 2024 | EIA-860 reported capex, battery share of hybrids | High |
+| LBNL ISO-NE interconnection study (Kemp et al. 2023) | Interconnection cost only | Storage **$230/kW** (ISO-NE avg, 2018-21 requests) | n/a | nominal | POI + network upgrades from ISO studies | High |
+| PNNL 2022 assessment | Total installed | 100 MW/10-h LFP **$216/kWh** (battery $78/kWh) | 100 MW, 10-h | 2021$ | SB + BOS + PCS + C&C + integration + EPC + dev + grid integration | High |
+| Wood Mackenzie/ACP ESM (Dec 2025) | Utility-scale system price | **$938/kW** (from $1,050/kW, −11% YoY) | 4-h implied | 2025 | WoodMac "system price" (turnkey incl. EPC; interconnection excluded — verify) | Medium |
+| Wood Mackenzie/ACP ESM (Q2 2026) | Utility-scale system price | **$916/kW** (−2% YoY) | 4-h implied | 2026 | as above | Medium |
+| Anza Q1 2026 | Distribution-scale system price (delivered, incl. tariffs) | AC ≈ **$203/kWh**; DC ≈ **$175/kWh** | distribution-scale | 2026 | Equipment delivered; no EPC/civil/interconnection | Medium |
+| Eversource Outer Cape (Provincetown) BESS | Actual utility-owned project cost | **$49M** for 24.9 MW/38 MWh = **$1,289/kWh; $1,968/kW (derived)** | 1.5-h | nominal 2019-22 | Full utility capital incl. site, interconnection, microgrid controls | High |
+| National Grid Nantucket BESS | Actual utility-owned | **$81M** for 6 MW/48 MWh **plus 15 MW diesel gen + control house** | 8-h | nominal 2017-19 | Battery NOT separately disclosed | High |
+| Eversource Martha's Vineyard (cancelled 2021) | DPU-filed estimate | Ph1 4.9 MW/20 MWh $15M (**$750/kWh**); Ph2 9.8 MW/64 MWh $28M (**$438/kWh**) (derived) | 4-h / 6.5-h | 2018-19 est. | Utility capital estimate | Medium |
+| National Grid MA (2018 rate case proposal) | DPU-filed estimate | $50M for 14 MW/56 MWh = **$893/kWh (derived)** | 4-h | 2018 est. | Utility capital estimate | Medium |
+| Hawaiian Electric Waena (Maui) | PUC-approved utility-owned | **$82.1M** for 40 MW/160 MWh = **$513/kWh; $2,053/kW (derived)**; utility now seeking increase for tariffs | 4-h | 2023 approval | Purchase + installation (Tesla Megapack) | High |
+| NV Energy Reid Gardner | Utility-owned, EPC by Energy Vault | **$257M** for 220 MW/440 MWh = **$584/kWh; $1,168/kW (derived)** | 2-h | 2022-23 | Construction cost | Medium |
+| SCE / Ameresco (CPUC D.21-12-xxx) | Utility-owned EPC+maintenance contract | **$1.226B** for 537.5 MW/2,150 MWh = **$570/kWh; $2,281/kW (derived)** | 4-h | 2021 | EPC + maintenance term, at existing SCE substations | High |
+
+---
+
+## 1. NREL — Annual Technology Baseline (ATB) 2024 & 2025, Cole et al. 2025 Update, and the bottom-up benchmark (Ramasamy et al.)
+
+### 1.1 NREL "Cost Projections for Utility-Scale Battery Storage: 2025 Update" (Cole, Ramasamy, Turan; NREL/TP-6A40-93281, June 2025)
+- URL: https://docs.nrel.gov/docs/fy25osti/93281.pdf (mirror: https://docs.nlr.gov/docs/fy25osti/93281.pdf ; OSTI: https://www.osti.gov/biblio/2583471 ; landing: https://research-hub.nrel.gov/en/publications/cost-projections-for-utility-scale-battery-storage-2025-update/)
+- **Base year (2024) total installed cost, 4-hour system: $334/kWh** → **$1,336/kW (derived)**. Quote from report text: "The 2024 starting point of $334/kWh is derived from the bottom-up cost model for a 4-hour battery storage system... shown in Figure 4." `High`
+- Dollar year: the report normalizes to 2024; ATB 2025 states "benchmark costs focus on the costs for 2024, with 2023 costs retained from the 2024 ATB." Whether $334 is in 2024$ or 2023$ was NOT confirmed from the excerpt — verify on p. 1-4 of the PDF. `Medium`
+- Scope: the bottom-up model (NREL PV/storage cost model, PVSCM) for a standalone utility-scale ESS includes battery pack/cells, enclosures, PCS/inverter, structural & electrical BOS, installation labor, EPC overhead, developer overhead, sales tax, permitting/interconnection and contingency — i.e., an **all-in "modeled market price"** for a 60 MW system. Explicit line-item values from the 2024 benchmark were NOT RETRIEVED (see 1.3). `Medium`
+- Projections (4-h, $/kWh, low/mid/high): **2035: $152 / $247 / $349; 2050: $111 / $184 / $333** (OSTI abstract). A second excerpt (apparently the ATB 2025 page or an alternate dollar-year table) shows **2035: $147 / $234 / $339; 2050: $108 / $178 / $307**. The two sets likely differ by dollar-year (2024$ vs 2023$) — reconcile before use. `High` for the first set (abstract text), `Medium` for the second.
+- Method: projections built from a literature review of publications released 2023 or later (BNEF, Wood Mackenzie, EIA, etc.), normalized to the 2024 base; values for intermediate years 2025–2030 are in the report's Figure/Table but were NOT RETRIEVED.
+- Duration scaling: NREL splits cost into an **energy-related component ($/kWh)** and a **power-related component ($/kW)** using the share from the Storage Futures Study (Augustine & Blair 2021, NREL/TP-5700-78694, https://docs.nlr.gov/docs/fy21osti/78694.pdf). The ATB formula: **Total System Cost ($/kW) = Battery Pack Cost ($/kWh) × Duration (h) + BOS Cost ($/kW)**. Consequently **$/kWh rises as duration falls** (a 2-h system is meaningfully more expensive per kWh than the $334/kWh 4-h figure) while $/kW falls. `High` for the formula; the numeric energy/power split was NOT RETRIEVED.
+- Prior edition for trend: Cole & Karmakar 2023 Update (https://docs.nrel.gov/docs/fy23osti/85332.pdf), 2022$: the high scenario for 2026 was $477/kWh. Base-year 2022 value NOT RETRIEVED. `Medium`
+
+### 1.2 NREL ATB 2025 and 2024 — Utility-Scale Battery Storage pages
+- ATB 2025: https://atb.nrel.gov/electricity/2025/utility-scale_battery_storage (mirror https://atb.nlr.gov/electricity/2025/utility-scale_battery_storage)
+- ATB 2024: https://atb.nrel.gov/electricity/2024/utility-scale_battery_storage ; ATB 2024b: https://atb.nrel.gov/electricity/2024b/utility-scale_battery_storage
+- Both editions model a **60 MW BESS at 2, 4, 6, 8 and 10 hours**; LFP and NMC chemistries; three scenarios (Conservative / Moderate / Advanced) to 2050. `High`
+- ATB 2024: "The 2022 cost breakdown for the 2024 ATB is based on Ramasamy et al., 2023 and is in 2022$" (i.e., the Q1 2023 benchmark). Scenario reductions for the **60 MW, 4-h** system between 2022 and 2035: **Conservative −18%, Moderate −37%, Advanced −52%** (avg annual −1.4%, −2.9%, −4.0%). `High`
+- ATB 2025: base year moves to 2024 (Cole et al. 2025 / Q1 2024 benchmark). `High`
+- **The actual $/kW and $/kWh values for the 2-h and 4-h systems (base year and 2025–2030 Moderate) are NOT RETRIEVED** — they are in the ATB data workbook (downloadable from the ATB page; also https://catalog.data.gov/dataset/2024-annual-technology-baseline-atb-cost-and-performance-data-for-electricity-generation-t). The ATB text confirms only the qualitative rule: "Base year installed capital costs for BESS decrease with duration (measured in $/kWh) whereas system costs (in $/kW) increase."
+- Cost-component structure used by ATB (from ATB text): "The bottom-up BESS model accounts for major components, including the LIB pack, the inverter, and the balance of system (BOS)"; O&M is set as a fixed % of capex (value NOT RETRIEVED).
+
+### 1.3 NREL bottom-up benchmarks (Ramasamy et al.)
+- **Q1 2023**: "U.S. Solar Photovoltaic System and Energy Storage Cost Benchmarks, With Minimum Sustainable Price Analysis: Q1 2023" (Ramasamy, Zuboy, Woodhouse, O'Shaughnessy, Feldman, Desai, Walker, Margolis, Basore), NREL/TP-7A40-87303, Sept 2023. URL: https://docs.nrel.gov/docs/fy23osti/87303.pdf ; data file https://data.openei.org/submissions/8272. Standalone utility-scale ESS reference: **60 MW / 240 MWh (4-h)**, reported as Modeled Market Price (MMP) and Minimum Sustainable Price (MSP), 2022 USD. **The standalone-storage $/kWh totals and component table (battery cabinets, PCS, BOS, labor, EPC overhead, developer overhead, sales tax, interconnection, contingency, profit) were NOT RETRIEVED.** `–`
+- **Q1 2024**: "Q1-2024 Solar Cost Benchmarks" (Ramasamy, Feldman, Woodhouse; published 2025), dataset https://data.nrel.gov/submissions/307 (OSTI https://www.osti.gov/dataexplorer/biblio/dataset/3007269); the PDF appears to be https://docs.nrel.gov/docs/fy25osti/92536.pdf (unverified). Excerpted figures relate to PV: utility PV MMP $1.12/Wdc, MSP $0.98/Wdc; PV + 240 MWh storage $1.99/Wdc MMP. **Standalone ESS $/kWh NOT RETRIEVED** — but note the ATB 2025 / Cole 2025 base of **$334/kWh** is derived from this same model, so treat $334/kWh (4-h, 60 MW) as the Q1-2024 NREL all-in benchmark. `Medium`
+- **Q1 2025**: "Q1-2025 Solar Photovoltaic System Cost Benchmarks" (Basore et al., dataset updated 2026-03-12), https://data.nlr.gov/submissions/304 / https://www.osti.gov/biblio/3009689. Storage values NOT RETRIEVED.
+
+**What NREL's benchmark includes (structural point for the comparison):** the NREL standalone-storage MMP is an all-in developer-perspective price for a 60 MW, 4-h, transmission/sub-transmission-connected merchant-style project: battery + PCS + BOS + installation labor + EPC overhead + developer overhead + sales tax + **an allowance for interconnection** + contingency + profit. It does **not** include utility-specific items (AFUDC, utility overheads/loaders, property tax gross-ups, a dedicated distribution substation bay or feeder rebuild, or NE union-labor premiums). `Medium`
+
+---
+
+## 2. EIA
+
+### 2.1 Form EIA-860 construction-cost analysis (empirical, capacity-weighted averages)
+- Source page: "Construction cost data for electric generators installed in 2023," https://www.eia.gov/electricity/generatorcosts (Form EIA-860, Annual Electric Generator Report); data page https://www.eia.gov/electricity/data/eia860/.
+- **Installed 2023: battery storage capacity-weighted average construction cost = $1,361/kW**, covering 5,836 MW at new plants + 1,005 MW at existing plants, total $9.3 billion. `High` (text of eia.gov page). Duration is not stated; EIA reports $/kW only. If the 2023 fleet averaged ~3–4 h, this implies roughly $340–450/kWh (my arithmetic, `Low`).
+- 2021: **$1,796/kW** (Statista citing EIA; `Medium`). 2022: NOT RETRIEVED (EIA states some technology values are suppressed to avoid disclosure).
+- EIA said it expects to publish 2024 installed-cost data in September 2026 — check https://www.eia.gov/electricity/generatorcosts for the 2024 release. `Medium`
+- Historical (EIA Today in Energy, Oct 2020, https://www.eia.gov/todayinenergy/detail.php?id=45596): average energy-capacity cost fell from **$2,152/kWh (2015) to $625/kWh (2018)**; these are $/kWh of installed energy capacity, all-in reported construction cost. `High`
+- EIA "Battery Storage in the United States: An Update on Market Trends" (Aug 2021, https://www.eia.gov/analysis/studies/electricity/batterystorage/pdf/battery_storage_2021.pdf) and its 2022/2023 figure workbooks (https://www.eia.gov/analysis/studies/electricity/batterystorage/xls/battery_storage_2022.xlsx) contain the year-by-year $/kWh series (2019–2021+). Values NOT RETRIEVED.
+- Scope note: EIA-860 "construction cost" is what the respondent reports as total capitalized cost for the generator, generally including equipment, EPC, and owner-side interconnection; it varies by respondent and includes projects of all sizes/durations.
+
+### 2.2 EIA "Capital Cost and Performance Characteristics for Utility-Scale Electric Power Generating Technologies" (Sargent & Lundy for AEO2025; released Jan 10, 2024)
+- URL: https://www.eia.gov/analysis/studies/powerplants/capitalcost/pdf/capital_cost_AEO2025.pdf (landing https://www.eia.gov/analysis/studies/powerplants/capitalcost ; discussion slides https://www.eia.gov/analysis/studies/powerplants/capitalcost/pdf/Capital_Cost_Study_Discussion_Slides.pdf)
+- **BESS case: 150 MW / 600 MWh (4-h), overnight capital cost $1,744/kW = $436/kWh, 2023 dollars.** `High`
+- Scope (S&L convention): overnight cost = EPC (civil/structural, mechanical, electrical incl. PCS and MV collection, battery modules) + owner's costs (development, land, permitting, owner's engineering, spare parts, contingency) ; **excludes AFUDC/financing**; interconnection is generally limited to a switchyard/tie to an assumed nearby substation. The component table and any Boston/New England regional multiplier were NOT RETRIEVED — the S&L report and EIA's EMM assumptions (https://www.eia.gov/outlooks/aeo/assumptions/pdf/electricity.pdf) include regional cost factors by EMM region (New England is its own region). `Medium`
+- Prior edition (AEO2023, S&L; https://www.eia.gov/outlooks/aeo/assumptions/pdf/elec_cost_perf.pdf): BESS 150 MW/600 MWh value NOT RETRIEVED.
+- EIA AEO2025 LCOE report (https://www.eia.gov/outlooks/aeo/electricity_generation/pdf/AEO2025_LCOE_report.pdf) uses the same S&L basis.
+
+---
+
+## 3. Lazard Levelized Cost of Storage (LCOS)
+
+- v10 / LCOE+ June 2024: https://www.lazard.com/media/xemfey0k/lazards-lcoeplus-june-2024-_vf.pdf
+- v11 / LCOE+ June 2025: https://www.lazard.com/media/5tlbhyla/lazards-lcoeplus-june-2025-_vf.pdf (also https://www.lazard.com/media/uounhon4/lazards-lcoeplus-june-2025.pdf); press release https://www.lazard.com/news-announcements/lazard-releases-2025-levelized-cost-of-energyplus-report-pr/
+- 2026 edition (July 2026): https://www.lazard.com/news-announcements/lazard-releases-2026-levelized-cost-of-energyplus-report-pr/
+- Secondary reporting used: Energy-Storage.News (2024: https://www.energy-storage.news/lazard-ira-brings-lcos-of-100mw-4-hour-standalone-bess-down-as-low-as-us124-mwh/ ; 2025: https://www.energy-storage.news/lazard-says-us-energy-storage-cost-reduction-in-2025-offsets-prior-pandemic-driven-increases/), ESS News 2026 (https://www.ess-news.com/2026/07/13/battery-storage-costs-up-27-since-2020-says-lazard/), pv magazine 2026 (https://www.pv-magazine.com/2026/07/13/u-s-solar-lcoe-on-the-rise-lazard-says/).
+
+| Edition | Case | LCOS unsubsidized ($/MWh) | LCOS with ITC ($/MWh) | Conf. |
+|---|---|---|---|---|
+| v10, June 2024 | Utility-scale standalone 100 MW / 400 MWh (4-h) | **$170–296** | $124 (energy-community adder) – $226 | Medium |
+| v11, June 2025 | 100 MW, 4-h | **$115–254** | $83 (energy community) – $192 | Medium |
+| v11, June 2025 | 100 MW, 2-h | **$129–277** | not retrieved | Medium |
+| 2026 ed., July 2026 | 100 MW, 4-h | **~$210–292** (increase attributed to higher capex, supply-chain constraints, FEOC-driven diversification) | not retrieved | Medium |
+
+- **Capital-cost ($/kWh, $/kW) input ranges for the 100 MW cases: NOT RETRIEVED.** They appear in the LCOS "Key Assumptions"/"Illustrative Value Snapshot" tables of each PDF (typically 2–3 pages after the LCOS comparison chart). Pull them directly from the PDFs above.
+- Lazard's capex definition (quoted via secondary): "Capital costs include the storage module, balance of system and power conversion equipment, collectively referred to as the energy storage system, equipment (where applicable) and EPC costs." `Medium` Lazard's methodology notes have historically stated that costs **exclude grid interconnection/network upgrade costs and land**, and that charging is priced at wholesale — verify wording in the v11 PDF before citing. `Low` (from memory of earlier editions; not confirmed this session).
+- ESS News headline (July 2026): "Battery storage costs up 27% since 2020, says Lazard" — the 27% figure was not confirmed in the excerpt. `Low`
+- Lazard also states that the 2025 decline "offset increases between 2021 and 2024" (pandemic/commodity driven). `Medium`
+
+---
+
+## 4. BloombergNEF — battery pack price survey and Energy Storage System Cost Survey
+
+### 4.1 Lithium-ion Battery Price Survey (pack level; **equipment only, ex-works, not installed**)
+All figures are BNEF volume-weighted averages in real USD of the survey year.
+
+| Survey (Dec of year) | All-segment avg pack | Stationary-storage pack | Other detail | Source | Conf. |
+|---|---|---|---|---|---|
+| 2022 | **$151/kWh** (+7% YoY, first-ever increase) | not retrieved | LFP packs +27% YoY (lithium carbonate exposure) | https://about.bnef.com/insights/commodities/lithium-ion-battery-pack-prices-rise-for-first-time-to-an-average-of-151-kwh/ | Medium |
+| 2023 | **$139/kWh** (−14%) | not retrieved | ~300 data points across EV, bus, 2/3-wheel, stationary | https://about.bnef.com/insights/clean-energy/lithium-ion-battery-pack-prices-hit-record-low-of-139-kwh/ ; https://www.pv-magazine.com/2023/12/01/battery-prices-down-14-this-year-says-bloombergnef/ | Medium |
+| 2024 | **$115/kWh** (−20%, largest drop since 2017) | not retrieved (BNEF said stationary fell steeply; figure not in excerpts) | China $94/kWh; US packs ≈31% and Europe ≈48% above China (US ≈ $123/kWh derived) | https://about.bnef.com/insights/commodities/lithium-ion-battery-pack-prices-see-largest-drop-since-2017-falling-to-115-per-kilowatt-hour-bloombergnef/ ; https://www.ess-news.com/2024/12/11/bnef-lithium-ion-battery-pack-prices-drop-to-record-low-of-115-kwh/ | Medium |
+| 2025 | **$108/kWh** (−8%) | **$70/kWh (−45% YoY; lowest segment for first time)** | BEV $99; LFP all-segment $81; NMC $128; China avg $84 (−13%); China stationary-cell output ~557 GWh vs global installs | https://about.bnef.com/insights/clean-transport/lithium-ion-battery-pack-prices-fall-to-108-per-kilowatt-hour-despite-rising-metal-prices-bloombergnef/ ; https://www.pv-magazine.com/2025/12/09/global-lithium-ion-battery-pack-prices-fall-to-108-kwh-says-bnef/ ; https://www.ess-news.com/2025/12/09/bnef-lithium-ion-battery-pack-prices-fall-to-108-kwh-stationary-storage-becomes-lowest-price-segment/ | Medium |
+
+- LFP **cell** prices in China fell below $60/kWh in 2024 (some vertically integrated makers ~$44/kWh) (`Low`, trade sources). ESS News (Apr 2026) reports LFP cell costs up 15–30% in the six months to spring 2026 as lithium carbonate rose >100% (`Medium`; https://www.ess-news.com/2026/04/29/the-battery-cost-disconnect/).
+- US landed price for Chinese LFP ESS cells in 2026 projected at ~$87/kWh after the 25% Section 301 rate, vs domestic ESS cells $85–90/kWh (`Low`, https://battery-tech.net/battery-markets-news/u-s-raises-section-301-duties-on-chinese-ess-batteries/).
+
+### 4.2 BNEF Energy Storage System Cost Survey (turnkey system; **equipment + integration + installation — NOT all-in project**)
+- 2023 survey: https://www.bnef.com/insights/33081 ; 2024: https://www.bnef.com/insights/35543 ; 2025: https://www.bnef.com/insights/38229 (paywalled). Secondary: https://www.energy-storage.news/behind-the-numbers-bnef-finds-40-year-on-year-drop-in-bess-costs/ ; https://www.energy-storage.news/battery-storage-system-prices-continue-to-fall-sharply-bnef-and-ember-reports-find/ ; https://about.bnef.com/insights/clean-energy/battery-storage-costs-hit-record-lows-as-costs-of-other-clean-power-technologies-increased-bloombergnef/
+
+| Survey year | Global avg turnkey (4-h) | US | Europe | China | Notes | Conf. |
+|---|---|---|---|---|---|---|
+| 2023 | **$263/kWh** (−24%); range $135–580 | n/r | n/r | n/r | | Medium |
+| 2024 | **$165/kWh** (−40%) | **$236/kWh** | n/r | $101/kWh (4-h $85) | | Medium |
+| 2025 | **$117/kWh** (−31%) | **$219/kWh** | $177/kWh | $73/kWh | DC blocks using ≥300 Ah cells ~50% cheaper than smaller cells; ≥4 MWh DC blocks 39% cheaper than 2–4 MWh; BNEF 2035 forecast: China $41, Europe $101, **US $108/kWh** | Medium |
+
+- **Scope of BNEF "turnkey":** BNEF defines the turnkey system price as the fully installed price of the energy storage system (battery racks/DC blocks, PCS, BOS, EMS, system integration, installation/commissioning) for a 4-h utility-scale project, **excluding grid connection, land, development costs, and owner's costs**. This wording is from BNEF's public summaries in prior years and was not re-verified this session — confirm in the 2025 survey methodology before citing. `Low/Medium`
+- BNEF global "benchmark" LCOE-style figure for 4-h storage fell 27% to **$78/MWh** in 2025 (BNEF LCOE 2H 2025 press release). `Medium`
+
+### 4.3 Ember, "How cheap is battery storage?" (Dec 2025) — useful for scope decomposition
+- URL: https://ember-energy.org/latest-insights/how-cheap-is-battery-storage/ (PDF: https://ember-energy.org/app/uploads/2025/12/How-cheap-is-battery-storage-PDF.pdf)
+- For large (100+ MW), 4-h+ projects **outside China and the US**: all-in capex ≈ **$125/kWh = ~$75/kWh core equipment shipped from China + ~$50/kWh installation and grid connection**. Grid-connection-driven variation: **$30/kWh (cheap POI) to $100/kWh (extreme)**, typical ~$50/kWh; ≈ $0 when co-located at an existing plant. Evidence: Saudi Tabuk/Hail 2.45 GWh each — equipment $73–75/kWh, EPC $47–48/kWh (Aug 2025). `Medium`
+- Ember explicitly excludes the US market from the $125/kWh figure because of tariffs. `Medium`
+
+---
+
+## 5. LBNL and PNNL
+
+### 5.1 LBNL
+- **Utility-Scale Solar 2025 Data Update** (Seel, Mulvaney Kemp et al., Oct 2025), slides https://emp.lbl.gov/sites/default/files/2025-10/Utility%20Scale%20Solar%202025%20Edition%20Slides.pdf (mirror https://data.openei.org/files/8541/...). "**All-in battery CapEx increased to $458/kWh in 2024**"; the battery portion of PV+battery hybrids averaged **3.3 h duration and 0.57 battery:PV capacity ratio**, adding ~$1/W-AC-PV. Data source is plant-level reported capex (EIA-860 / FERC / developer disclosures) for hybrid plants >5 MW-AC, so the figure includes everything the owner capitalized for the battery block (equipment, EPC, share of interconnection). It is not a standalone-BESS benchmark but it is the best **empirical** U.S. all-in $/kWh number for 2024. `High`
+- 2024 edition (2023 data) battery capex: NOT RETRIEVED (https://eta-publications.lbl.gov/sites/default/files/2024-10/utility_scale_solar_2024_edition_slides.pdf).
+- **Interconnection Cost Analysis in ISO-New England** (Kemp, Seel, Gorman, Rand, Wiser, Cotton, Porter; LBNL 2023), https://eta-publications.lbl.gov/sites/default/files/iso-ne_interconnection_costs_vfinal.pdf. ISO-NE transmission-level interconnection costs (POI + network upgrades, from ISO studies): **storage $230/kW** average (2018–2021 requests), vs solar $450/kW and onshore wind $909/kW; all-technology mean rose from $225/kW (2010–17) to $422/kW (2018–21); projects reaching COD were much cheaper (mean $134/kW then $114/kW); 40% of completed projects cost <$20/kW, one >$400/kW. Note these are **transmission (ISO-NE) queue** projects; a 10 MW distribution-connected BESS goes through the EDC's (Eversource) distribution interconnection process instead, but the study is the only ISO-NE-specific storage interconnection benchmark. **For a 10 MW/20 MWh unit, $230/kW ≡ $115/kWh (derived).** `High`
+- LBNL "Generator Interconnection Costs to the Transmission System" (5-ISO synthesis; non-ISO BA update Feb 2026): https://emp.lbl.gov/interconnection_costs ; https://eta-publications.lbl.gov/sites/default/files/2026-02/lbnl_2026.02.23_ba_interconnection_costs.pdf. Storage-specific values NOT RETRIEVED.
+
+### 5.2 PNNL Energy Storage Cost and Performance Database / Grid Energy Storage Technology Cost and Performance Assessment
+- Database: https://www.pnnl.gov/projects/esgc-cost-performance ; estimates page https://www.pnnl.gov/projects/esgc-cost-performance/estimates ; 2022 report (PNNL-33283, Viswanathan, Mongird, Franks, Li, Sprenkle; Aug 2022): https://www.pnnl.gov/sites/default/files/media/file/ESGC%20Cost%20Performance%20Report%202022%20PNNL-33283.pdf ; 2024 LCOS workbook documentation: https://www.pnnl.gov/sites/default/files/media/file/ESGC_LCOS_Workbook_v2024_Documentation.pdf
+- Cost taxonomy (all editions): Storage Block (SB, cells/modules) → Storage BOS (racks, container, thermal, BMS) → PCS → Controls & Communication → System Integration → EPC → Project Development → **Grid Integration** (transformer, switchgear, interconnection to POI) → total installed cost; reported for **1, 10, 100, 1,000 MW** at **2, 4, 6, 8, 10, 24, 100 h** for LFP and NMC. `High`
+- 2022 report (2021$): **100 MW / 10-h LFP total installed $216/kWh, of which battery (SB) $78/kWh**; BESS LCOS for ≤10-h systems ~$200–400/MWh with LFP at the low end. `High`
+- **The 10 MW / 2-h and 10 MW / 4-h LFP total installed values (2021 and 2030) and the v2024 (2023$) values were NOT RETRIEVED.** They are in the report tables (2022 report §3 Li-ion; Tables 3.x) and in the interactive database. Because PNNL is the only public source with an explicit **1/10/100/1,000 MW size dimension** and an explicit **grid-integration line**, it is the best source for the size-premium question (§8) — pull the 10 MW vs 100 MW LFP rows directly.
+- PNNL v2024 database "represents 2023 values"; no accompanying report. `High`
+- PNNL also assessed the Nantucket system: "Nantucket Island Energy Storage System Assessment" (PNNL-28941, 2019), https://www.osti.gov/servlets/purl/1564262/ — cost breakdown NOT RETRIEVED.
+
+---
+
+## 6. Wood Mackenzie / ACP U.S. Energy Storage Monitor; Anza; tariffs and FEOC
+
+### 6.1 Wood Mackenzie / ACP system price series (utility-scale, $/kW; 4-h implied)
+- Report pages: https://www.woodmac.com/reports/power-markets-us-energy-storage-monitor-q4-2025-150428758/ ; https://www.woodmac.com/reports/power-markets-us-energy-storage-monitor-q1-2026-and-2025-year-in-review-150449846/ ; https://www.woodmac.com/reports/power-markets-us-energy-storage-monitor-q2-2026-150481323/ ; US pricing report H1 2025 https://www.woodmac.com/reports/power-markets-us-utility-scale-energy-storage-pricing-report-h1-2025-150389667/ ; ACP landing https://cleanpower.org/resources/u-s-energy-storage-monitor/
+- Secondary: Utility Dive (Dec 2025) https://www.utilitydive.com/news/energy-storage-installations-capacity-battery-obbba/808115/ ; Utility Dive (Anza/WoodMac, 2026) https://www.utilitydive.com/news/energy-storage-pricing-anza-woodmac/816857/ ; Solar Power World (Sept 2026) https://www.solarpowerworldonline.com/2026/09/no-future-quarterly-declines-predicted-for-us-energy-storage-installation-market/ ; WoodMac press https://www.woodmac.com/press-releases/2025-u.s.-energy-storage-installations-set-new-record-surpass-2024-by-52
+- Figures: utility-scale system prices **rose 23% YoY from 2024 to 2025** (tariff pass-through; H1/Q2-Q3 2025 reports), then the Q4 2025 report shows **$1,050/kW → $938/kW (−11% YoY)**, and Q2 2026: **$916/kW (−2% YoY)**. WoodMac "system price" = turnkey (DC block + PCS + BOS + EPC) for a 4-h utility-scale project; excludes interconnection/network upgrades and owner's costs (definition not re-verified this session). `Medium`
+- 2025 US installs: 18.9 GW (+52%); WoodMac projects an **11% contraction in utility-scale in 2026 and −8% in 2027** due to FEOC/tariff supply-chain adjustment, then double-digit growth 2028–29. `Medium`
+
+### 6.2 Anza Renewables (transaction-based equipment pricing, delivered incl. tariffs/duties; **no EPC/civil/interconnection**)
+- https://www.anzarenewables.com/energy-storage-pricing-insights/ ; Q2 2025 coverage: https://www.energy-storage.news/anza-q2-pricing-report-shows-impact-of-tariffs-on-us-storage/ ; https://pv-magazine-usa.com/2025/06/10/battery-energy-storage-prices-spike-in-q2-2025/
+- **Jan→May 2025 (tariff shock): AC system prices +$115.70/kWh (+68%); DC +$90/kWh (+68%)**; utility-scale AC +56%. Sharpest jump since 2021. `Medium`
+- **Q1 2026**: utility-scale prices fell 8.6% since Nov 2025 and 20.9% since May 2025; **distribution-scale prices flat at ≈$203/kWh (AC) and ≈$175/kWh (self-integrated DC)**, ~14% below May 2025 — suppliers prioritising large data-center/IPP orders and treating distribution-scale as "an afterthought." **This is the most directly relevant equipment benchmark for a 10 MW/20 MWh distribution-connected project.** `Medium`
+
+### 6.3 Tariffs on Chinese LFP cells/modules (stationary storage), status as of Sept 2026
+- Section 301 (List 4/battery HTS): **7.5% → 25% on lithium-ion non-EV batteries effective Jan 1, 2026** (covers cells, modules, cubes). Sources: Morgan Lewis (Mar 2026) https://www.morganlewis.com/pubs/2026/03/tariffs-and-trade-risk-in-energy-storage-projects-2026-and-beyond ; Fluence https://blog.fluenceenergy.com/impact-us-tariffs-energy-storage-industry ; Fluence 10-K FY2025 https://www.sec.gov/Archives/edgar/data/1868941/000186894125000081/flnc-20250930.htm. `High` (10-K text)
+- Stack in 2025 (per Fluence 10-K): 3.4% MFN base + Section 301 + 10% China "reciprocal" (IEEPA) + 20% "fentanyl" (IEEPA) → trade press cited **40.9% (2025) rising to 58.4% (2026)** for Chinese ESS batteries (https://battery-tech.net/battery-markets-news/u-s-raises-section-301-duties-on-chinese-ess-batteries/). `Medium`
+- **On Feb 20, 2026 the U.S. Supreme Court held IEEPA does not authorize tariffs; IEEPA-based (reciprocal + fentanyl) tariffs were invalidated. Section 301 unaffected.** (Morgan Lewis / SEC 10-Q excerpts.) Post-ruling statutory stack on Chinese cells ≈ 3.4% + 25% = **~28.4%** plus any AD/CVD; replacement tariffs under other authorities (Section 232 "national security" on battery materials/systems, Section 122) are flagged as live risks by Anza and Morgan Lewis. `Medium`
+- **AD/CVD on Chinese active anode material (graphite)**: preliminary CVD 11.58% (May 2025); preliminary AD 93.5% (separate rate) / 102.72% (adverse) (July 2025) — affects cells made with Chinese AAM regardless of cell origin. `Medium`
+- Cost-impact estimates: Anza measured +56–68% on delivered system prices Jan→May 2025 (§6.2); industry estimates of 30–50% project-cost impact under steep-tariff scenarios (EnergyTech, https://www.energytech.com/energy-storage/article/55261236/tariff-threats-energy-storage-prices-could-rise-35-or-more-under-hikes) `Low`; ESS News (Apr 2026): despite lithium +102% and LFP cells +15–30%, total US/DE/CN project capex rose <15% because cells are now only **25–45% of BESS capex** (https://www.ess-news.com/2026/04/29/the-battery-cost-disconnect/). `Medium`
+- Import data: US battery imports fell to a five-year low after the 25% rate (Benchmark Mineral Intelligence, https://source.benchmarkminerals.com/article/us-battery-imports-fall-to-five-year-low-after-section-301-tariffs-raised-to-25-). `Medium`
+
+### 6.4 FEOC / Prohibited Foreign Entity rules (OBBBA, enacted July 4, 2025) — affects ITC (§48E) eligibility, hence net cost
+- Sources: Foley Hoag (Jul 2026) https://foleyhoag.com/news-and-insights/blogs/energy-and-climate-counsel/2026/july/the-prohibited-foreign-entity-(or-feoc)-rules-and-battery-storage/ ; Morgan Lewis https://www.morganlewis.com/pubs/2026/03/how-feoc-rules-are-reshaping-energy-storage-tax-credit-eligibility ; Baker Botts / Novogradac / Bracewell on IRS **Notice 2026-15 (Feb 12, 2026)**.
+- **Material Assistance Cost Ratio (MACR)** for energy storage technology: non-PFE share of direct equipment cost must be **≥55% for projects beginning construction in 2026, rising 5 pts/yr to ≥75% for 2030+**. MACR = (A − B)/A where A = direct cost of all manufactured products/components, B = cost attributable to PFEs. Projects that began construction (tax definition) by Dec 31, 2025 are exempt. `Medium`
+- A Dec-2028 in-service project that begins construction in 2027 needs **≥60% non-PFE** content (2027 threshold) — i.e., cells/DC blocks from a non-Chinese-controlled supply chain (US, Korea, Japan, SE Asia, or non-PFE Chinese-licensed US plants), which currently carry a price premium over Chinese LFP (domestic ESS cells $85–90/kWh vs Chinese ~$60–70 ex-works pre-tariff; `Low`). Lazard (2026) attributes part of its 2026 LCOS increase to FEOC-driven diversification. `Medium`
+- Utility-owned (rate-based) storage may claim the §48E ITC via elective pay only if the utility is a tax-exempt/applicable entity; for IOUs the ITC flows through normalization — the FEOC test still applies to the credit. (Legal point; not a cost figure.)
+
+---
+
+## 7. Northeast / Massachusetts / ISO-NE data points and other regulated-utility BESS costs
+
+### 7.1 Massachusetts utility-owned BESS (Mass.gov list: https://www.mass.gov/info-details/utility-owned-large-scale-battery-energy-storage)
+| Project | Size | Cost | $/kWh, $/kW (derived) | Scope / notes | Sources | Conf. |
+|---|---|---|---|---|---|---|
+| **Eversource Outer Cape BESS, Provincetown** (D.P.U. 17-05, pp. 455–471) | 24.9 MW / 38 MWh (≈1.5 h), NMC-era Li-ion, distribution-connected microgrid at town transfer station, backs up 13-mile circuit 96 from Wellfleet substation to ~11,000 customers | DPU-approved budget **$35–45M**; **final cost $49M**; in service May 31 / Dec 1, 2022 | **$1,289/kWh; $1,968/kW** | Utility capital: batteries, PCS, site civil, controls/microgrid islanding, interconnection, project overheads; deferred a 13-mile distribution line rebuild. A 2019 commentary computed ~$1,350/kWh on the $50M/37 MWh approval basis. DOE OCED awarded up to **$19.5M** (of a $69M 5-yr program) in 2024 to extend the microgrid/DERMS benefits | https://www.utilitydive.com/news/eversource-advances-cape-cod-battery-project-defers-13-mile-distribution-l/552171/ ; https://provincetownindependent.org/tag/battery-energy-storage-system/ ; https://www.mass.gov/info-details/utility-owned-large-scale-battery-energy-storage ; https://www.tdworld.com/distributed-energy-resources/energy-storage/news/55237508/... ; https://protoventures.substack.com/p/giant-batteries-for-a-more-resilient | High (cost), Medium (scope) |
+| **Eversource Martha's Vineyard (Oak Bluffs)** — cancelled May 17, 2021 | Ph1 4.9 MW / 20 MWh; Ph2 9.8 MW / 64 MWh (D.P.U. 18-155) | Ph1 est. **$15M**; Ph2 est. **$28M**; total $43M | Ph1 **$750/kWh, $3,061/kW**; Ph2 **$438/kWh, $2,857/kW** | 2018–19 utility estimates, indoor two-story building at service center; Eversource withdrew after finding it "no longer a good financial investment" | https://www.microgridknowledge.com/distributed-energy/article/11429907/eversource-pushes-ahead-with-147-mw-battery-project-on-marthas-vineyard ; https://www.mass.gov/info-details/utility-owned-large-scale-battery-energy-storage | Medium |
+| **National Grid Nantucket "IslandReady"** (D.P.U. 17-13 area; Tesla) | 6 MW / 48 MWh (8-h) | **$81M** total for BESS **+ 15 MW diesel generator + power control house**; commissioned Oct 2019; avoided ~$200M third submarine cable | Not separable; if the whole $81M were battery it would be $1,688/kWh — actual battery share is lower but undisclosed | Utility capital incl. generator, controls, site, interconnection | https://www.utilitydive.com/news/Tesla-national-grid-battery-energy-storage-8hour-long-duration-diesel-generation-system-nantucket/564428/ ; https://www.renewableenergyworld.com/energy-storage/battery/6-mw-48-mwh-battery-storage-system-unveiled-on-nantucket-island-in-massachusetts/ | High (total), n/a (battery-only) |
+| **National Grid MA proposal (2018 rate case)** | 14 MW / 56 MWh | **$50M** proposed, recovery via existing mechanisms | **$893/kWh; $3,571/kW** | 2018 estimate; build status not confirmed in this research | https://www.sec.gov/Archives/edgar/data/0001004315/000100431518000103/a6kannouncments16nov10de.htm | Medium |
+| National Grid Grafton (at NGrid-owned solar) | 3.075 MW / 8.071 MWh | not disclosed | – | | Mass.gov page | – |
+| **Unitil Townsend substation** (2021) | 2 MW / 4 MWh | total not disclosed; **$1.2M state grant** | – | Purpose: substation upgrade deferral | https://unitil.com/energy-projects/battery-storage-system ; Mass.gov | Medium |
+| Eversource ESMP 2025-29 (D.P.U. 24-10) | 1 MW / 2 MWh mobile BESS, Springfield | not retrieved | – | Utility-owned; DPU capped first-term ESMP incremental spend at $139.05M (July 3, 2025) | https://www.mass.gov/doc/esmp-phase-ii-order-0/download | Medium |
+
+**Observations for the Boston comparison:** the only completed, cost-disclosed, distribution-connected utility-owned BESS in Massachusetts (Provincetown) came in at ~$1,290/kWh / ~$1,970/kW in 2019–22 dollars for a 1.5-h system — 3–4× the contemporaneous NREL/EIA all-in benchmarks — reflecting island/outer-Cape logistics, microgrid islanding scope, small size and utility overheads. The cancelled Martha's Vineyard Phase 2 estimate (~$438/kWh for 6.5-h) is closer to national benchmarks, showing how strongly duration drives $/kWh.
+
+### 7.2 Massachusetts policy/market context (not capex, but relevant)
+- MA Section 83E mid-duration storage procurement (DOER + EDCs): first RFP July 31, 2025; **1,268 MW selected Dec 2025** (FlatIron Energy "Energizar" and "Salt Cod", Rhynland "River Mill Storage", Jupiter Power "Trimount ESS"); target 5 GW by 2030. **Contract prices not disclosed.** https://www.energy-storage.news/massachusetts-selects-1-2gw-of-bess-through-rfp/ ; https://pv-magazine-usa.com/2025/12/23/massachusetts-awards-1-3-gw-in-landmark-energy-storage-tender/ `Medium`
+- Clean Peak Energy Standard: ACP rate $45/MWh (to 2025), **$65/MWh 2025–2032**, $45 after (https://www.tyba.ai/resources/guides/massachusetts-cps-rfp-2025/). `Medium`
+- ISO-NE Transitional Cluster Study (Oct 2025): 26 requests, ~8 GW, **21 BESS**, mostly in MA; completion Aug 2026; first full cluster window Oct 5–Nov 19, 2026 (https://isonewswire.com/2025/10/20/iso-ne-begins-interconnection-transitional-cluster-study/). A distribution-connected 10 MW unit avoids the ISO queue but still needs an ISO-NE Section I.3.9 review if it affects the transmission system. `Medium`
+- Modo Energy (Jul 2026): ISO-NE expected build through 2029 includes 1,793 MW BESS; 76% of committed ISO-NE battery capacity is in MA due to Clean Peak. `Medium`
+- Eversource's Massachusetts distribution interconnection for storage (ConnectedSolutions, SMART) is not a capex benchmark; no MA DOER/DPU published $/kWh installed-cost analysis for utility-scale storage was found in this research beyond the "State of Charge" (2016) study (https://www.mass.gov/media/6441/download), which is dated.
+
+### 7.3 Other regulated-utility, utility-owned BESS with disclosed costs
+| Utility / project | Size | Cost | $/kWh, $/kW (derived) | Scope | Source | Conf. |
+|---|---|---|---|---|---|---|
+| **Hawaiian Electric — Waena BESS, Maui** (PUC approved Dec 2023) | 40 MW / 160 MWh (4-h), Tesla Megapack (54 units), standalone at utility site; ISD 2027 | **$82.1M approved**; utility seeking increase for tariff exposure (Tesla final BOM pricing fixed 30 days before shipment, ~July 2026) | **$513/kWh; $2,053/kW** | Purchase + installation of the BESS; site/interconnection at utility-owned Waena site | https://www.energy-storage.news/hawaiian-electric-requests-funds-with-tariffs-expected-to-drive-up-cost-of-tesla-bess/ ; https://www.mauinews.com/news/local-news/2020/09/heco-seeks-approval-for-battery-project/ ; https://mauinow.com/2026/09/21/... | High (approved $) |
+| **NV Energy — Reid Gardner BESS** (Energy Vault EPC; COD Dec 23, 2023) | 220 MW / 440 MWh (**2-h**) at former coal site (existing switchyard) | **$257M** construction | **$584/kWh; $1,168/kW** | EPC incl. site, using existing interconnection; NV Energy-owned | https://en.wikipedia.org/wiki/Reid_Gardner_Battery_Energy_Storage_System ; https://www.businesswire.com/news/home/20240425206995/en/... | Medium |
+| **SCE — Ameresco utility-owned BESS** (CPUC approved Dec 2021, emergency procurement) | 537.5 MW / 2,150 MWh (4-h) at Springvale (225 MW), Hinson (200 MW), Etiwanda (112.5 MW) substations | **$1.226B** EPC + maintenance contract | **$570/kWh; $2,281/kW** | EPC + multi-year maintenance; sited at existing SCE substations (interconnection cost minimized); built under 2021 emergency timelines/premiums | https://www.cpuc.ca.gov/news-and-updates/all-news/cpuc-approves-energy-storage-contract-for-sce ; https://www.utilitydive.com/news/sces-12b-grid-reliability-storage-contract-receives-approval-from-regula/611765/ | High |
+| **PG&E — Elkhorn (Moss Landing)** | 182.5 MW / 730 MWh (4-h), 256 Megapacks, 115 kV | cost **not publicly disclosed** | – | PG&E-owned; CPUC approved Nov 2018; energized Apr 2022 | https://investor.pgecorp.com/... | – |
+| **Green Mountain Power (VT)** | Stafford Hill 4 MW/3.4 MWh (2015); Panton 1 MW/4 MWh (2019); Essex 2 MW battery + 4.5 MW solar ≈ $14.3M total (not separable) | n/a | – | | https://www.utilitydive.com/news/vermont-regulators-advance-first-of-3-green-mountain-power-solar-plus-stora/547052/ | Low |
+| Ameren Missouri / APS / SRP | Utility-owned programs announced (Ameren 400 MW at Big Hollow; APS 650 MW; SRP 338 MW) | no per-project cost disclosed in accessible sources; Ameren 2020 IRP cited **$380/kWh (60 MW, 4-h, 2018)** of which $209/kWh battery | – | IRP planning assumption | https://efis.psc.mo.gov/Document/Display/56222 | Medium |
+
+---
+
+## 8. Interconnection + substation + civil ("balance of plant beyond the battery") share, and small-project premium
+
+Quantified statements found (best first):
+1. **LBNL ISO-NE study (2023)**: storage interconnection cost averaged **$230/kW** in ISO-NE (2018–21 requests); completed projects far lower (mean $114–134/kW); 40% of completed projects <$20/kW. For 10 MW/20 MWh: **$230/kW ≈ $115/kWh ≈ 25–35% of an all-in cost of $330–460/kWh** (derived). `High` for the $/kW; `Low` for the share.
+2. **Ember (Dec 2025)**: installation + grid connection ≈ **$50/kWh typical, $30–100/kWh range**, on top of ~$75/kWh equipment → **~40% of all-in ($125/kWh) outside China/US**; grid connection is "the largest variation in costs." `Medium`
+3. **ESS News / pv magazine "The battery cost disconnect" (Apr 2026)**: cells + modules are **25–45% of total BESS capex in 2026**; BOS, interconnection and execution/soft costs take the rest. `Medium`
+4. **BNEF vs all-in**: US turnkey $219/kWh (2025) vs LBNL empirical all-in $458/kWh (2024) and NREL $334/kWh (2024) — the gap (~$115–240/kWh) is the non-turnkey scope: interconnection/network upgrades, land/site civil, owner's costs, development, financing, and sample-mix (small, short-duration, island projects). `Medium` (arithmetic on Medium/High inputs).
+5. **The Battery Magazine (trade)**: "Balance of Plant typically represents **15–30%** of total project cost" (civil, MV switchgear, cabling, aux power, HVAC, fencing, fire, grid-connection infrastructure). https://www.thebatterymagazine.com/balance-of-plant-for-battery-storage-everything-beyond-the-battery/ `Low`
+6. Trade-blog claims that BOS + EPC civil + grid-connection fees are 45–55% of budget and soft costs 25–35% (https://nextgpower.com/..., https://howtostoreelectricity.com/...) — **unsourced; do not cite.** `Low`
+7. Ameren 2020 IRP: battery = $209/kWh of $380/kWh (55%) in 2018 → non-battery 45%. `Medium`
+
+Size premium (10–20 MW vs 100+ MW):
+- **No primary source with a clean 10 MW vs 100 MW installed-cost ratio was retrieved.** PNNL's database (§5.2) is the primary source that tabulates 1/10/100/1,000 MW LFP costs — pull the 10 MW/2-h vs 100 MW/2-h rows (2023 values) from https://www.pnnl.gov/projects/esgc-cost-performance/estimates. From memory of the 2020/2022 PNNL reports the 10 MW → 100 MW step reduces total installed $/kWh by roughly 10–15% for Li-ion (economies in PCS, EPC, dev and grid-integration), but this was **not verified this session** (`Low`).
+- BNEF 2025: DC blocks ≥4 MWh are 39% cheaper than 2–4 MWh blocks; ≥300 Ah cells 50% cheaper than small cells — a scale effect at the block level that a 20 MWh project can still capture (5 × 4 MWh blocks). `Medium`
+- Anza Q1 2026: distribution-scale delivered system pricing (~$175–203/kWh) sits **above** utility-scale pricing, and fell less (0% vs −8.6% since Nov 2025) — a measured small-project equipment premium. `Medium`
+- Trade-blog claim "100 MWh→1 GWh compresses $450→$320/kWh" (GreentechLead) — unsourced. `Low`
+- Empirical small-utility examples above (Provincetown $1,289/kWh at 38 MWh; MV Ph1 $750/kWh at 20 MWh; NGrid $893/kWh at 56 MWh) versus large utility-owned (Reid Gardner $584/kWh at 440 MWh 2-h; SCE $570/kWh at 2,150 MWh; Waena $513/kWh at 160 MWh) illustrate a 1.5–2.5× premium for ≤60 MWh distribution projects, though vintage, duration and site conditions confound the comparison. `Low` (inference).
+
+---
+
+## 9. Trend narrative 2021–2026 (with sources)
+
+1. **2021 → 2022: first-ever cost increase.** Lithium carbonate spiked to **~$81,000/t (Dec 2022)** from <$10k/t in 2020 (SMM, Benchmark; https://news.metal.com/newscontent/102612413/...). BNEF pack prices rose **+7% to $151/kWh (2022)**, with **LFP +27%** because LFP is most exposed to carbonate. BNEF turnkey systems saw an "unprecedented increase" in 2022. Freight, PCS lead times, and post-COVID EPC labor inflation added to installed cost; Lazard says costs rose 2021–2024. Anza calls 2021–22 the previous largest price lift. `Medium`
+2. **2023: sharp decline.** Lithium carbonate fell **>80%** during 2023 (to ~96,900 CNY/t; ~$13k/t by Jan 2024). BNEF pack **−14% to $139/kWh**; turnkey **−24% to $263/kWh**. EIA-860 installed cost for 2023 COD projects: **$1,361/kW** (down ~24% from $1,796/kW in 2021). `Medium/High`
+3. **2024: cell overcapacity drives steep declines in equipment; all-in U.S. cost lags.** BNEF pack **−20% to $115/kWh**; turnkey **−40% to $165/kWh** global, **US $236/kWh**; Chinese LFP cells <$60/kWh. Yet LBNL's empirical U.S. all-in battery capex was **$458/kWh in 2024**, and NREL's Q1-2024 bottom-up all-in benchmark was **$334/kWh (4-h)** — evidence that U.S. installed costs are dominated by non-cell scope (interconnection, EPC labor, tariffs, development). `Medium/High`
+4. **2025: tariff shock then partial unwind; global prices keep falling.** Anza: US delivered system prices **+56–68% Jan→May 2025** as IEEPA reciprocal/fentanyl tariffs and Section 301 stacked to ~41%; WoodMac: US utility-scale system prices **+23% YoY** mid-2025, then **$938/kW (−11%)** by Q4 2025 as tariffs were paused/reduced and suppliers absorbed costs. Globally BNEF turnkey fell **−31% to $117/kWh**; stationary pack **$70/kWh**; **US $219/kWh** (−7% vs 2024). Lazard v11 (June 2025) showed LCOS declines "offsetting" the 2021–24 increases. OBBBA (July 4, 2025) enacted FEOC/MACR rules effective for construction starts from 2026. `Medium`
+5. **2026: Section 301 to 25%; IEEPA tariffs struck down; FEOC binds; lithium rebounds; U.S. market contracts.** Section 301 on non-EV Li-ion rose to **25% on Jan 1, 2026**; the Supreme Court invalidated IEEPA tariffs on **Feb 20, 2026** (statutory stack ≈ 28.4% + AD/CVD on Chinese anode material at ~93–103% AD). IRS Notice 2026-15 (Feb 12, 2026) implemented the ≥55% MACR. Lithium carbonate rose >100% in six months and LFP cells +15–30% (spring 2026), but system capex rose <15% because cells are 25–45% of capex. WoodMac Q2 2026: US utility-scale **$916/kW (−2% YoY)**; utility-scale segment forecast **−11% in 2026, −8% in 2027**, recovery 2028–29 as domestic/non-PFE cell capacity (Korean/Japanese/US LFP plants) comes online. Lazard 2026: 4-h LCOS back up to ~$210–292/MWh, citing FEOC-driven supply-chain diversification. Anza Q1 2026: distribution-scale equipment ≈ $175–203/kWh, flat. `Medium`
+6. **Interconnection timelines/costs (structural, not cyclical).** LBNL: ISO-NE interconnection costs roughly doubled 2018–21 vs 2010–17; storage averages $230/kW. ISO-NE's first cluster study (26 projects/8 GW, 21 BESS) completes Aug 2026 with the next window Oct–Nov 2026 — a Dec-2028 COD for a transmission-connected project would be tight; a **distribution-connected 10 MW** unit under Eversource's interconnection tariff avoids the ISO cluster but still faces EDC study queues, a likely dedicated 13.8 kV feeder/bay, and ISO-NE I.3.9 review. `Medium`
+
+---
+
+## 10. Implications for a 10 MW / 20 MWh, Boston, Dec-2028 estimate (analyst synthesis — not a source figure)
+
+- **Equipment (DC blocks + PCS, delivered, FEOC-compliant, post-tariff), 2026 basis:** Anza distribution-scale ≈ **$175–203/kWh**; BNEF US turnkey (incl. integration/installation) **$219/kWh (2025)** trending to **$108/kWh by 2035** (BNEF). A FEOC-compliant (non-PFE cell) premium and the 25% Section 301 rate on any Chinese content push the 2027 procurement basis toward the upper end. `Medium`
+- **All-in (owner's cost, incl. interconnection, substation work, civil, EPC, development, contingency; ex-AFUDC):** national empirical/modeled range **$334/kWh (NREL 2024, 4-h, 60 MW) – $436/kWh (EIA/S&L 2023$, 4-h, 150 MW) – $458/kWh (LBNL 2024 empirical hybrids, 3.3-h)**. Converting to 2-hour: NREL's own structure (pack $/kWh × h + BOS $/kW) implies a **2-h system runs roughly 1.3–1.5× the 4-h $/kWh** (the $/kW BOS/PCS/interconnection term is spread over half the MWh); with a $230/kW ISO-NE-type interconnection allowance and NE labor, a 2-h distribution-connected unit plausibly lands **$450–650/kWh ($900–1,300/kW)** in 2025–26 dollars before AFUDC and utility loaders. Recent disclosed utility-owned 2-h to 4-h projects at existing sites (Reid Gardner $584/kWh 2-h; SCE $570/kWh; Waena $513/kWh) bracket the middle of that range; MA's Provincetown ($1,289/kWh, 1.5-h, microgrid scope) marks the high end. `Low` (synthesis).
+- **What to pull directly before filing** (blocked this session): NREL ATB 2025 workbook 2-h/4-h $/kW and $/kWh (2024$, Moderate 2028); Lazard v11 capex $/kWh input table; PNNL v2024 LFP 10 MW/2-h vs 100 MW/2-h rows (with grid-integration $/kW); EIA-860 2024 installed-cost release (Sept 2026); S&L AEO2025 BESS component table and New England regional factor; NREL Q1-2024 standalone ESS component table; BNEF 2025 ESS survey turnkey scope definition.
+
+---
+
+## Source URL index (primary first)
+- NREL Cole et al. 2025 Update PDF: https://docs.nrel.gov/docs/fy25osti/93281.pdf ; OSTI https://www.osti.gov/biblio/2583471
+- NREL Cole & Karmakar 2023 Update: https://docs.nrel.gov/docs/fy23osti/85332.pdf
+- NREL ATB 2025 battery: https://atb.nrel.gov/electricity/2025/utility-scale_battery_storage ; ATB 2024: https://atb.nrel.gov/electricity/2024/utility-scale_battery_storage
+- NREL Ramasamy Q1 2023 benchmark: https://docs.nrel.gov/docs/fy23osti/87303.pdf ; Q1 2024 dataset: https://data.nrel.gov/submissions/307 ; Q1 2025 dataset: https://data.nlr.gov/submissions/304
+- NREL Storage Futures (Augustine & Blair 2021): https://docs.nlr.gov/docs/fy21osti/78694.pdf
+- EIA generator construction costs (2023 data): https://www.eia.gov/electricity/generatorcosts ; EIA-860: https://www.eia.gov/electricity/data/eia860/
+- EIA/S&L AEO2025 capital cost report: https://www.eia.gov/analysis/studies/powerplants/capitalcost/pdf/capital_cost_AEO2025.pdf
+- EIA Today in Energy (2015–18 battery costs): https://www.eia.gov/todayinenergy/detail.php?id=45596
+- Lazard LCOE+ June 2024: https://www.lazard.com/media/xemfey0k/lazards-lcoeplus-june-2024-_vf.pdf ; June 2025: https://www.lazard.com/media/5tlbhyla/lazards-lcoeplus-june-2025-_vf.pdf ; 2026 PR: https://www.lazard.com/news-announcements/lazard-releases-2026-levelized-cost-of-energyplus-report-pr/
+- BNEF pack survey 2025: https://about.bnef.com/insights/clean-transport/lithium-ion-battery-pack-prices-fall-to-108-per-kilowatt-hour-despite-rising-metal-prices-bloombergnef/ ; 2024: https://about.bnef.com/insights/commodities/lithium-ion-battery-pack-prices-see-largest-drop-since-2017-falling-to-115-per-kilowatt-hour-bloombergnef/ ; 2023: https://about.bnef.com/insights/clean-energy/lithium-ion-battery-pack-prices-hit-record-low-of-139-kwh/ ; 2022: https://about.bnef.com/insights/commodities/lithium-ion-battery-pack-prices-rise-for-first-time-to-an-average-of-151-kwh/
+- BNEF ESS cost survey 2025: https://www.bnef.com/insights/38229 ; 2024: https://www.bnef.com/insights/35543 ; 2023: https://www.bnef.com/insights/33081
+- Ember: https://ember-energy.org/latest-insights/how-cheap-is-battery-storage/
+- LBNL Utility-Scale Solar 2025: https://emp.lbl.gov/sites/default/files/2025-10/Utility%20Scale%20Solar%202025%20Edition%20Slides.pdf ; LBNL ISO-NE interconnection: https://eta-publications.lbl.gov/sites/default/files/iso-ne_interconnection_costs_vfinal.pdf
+- PNNL database: https://www.pnnl.gov/projects/esgc-cost-performance ; 2022 report: https://www.pnnl.gov/sites/default/files/media/file/ESGC%20Cost%20Performance%20Report%202022%20PNNL-33283.pdf
+- Wood Mackenzie/ACP: https://cleanpower.org/resources/u-s-energy-storage-monitor/ ; https://www.utilitydive.com/news/energy-storage-installations-capacity-battery-obbba/808115/ ; https://www.utilitydive.com/news/energy-storage-pricing-anza-woodmac/816857/
+- Anza: https://www.anzarenewables.com/energy-storage-pricing-insights/ ; https://www.energy-storage.news/anza-q2-pricing-report-shows-impact-of-tariffs-on-us-storage/
+- Tariffs/FEOC: https://www.morganlewis.com/pubs/2026/03/tariffs-and-trade-risk-in-energy-storage-projects-2026-and-beyond ; https://www.sec.gov/Archives/edgar/data/1868941/000186894125000081/flnc-20250930.htm ; https://foleyhoag.com/news-and-insights/blogs/energy-and-climate-counsel/2026/july/the-prohibited-foreign-entity-(or-feoc)-rules-and-battery-storage/ ; https://www.projectfinance.law/publications/new-feoc-guidance-notice-2026-15
+- Massachusetts: https://www.mass.gov/info-details/utility-owned-large-scale-battery-energy-storage ; https://www.utilitydive.com/news/eversource-advances-cape-cod-battery-project-defers-13-mile-distribution-l/552171/ ; https://www.utilitydive.com/news/Tesla-national-grid-battery-energy-storage-8hour-long-duration-diesel-generation-system-nantucket/564428/ ; https://www.microgridknowledge.com/distributed-energy/article/11429907/eversource-pushes-ahead-with-147-mw-battery-project-on-marthas-vineyard ; https://www.energy-storage.news/massachusetts-selects-1-2gw-of-bess-through-rfp/ ; https://isonewswire.com/2025/10/20/iso-ne-begins-interconnection-transitional-cluster-study/
+- Other utilities: https://www.energy-storage.news/hawaiian-electric-requests-funds-with-tariffs-expected-to-drive-up-cost-of-tesla-bess/ ; https://www.cpuc.ca.gov/news-and-updates/all-news/cpuc-approves-energy-storage-contract-for-sce ; https://en.wikipedia.org/wiki/Reid_Gardner_Battery_Energy_Storage_System ; https://efis.psc.mo.gov/Document/Display/56222
