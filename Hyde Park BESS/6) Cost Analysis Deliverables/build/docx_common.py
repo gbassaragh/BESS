@@ -37,6 +37,8 @@ def table(d,headers,rows,widths=None,num_cols=(),font=9.5,header_fill="001E60",z
             set_cell_text(cells[i],txt,size=font,align=al,bold=bold)
             if zebra and ri%2==1: shade(cells[i],"F2F4F8")
     if widths:
+        t.autofit=False
+        for i,w in enumerate(widths): t.columns[i].width=Inches(w)
         for row in t.rows:
             for i,w in enumerate(widths): row.cells[i].width=Inches(w)
     d.add_paragraph().paragraph_format.space_after=Pt(2)

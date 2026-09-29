@@ -1,0 +1,560 @@
+{
+ "n_total": 26,
+ "projects_used": [
+  {
+   "project": "Outer Cape (Provincetown) BESS",
+   "state": "MA",
+   "owner_type": "IOU",
+   "mw": 25.0,
+   "mwh": 38.0,
+   "cod_year": 2022.0,
+   "cost_usd": 49000000,
+   "kwh": 1289.4736842105262,
+   "cost_basis": "final/actual (as reported)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Martha's Vineyard BESS Phase 1 (cancelled)",
+   "state": "MA",
+   "owner_type": "IOU",
+   "mw": 4.9,
+   "mwh": 20.0,
+   "cod_year": 2019.0,
+   "cost_usd": 15000000,
+   "kwh": 750.0,
+   "cost_basis": "estimate (DPU 18-155 filing)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Martha's Vineyard BESS Phase 2 (cancelled)",
+   "state": "MA",
+   "owner_type": "IOU",
+   "mw": 9.8,
+   "mwh": 64.0,
+   "cod_year": 2019.0,
+   "cost_usd": 28000000,
+   "kwh": 437.5,
+   "cost_basis": "estimate (DPU 18-155 filing)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Sterling MLD Chocksett Road BESS",
+   "state": "MA",
+   "owner_type": "muni/coop",
+   "mw": 2.0,
+   "mwh": 3.9,
+   "cod_year": 2016.0,
+   "cost_usd": 2700000,
+   "kwh": 692.3076923076923,
+   "cost_basis": "final/actual (as reported)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Pomona (Ladentown) BESS",
+   "state": "NY",
+   "owner_type": "IOU",
+   "mw": 3.0,
+   "mwh": 12.0,
+   "cod_year": 2021.0,
+   "cost_usd": 7400000,
+   "kwh": 616.6666666666666,
+   "cost_basis": "final/actual (utility press release)",
+   "confidence": "High"
+  },
+  {
+   "project": "Waena BESS (Maui)",
+   "state": "HI",
+   "owner_type": "IOU",
+   "mw": 40.0,
+   "mwh": 160.0,
+   "cod_year": 2027.0,
+   "cost_usd": 82100000,
+   "kwh": 513.125,
+   "cost_basis": "approved budget/estimate (HPUC Dec 2023)",
+   "confidence": "High"
+  },
+  {
+   "project": "Reid Gardner BESS",
+   "state": "NV",
+   "owner_type": "IOU",
+   "mw": 220.0,
+   "mwh": 440.0,
+   "cod_year": 2023.0,
+   "cost_usd": 257000000,
+   "kwh": 584.0909090909091,
+   "cost_basis": "final/actual (as reported)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Constable (Evergreen) BESS",
+   "state": "OR",
+   "owner_type": "IOU",
+   "mw": 75.0,
+   "mwh": 300.0,
+   "cod_year": 2024.0,
+   "cost_usd": 156000000,
+   "kwh": 520.0,
+   "cost_basis": "final/actual (Electric Utility Plant recorded incl. AFUDC, 10-K)",
+   "confidence": "High"
+  },
+  {
+   "project": "Seaside BESS",
+   "state": "OR",
+   "owner_type": "IOU",
+   "mw": 200.0,
+   "mwh": 800.0,
+   "cod_year": 2025.0,
+   "cost_usd": 360000000,
+   "kwh": 450.0,
+   "cost_basis": "contract price (fixed-cost build-transfer agreement, excl. AFUDC)",
+   "confidence": "High"
+  },
+  {
+   "project": "Northern New York (Chateaugay) BESS",
+   "state": "NY",
+   "owner_type": "other (state power authority)",
+   "mw": 20.0,
+   "mwh": 20.0,
+   "cod_year": 2023.0,
+   "cost_usd": 29800000,
+   "kwh": 1490.0,
+   "cost_basis": "approved budget (NYPA Trustees)",
+   "confidence": "High"
+  },
+  {
+   "project": "Ozone Park BESS",
+   "state": "NY",
+   "owner_type": "IOU",
+   "mw": 1.5,
+   "mwh": 12.0,
+   "cod_year": 2019.0,
+   "cost_usd": 15000000,
+   "kwh": 1250.0,
+   "cost_basis": "estimate (utility spokesman: 'about $15 million')",
+   "confidence": "Low"
+  },
+  {
+   "project": "Glacier BESS",
+   "state": "WA",
+   "owner_type": "IOU",
+   "mw": 2.0,
+   "mwh": 4.4,
+   "cod_year": 2016.0,
+   "cost_usd": 11200000,
+   "kwh": 2545.4545454545455,
+   "cost_basis": "final/actual (PSE $7.4M + $3.8M state grant)",
+   "confidence": "High"
+  },
+  {
+   "project": "Chugach BESS (Southcentral Power Project site)",
+   "state": "AK",
+   "owner_type": "muni/coop",
+   "mw": 40.0,
+   "mwh": 80.0,
+   "cod_year": 2024.0,
+   "cost_usd": 65000000,
+   "kwh": 812.5,
+   "cost_basis": "final/actual (as reported)",
+   "confidence": "High"
+  },
+  {
+   "project": "Trenton Channel Energy Center BESS",
+   "state": "MI",
+   "owner_type": "IOU",
+   "mw": 220.0,
+   "mwh": 880.0,
+   "cod_year": 2026.0,
+   "cost_usd": 460000000,
+   "kwh": 522.7272727272727,
+   "cost_basis": "approved estimate (MPSC, 2024)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Roadrunner Reserve (Phase 1)",
+   "state": "AZ",
+   "owner_type": "IOU",
+   "mw": 200.0,
+   "mwh": 800.0,
+   "cod_year": 2025.0,
+   "cost_usd": 294000000,
+   "kwh": 367.5,
+   "cost_basis": "estimate at announcement (2023)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Roadrunner Reserve 2 (Phase 2)",
+   "state": "AZ",
+   "owner_type": "IOU",
+   "mw": 200.0,
+   "mwh": 800.0,
+   "cod_year": 2026.0,
+   "cost_usd": 350000000,
+   "kwh": 437.5,
+   "cost_basis": "estimate (utility statement)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Harding Street BESS",
+   "state": "IN",
+   "owner_type": "IOU",
+   "mw": 20.0,
+   "mwh": 20.0,
+   "cod_year": 2016.0,
+   "cost_usd": 25000000,
+   "kwh": 1250.0,
+   "cost_basis": "estimate at announcement (2015)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Kingsbery Community Solar + Storage",
+   "state": "TX",
+   "owner_type": "muni/coop",
+   "mw": 1.5,
+   "mwh": 3.0,
+   "cod_year": 2016.0,
+   "cost_usd": 3000000,
+   "kwh": 1000.0,
+   "cost_basis": "final/actual (as reported)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Nova Scotia BESS portfolio (Bridgewater, Waverley, White Rock; 3 x 50 MW) [CANADA]",
+   "state": "NS (Canada)",
+   "owner_type": "IOU",
+   "mw": 150.0,
+   "mwh": 600.0,
+   "cod_year": 2026.0,
+   "cost_usd": 258000000,
+   "kwh": 430.0,
+   "cost_basis": "approved budget (NSUARB) incl. AFUDC",
+   "confidence": "High"
+  },
+  {
+   "project": "Fairhaven BESS",
+   "state": "MD",
+   "owner_type": "IOU",
+   "mw": 2.5,
+   "mwh": 9.74,
+   "cod_year": 2023.0,
+   "cost_usd": 16161336,
+   "kwh": 1659.2747433264888,
+   "cost_basis": "final/actual (reported to MD PSC)",
+   "confidence": "High"
+  },
+  {
+   "project": "Stafford Hill Solar + Storage (Rutland)",
+   "state": "VT",
+   "owner_type": "IOU",
+   "mw": 4.0,
+   "mwh": 3.4,
+   "cod_year": 2015.0,
+   "cost_usd": 4200000,
+   "kwh": 1235.2941176470588,
+   "cost_basis": "final/actual (storage component)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Dalrymple ESCRI BESS [AUSTRALIA]",
+   "state": "SA (Australia)",
+   "owner_type": "IOU (regulated TNSP)",
+   "mw": 30.0,
+   "mwh": 8.0,
+   "cod_year": 2018.0,
+   "cost_usd": 22200000,
+   "kwh": 2775.0,
+   "cost_basis": "final/actual (as reported)",
+   "confidence": "High"
+  },
+  {
+   "project": "Oneida Energy Storage [CANADA]",
+   "state": "ON (Canada)",
+   "owner_type": "IPP",
+   "mw": 250.0,
+   "mwh": 1000.0,
+   "cod_year": 2025.0,
+   "cost_usd": 511000000,
+   "kwh": 511.0,
+   "cost_basis": "final/actual (reported ~C$700M vs C$800M budget)",
+   "confidence": "High"
+  },
+  {
+   "project": "SCE substation BESS portfolio (Springvale 225 MW, Hinson 200 MW, Etiwanda 112.5 MW)",
+   "state": "CA",
+   "owner_type": "IOU",
+   "mw": 537.5,
+   "mwh": 2150.0,
+   "cod_year": 2022.0,
+   "cost_usd": 1226000000,
+   "kwh": 570.2325581395348,
+   "cost_basis": "contract price (EPCM contract, CPUC-authorized Dec 2021)",
+   "confidence": "High"
+  },
+  {
+   "project": "Kwinana BESS Stage 1 [AUSTRALIA]",
+   "state": "WA (Australia)",
+   "owner_type": "other (state-owned utility)",
+   "mw": 100.0,
+   "mwh": 200.0,
+   "cod_year": 2023.0,
+   "cost_usd": 103500000,
+   "kwh": 517.5,
+   "cost_basis": "final (as reported)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "WindCharger [CANADA]",
+   "state": "AB (Canada)",
+   "owner_type": "IPP",
+   "mw": 10.0,
+   "mwh": 20.0,
+   "cod_year": 2020.0,
+   "cost_usd": 11000000,
+   "kwh": 550.0,
+   "cost_basis": "final/actual (total capital cost)",
+   "confidence": "Medium"
+  }
+ ],
+ "reference_class": {
+  "n": 13,
+  "median_kwh": 1235.2941176470588,
+  "q25": 750.0,
+  "q75": 1289.4736842105262,
+  "min": 437.5,
+  "max": 2775.0,
+  "hp_rank": {
+   "b3": 0.38461538461538464,
+   "b4": 0.7692307692307693,
+   "b6": 1.0,
+   "contract": 0.07692307692307693
+  },
+  "projects": [
+   {
+    "project": "Martha's Vineyard BESS Phase 2 (cancelled)",
+    "state": "MA",
+    "mw": 9.8,
+    "mwh": 64.0,
+    "cod_year": 2019.0,
+    "kwh": 437.5,
+    "cost_basis": "estimate (DPU 18-155 filing)"
+   },
+   {
+    "project": "Pomona (Ladentown) BESS",
+    "state": "NY",
+    "mw": 3.0,
+    "mwh": 12.0,
+    "cod_year": 2021.0,
+    "kwh": 616.6666666666666,
+    "cost_basis": "final/actual (utility press release)"
+   },
+   {
+    "project": "Sterling MLD Chocksett Road BESS",
+    "state": "MA",
+    "mw": 2.0,
+    "mwh": 3.9,
+    "cod_year": 2016.0,
+    "kwh": 692.3076923076923,
+    "cost_basis": "final/actual (as reported)"
+   },
+   {
+    "project": "Martha's Vineyard BESS Phase 1 (cancelled)",
+    "state": "MA",
+    "mw": 4.9,
+    "mwh": 20.0,
+    "cod_year": 2019.0,
+    "kwh": 750.0,
+    "cost_basis": "estimate (DPU 18-155 filing)"
+   },
+   {
+    "project": "Chugach BESS (Southcentral Power Project site)",
+    "state": "AK",
+    "mw": 40.0,
+    "mwh": 80.0,
+    "cod_year": 2024.0,
+    "kwh": 812.5,
+    "cost_basis": "final/actual (as reported)"
+   },
+   {
+    "project": "Kingsbery Community Solar + Storage",
+    "state": "TX",
+    "mw": 1.5,
+    "mwh": 3.0,
+    "cod_year": 2016.0,
+    "kwh": 1000.0,
+    "cost_basis": "final/actual (as reported)"
+   },
+   {
+    "project": "Stafford Hill Solar + Storage (Rutland)",
+    "state": "VT",
+    "mw": 4.0,
+    "mwh": 3.4,
+    "cod_year": 2015.0,
+    "kwh": 1235.2941176470588,
+    "cost_basis": "final/actual (storage component)"
+   },
+   {
+    "project": "Ozone Park BESS",
+    "state": "NY",
+    "mw": 1.5,
+    "mwh": 12.0,
+    "cod_year": 2019.0,
+    "kwh": 1250.0,
+    "cost_basis": "estimate (utility spokesman: 'about $15 million')"
+   },
+   {
+    "project": "Harding Street BESS",
+    "state": "IN",
+    "mw": 20.0,
+    "mwh": 20.0,
+    "cod_year": 2016.0,
+    "kwh": 1250.0,
+    "cost_basis": "estimate at announcement (2015)"
+   },
+   {
+    "project": "Outer Cape (Provincetown) BESS",
+    "state": "MA",
+    "mw": 25.0,
+    "mwh": 38.0,
+    "cod_year": 2022.0,
+    "kwh": 1289.4736842105262,
+    "cost_basis": "final/actual (as reported)"
+   },
+   {
+    "project": "Fairhaven BESS",
+    "state": "MD",
+    "mw": 2.5,
+    "mwh": 9.74,
+    "cod_year": 2023.0,
+    "kwh": 1659.2747433264888,
+    "cost_basis": "final/actual (reported to MD PSC)"
+   },
+   {
+    "project": "Glacier BESS",
+    "state": "WA",
+    "mw": 2.0,
+    "mwh": 4.4,
+    "cod_year": 2016.0,
+    "kwh": 2545.4545454545455,
+    "cost_basis": "final/actual (PSE $7.4M + $3.8M state grant)"
+   },
+   {
+    "project": "Dalrymple ESCRI BESS [AUSTRALIA]",
+    "state": "SA (Australia)",
+    "mw": 30.0,
+    "mwh": 8.0,
+    "cod_year": 2018.0,
+    "kwh": 2775.0,
+    "cost_basis": "final/actual (as reported)"
+   }
+  ]
+ },
+ "ols_parsimonious": {
+  "n": 26,
+  "r2": 0.6450733441856726,
+  "adj_r2": 0.5966742547564461,
+  "resid_sd": 0.36101066671198556,
+  "coef": {
+   "const": {
+    "b": 7.6193823307311686,
+    "se": 0.25244930281414385,
+    "p": 4.1017540105317787e-200
+   },
+   "ln_mwh": {
+    "b": -0.17311255876191164,
+    "se": 0.06919942874252533,
+    "p": 0.012361703368286835
+   },
+   "ln_dur": {
+    "b": -0.29237932864190025,
+    "se": 0.12165806568975608,
+    "p": 0.01624840008909876
+   },
+   "yr": {
+    "b": 0.014875516179327114,
+    "se": 0.03583000378142199,
+    "p": 0.6780179998876322
+   }
+  },
+  "hp_pred_kwh": {
+   "p50": 1115.5754770050157,
+   "pi80_lo": 611.0937639727337,
+   "pi80_hi": 2036.5265009487102
+  },
+  "hp_percentile": {
+   "b3": 0.26689850894113204,
+   "b4": 0.7279577616403305,
+   "b6": 0.9775964274961569,
+   "contract": 0.09647792323844273
+  }
+ },
+ "ols": {
+  "n": 26,
+  "r2": 0.6575112133166696,
+  "adj_r2": 0.571889016645837,
+  "resid_sd": 0.37193773895312526,
+  "coef": {
+   "const": {
+    "b": 7.634520384550666,
+    "se": 0.42852847514286707,
+    "p": 5.341785914865368e-71
+   },
+   "ln_mwh": {
+    "b": -0.19174239094487755,
+    "se": 0.07750613797614589,
+    "p": 0.013364731111572077
+   },
+   "ln_dur": {
+    "b": -0.27463432873909693,
+    "se": 0.14156420894880983,
+    "p": 0.05237989301663527
+   },
+   "yr": {
+    "b": 0.01599863288925362,
+    "se": 0.037694661863377346,
+    "p": 0.6712544209130379
+   },
+   "utility": {
+    "b": 0.09683238321231347,
+    "se": 0.28344627245235215,
+    "p": 0.7326329868945072
+   },
+   "ne": {
+    "b": -0.1343176666667778,
+    "se": 0.23985004520299175,
+    "p": 0.5754747699858578
+   }
+  },
+  "hp_pred_kwh": {
+   "p50": 1053.9004604046258,
+   "pi80_lo": 538.9490021509987,
+   "pi80_hi": 2060.874361039995
+  },
+  "hp_percentile": {
+   "b3": 0.32644833326109685,
+   "b4": 0.7431657048642945,
+   "b6": 0.9718967809260117,
+   "contract": 0.14463533074722523
+  }
+ },
+ "ols_utility_only": {
+  "n": 23,
+  "r2": 0.665559578495089,
+  "coef": {
+   "const": {
+    "b": 7.650548569187162,
+    "p": 3.535175009591225e-146
+   },
+   "ln_mwh": {
+    "b": -0.17863780076041935,
+    "p": 0.01994743956316511
+   },
+   "ln_dur": {
+    "b": -0.2839126384436419,
+    "p": 0.02259909328184341
+   },
+   "yr": {
+    "b": 0.011846261120067453,
+    "p": 0.7687237567885423
+   }
+  }
+ }
+}
