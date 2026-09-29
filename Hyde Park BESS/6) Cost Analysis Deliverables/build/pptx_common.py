@@ -43,11 +43,13 @@ def bullets(s,x,y,w,h,items,size=18,color=INK,gap=6,bullet_color=GOLD):
         else:
             r1=para.add_run(); r1.text=it; r1.font.size=Pt(size); r1.font.color.rgb=color; r1.font.name=BODY
     return tb
+SECTION=[""]
 def chrome(s,title,eyebrow=None,n=None,dark=False):
     bg=NAVY if dark else PAPER
     rect(s,0,0,W,H,bg)
     tc=WHITE if dark else NAVY
-    if eyebrow: text(s,0.6,0.28,11,0.3,eyebrow.upper(),size=11,bold=True,color=(GOLD if dark else BURG),font=BODY)
+    if eyebrow and SECTION[0]: eyebrow=f"{SECTION[0]}   |   {eyebrow}"
+    if eyebrow: text(s,0.6,0.28,12.1,0.3,eyebrow.upper(),size=11,bold=True,color=(GOLD if dark else BURG),font=BODY)
     text(s,0.6,0.52,12.1,0.95,title,size=23,bold=True,color=tc,font=HEAD,anchor=MSO_ANCHOR.TOP,line_spacing=1.0)
     text(s,0.6,7.02,9,0.3,FOOT,size=10,color=(MID if dark else GRAY))
     if n: text(s,12.0,7.02,0.75,0.3,str(n),size=10,color=(MID if dark else GRAY),align=PP_ALIGN.RIGHT)

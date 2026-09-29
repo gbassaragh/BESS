@@ -24,8 +24,9 @@ text(s,0.6,1.55,12,0.7,"“Why is a $12 million battery a $57 million project?�
 stat(s,0.6,2.7,3.9,2.4,"$12.1M","Vendor fixed-price contract","Nomad cover agreement, 10 Mar 2026. 12 Voyager LFP units, PCS, BMS, fire protection, 10-yr warranty. $605/kWh, $1,211/kW.")
 stat(s,4.72,2.7,3.9,2.4,"$57.2M","Project 21334 approval level","ESF Total Rev 3. Station 360 $50.0M plus Station 496 protection $7.3M. $2,862/kWh, $5,725/kW. Conceptual, -25%/+50%.",vcolor=BURG)
 stat(s,8.84,2.7,3.9,2.4,"21%","Battery share of the total","Add the D-Line circuit extension (24211, $4.8M conceptual) and the share drops to 20%. Four dollars of every five are not the battery.")
-text(s,0.6,5.4,12.1,1.4,[[("What this deck contributes: ",{"bold":True,"color":NAVY}),("a line-by-line extraction of the Rev 3 estimate into thirteen cost layers, unit costs at every boundary a benchmark could be quoted at, the cost history from the 2021 IFR to today, and the reconciliations that must close before full funding.",{})]],size=16)
-notes(s,"Three numbers. Vendor contract, approval level, share. Everything after this slide is proof.")
+text(s,0.6,5.4,12.1,1.2,[[("Three sections: ",{"bold":True,"color":NAVY}),("where the money sits (thirteen layers, unit costs, benchmarks); how the cost changed (2021 to today); can the number be defended (red team, stress tests, what must close).",{})]],size=16)
+notes(s,"Three numbers. Vendor contract, approval level, share. Everything after this slide is proof. CORE PATH for a 25-minute slot: slides 1, 2, 3, 6, 4, 7, 8, 9, 11, 15, 18, 22. Everything else is reachable from the appendix.")
+SECTION[0]="1 · WHERE THE MONEY SITS"
 # ---------------- 3 What the vendor prices vs what we build ----------------
 s=blank(p); n+=1; chrome(s,"What a vendor quote contains, and what it leaves for the utility",eyebrow="Two framings of the same project",n=n)
 rect(s,0.6,1.55,5.9,5.2,LIGHT); rect(s,6.85,1.55,5.9,5.2,LIGHT)
@@ -55,7 +56,7 @@ ca=ch.category_axis; ca.tick_labels.font.size=Pt(9); ca.format.line.color.rgb=MI
 text(s,0.6,6.65,12,0.35,"Gold = battery contract as carried in Rev 3 ($12.1M contract plus $1.1M escalation on the unpaid balance; see slide 12). Teal = station, site and feeder protection. Burgundy = risk, contingency, indirects, AFUDC. Total $57.2M.",size=11,color=GRAY)
 notes(s,"Read left to right. The battery contract is the first bar. Everything to its right is the utility's project.")
 # ---------------- 5 Layer table ----------------
-s=blank(p); n+=1; chrome(s,"Where the $57.2M sits when risk, contingency, indirects and AFUDC are spread",eyebrow="Loaded view: every layer carries its share of the loaders (factor 1.685 on Station 360 directs)",n=n)
+s=blank(p); n+=1; chrome(s,"Where the $57.2M sits when risk, contingency, indirects and AFUDC are spread",eyebrow="Loaded view, factor 1.685 on Station 360 directs",n=n)
 rows=[]
 for kk in sorted(LD.keys()):
     rows.append([kk[3:], f"${L[kk]/1e6:,.1f}M", f"${LD[kk]/1e6:,.1f}M", f"{LD[kk]/TOT:.0%}"])
@@ -76,8 +77,32 @@ ch.plots[0].gap_width=45; ch.category_axis.reverse_order=True; ch.category_axis.
 table(s,8.35,1.55,4.4,3.6,["Boundary","$/kW","$/kWh","x"],[[ "Vendor contract","$1,211","$605","1.0x"],["Battery installed","$1,666","$833","1.4x"],["Sta 360 approval","$4,999","$2,500","4.1x"],["Project 21334","$5,725","$2,862","4.7x"],["Incl. D-Line","$6,204","$3,102","5.1x"]],col_w=[1.7,0.9,0.9,0.9],size=12,align_right=(1,2,3))
 text(s,8.35,5.3,4.4,1.5,"A benchmark is only meaningful against the row that matches its definition. Pack and DC-block prices belong beside the top bar; NREL and EIA installed costs beside 'battery installed' or 'station complete'; nothing published includes a utility's own indirects and AFUDC.",size=12.5,color=GRAY)
 notes(s,"This is the slide that ends the argument. The multiple between the vendor line and the approval level is 4.7x, and each step between them is a named scope.")
+# ---------------- 13 Interconnection & station ----------------
+s=blank(p); n+=1; chrome(s,"Station and interconnection: $18.3M loaded, none of it in a vendor quote",eyebrow="What it takes to put 10 MW on four 13.8 kV feeders",n=n)
+ic=[("Station 360 switching facilities (D)",LD["D. Station 360 13.8 kV switching & interconnection facilities"]),("Site development on landfill (E)",LD["E. Site development & civil (former landfill site)"]),("Station 496 protection (F)",F)]
+cd=CategoryChartData(); cd.categories=[c for c,_ in ic]+["D-Line 24211 (memo)"]; cd.add_series("Loaded $M",[round(v/1e6,2) for _,v in ic]+[round(DLINE/1e6,2)])
+gf=s.shapes.add_chart(XL_CHART_TYPE.BAR_CLUSTERED,Inches(0.5),Inches(1.5),Inches(6.4),Inches(3.2),cd); ch=gf.chart; style_chart(ch,legend=False,size=11)
+sr=ch.series[0]; 
+for i,pt in enumerate(sr.points): pt.format.fill.solid(); pt.format.fill.fore_color.rgb = MID if i==3 else TEAL
+sr.data_labels.show_value=True; sr.data_labels.number_format='"$"0.0"M"'; sr.data_labels.number_format_is_linked=False; sr.data_labels.position=XL_LABEL_POSITION.OUTSIDE_END; sr.data_labels.font.size=Pt(11); sr.data_labels.font.bold=True
+ch.plots[0].gap_width=40; ch.category_axis.reverse_order=True; ch.category_axis.tick_labels.font.size=Pt(11); ch.value_axis.visible=False; ch.value_axis.has_major_gridlines=False; ch.category_axis.format.line.color.rgb=MID; ch.value_axis.maximum_scale=9
+tot_ic=sum(v for _,v in ic)
+stat(s,0.6,4.9,3.0,1.9,f"${tot_ic/1e6:.1f}M","Loaded, in 21334",f"{tot_ic/TOT:.0%} of the approval level",vsize=32)
+stat(s,3.75,4.9,3.15,1.9,f"${(tot_ic+DLINE)/1e6:.1f}M","Incl. D-Line memo",f"{(tot_ic+DLINE)/(TOT+DLINE):.0%} of the all-in view",vsize=32)
+bullets(s,7.15,1.55,5.6,5.3,[("Four Siemens SDV7 breaker skids at $300K each ","(relays, PTs, DC battery, cabinet on the skid), disconnects, four metering transclosures, station service, riser poles, 15 kV cable and 1,240 ft of duct bank."),("Station 496: ","20 SEL relays replacing SEL-551 and REF610 units on four feeders, RTU and RTAC points, transfer trip over dark fiber; $1.8M of that is testing."),("Site: ","2.5 acres cleared, 760 ft road, 2,520 CY cut, imported fill, 14 ft retaining wall, ground grid, fence, lighting; Haugland's platform take-off is larger than ours and is unreconciled."),("D-Line (24211): ","5,465 ft feeder extension, three manholes, 16,395 ft of 3-700 cable; $4.8M is a 2023 conceptual figure.")],size=13,gap=6)
+notes(s,"These are the facilities that make a battery a grid asset. A vendor's job ends at the container terminals.")
+# ---------------- 14 Risk, contingency, loaders ----------------
+s=blank(p); n+=1; chrome(s,"Risk, contingency, indirects and AFUDC are 41% of the approval level",eyebrow="Loaders on project 21334",n=n)
+cd=CategoryChartData(); cd.categories=["Risk register","Contingency","Indirects / overheads","AFUDC"]; cd.add_series("$M",[round(v/1e6,2) for v in (6070000,2615200,9986700,5014000)])
+gf=s.shapes.add_chart(XL_CHART_TYPE.PIE,Inches(0.5),Inches(1.5),Inches(5.2),Inches(5.2),cd); ch=gf.chart; style_chart(ch,legend=True,size=11,legend_pos=XL_LEGEND_POSITION.BOTTOM)
+sr=ch.series[0]
+for i,pt in enumerate(sr.points): pt.format.fill.solid(); pt.format.fill.fore_color.rgb=[BURG,GOLD,NAVY,TEAL][i]
+sr.data_labels.show_value=True; sr.data_labels.number_format='"$"0.0"M"'; sr.data_labels.number_format_is_linked=False; sr.data_labels.font.size=Pt(11); sr.data_labels.font.color.rgb=WHITE; sr.data_labels.font.bold=True; sr.data_labels.position=XL_LABEL_POSITION.CENTER
+table(s,6.0,1.55,6.75,3.5,["Station 360 risk item","$K"],[["Material cost, tariffs","1,000"],["Design / scope change orders","800"],["Labor cost, shortage, overtime","800"],["Unforeseen UG obstructions (landfill)","450"],["Environmental (DEP, landfill closure docs)","300"],["Soil contamination remediation","300"],["Station and P&C engineering changes","600"],["Weather, siting delay, outreach, BAR deductibles","1,050"]],col_w=[5.0,1.75],size=12,align_right=(1,))
+text(s,6.0,5.2,6.75,1.6,"Risk plus contingency is 17.9% of the approval level before loaders, inside the 15-18% lead-review guidance. Indirects at 17.4% and AFUDC at 8.8% follow the EMA station template on a spend curve that runs from July 2021 to December 2028. Haugland's Attachment 4-F carries overlapping exposures (geotech $0.6M-$3.5M, fault-study equipment change $0.25M-$1.8M) that have not been reconciled with this register.",size=12.5,color=GRAY)
+notes(s,"AFUDC is the cost of a seven-year development window. Every month of siting delay adds to it.")
 # ---------------- 7 Benchmarks ----------------
-s=blank(p); n+=1; chrome(s,"The battery is at market; the project is above it, for reasons the benchmarks exclude",eyebrow="Industry benchmarks vs Hyde Park boundaries ($/kWh, nominal)",n=n)
+s=blank(p); n+=1; chrome(s,"The battery is at market; the project is above it for reasons benchmarks exclude",eyebrow="Industry benchmarks vs Hyde Park boundaries, $/kWh nominal",n=n)
 if BM and BM.get("chart_rows"):
     cats=[r["label"] for r in BM["chart_rows"]]; vals=[r["value"] for r in BM["chart_rows"]]
     cd=CategoryChartData(); cd.categories=cats; cd.add_series("$/kWh",vals)
@@ -104,8 +129,9 @@ for i,(h,b) in enumerate(items):
     rect(s,x,y,5.95,1.6,LIGHT); rect(s,x,y,0.09,1.6,GOLD)
     text(s,x+0.25,y+0.1,5.6,1.45,[[(h,{"bold":True,"color":NAVY,"size":15}),(b,{"size":13.5})]],size=13.5)
 notes(s,"None of these six is optional and none of them is the battery.")
+SECTION[0]="2 · HOW THE COST CHANGED"
 # ---------------- 9 Cost over time ----------------
-s=blank(p); n+=1; chrome(s,"Five years, five in-service dates, and an estimate that moved from $44M to $57M",eyebrow="Cost history, 2021 to 2026 (approval-level estimates and vendor price points)",n=n)
+s=blank(p); n+=1; chrome(s,"Five years, five in-service dates, and an estimate that moved from $44M to $57M",eyebrow="Cost history, 2021 to 2026",n=n)
 tl=[("Jun 2021\nIFR","",0.2),("Jul 2023\nVendor indicative\n(Company 3, turnkey)","v",18.2),("Dec 2023\nE-23-373\nconceptual","e",43.9),("Feb 2024\nSSF incl.\nD-Line","e",49.2),("Mar 2026\nNomad\ncontract","v",12.1),("Aug 2026\nRev 0","e",47.2),("Sep 2026\nRev 2","e",63.6),("Sep 2026\nRev 3","e",57.2)]
 cd=CategoryChartData(); cd.categories=[t[0] for t in tl]; cd.add_series("$M",[t[2] for t in tl])
 gf=s.shapes.add_chart(XL_CHART_TYPE.COLUMN_CLUSTERED,Inches(0.5),Inches(1.5),Inches(8.3),Inches(5.3),cd); ch=gf.chart; style_chart(ch,legend=False,size=10)
@@ -154,7 +180,7 @@ ch.plots[0].gap_width=35; ch.category_axis.tick_labels.font.size=Pt(9); ch.value
 bullets(s,8.3,1.55,4.5,5.3,[("Rev 0 carried the battery at about $6M ","from the 2023 indicative sheet. The PM: 'we know the BESS system itself is 12.'"),("Rev 2 reset it to the cover agreement, escalated to $13.1M, ","and carried $1.5M of 'relays for batteries' from a 2023 bidder that priced its own switchgear."),("Rev 3 removed the relays ","(P&C Engineering: included in the $300K Siemens skid), cut three SSVTs to one, and re-based engineering to $501K to go plus actuals."),("Net: ","+$10.0M from Rev 0, of which $7.0M is the battery line catching up to the contract.")],size=13.5,gap=7)
 notes(s,"This walk is in the email record. It matters because the full-funding placeholder of $43.9M was never touched between December 2023 and August 2026.")
 # ---------------- 12 Battery price over time ----------------
-s=blank(p); n+=1; chrome(s,"The battery itself: a $9.6M-$18.2M indicative spread in 2023, a $12.1M fixed price in 2026",eyebrow="Battery scope price points ($/kWh at 20 MWh)",n=n)
+s=blank(p); n+=1; chrome(s,"The battery: a $9.6M to $18.2M spread in 2023, a $12.1M fixed price in 2026",eyebrow="Battery scope price points ($/kWh at 20 MWh)",n=n)
 ind=D["indicative_2023"]
 rows=[(k,v) for k,v in ind.items()]
 cats=[k for k,_ in rows]+["Nomad contract\nMar 2026"]; vals=[round(v/20000) for _,v in rows]+[round(NOMAD/20000)]
@@ -167,32 +193,36 @@ sr.data_labels.show_value=True; sr.data_labels.number_format='"$"#,##0'; sr.data
 ch.plots[0].gap_width=50; ch.category_axis.tick_labels.font.size=Pt(9); ch.value_axis.visible=False; ch.value_axis.has_major_gridlines=False; ch.category_axis.format.line.color.rgb=MID; ch.value_axis.maximum_scale=1150
 bullets(s,8.3,1.55,4.5,5.3,[("July 2023, five bidders, 10 MW / 20 MWh: ","$9.6M to $18.2M. Every bidder excluded interconnection, permits beyond local, below-grade risk, sound walls or spares."),("Company 3 ($18.2M, burgundy) ","became the E-23-373 basis because it alone priced turnkey civil ($4.56M) and installation."),("March 2026 contract, $12.1M (gold): ","supply only, with supervision. Civil, install, GSUs, station and interconnection moved to Eversource scope."),("Equipment-only inside the contract: ","$10.64M, $532/kWh, in line with published 2025-26 turnkey system indices (slide 7)."),("Rev 3 adds $1.13M of escalation ","to a price the contract fixes until Final Acceptance.")],size=13,gap=6)
 notes(s,"The lesson from 2023: a low bid with exclusions is not a low project. The lesson from 2026: the vendor price is defensible. It is the boundary that moved.")
-# ---------------- 13 Interconnection & station ----------------
-s=blank(p); n+=1; chrome(s,"Station and interconnection facilities: $18.3M loaded, and none of it in a vendor quote",eyebrow="What it takes to put 10 MW on four 13.8 kV feeders",n=n)
-ic=[("Station 360 switching facilities (D)",LD["D. Station 360 13.8 kV switching & interconnection facilities"]),("Site development on landfill (E)",LD["E. Site development & civil (former landfill site)"]),("Station 496 protection (F)",F)]
-cd=CategoryChartData(); cd.categories=[c for c,_ in ic]+["D-Line 24211 (memo)"]; cd.add_series("Loaded $M",[round(v/1e6,2) for _,v in ic]+[round(DLINE/1e6,2)])
-gf=s.shapes.add_chart(XL_CHART_TYPE.BAR_CLUSTERED,Inches(0.5),Inches(1.5),Inches(6.4),Inches(3.2),cd); ch=gf.chart; style_chart(ch,legend=False,size=11)
-sr=ch.series[0]; 
-for i,pt in enumerate(sr.points): pt.format.fill.solid(); pt.format.fill.fore_color.rgb = MID if i==3 else TEAL
-sr.data_labels.show_value=True; sr.data_labels.number_format='"$"0.0"M"'; sr.data_labels.number_format_is_linked=False; sr.data_labels.position=XL_LABEL_POSITION.OUTSIDE_END; sr.data_labels.font.size=Pt(11); sr.data_labels.font.bold=True
-ch.plots[0].gap_width=40; ch.category_axis.reverse_order=True; ch.category_axis.tick_labels.font.size=Pt(11); ch.value_axis.visible=False; ch.value_axis.has_major_gridlines=False; ch.category_axis.format.line.color.rgb=MID; ch.value_axis.maximum_scale=9
-tot_ic=sum(v for _,v in ic)
-stat(s,0.6,4.9,3.0,1.9,f"${tot_ic/1e6:.1f}M","Loaded, in 21334",f"{tot_ic/TOT:.0%} of the approval level",vsize=32)
-stat(s,3.75,4.9,3.15,1.9,f"${(tot_ic+DLINE)/1e6:.1f}M","Incl. D-Line memo",f"{(tot_ic+DLINE)/(TOT+DLINE):.0%} of the all-in view",vsize=32)
-bullets(s,7.15,1.55,5.6,5.3,[("Four Siemens SDV7 breaker skids at $300K each ","(relays, PTs, DC battery, cabinet on the skid), disconnects, four metering transclosures, station service, riser poles, 15 kV cable and 1,240 ft of duct bank."),("Station 496: ","20 SEL relays replacing SEL-551 and REF610 units on four feeders, RTU and RTAC points, transfer trip over dark fiber; $1.8M of that is testing."),("Site: ","2.5 acres cleared, 760 ft road, 2,520 CY cut, imported fill, 14 ft retaining wall, ground grid, fence, lighting; Haugland's platform take-off is larger than ours and is unreconciled."),("D-Line (24211): ","5,465 ft feeder extension, three manholes, 16,395 ft of 3-700 cable; $4.8M is a 2023 conceptual figure.")],size=13,gap=6)
-notes(s,"These are the facilities that make a battery a grid asset. A vendor's job ends at the container terminals.")
-# ---------------- 14 Risk, contingency, loaders ----------------
-s=blank(p); n+=1; chrome(s,"Risk, contingency, indirects and AFUDC are 41% of the approval level",eyebrow="Loaders on project 21334",n=n)
-cd=CategoryChartData(); cd.categories=["Risk register","Contingency","Indirects / overheads","AFUDC"]; cd.add_series("$M",[round(v/1e6,2) for v in (6070000,2615200,9986700,5014000)])
-gf=s.shapes.add_chart(XL_CHART_TYPE.PIE,Inches(0.5),Inches(1.5),Inches(5.2),Inches(5.2),cd); ch=gf.chart; style_chart(ch,legend=True,size=11,legend_pos=XL_LEGEND_POSITION.BOTTOM)
-sr=ch.series[0]
-for i,pt in enumerate(sr.points): pt.format.fill.solid(); pt.format.fill.fore_color.rgb=[BURG,GOLD,NAVY,TEAL][i]
-sr.data_labels.show_value=True; sr.data_labels.number_format='"$"0.0"M"'; sr.data_labels.number_format_is_linked=False; sr.data_labels.font.size=Pt(11); sr.data_labels.font.color.rgb=WHITE; sr.data_labels.font.bold=True; sr.data_labels.position=XL_LABEL_POSITION.CENTER
-table(s,6.0,1.55,6.75,3.5,["Station 360 risk item","$K"],[["Material cost, tariffs","1,000"],["Design / scope change orders","800"],["Labor cost, shortage, overtime","800"],["Unforeseen UG obstructions (landfill)","450"],["Environmental (DEP, landfill closure docs)","300"],["Soil contamination remediation","300"],["Station and P&C engineering changes","600"],["Weather, siting delay, outreach, BAR deductibles","1,050"]],col_w=[5.0,1.75],size=12,align_right=(1,))
-text(s,6.0,5.2,6.75,1.6,"Risk plus contingency is 17.9% of the approval level before loaders, inside the 15-18% lead-review guidance. Indirects at 17.4% and AFUDC at 8.8% follow the EMA station template on a spend curve that runs from July 2021 to December 2028. Haugland's Attachment 4-F carries overlapping exposures (geotech $0.6M-$3.5M, fault-study equipment change $0.25M-$1.8M) that have not been reconciled with this register.",size=12.5,color=GRAY)
-notes(s,"AFUDC is the cost of a seven-year development window. Every month of siting delay adds to it.")
+SECTION[0]="3 · CAN THE NUMBER BE DEFENDED"
+# ---------------- 15b Red team kill shots ----------------
+s=blank(p); n+=1; chrome(s,"Three assumptions that, if wrong, move the number more than the reserve",eyebrow="Independent challenge, 29 Sep 2026",n=n)
+ks=[("1. Construction may be low, not high.","Rev 3 layers B+D+E are $8.3M direct. Haugland's Class 3 base for overlapping scope is $19.2M with a $2.9M deduct ceiling. Nobody has mapped one to the other.","Settles it: a signed HEG-to-Rev 3 scope map before the PAF is drafted."),
+("2. Siting is binary and carries no float.","ZBA determination, construction start and container delivery all land in Q1 2028 for a Dec 2028 ISD. Denial means an EFSB exemption at 18-24 months. The estimate carries $250K for siting delay.","Settles it: Article 80 filing date, ZBA calendar, P6 float on the siting chain."),
+("3. The number is Class 4 wearing Class 3 clothes.","30% engineering, unit-library construction with no bid, install labor as a percentage of a 2023 total, a 2.5 ft platform placeholder. EPAC will hear $57.2M as a planning number.","Settles it: geotech, HMA, HEG map, crew build-up; then reclassify with a -15/+25% range.")]
+for i,(h,b,e) in enumerate(ks):
+    y=1.55+i*1.72; rect(s,0.6,y,12.1,1.6,LIGHT); rect(s,0.6,y,0.09,1.6,BURG)
+    text(s,0.85,y+0.08,4.0,1.45,h,size=16,bold=True,color=BURG,font=HEAD)
+    text(s,4.9,y+0.08,5.2,1.45,b,size=12.5)
+    text(s,10.2,y+0.08,2.45,1.45,e,size=11.5,color=NAVY,italic=True)
+notes(s,"Steelman first: the battery is contracted, every dollar has a name, the direct cost is inside the reference class. These three are what an outside reviewer will find if we do not.")
+# ---------------- 15c Stress tests + base rate ----------------
+s=blank(p); n+=1; chrome(s,"Stress tests on our own numbers, and what history says about small utility batteries",eyebrow="Red team: quantified downside, loaded at 1.685",n=n)
+rows=[["Construction unit costs +25% on B+D+E+G","+$4.0M","0","Yes, alone"],["HEG reconciliation at midpoint of the gap (+$5M direct)","+$8.4M","0","No"],["Schedule +12 months (siting or long-lead)","~+$5M","+12 mo","Partly"],["EFSB zoning exemption path","~+$8M to +$10M","+18-24 mo","No"],["Contractor bids +20% over estimate labor","+$2.1M","0","Yes, alone"],["Combination: HEG midpoint + 12-month slip","~+$13M (to ~$70M)","+12 mo","No"],["Battery change orders at the LD cap (10%)","+$1.2M","0","Yes"]]
+table(s,0.6,1.5,7.6,4.2,["Scenario","Loaded cost","Date","Covered by $7.6M reserve?"],rows,col_w=[3.6,1.5,1.0,1.5],size=11)
+text(s,0.6,5.8,7.6,1.0,"Untestable from the package: tariff or change-in-law pass-through on the Nomad price (Exhibit C terms), the AFUDC rate (assumed ~7% on CWIP), Station 496 outage premium (1.35 to 1.70 factor on affected hours), FEOC / ITC effect on net cost.",size=10.5,color=GRAY)
+text(s,8.5,1.5,4.3,0.4,"Base rate: approved to actual",size=15,bold=True,color=NAVY,font=HEAD)
+table(s,8.5,1.95,4.3,2.5,["Project","Uplift"],[["BGE Fairhaven 2.5 MW/9.7 MWh","+64%"],["HECO Waena 40 MW/160 MWh","+37%"],["SaskPower Regina 20 MW","+31%"],["Eversource Provincetown","+9% to +40%"],["Hyde Park, Dec 2023 to Sep 2026","+30%"],["Hyde Park, Rev 0 to Rev 3 (5 wks)","+21%"]],col_w=[3.0,1.3],size=11,align_right=(1,))
+text(s,8.5,4.6,4.3,2.3,"Rev 3 carries 17.9% risk plus contingency. The exception case for beating the base rate rests on three anchors: a fixed battery price, a Siemens price on the skids, and Haugland engaged pre-construction. Together they cover about a third of the cost. The other two thirds have no such anchor.",size=11.5,color=INK)
+notes(s,"The combination case is the one to plan against. It is not exotic: it is the HEG gap plus one missed siting season.")
+# ---------------- 15d Pre-mortem ----------------
+s=blank(p); n+=1; chrome(s,"Pre-mortem: June 2031, $74M, fifteen months late. What happened?",eyebrow="Red team: failure narrative and early-warning indicators",n=n)
+rect(s,0.6,1.5,6.3,5.3,LIGHT)
+text(s,0.8,1.7,5.9,5.0,"The ZBA conditioned approval on a smaller footprint and new screening; the civil package went back through Haugland in the winter of 2028. Spring 2027 borings found debris deeper than the 2014 closure set showed; the platform went from 2.5 ft of fill to piles, and the reconciliation that had never been done was done as a change order. Nomad's twelve containers arrived on time in January 2028 and sat in a rented yard for nine months. Station 496 cutovers needed night outages priced at straight time. AFUDC alone added $4M. The PAF had said Conceptual, -25/+50%. Everyone remembered $57M.",size=12.5,color=INK,italic=True)
+text(s,7.2,1.5,5.6,0.4,"Early-warning indicators",size=15,bold=True,color=NAVY,font=HEAD)
+table(s,7.2,1.95,5.6,4.9,["Indicator","Caught today?"],[["Geotech report not issued by IFC-civil design freeze (mid-2027)","No: no P6 gate ties IFC to it"],["ZBA hearing date not set within 90 days of Article 80 filing","No: siting carries hours, not milestones"],["HEG reconciliation not closed before the PAF is drafted (Nov 2026)","Only if the CoE makes it a precondition"],["Nomad final-drawings milestone (13 Jul 2026) slipped","Partly: payments tracked, not downstream effect on GSU spec and civil"],["Station 496 outage plan not issued before construction pricing","No"]],col_w=[3.4,2.2],size=11)
+notes(s,"Five indicators, none of them expensive to watch. Three of them have no owner today.")
 # ---------------- 15 Open items ----------------
-s=blank(p); n+=1; chrome(s,"What must close before this number goes to EPAC as full funding",eyebrow="Reconciliations and decisions, with the dollars at stake (red-team ranked)",n=n)
+s=blank(p); n+=1; chrome(s,"What must close before this number goes to EPAC as full funding",eyebrow="Reconciliations and decisions, red-team ranked",n=n)
 rows=[["Reconcile Haugland Class 3 base ($19.2M, its scope) to Rev 3 layers B+D+E ($8.3M direct). Red team expects it to move the base up, not down.","Scope boundary","+$4M to +$8M direct if half the gap is 21334 scope","Cost Estimating + PM + HEG"],
 ["Siting chain has no float: ZBA determination Feb 2028, construction start Feb 2028, ISD Dec 2028; EFSB fallback 18-24 mo","Schedule","~$5M per 12 months (AFUDC, escalation, PM, indirects)","Siting + PM"],
 ["Present full funding at its real maturity: 30% engineering, no bid, placeholder platform = Class 4","Classification","Range is -25/+50% ($43M-$86M) until closed","Cost Estimating"],
@@ -206,41 +236,15 @@ rows=[["Reconcile Haugland Class 3 base ($19.2M, its scope) to Rev 3 layers B+D+
 table(s,0.6,1.45,12.1,4.9,["Item","Type","Dollars at stake","Owner"],rows,col_w=[6.6,1.3,2.5,1.7],size=10)
 text(s,0.6,6.62,12.1,0.35,"Defensible reductions (~$3M: battery escalation, design-basis confirmations, material risk sized on non-battery material) are conditional on the Haugland reconciliation closing first.",size=11,color=GRAY)
 notes(s,"Ranked by the red team. The first two items are the ones that can move the number by more than the whole reserve; the rest are hygiene.")
-# ---------------- 15b Red team kill shots ----------------
-s=blank(p); n+=1; chrome(s,"Red team: three assumptions that, if wrong, move the number more than the reserve",eyebrow="Independent challenge, 29 Sep 2026 (estimate-red-team method)",n=n)
-ks=[("1. Construction may be low, not high.","Rev 3 layers B+D+E are $8.3M direct. Haugland's Class 3 base for overlapping scope is $19.2M with a $2.9M deduct ceiling. Nobody has mapped one to the other.","Settles it: a signed HEG-to-Rev 3 scope map before the PAF is drafted."),
-("2. Siting is binary and carries no float.","ZBA determination, construction start and container delivery all land in Q1 2028 for a Dec 2028 ISD. Denial means an EFSB exemption at 18-24 months. The estimate carries $250K for siting delay.","Settles it: Article 80 filing date, ZBA calendar, P6 float on the siting chain."),
-("3. The number is Class 4 wearing Class 3 clothes.","30% engineering, unit-library construction with no bid, install labor as a percentage of a 2023 total, a 2.5 ft platform placeholder. EPAC will hear $57.2M as a planning number.","Settles it: geotech, HMA, HEG map, crew build-up; then reclassify with a -15/+25% range.")]
-for i,(h,b,e) in enumerate(ks):
-    y=1.55+i*1.72; rect(s,0.6,y,12.1,1.6,LIGHT); rect(s,0.6,y,0.09,1.6,BURG)
-    text(s,0.85,y+0.08,4.0,1.45,h,size=16,bold=True,color=BURG,font=HEAD)
-    text(s,4.9,y+0.08,5.2,1.45,b,size=12.5)
-    text(s,10.2,y+0.08,2.45,1.45,e,size=11.5,color=NAVY,italic=True)
-notes(s,"Steelman first: the battery is contracted, every dollar has a name, the direct cost is inside the reference class. These three are what an outside reviewer will find if we do not.")
-# ---------------- 15c Stress tests + base rate ----------------
-s=blank(p); n+=1; chrome(s,"Stress tests on the package's own numbers, and what history says about small utility batteries",eyebrow="Red team: quantified downside, loaded at the 1.685 Station 360 factor",n=n)
-rows=[["Construction unit costs +25% on B+D+E+G","+$4.0M","0","Yes, alone"],["HEG reconciliation at midpoint of the gap (+$5M direct)","+$8.4M","0","No"],["Schedule +12 months (siting or long-lead)","~+$5M","+12 mo","Partly"],["EFSB zoning exemption path","~+$8M to +$10M","+18-24 mo","No"],["Contractor bids +20% over estimate labor","+$2.1M","0","Yes, alone"],["Combination: HEG midpoint + 12-month slip","~+$13M (to ~$70M)","+12 mo","No"],["Battery change orders at the LD cap (10%)","+$1.2M","0","Yes"]]
-table(s,0.6,1.5,7.6,4.2,["Scenario","Loaded cost","Date","Covered by $7.6M reserve?"],rows,col_w=[3.6,1.5,1.0,1.5],size=11)
-text(s,0.6,5.8,7.6,1.0,"Untestable from the package: tariff or change-in-law pass-through on the Nomad price (Exhibit C terms), the AFUDC rate (assumed ~7% on CWIP), Station 496 outage premium (1.35 to 1.70 factor on affected hours), FEOC / ITC effect on net cost.",size=10.5,color=GRAY)
-text(s,8.5,1.5,4.3,0.4,"Base rate: approved to actual",size=15,bold=True,color=NAVY,font=HEAD)
-table(s,8.5,1.95,4.3,2.5,["Project","Uplift"],[["BGE Fairhaven 2.5 MW/9.7 MWh","+64%"],["HECO Waena 40 MW/160 MWh","+37%"],["SaskPower Regina 20 MW","+31%"],["Eversource Provincetown","+9% to +40%"],["Hyde Park, Dec 2023 to Sep 2026","+30%"],["Hyde Park, Rev 0 to Rev 3 (5 wks)","+21%"]],col_w=[3.0,1.3],size=11,align_right=(1,))
-text(s,8.5,4.6,4.3,2.3,"Rev 3 carries 17.9% risk plus contingency. The exception case for beating the base rate rests on three anchors: a fixed battery price, a Siemens price on the skids, and Haugland engaged pre-construction. Together they cover about a third of the cost. The other two thirds have no such anchor.",size=11.5,color=INK)
-notes(s,"The combination case is the one to plan against. It is not exotic: it is the HEG gap plus one missed siting season.")
-# ---------------- 15d Pre-mortem ----------------
-s=blank(p); n+=1; chrome(s,"Pre-mortem: it is June 2031, the project finished at $74M and fifteen months late. What happened?",eyebrow="Red team: failure narrative and the early-warning indicators that would have caught it",n=n)
-rect(s,0.6,1.5,6.3,5.3,LIGHT)
-text(s,0.8,1.6,5.9,5.1,"The ZBA hearing in late 2027 drew the abutters who had raised open-land and traffic concerns since 2024; approval was conditioned on a redesigned screening plan and a smaller footprint, which sent the civil package back through Haugland in the winter of 2028. Borings, finally drilled in spring 2027, found debris deeper than the 2014 closure set showed, and the platform went from 2.5 ft of fill to a piled solution; the HEG reconciliation that had never been done was done as a change order. Nomad's twelve containers arrived on schedule in January 2028 and sat in a rented yard for nine months with the support clock running. Station 496 cutovers needed night outage windows priced at straight time. AFUDC alone added $4M. The full-funding PAF said Conceptual, -25/+50%. Everyone remembered $57M.",size=12.5,color=INK,italic=True)
-text(s,7.2,1.5,5.6,0.4,"Early-warning indicators",size=15,bold=True,color=NAVY,font=HEAD)
-table(s,7.2,1.95,5.6,4.9,["Indicator","Caught today?"],[["Geotech report not issued by IFC-civil design freeze (mid-2027)","No: no P6 gate ties IFC to it"],["ZBA hearing date not set within 90 days of Article 80 filing","No: siting carries hours, not milestones"],["HEG reconciliation not closed before the PAF is drafted (Nov 2026)","Only if the CoE makes it a precondition"],["Nomad final-drawings milestone (13 Jul 2026) slipped","Partly: payments tracked, not downstream effect on GSU spec and civil"],["Station 496 outage plan not issued before construction pricing","No"]],col_w=[3.4,2.2],size=11)
-notes(s,"Five indicators, none of them expensive to watch. Three of them have no owner today.")
+SECTION[0]=""
 # ---------------- 16 Contributions ----------------
 s=blank(p); n+=1; rect(s,0,0,W,H,NAVY)
 text(s,0.6,0.35,10,0.35,"CONTRIBUTIONS",size=12,bold=True,color=GOLD)
 text(s,0.6,0.7,12.1,1.0,"A $12 million battery is a $57 million project, and now every dollar between them has a name",size=30,bold=True,color=WHITE,font=HEAD)
-bullets(s,0.6,1.9,6.1,4.9,[("Cost layer extraction. ","292 Rev 3 line items in thirteen layers, reconciled to the penny. Direct shares: battery contract 23%, battery install and balance of plant 6%, station and interconnection 24%, owner scope 11%, Station 360 loaders 35%."),("Unit costs at every boundary. ","$605/kWh vendor, $833 installed, $2,500 Station 360, $2,862 project, $3,102 all-in. Benchmarks compared against the row that matches their definition."),("Cost history. ","2021 IFR to Rev 3, with the ISD drift and the five-week September walk documented from the ESF revisions and email record."),("Red team and open-item register. ","Three kill shots, seven stress tests, a pre-mortem with five early-warning indicators, and ten reconciliations with owners and dollars.")],size=14.5,color=WHITE,gap=8,bullet_color=GOLD)
+bullets(s,0.6,1.9,6.1,4.9,[("Where the money sits. ","292 lines in thirteen layers, reconciled to the penny: battery contract 21%, station and interconnection 32% loaded, owner scope 19%, loaders 41%."),("Unit cost at every boundary. ","$605/kWh vendor, $833 installed, $1,483 station direct, $2,862 project. Each benchmark read against the row that shares its definition."),("How it changed. ","The battery got cheaper; the project got real. $43.9M to $57.2M, five in-service dates, documented from the ESF revisions and the email record."),("Can it be defended. ","Inside the reference class on direct cost; three kill shots, seven stress tests, a pre-mortem, and ten reconciliations with owners and dollars.")],size=14.5,color=WHITE,gap=9,bullet_color=GOLD)
 rect(s,7.0,1.9,5.75,4.9,RGBColor(0x0B,0x2A,0x72))
 text(s,7.2,2.05,5.4,0.4,"Decisions requested",size=16,bold=True,color=GOLD,font=HEAD)
-bullets(s,7.2,2.5,5.4,4.2,["Adopt the layered view as the standard way this project is presented internally and to regulators: battery, station, interconnection, owner scope, loaders.","Make the Haugland-to-Rev 3 reconciliation a precondition of the full-funding PAF; it is the one item that can move the base by more than the reserve.","Present November at its real maturity (Class 4, -25/+50%) unless geotech, HMA and the HEG map close first.","Put a float target on the siting chain and assign owners to the five early-warning indicators.","Decide the escalation treatment on the fixed-price battery balance; retire the $43.9M placeholder."],size=13.5,color=WHITE,gap=7,bullet_color=GOLD)
+bullets(s,7.2,2.5,5.4,4.2,["Adopt the layered view (battery, station, interconnection, owner scope, loaders) as the standard presentation of this project, internally and to regulators.","Make the Haugland-to-Rev 3 reconciliation, the geotech and the hazard mitigation analysis preconditions of the November PAF; present at Class 4 until they close.","Assign owners to the siting-chain float and the five early-warning indicators."],size=13.5,color=WHITE,gap=7,bullet_color=GOLD)
 text(s,0.6,7.02,9,0.3,FOOT,size=10,color=MID)
 notes(s,"Mirror the open. Leave this slide up for questions. Do not add a Questions slide.")
 out=f"{B}/Hyde_Park_BESS_Cost_Analysis.pptx"; p.save(out); print("saved",out,"slides",n)
