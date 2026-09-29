@@ -20,7 +20,7 @@ text(s,0.8,6.05,11.5,0.4,"Internal. Contains vendor-confidential pricing.",size=
 notes(s,"Open on the promise, not a joke. The one sentence the audience should be able to repeat afterwards: the battery is 21 percent of the project, and the other 79 percent is what it takes to put a battery on a landfill in Boston and connect it to four feeders safely.")
 # ---------------- 2 Promise + three numbers ----------------
 s=blank(p); n+=1; chrome(s,"By the end of this deck you can answer one question in one breath",eyebrow="The promise",n=n)
-text(s,0.6,1.55,12,0.7,"“Why is a $12 million battery a $57 million project?”  Because the battery is the only part a vendor prices. The station, the site, the feeder protection, the siting case, the risk and the cost of money are ours.",size=19,color=INK)
+text(s,0.6,1.55,12,0.7,"“Why is a $12 million battery a $57 million project?”  Because a vendor prices the battery. We build the station, the site, the feeder protection and the siting case, and we carry the risk and the cost of money.",size=19,color=INK)
 stat(s,0.6,2.7,3.9,2.4,"$12.1M","Vendor fixed-price contract","Nomad cover agreement, 10 Mar 2026. 12 Voyager LFP units, PCS, BMS, fire protection, 10-yr warranty. $605/kWh, $1,211/kW.")
 stat(s,4.72,2.7,3.9,2.4,"$57.2M","Project 21334 approval level","ESF Total Rev 3. Station 360 $50.0M plus Station 496 protection $7.3M. $2,862/kWh, $5,725/kW. Conceptual, -25%/+50%.",vcolor=BURG)
 stat(s,8.84,2.7,3.9,2.4,"21%","Battery share of the total","Add the D-Line circuit extension (24211, $4.8M conceptual) and the share drops to 20%. Four dollars of every five are not the battery.")
