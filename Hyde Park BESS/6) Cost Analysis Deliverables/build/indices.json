@@ -1,0 +1,18 @@
+{
+ "note": "Battery cost index series used to normalize comparables to 2026 (research pass 2 Oct 2026; values from search-index excerpts of the publishers' releases, no interpolation by the researcher). adjust_model.py interpolates linearly between published points and holds series flat outside their span. Pack and turnkey are real dollars of each survey year; EIA and LBNL nominal; NREL as published; LCOS is $/MWh (a levelized, not capital, metric).",
+ "construction_g": 0.035,
+ "construction_index": {"label": "Handy-Whitman North Atlantic, total steam production plant (July index, 1973 = 100), as posted by PJM", "source": "https://www.pjm.com/-/media/DotCom/committees-groups/subcommittees/cds/postings/handy-whitman-index.ashx", "conf": "Medium (2015-2018 seen in excerpt; later years from search summary of the same posting); production-plant line, not distribution plant",
+   "points": {"2015": 700, "2016": 714, "2017": 711, "2018": 745, "2019": 760, "2020": 779, "2021": 861, "2022": 953, "2023": 1015, "2024": 1056, "2025": 1066, "2026": 1112}},
+ "indices": {
+  "installed": {"label": "Installed all-in (EIA-860 2015-18, LBNL 2024)", "units": "$/kWh nominal", "primary": true, "source": "EIA Today in Energy #45596 (2015 $2,152; 2017 $834; 2018 $625); LBNL Utility-Scale Solar 2025 (2024 $458)", "conf": "High at published points; interpolated 2019-2023",
+                "points": {"2015": 2152, "2017": 834, "2018": 625, "2024": 458}},
+  "pack": {"label": "BNEF pack price, as released (real $ of survey year)", "units": "$/kWh real", "source": "BloombergNEF Lithium-Ion Battery Price Survey releases 2014-2025", "conf": "High 2017-2025; Medium 2014-2016",
+           "points": {"2014": 540, "2015": 350, "2016": 273, "2017": 209, "2018": 176, "2019": 156, "2020": 137, "2021": 132, "2022": 151, "2023": 139, "2024": 115, "2025": 108}},
+  "turnkey": {"label": "BNEF turnkey system, global (4-h to 2023; all durations 2024-25)", "units": "$/kWh real", "source": "BloombergNEF Energy Storage System Cost Survey 2021-2025", "conf": "High 2022-2025; Medium 2021; 2017-2020 not retrieved (held flat)",
+              "points": {"2021": 238, "2022": 324, "2023": 263, "2024": 165, "2025": 117}},
+  "nrel": {"label": "NREL bottom-up 4-h 60 MW base year (2022 and 2024 editions)", "units": "$/kWh", "source": "NREL Cost Projections for Utility-Scale Battery Storage: 2023 update (2022 base $482, Ramasamy et al.) and 2025 update (2024 base $334)", "conf": "Medium; earlier editions' base years not retrieved (held flat before 2022)",
+           "points": {"2022": 482, "2024": 334}},
+  "lcos": {"label": "Lazard LCOS midpoint, unsubsidized 100 MW 4-h", "units": "$/MWh", "source": "Lazard LCOS v5.0 (2019, $173-315), v6.0 (2020, $132-250), v7.0 (2021, $131-232), 2024 ($170-296), 2025 ($115-254), 2026 (~$210-292)", "conf": "Medium; v8.0 (2023) possibly conflated with 2024 and omitted",
+           "points": {"2019": 244, "2020": 191, "2021": 181.5, "2024": 233, "2025": 184.5, "2026": 251}}
+ }
+}
