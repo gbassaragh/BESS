@@ -25,7 +25,7 @@ stat(s,0.6,2.7,3.9,2.4,"$12.1M","Vendor fixed-price contract","Nomad cover agree
 stat(s,4.72,2.7,3.9,2.4,"$57.2M","Project 21334 approval level","ESF Total Rev 3. Station 360 $50.0M plus Station 496 protection $7.3M. $2,862/kWh, $5,725/kW. Conceptual, -25%/+50%.",vcolor=BURG)
 stat(s,8.84,2.7,3.9,2.4,"21%","Battery share of the total","Add the D-Line circuit extension (24211, $4.8M conceptual) and the share drops to 20%. Four dollars of every five are not the battery.")
 text(s,0.6,5.4,12.1,1.2,[[("Three sections: ",{"bold":True,"color":NAVY}),("where the money sits (thirteen layers, unit costs, benchmarks); how the cost changed (2021 to today); can the number be defended (red team, stress tests, what must close).",{})]],size=16)
-notes(s,"Three numbers. Vendor contract, approval level, share. Everything after this slide is proof. CORE PATH for a 25-minute slot: slides 1, 2, 3, 6, 4, 7, 8, 9, 11, 15, 18, 22. Everything else is reachable from the appendix.")
+notes(s,"Three numbers. Vendor contract, approval level, share. Everything after this slide is proof. CORE PATH for a 25-minute slot: slides 1, 2, 3, 6, 4, 7, 8, 9, 10, 13, 17, 20, 24. Everything else is reachable from the appendix.")
 SECTION[0]="1 · WHERE THE MONEY SITS"
 # ---------------- 3 What the vendor prices vs what we build ----------------
 s=blank(p); n+=1; chrome(s,"What a vendor quote contains, and what it leaves for the utility",eyebrow="Two framings of the same project",n=n)
@@ -53,7 +53,7 @@ for i,pt in enumerate(sl.points):
     pt.format.fill.solid(); pt.format.fill.fore_color.rgb = GOLD if i==0 else (TEAL if i in (3,4,5) else (BURG if i>=9 else NAVY))
 va=ch.value_axis; va.has_major_gridlines=True; va.major_gridlines.format.line.color.rgb=MID; va.tick_labels.font.size=Pt(10); va.tick_labels.number_format='"$"0"M"'; va.tick_labels.number_format_is_linked=False; va.maximum_scale=60; va.format.line.fill.background()
 ca=ch.category_axis; ca.tick_labels.font.size=Pt(9); ca.format.line.color.rgb=MID
-text(s,0.6,6.65,12,0.35,"Gold = battery contract as carried in Rev 3 ($12.1M contract plus $1.1M escalation on the unpaid balance; see slide 12). Teal = station, site and feeder protection. Burgundy = risk, contingency, indirects, AFUDC. Total $57.2M.",size=11,color=GRAY)
+text(s,0.6,6.65,12,0.35,"Gold = battery contract as carried in Rev 3 ($12.1M contract plus $1.1M escalation on the unpaid balance; see slide 16). Teal = station, site and feeder protection. Burgundy = risk, contingency, indirects, AFUDC. Total $57.2M.",size=11,color=GRAY)
 notes(s,"Read left to right. The battery contract is the first bar. Everything to its right is the utility's project.")
 # ---------------- 5 Layer table ----------------
 s=blank(p); n+=1; chrome(s,"Where the $57.2M sits when risk, contingency, indirects and AFUDC are spread",eyebrow="Loaded view, factor 1.685 on Station 360 directs",n=n)
@@ -116,6 +116,55 @@ if BM and BM.get("chart_rows"):
 else:
     text(s,0.6,1.6,12,1,"[benchmark data pending]",size=18,color=GRAY)
 notes(s,BM["notes"] if BM else "")
+# ---------------- 7b Battery installed-cost curve ----------------
+from pptx.chart.data import XyChartData
+from pptx.enum.chart import XL_MARKER_STYLE
+from pptx.enum.dml import MSO_LINE_DASH_STYLE
+from lxml import etree
+CV=json.load(open(f"{B}/curve.json"))
+s=blank(p); n+=1; chrome(s,"Battery installed-cost curve: the Nomad price sits on it once duration and size are adjusted",eyebrow="Industry curve 2015-2028 vs Hyde Park, $/kWh, log scale",n=n)
+cd=XyChartData()
+dummy=cd.add_series("_")   # LibreOffice drops XY series that precede the longest series on import; make this hidden series the longest (points sit outside the axis range)
+for xx in range(2000,2006): dummy.add_data_point(xx,100)
+for sr_ in CV["series"]:
+    ser=cd.add_series(sr_["name"].split(" (")[0])
+    for x,y in sr_["points"]: ser.add_data_point(x,y)
+hp_rng=cd.add_series("Hyde Park 2023 indicative bids (range)")
+for pt_ in CV["hyde_park"]:
+    if pt_.get("kind")=="range":
+        hp_rng.add_data_point(pt_["x"],pt_["y"][0]); hp_rng.add_data_point(pt_["x"],pt_["y"][1])
+hp_pts=cd.add_series("Hyde Park 2026 (equipment, contract, as carried, installed)")
+for pt_ in CV["hyde_park"]:
+    if "kind" not in pt_: hp_pts.add_data_point(pt_["x"],pt_["y"])
+gf=s.shapes.add_chart(XL_CHART_TYPE.XY_SCATTER_LINES,Inches(0.5),Inches(1.5),Inches(7.7),Inches(4.95),cd); ch=gf.chart; style_chart(ch,legend=True,size=9.5,legend_pos=XL_LEGEND_POSITION.BOTTOM)
+cols=[WHITE,INK,NAVY,TEAL,GRAY,BURG,GOLD]
+for i,ser in enumerate(ch.series):
+    ser.smooth=False; ser.format.line.color.rgb=cols[i]; ser.format.line.width=Pt(2.0)
+    if i==0: ser.format.line.fill.background(); ser.marker.style=XL_MARKER_STYLE.NONE; continue
+    i-=1
+    ser.marker.style=XL_MARKER_STYLE.CIRCLE; ser.marker.size=7; ser.marker.format.fill.solid(); ser.marker.format.fill.fore_color.rgb=cols[i]; ser.marker.format.line.color.rgb=cols[i]
+    if i==3: ser.format.line.dash_style=MSO_LINE_DASH_STYLE.DASH
+    if i==4: ser.format.line.width=Pt(3.5); ser.marker.style=XL_MARKER_STYLE.DASH; ser.marker.size=12
+    if i==5: ser.format.line.fill.background(); ser.marker.style=XL_MARKER_STYLE.DIAMOND; ser.marker.size=11; ser.marker.format.line.color.rgb=NAVY
+va=ch.value_axis; va.minimum_scale=100; va.maximum_scale=3000; va.has_major_gridlines=True; va.major_gridlines.format.line.color.rgb=MID; va.tick_labels.number_format='"$"#,##0'; va.tick_labels.number_format_is_linked=False; va.tick_labels.font.size=Pt(9.5); va.format.line.color.rgb=MID
+scaling=va._element.find('{http://schemas.openxmlformats.org/drawingml/2006/chart}scaling'); lb=etree.SubElement(scaling,'{http://schemas.openxmlformats.org/drawingml/2006/chart}logBase'); lb.set('val','10'); scaling.insert(0,lb)
+lg=ch.legend._element; le=etree.SubElement(lg,'{http://schemas.openxmlformats.org/drawingml/2006/chart}legendEntry'); etree.SubElement(le,'{http://schemas.openxmlformats.org/drawingml/2006/chart}idx').set('val','0'); etree.SubElement(le,'{http://schemas.openxmlformats.org/drawingml/2006/chart}delete').set('val','1'); lg.find('{http://schemas.openxmlformats.org/drawingml/2006/chart}legendPos').addnext(le)
+ca=ch.category_axis; ca.minimum_scale=2014.5; ca.maximum_scale=2029; ca.major_unit=2; ca.tick_labels.number_format='0'; ca.tick_labels.number_format_is_linked=False; ca.tick_labels.font.size=Pt(9.5); ca.has_major_gridlines=False; ca.format.line.color.rgb=MID
+# labels on the Hyde Park points
+for j,pt_ in enumerate([q for q in CV["hyde_park"] if "kind" not in q]):
+    dl=ch.series[6].points[j].data_label; dl.has_text_frame=True; dl.text_frame.text=pt_["label"].split(",")[-1].strip(); dl.text_frame.paragraphs[0].runs[0].font.size=Pt(9); dl.text_frame.paragraphs[0].runs[0].font.bold=True; dl.text_frame.paragraphs[0].runs[0].font.color.rgb=NAVY; dl.position=[XL_LABEL_POSITION.BELOW,XL_LABEL_POSITION.LEFT,XL_LABEL_POSITION.RIGHT,XL_LABEL_POSITION.RIGHT][j]
+bullets(s,8.4,1.55,4.4,5.0,[("The curve is a 4-h, 60-150 MW, real-dollar curve. ","EIA's reported all-in fell from $2,152 (2015) to $625 (2018); BNEF turnkey from $324 (2022) to $117 global and $219 US (2025); NREL's 4-h bottom-up base is $334 (2024), $247 by 2035."),("Hyde Park is 2-h, 10 MW, nominal. ","NREL's structure puts a 2-h system at 1.3-1.5x the 4-h $/kWh; the size elasticity in Appendix B adds 1.5x at 20 MWh. Adjusted US turnkey: $440-$505. Nomad equipment: $532."),("Install is the layer the curve never shows. ","Owner-scope installation, integration and balance of plant (B+C) add $183/kWh to the $650 battery line: $833 installed. BNEF's install sits inside a developer's EPC; ours is Eversource scope at New England rates."),("The 2026 turn. ","Lithium carbonate roughly doubled year on year by August 2026 and tariffs lifted delivered US prices. The March 2026 fixed price sits below where a 2027 re-procurement would land.")],size=12,gap=5)
+text(s,0.6,6.5,7.6,0.5,"Plotted as published: EIA-860 nominal; BNEF real survey-year; NREL 2024$ (2028 interpolated between the 2024 base and the 2035 mid case). 2023 bar = five indicative bids, $479-$911/kWh, differing scopes. Retrieved from search excerpts; verify before external use.",size=9.5,color=GRAY)
+notes(s,"Answer to 'is there a battery curve': yes, and the Nomad price lands on it. The curve is for four-hour, 60 to 150 MW systems in real dollars; our system is two-hour and 10 MW in nominal dollars, which is why the raw comparison looks unfavorable and the adjusted one does not. Sources: EIA Today in Energy #45596 (2015-2018 $/kWh); BNEF Energy Storage System Cost Surveys 2022-2025 (bnef.com/insights/30443, 33081, 35543, 38229); NREL Cole et al. 2025 Update (NREL/TP-6A40-93281); Anza and ESS News for the 2026 tariff and lithium moves. Duration factor from NREL's cost structure; size factor from the Appendix B regression.")
+# ---------------- 7c Escalation basis ----------------
+ES=CV["escalation"]; k=lambda v: f"${v/1e3:,.0f}K"; kwh=lambda v: f"${v/20000:,.0f}"
+s=blank(p); n+=1; chrome(s,"Escalation is already in the number: $2.9M at template rates, $1.1M of it on a fixed price",eyebrow="Escalation basis and the common-dollar comparison",n=n)
+text(s,0.6,1.5,6.0,0.35,"Where the escalation sits (Rev 3, included in the directs)",size=13,bold=True,color=NAVY)
+table(s,0.6,1.9,6.0,2.35,["Item","$","$/kWh"],[["Escalation in the approval level (Sta 360 $2,622K + Sta 496 $326K)",k(ES["total"]),kwh(ES["total"])],["on the Nomad balance, which Exhibit C fixes until Final Acceptance",k(ES["battery"]),kwh(ES["battery"])],["on station, site, feeder protection, testing and owner scope",k(ES["total"]-ES["battery"]),kwh(ES["total"]-ES["battery"])],["Spend curve it is applied to: actuals $5.2M, 2026 $13.5M, 2027 $12.5M, 2028 $26.1M","",""]],col_w=[4.5,0.8,0.7],size=11,align_right=(1,2))
+text(s,0.6,4.4,6.0,0.35,"Same comparison, same dollars (per kWh)",size=13,bold=True,color=NAVY)
+table(s,0.6,4.8,6.0,1.95,["Boundary","Nominal","Ex-escalation","Benchmark brought to 2028 at 3%/yr"],[["Vendor contract","$605","$605 (fixed)","BNEF US turnkey $219 (2025) = $239"],["Battery as carried (A)","$650","$593","NREL 4-h $334 (2024$) = $376"],["Battery installed (A+B+C)","$833","~$756","NREL adjusted to 2-h, 10 MW: $750-$870"],["Station complete, direct","$1,483","$1,352","EIA/S&L $436 (2023$) = $505; LBNL $458 = $516"]],col_w=[1.55,0.85,1.1,2.5],size=10.5,align_right=(1,2))
+bullets(s,6.9,1.5,5.9,5.3,[("Rates. ","ESF template escalation, about 3% a year, on the 2026-2028 spend curve. $2.9M is 5.1% of the approval level and 7.4% of directs. Benchmarks are 2023-2025 dollars; Rev 3 is 2026-2028 nominal, so one side must move before they are compared."),("Decision pending. ","$1.13M sits on a price the contract fixes. Remove it or move it to the risk register with a stated rationale (open item, slide 20)."),("Brought to the same year, the installed battery is on the index. ","NREL's $334 is $376 in 2028 dollars and $750-$870 after the 2-h and 10 MW adjustments; Hyde Park installed is $833."),("What 3% does not cover. ","Lithium carbonate and tariffs moved faster than 3% in 2026. The battery is fixed by contract, so the exposure is the $3.7M of non-battery material and the labor lines. The $1.0M tariff item in the risk register is sized on total material, battery included."),("Schedule. ","Twelve months of slip adds about $1.2M of escalation on the $38.6M scheduled for 2027-2028, before AFUDC, PM and indirects (about $5M in total)."),("Ex-escalation values ","strip the station's $131/kWh from the direct boundaries; the B+C share (~$20/kWh) is allocated pro rata and is approximate.")],size=11.5,gap=4)
+notes(s,"Answer to 'escalation to be included': it is, at $2.95M on the ESF Overview tab (Sta 360 $2,622,100; Sta 496 $326,100), inside the directs at the template rates. The slide shows what it is applied to, which part of it is contestable ($1.13M on the fixed-price battery balance), and what the comparison looks like once both sides are in the same dollar year. The ex-escalation column removes the station escalation from the direct boundaries; the allocation of the non-battery escalation to B+C is pro rata to direct cost and approximate. The 2028 benchmark column compounds each published figure at 3% from its dollar year; the 2-h and 10 MW adjustment is the same one used on the curve slide.")
 # ---------------- 8 What doesn't scale ----------------
 s=blank(p); n+=1; chrome(s,"Six things about Hyde Park that a 100 MW greenfield benchmark never has to pay for",eyebrow="Why a small urban utility-owned project sits above the index",n=n)
 items=[("Size. ","10 MW / 20 MWh. A switching station, a siting case and a commissioning team cost about the same at 10 MW as at 100 MW; per kWh they are ten times heavier."),
@@ -191,7 +240,7 @@ for i,pt in enumerate(sr.points):
     pt.format.fill.solid(); pt.format.fill.fore_color.rgb = GOLD if i==len(vals)-1 else (BURG if i==3 else MID)
 sr.data_labels.show_value=True; sr.data_labels.number_format='"$"#,##0'; sr.data_labels.number_format_is_linked=False; sr.data_labels.position=XL_LABEL_POSITION.OUTSIDE_END; sr.data_labels.font.size=Pt(10); sr.data_labels.font.bold=True
 ch.plots[0].gap_width=50; ch.category_axis.tick_labels.font.size=Pt(9); ch.value_axis.visible=False; ch.value_axis.has_major_gridlines=False; ch.category_axis.format.line.color.rgb=MID; ch.value_axis.maximum_scale=1150
-bullets(s,8.3,1.55,4.5,5.3,[("July 2023, five bidders, 10 MW / 20 MWh: ","$9.6M to $18.2M. Every bidder excluded interconnection, permits beyond local, below-grade risk, sound walls or spares."),("Company 3 ($18.2M, burgundy) ","became the E-23-373 basis because it alone priced turnkey civil ($4.56M) and installation."),("March 2026 contract, $12.1M (gold): ","supply only, with supervision. Civil, install, GSUs, station and interconnection moved to Eversource scope."),("Equipment-only inside the contract: ","$10.64M, $532/kWh, in line with published 2025-26 turnkey system indices (slide 7)."),("Rev 3 adds $1.13M of escalation ","to a price the contract fixes until Final Acceptance.")],size=13,gap=6)
+bullets(s,8.3,1.55,4.5,5.3,[("July 2023, five bidders, 10 MW / 20 MWh: ","$9.6M to $18.2M. Every bidder excluded interconnection, permits beyond local, below-grade risk, sound walls or spares."),("Company 3 ($18.2M, burgundy) ","became the E-23-373 basis because it alone priced turnkey civil ($4.56M) and installation."),("March 2026 contract, $12.1M (gold): ","supply only, with supervision. Civil, install, GSUs, station and interconnection moved to Eversource scope."),("Equipment-only inside the contract: ","$10.64M, $532/kWh, in line with published 2025-26 turnkey system indices (slides 9-10)."),("Rev 3 adds $1.13M of escalation ","to a price the contract fixes until Final Acceptance.")],size=13,gap=6)
 notes(s,"The lesson from 2023: a low bid with exclusions is not a low project. The lesson from 2026: the vendor price is defensible. It is the boundary that moved.")
 SECTION[0]="3 · CAN THE NUMBER BE DEFENDED"
 # ---------------- 15b Red team kill shots ----------------
