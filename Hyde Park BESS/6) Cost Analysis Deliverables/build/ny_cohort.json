@@ -1,0 +1,106 @@
+{
+ "retrieved": "2026-10-02",
+ "note": "New York distribution-connected cohort assembled after a review comment that many more projects have been built in New York (NineDot Energy and others). Values from search-index excerpts of the cited documents; edc.nyc, nyserda.ny.gov, canarymedia.com and mgrid.org were blocked by the research proxy.",
+ "projects": [
+  {
+   "project": "NineDot Arthur Kill Road (two 4.9 MW systems)",
+   "owner": "NineDot Energy",
+   "owner_type": "developer",
+   "state": "NY",
+   "mw": 9.8,
+   "mwh": 39.1,
+   "cod_year": 2025,
+   "cost_usd": 43384000,
+   "cost_basis": "NYCIDA project budget (inducement resolution, Apr 2024)",
+   "scope": "Developer-owned, distribution-connected, solar canopy, 4-h; no utility station; NYSERDA incentive and ITC not netted",
+   "confidence": "High",
+   "url": "https://edc.nyc/sites/default/files/2025-03/GB%20Arthur%20Kill%20Storage%20LLC%20-%20Inducement%20and%20Authorizing%20Resolution%20April%202024.pdf"
+  },
+  {
+   "project": "Elevate Renewables, 4401 Victory Blvd, Staten Island",
+   "owner": "Elevate Renewables (ArcLight)",
+   "owner_type": "developer",
+   "state": "NY",
+   "mw": 15.1,
+   "mwh": 60.4,
+   "cod_year": 2025,
+   "cost_usd": 31650000,
+   "cost_basis": "NYCIDA total project cost (public hearing notice, Apr 2024)",
+   "scope": "Developer-owned, distribution-connected, 4-h; sited at an existing ArcLight generation site",
+   "confidence": "High",
+   "url": "https://edc.nyc/sites/default/files/2024-03/IDA-Public-Hearing-Notice-April-18-2024.pdf"
+  },
+  {
+   "project": "Soltage Brigis 1A, Maspeth, Queens",
+   "owner": "Soltage",
+   "owner_type": "developer",
+   "state": "NY",
+   "mw": 5.0,
+   "mwh": 20.0,
+   "cod_year": 2025,
+   "cost_usd": 16104493,
+   "cost_basis": "NYCIDA total project cost (public hearing notice, Mar 2024); 4-h duration assumed (MWh not stated)",
+   "scope": "Developer-owned, distribution-connected, 5 MW retail-tier",
+   "confidence": "Medium (cost High; duration assumed)",
+   "url": "https://edc.nyc/sites/default/files/2024-02/IDA-Public-Hearing-Notice-March-7-2024-Public-Hearing.pdf"
+  },
+  {
+   "project": "NineDot 28-project NYC portfolio (financing proxy)",
+   "owner": "NineDot Energy",
+   "owner_type": "developer",
+   "state": "NY",
+   "mw": 124,
+   "mwh": 494,
+   "cod_year": 2027,
+   "cost_usd": 431000000,
+   "cost_basis": "Natixis construction/term loan + tax-credit bridge + LC facility, Feb 2026; a floor on total cost, not the cost itself",
+   "scope": "28 distribution-connected sites, COD 2026-2027",
+   "confidence": "Low-Medium (financing, not capex)",
+   "url": "https://www.prnewswire.com/news-releases/natixis-corporate--investment-banking-acts-as-sole-lead-arranger-and-bookrunner-for-ninedot-energy-in-431-million-financing-of-28-battery-energy-storage-systems-portfolio-in-new-york-city-302681842.html"
+  }
+ ],
+ "indices": [
+  {
+   "name": "NYSERDA retail (<= 5 MW) average total installed cost, 2022-23 installs",
+   "kwh": 567,
+   "year": 2023,
+   "source": "New York's 6 GW Energy Storage Roadmap, NYSERDA/DPS, Dec 2022",
+   "confidence": "High",
+   "url": "https://www.nyserda.ny.gov/-/media/Project/Nyserda/Files/Programs/Energy-Storage/ny-6-gw-energy-storage-roadmap.pdf"
+  },
+  {
+   "name": "NYSERDA retail (<= 5 MW) average total installed cost, 2020-21 installs",
+   "kwh": 464,
+   "year": 2021,
+   "source": "as above",
+   "confidence": "High",
+   "url": "https://www.nyserda.ny.gov/-/media/Project/Nyserda/Files/Programs/Energy-Storage/ny-6-gw-energy-storage-roadmap.pdf"
+  }
+ ],
+ "interconnection": {
+  "note": "Con Edison two-part test (CESIR): NY-BEST and NYSEIA told the PSC on 11 Mar 2026 (Case 24-E-0621) that upgrade costs rose about 14-fold on 34 distributed battery projects totaling 161 MW, an average of about $21M per project, leaving nearly 600 MW unviable.",
+  "projects": 34,
+  "mw": 161,
+  "avg_upgrade_usd": 21000000,
+  "confidence": "Medium",
+  "url": "https://www.utilitydive.com/news/battery-developers-local-officials-ask-new-york-to-roll-back-con-edison-be/815115/"
+ },
+ "ninedot_status": {
+  "operating_projects": 11,
+  "operating_sites": 6,
+  "operating_mw": 39,
+  "as_of": "Sep 2026",
+  "pipeline_goal_mw": 400,
+  "equipment_financing": {
+   "usd": 65000000,
+   "mw": 100,
+   "mwh": 400,
+   "note": "battery purchase for 20 projects; $163/kWh equipment"
+  },
+  "hunts_point": {
+   "mw": 19.6,
+   "mwh": 78.3,
+   "nyserda_incentive_usd": 9800000
+  }
+ }
+}
