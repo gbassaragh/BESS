@@ -3,6 +3,7 @@ sys.path.insert(0,"/tmp/claude-0/-home-user-BESS/078f934e-4ca0-5169-be3f-cb66ff0
 from docx_common import *
 B="/tmp/claude-0/-home-user-BESS/078f934e-4ca0-5169-be3f-cb66ff0e2514/scratchpad/build"
 D=json.load(open(f"{B}/data.json")); L=D["layers_direct"]; LD=D["layers_loaded"]
+R=json.load(open(f"{B}/stats_results.json")); RC=R["reference_class"]; RCU=R["reference_class_utility"]; P=R["ols_parsimonious"]; AJ=json.load(open(f"{B}/adjust_results.json")); CL=AJ["classes"]["reference_class"]["indices"]; k_=lambda v: f"${v:,.0f}"
 d=new_doc()
 # ---------- Title ----------
 p=para(d,"Basis of Estimate",bold=True,size=22,color=NAVY,after=2); p.alignment=WD_ALIGN_PARAGRAPH.LEFT
@@ -15,7 +16,7 @@ table(d,["Field","Value","Field","Value"],[
  ["Project manager","Robert Herman (Adam Kelley through PF Rev 3)","Project estimator","Brian Roche; lead review Justin Niderno; peer review PAG, D. Piccorelli"],
  ["Estimate class","Conceptual, -25% / +50% (ESF)","In-service date","28 Dec 2028"],
  ["Approval-level total, 21334","$57,247,300","Actuals to 23 Sep 2026","$5,222,045 (21334)"],
- ["BOE prepared by","Cost Estimating Center of Excellence","BOE date","29 Sep 2026"],
+ ["BOE prepared by","Cost Estimating Center of Excellence","BOE date","29 Sep 2026; benchmark section revised 2 Oct 2026"],
 ],widths=[1.3,2.0,1.3,2.0])
 callout(d,"Reading this document.","This Basis of Estimate follows the Eversource Estimate Basis Document template (rev 1) heading by heading. Every dollar figure carries its source: the ESF Total Rev 3 workbook (Item, Summary and Overview tabs), the Nomad cover agreement dated 10 Mar 2026, the E-23-373 conceptual estimate of 8 Dec 2023, the July 2023 indicative pricing, the PAF Rev 3 approved 25 Jun 2026, and the project email record of 12 Aug to 23 Sep 2026. Confidence tags (High, Medium, Low) mark the quantitative claims that carry weight in a leadership setting.")
 # ---------- 1 General ----------
@@ -41,6 +42,7 @@ table(d,["Cost boundary","Total","$/kW","$/kWh","Multiple of vendor quote"],[
  ["All-in incl. D-Line 24211 conceptual (memo)","$62,040,300","$6,204","$3,102","5.12x"],
 ],widths=[2.9,1.1,0.8,0.8,1.0],num_cols=(1,2,3,4))
 para(d,"A small, distribution-connected, urban, landfill-sited, utility-owned two-hour system carries fixed costs (a switching station, feeder protection at the source station, siting under Article 80, a 200 ft by 200 ft platform on a capped landfill, corporate indirects and AFUDC) that do not scale with MWh. Published benchmarks are dominated by 100 MW-class, four-hour, developer-built projects on greenfield sites. The whitepaper sets out which benchmark boundary each of the rows above should be compared against.")
+para(d,f"Reference class (companion statistical memo, 2 October 2026). Against {RC['n']} public projects at or below 100 MWh with an all-in disclosed cost ({RC['n_utility']} utility-owned, {RC['n_developer']} developer-owned; median {k_(RC['median_kwh'])}/kWh, interquartile {k_(RC['q25'])} to {k_(RC['q75'])}), the installed battery (boundary 3, $833/kWh) ranks at the {RC['hp_rank']['b3']:.0%} percentile, the station-complete direct cost (boundary 4, $1,483/kWh) at the {RC['hp_rank']['b4']:.0%} percentile ({RCU['hp_rank']['b4']:.0%} within the {RCU['n']} utility-owned members, median {k_(RCU['median_kwh'])}), and the approval level above every member. A log-log regression on {P['n']} public projects (size elasticity {P['coef']['ln_mwh']['b']:+.2f}, duration elasticity {P['coef']['ln_dur']['b']:+.2f}, year not significant) predicts {k_(P['hp_pred_kwh']['p50'])}/kWh for a 20 MWh, two-hour project in 2028 with an 80 percent prediction interval of {k_(P['hp_pred_kwh']['pi80_lo'])} to {k_(P['hp_pred_kwh']['pi80_hi'])}; boundary 4 sits at the {P['hp_percentile']['b4']:.0%} percentile of that distribution. Re-based to 2026 dollars (battery share deflated on a published index, remainder on the Handy-Whitman utility construction index) the class median is {k_(min(CL[k]['by_share']['0.4']['median'] for k in ('installed','pack','turnkey','nrel')))} to {k_(max(CL[k]['by_share']['0.4']['median'] for k in ('installed','pack','turnkey','nrel')))} and the boundary 4 percentile {min(CL[k]['by_share']['0.4']['hp_pct']['station_direct'] for k in CL):.0%} to {max(CL[k]['by_share']['0.4']['hp_pct']['station_direct'] for k in CL):.0%}. Confidence: Medium; the public figures are search-excerpt retrievals with per-row confidence tags and the developer-owned members are gross of incentives.")
 # ---------- 2 Scope ----------
 d.add_heading("2. Scope",1)
 d.add_heading("2.1 Station (Station 360, new 13.8 kV BESS station)",2)

@@ -1,5 +1,5 @@
 {
- "n_total": 55,
+ "n_total": 81,
  "projects_used": [
   {
    "project": "Outer Cape (Provincetown) BESS",
@@ -660,24 +660,360 @@
    "kwh": 1900.0,
    "cost_basis": "IID / GE turnkey deal value",
    "confidence": "Medium"
+  },
+  {
+   "project": "LADWP Beacon Energy Storage System",
+   "state": "CA",
+   "owner_type": "muni/coop",
+   "mw": 20.0,
+   "mwh": 10.0,
+   "cod_year": 2018.0,
+   "cost_usd": 19200000,
+   "kwh": 1920.0,
+   "cost_basis": "board-approved Doosan GridTech contract value",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Thurcroft BESS [UK]",
+   "state": "England (UK)",
+   "owner_type": "developer",
+   "mw": 50.0,
+   "mwh": 75.0,
+   "cod_year": 2020.0,
+   "cost_usd": 41300000,
+   "kwh": 550.6666666666666,
+   "cost_basis": "total enterprise value of construction-ready project incl. build GBP 32.5M (converted at 1.27 USD/GBP)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Wickham Market BESS [UK]",
+   "state": "England (UK)",
+   "owner_type": "developer",
+   "mw": 50.0,
+   "mwh": 74.0,
+   "cod_year": 2020.0,
+   "cost_usd": 41600000,
+   "kwh": 562.1621621621622,
+   "cost_basis": "total enterprise value incl. build GBP 32.75M (converted at 1.27 USD/GBP)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Lake Bonney BESS [AUSTRALIA]",
+   "state": "SA (Australia)",
+   "owner_type": "developer",
+   "mw": 25.0,
+   "mwh": 52.0,
+   "cod_year": 2019.0,
+   "cost_usd": 26600000,
+   "kwh": 511.53846153846155,
+   "cost_basis": "ASX release: about AUD 38M development (converted at 0.70 USD/AUD)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Hornsdale Power Reserve expansion [AUSTRALIA]",
+   "state": "SA (Australia)",
+   "owner_type": "developer",
+   "mw": 50.0,
+   "mwh": 64.5,
+   "cod_year": 2020.0,
+   "cost_usd": 49700000,
+   "kwh": 770.5426356589147,
+   "cost_basis": "ARENA release: total project cost AUD 71M incl. development and finance (converted at 0.70 USD/AUD)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Wallgrove Grid Battery [AUSTRALIA]",
+   "state": "NSW (Australia)",
+   "owner_type": "IOU",
+   "mw": 50.0,
+   "mwh": 75.0,
+   "cod_year": 2021.0,
+   "cost_usd": 46400000,
+   "kwh": 618.6666666666666,
+   "cost_basis": "ARENA / minister release: total project cost AUD 61.9M (converted at 0.75 USD/AUD)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Broken Hill BESS [AUSTRALIA]",
+   "state": "NSW (Australia)",
+   "owner_type": "developer",
+   "mw": 50.0,
+   "mwh": 50.0,
+   "cod_year": 2023.0,
+   "cost_usd": 27500000,
+   "kwh": 550.0,
+   "cost_basis": "ARENA release: total project cost AUD 41M (converted at 0.67 USD/AUD)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Bouldercombe Battery [AUSTRALIA]",
+   "state": "QLD (Australia)",
+   "owner_type": "developer",
+   "mw": 50.0,
+   "mwh": 100.0,
+   "cod_year": 2023.0,
+   "cost_usd": 40200000,
+   "kwh": 402.0,
+   "cost_basis": "ASX: total capital budget AUD 60M incl. finance costs and contingency (converted at 0.67 USD/AUD)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Wandoan South BESS [AUSTRALIA]",
+   "state": "QLD (Australia)",
+   "owner_type": "developer",
+   "mw": 100.0,
+   "mwh": 150.0,
+   "cod_year": 2021.0,
+   "cost_usd": 90000000,
+   "kwh": 600.0,
+   "cost_basis": "project cost at financial close AUD 120M (converted at 0.75 USD/AUD)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Chinchilla Battery [AUSTRALIA]",
+   "state": "QLD (Australia)",
+   "owner_type": "other (state-owned utility)",
+   "mw": 100.0,
+   "mwh": 200.0,
+   "cod_year": 2024.0,
+   "cost_usd": 100000000,
+   "kwh": 500.0,
+   "cost_basis": "CS Energy fact sheet: AUD 150M investment (converted at 0.67 USD/AUD)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Hazelwood BESS [AUSTRALIA]",
+   "state": "VIC (Australia)",
+   "owner_type": "developer",
+   "mw": 150.0,
+   "mwh": 150.0,
+   "cod_year": 2023.0,
+   "cost_usd": 100000000,
+   "kwh": 666.6666666666666,
+   "cost_basis": "press: estimated project cost AUD 150M (converted at 0.67 USD/AUD)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Nova Scotia Power BESS portfolio (Bridgewater + White Rock + Spider Lake) [CANADA]",
+   "state": "NS (Canada)",
+   "owner_type": "IOU",
+   "mw": 150.0,
+   "mwh": 600.0,
+   "cod_year": 2026.0,
+   "cost_usd": 262000000,
+   "kwh": 436.6666666666667,
+   "cost_basis": "NSUARB-approved capital CAD 354M for three 50 MW / 200 MWh sites (converted at 0.74 USD/CAD)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Tilbury Battery Storage [CANADA]",
+   "state": "ON (Canada)",
+   "owner_type": "developer",
+   "mw": 80.0,
+   "mwh": 320.0,
+   "cod_year": 2025.0,
+   "cost_usd": 125800000,
+   "kwh": 393.125,
+   "cost_basis": "Ontario government release: project cost CAD 170M (converted at 0.74 USD/CAD)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Jurassic BESS [CANADA]",
+   "state": "AB (Canada)",
+   "owner_type": "developer",
+   "mw": 80.0,
+   "mwh": 160.0,
+   "cod_year": 2026.0,
+   "cost_usd": 88800000,
+   "kwh": 555.0,
+   "cost_basis": "estimated total cost at financial close about CAD 120M (converted at 0.74 USD/CAD)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Hemingway BESS (Idaho Power)",
+   "state": "ID",
+   "owner_type": "IOU",
+   "mw": 80.0,
+   "mwh": 320.0,
+   "cod_year": 2023.0,
+   "cost_usd": 100456659,
+   "kwh": 313.927059375,
+   "cost_basis": "IPUC Staff comments IPC-E-22-13: soft cap on utility-owned cost",
+   "confidence": "High"
+  },
+  {
+   "project": "Roadrunner Reserve (TEP)",
+   "state": "AZ",
+   "owner_type": "IOU",
+   "mw": 200.0,
+   "mwh": 800.0,
+   "cod_year": 2025.0,
+   "cost_usd": 294000000,
+   "kwh": 367.5,
+   "cost_basis": "SEC 8-K exhibit press release ($294M)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Roadrunner Reserve II (TEP)",
+   "state": "AZ",
+   "owner_type": "IOU",
+   "mw": 200.0,
+   "mwh": 800.0,
+   "cod_year": 2026.0,
+   "cost_usd": 350000000,
+   "kwh": 437.5,
+   "cost_basis": "utility statement via local press (about $350M)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Trenton Channel BESS (DTE)",
+   "state": "MI",
+   "owner_type": "IOU",
+   "mw": 220.0,
+   "mwh": 880.0,
+   "cod_year": 2026.0,
+   "cost_usd": 460000000,
+   "kwh": 522.7272727272727,
+   "cost_basis": "MPSC approval as reported: DTE range $423M-$460M pre-ITC",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Frontier Energy Storage (OG&E)",
+   "state": "OK",
+   "owner_type": "IOU",
+   "mw": 302.0,
+   "mwh": 1208.0,
+   "cod_year": 2027.0,
+   "cost_usd": 394000000,
+   "kwh": 326.158940397351,
+   "cost_basis": "OCC approval as reported (about $394M)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Edgewater BESS (Alliant / WPL)",
+   "state": "WI",
+   "owner_type": "IOU",
+   "mw": 99.0,
+   "mwh": 396.0,
+   "cod_year": 2025.0,
+   "cost_usd": 200000000,
+   "kwh": 505.050505050505,
+   "cost_basis": "utility press release / PSCW application: anticipated project cost about $200M",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Sierra Solar storage portion (NV Energy)",
+   "state": "NV",
+   "owner_type": "IOU",
+   "mw": 400.0,
+   "mwh": 1600.0,
+   "cod_year": 2026.0,
+   "cost_usd": 731000000,
+   "kwh": 456.875,
+   "cost_basis": "PUCN IRP approval; storage portion $731M of $1.5B (solar $734M; transmission $71M) per business press",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Asheville Rock Hill substation BESS (Duke Energy Progress)",
+   "state": "NC",
+   "owner_type": "IOU",
+   "mw": 9.0,
+   "mwh": 9.0,
+   "cod_year": 2020.0,
+   "cost_usd": 15000000,
+   "kwh": 1666.6666666666667,
+   "cost_basis": "utility statement / trade press: almost $15M",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Babcock Ranch storage add-on (FPL)",
+   "state": "FL",
+   "owner_type": "IOU",
+   "mw": 10.0,
+   "mwh": 40.0,
+   "cod_year": 2018.0,
+   "cost_usd": 15000000,
+   "kwh": 375.0,
+   "cost_basis": "FPL statement via Utility Dive: about $15M for the battery",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Panton battery (Green Mountain Power)",
+   "state": "VT",
+   "owner_type": "IOU",
+   "mw": 1.0,
+   "mwh": 4.0,
+   "cod_year": 2018.0,
+   "cost_usd": 3000000,
+   "kwh": 750.0,
+   "cost_basis": "Vermont PUC CPG coverage: $3.0M battery (solar about $11M separate)",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Oglethorpe Power three-site BESS (GRIP)",
+   "state": "GA",
+   "owner_type": "muni/coop",
+   "mw": 75.0,
+   "mwh": 300.0,
+   "cod_year": 2030.0,
+   "cost_usd": 240000000,
+   "kwh": 800.0,
+   "cost_basis": "Oglethorpe FY2024 10-K: estimated total cost about $240M before grant proceeds",
+   "confidence": "Medium"
+  },
+  {
+   "project": "Homer Electric second BESS (Soldotna area 45 MW / 4-h)",
+   "state": "AK",
+   "owner_type": "muni/coop",
+   "mw": 45.0,
+   "mwh": 180.0,
+   "cod_year": 2027.0,
+   "cost_usd": 112000000,
+   "kwh": 622.2222222222222,
+   "cost_basis": "NRECA via USDA PACE: roughly $112M project; $100M PACE loan (60% forgivable)",
+   "confidence": "Medium"
   }
  ],
  "reference_class": {
-  "n": 44,
-  "median_kwh": 830.7823129251701,
-  "q25": 640.3869047619048,
-  "q75": 1238.9705882352941,
-  "min": 410.0,
+  "n": 55,
+  "median_kwh": 770.5426356589147,
+  "q25": 575.7239382239383,
+  "q75": 1172.4296675191815,
+  "min": 375.0,
   "max": 2775.0,
-  "n_utility": 26,
-  "n_developer": 18,
+  "n_utility": 31,
+  "n_developer": 24,
   "hp_rank": {
-   "b3": 0.5227272727272727,
-   "b4": 0.8636363636363636,
+   "b3": 0.5818181818181818,
+   "b4": 0.8545454545454545,
    "b6": 1.0,
-   "contract": 0.20454545454545456
+   "contract": 0.2727272727272727
   },
   "projects": [
+   {
+    "project": "Babcock Ranch storage add-on (FPL)",
+    "state": "FL",
+    "owner_type": "IOU",
+    "utility": 1,
+    "mw": 10.0,
+    "mwh": 40.0,
+    "cod_year": 2018.0,
+    "kwh": 375.0,
+    "cost_basis": "FPL statement via Utility Dive: about $15M for the battery",
+    "confidence": "Medium"
+   },
+   {
+    "project": "Bouldercombe Battery [AUSTRALIA]",
+    "state": "QLD (Australia)",
+    "owner_type": "developer",
+    "utility": 0,
+    "mw": 50.0,
+    "mwh": 100.0,
+    "cod_year": 2023.0,
+    "kwh": 402.0,
+    "cost_basis": "ASX: total capital budget AUD 60M incl. finance costs and contingency (converted at 0.67 USD/AUD)",
+    "confidence": "Medium"
+   },
    {
     "project": "Convergent SSC Richmond Rd BESS (Staten Island)",
     "state": "NY",
@@ -727,6 +1063,18 @@
     "confidence": "Medium"
    },
    {
+    "project": "Lake Bonney BESS [AUSTRALIA]",
+    "state": "SA (Australia)",
+    "owner_type": "developer",
+    "utility": 0,
+    "mw": 25.0,
+    "mwh": 52.0,
+    "cod_year": 2019.0,
+    "kwh": 511.53846153846155,
+    "cost_basis": "ASX release: about AUD 38M development (converted at 0.70 USD/AUD)",
+    "confidence": "Medium"
+   },
+   {
     "project": "Greenbacker Staten Island Energy Storage 3 (Androvette St)",
     "state": "NY",
     "owner_type": "developer",
@@ -763,6 +1111,18 @@
     "confidence": "Medium"
    },
    {
+    "project": "Broken Hill BESS [AUSTRALIA]",
+    "state": "NSW (Australia)",
+    "owner_type": "developer",
+    "utility": 0,
+    "mw": 50.0,
+    "mwh": 50.0,
+    "cod_year": 2023.0,
+    "kwh": 550.0,
+    "cost_basis": "ARENA release: total project cost AUD 41M (converted at 0.67 USD/AUD)",
+    "confidence": "Medium"
+   },
+   {
     "project": "Wellesley MLP BESS (Citizens Energy)",
     "state": "MA",
     "owner_type": "developer",
@@ -772,6 +1132,30 @@
     "cod_year": 2024.0,
     "kwh": 550.0,
     "cost_basis": "reported project cost range $10M-$12M (midpoint used)",
+    "confidence": "Medium"
+   },
+   {
+    "project": "Thurcroft BESS [UK]",
+    "state": "England (UK)",
+    "owner_type": "developer",
+    "utility": 0,
+    "mw": 50.0,
+    "mwh": 75.0,
+    "cod_year": 2020.0,
+    "kwh": 550.6666666666666,
+    "cost_basis": "total enterprise value of construction-ready project incl. build GBP 32.5M (converted at 1.27 USD/GBP)",
+    "confidence": "Medium"
+   },
+   {
+    "project": "Wickham Market BESS [UK]",
+    "state": "England (UK)",
+    "owner_type": "developer",
+    "utility": 0,
+    "mw": 50.0,
+    "mwh": 74.0,
+    "cod_year": 2020.0,
+    "kwh": 562.1621621621622,
+    "cost_basis": "total enterprise value incl. build GBP 32.75M (converted at 1.27 USD/GBP)",
     "confidence": "Medium"
    },
    {
@@ -797,6 +1181,18 @@
     "kwh": 616.6666666666666,
     "cost_basis": "final/actual (utility press release)",
     "confidence": "High"
+   },
+   {
+    "project": "Wallgrove Grid Battery [AUSTRALIA]",
+    "state": "NSW (Australia)",
+    "owner_type": "IOU",
+    "utility": 1,
+    "mw": 50.0,
+    "mwh": 75.0,
+    "cod_year": 2021.0,
+    "kwh": 618.6666666666666,
+    "cost_basis": "ARENA / minister release: total project cost AUD 61.9M (converted at 0.75 USD/AUD)",
+    "confidence": "Medium"
    },
    {
     "project": "Braintree BELD solar-sited BESS",
@@ -883,6 +1279,18 @@
     "confidence": "Medium"
    },
    {
+    "project": "Panton battery (Green Mountain Power)",
+    "state": "VT",
+    "owner_type": "IOU",
+    "utility": 1,
+    "mw": 1.0,
+    "mwh": 4.0,
+    "cod_year": 2018.0,
+    "kwh": 750.0,
+    "cost_basis": "Vermont PUC CPG coverage: $3.0M battery (solar about $11M separate)",
+    "confidence": "Medium"
+   },
+   {
     "project": "Martha's Vineyard BESS Phase 1 (cancelled)",
     "state": "MA",
     "owner_type": "IOU",
@@ -904,6 +1312,18 @@
     "cod_year": 2025.0,
     "kwh": 763.125,
     "cost_basis": "NYCIDA estimated project budget (Jul 2023 PHP)",
+    "confidence": "Medium"
+   },
+   {
+    "project": "Hornsdale Power Reserve expansion [AUSTRALIA]",
+    "state": "SA (Australia)",
+    "owner_type": "developer",
+    "utility": 0,
+    "mw": 50.0,
+    "mwh": 64.5,
+    "cod_year": 2020.0,
+    "kwh": 770.5426356589147,
+    "cost_basis": "ARENA release: total project cost AUD 71M incl. development and finance (converted at 0.70 USD/AUD)",
     "confidence": "Medium"
    },
    {
@@ -1159,6 +1579,18 @@
     "confidence": "High"
    },
    {
+    "project": "Asheville Rock Hill substation BESS (Duke Energy Progress)",
+    "state": "NC",
+    "owner_type": "IOU",
+    "utility": 1,
+    "mw": 9.0,
+    "mwh": 9.0,
+    "cod_year": 2020.0,
+    "kwh": 1666.6666666666667,
+    "cost_basis": "utility statement / trade press: almost $15M",
+    "confidence": "Medium"
+   },
+   {
     "project": "El Centro BESS (IID)",
     "state": "CA",
     "owner_type": "public power",
@@ -1168,6 +1600,18 @@
     "cod_year": 2017.0,
     "kwh": 1900.0,
     "cost_basis": "IID / GE turnkey deal value",
+    "confidence": "Medium"
+   },
+   {
+    "project": "LADWP Beacon Energy Storage System",
+    "state": "CA",
+    "owner_type": "muni/coop",
+    "utility": 1,
+    "mw": 20.0,
+    "mwh": 10.0,
+    "cod_year": 2018.0,
+    "kwh": 1920.0,
+    "cost_basis": "board-approved Doosan GridTech contract value",
     "confidence": "Medium"
    },
    {
@@ -1209,21 +1653,33 @@
   ]
  },
  "reference_class_utility": {
-  "n": 26,
-  "median_kwh": 992.9577464788732,
-  "q25": 658.7019230769231,
-  "q75": 1372.3684210526317,
-  "min": 430.10752688172045,
+  "n": 31,
+  "median_kwh": 985.9154929577464,
+  "q25": 633.2738095238095,
+  "q75": 1445.0,
+  "min": 375.0,
   "max": 2775.0,
-  "n_utility": 26,
+  "n_utility": 31,
   "n_developer": 0,
   "hp_rank": {
-   "b3": 0.46153846153846156,
-   "b4": 0.7692307692307693,
+   "b3": 0.4838709677419355,
+   "b4": 0.7419354838709677,
    "b6": 1.0,
-   "contract": 0.15384615384615385
+   "contract": 0.16129032258064516
   },
   "projects": [
+   {
+    "project": "Babcock Ranch storage add-on (FPL)",
+    "state": "FL",
+    "owner_type": "IOU",
+    "utility": 1,
+    "mw": 10.0,
+    "mwh": 40.0,
+    "cod_year": 2018.0,
+    "kwh": 375.0,
+    "cost_basis": "FPL statement via Utility Dive: about $15M for the battery",
+    "confidence": "Medium"
+   },
    {
     "project": "Soldotna BESS (37 Megapacks)",
     "state": "AK",
@@ -1283,6 +1739,18 @@
     "kwh": 616.6666666666666,
     "cost_basis": "final/actual (utility press release)",
     "confidence": "High"
+   },
+   {
+    "project": "Wallgrove Grid Battery [AUSTRALIA]",
+    "state": "NSW (Australia)",
+    "owner_type": "IOU",
+    "utility": 1,
+    "mw": 50.0,
+    "mwh": 75.0,
+    "cod_year": 2021.0,
+    "kwh": 618.6666666666666,
+    "cost_basis": "ARENA / minister release: total project cost AUD 61.9M (converted at 0.75 USD/AUD)",
+    "confidence": "Medium"
    },
    {
     "project": "Braintree BELD solar-sited BESS",
@@ -1357,6 +1825,18 @@
     "confidence": "Medium"
    },
    {
+    "project": "Panton battery (Green Mountain Power)",
+    "state": "VT",
+    "owner_type": "IOU",
+    "utility": 1,
+    "mw": 1.0,
+    "mwh": 4.0,
+    "cod_year": 2018.0,
+    "kwh": 750.0,
+    "cost_basis": "Vermont PUC CPG coverage: $3.0M battery (solar about $11M separate)",
+    "confidence": "Medium"
+   },
+   {
     "project": "Chugach BESS (Southcentral Power Project site)",
     "state": "AK",
     "owner_type": "muni/coop",
@@ -1405,18 +1885,6 @@
     "confidence": "Medium"
    },
    {
-    "project": "Ozone Park BESS",
-    "state": "NY",
-    "owner_type": "IOU",
-    "utility": 1,
-    "mw": 1.5,
-    "mwh": 12.0,
-    "cod_year": 2019.0,
-    "kwh": 1250.0,
-    "cost_basis": "estimate (utility spokesman: 'about $15 million')",
-    "confidence": "Low"
-   },
-   {
     "project": "Harding Street BESS",
     "state": "IN",
     "owner_type": "IOU",
@@ -1427,6 +1895,18 @@
     "kwh": 1250.0,
     "cost_basis": "estimate at announcement (2015)",
     "confidence": "Medium"
+   },
+   {
+    "project": "Ozone Park BESS",
+    "state": "NY",
+    "owner_type": "IOU",
+    "utility": 1,
+    "mw": 1.5,
+    "mwh": 12.0,
+    "cod_year": 2019.0,
+    "kwh": 1250.0,
+    "cost_basis": "estimate (utility spokesman: 'about $15 million')",
+    "confidence": "Low"
    },
    {
     "project": "Regina BESS [CANADA]",
@@ -1489,6 +1969,18 @@
     "confidence": "High"
    },
    {
+    "project": "Asheville Rock Hill substation BESS (Duke Energy Progress)",
+    "state": "NC",
+    "owner_type": "IOU",
+    "utility": 1,
+    "mw": 9.0,
+    "mwh": 9.0,
+    "cod_year": 2020.0,
+    "kwh": 1666.6666666666667,
+    "cost_basis": "utility statement / trade press: almost $15M",
+    "confidence": "Medium"
+   },
+   {
     "project": "El Centro BESS (IID)",
     "state": "CA",
     "owner_type": "public power",
@@ -1498,6 +1990,18 @@
     "cod_year": 2017.0,
     "kwh": 1900.0,
     "cost_basis": "IID / GE turnkey deal value",
+    "confidence": "Medium"
+   },
+   {
+    "project": "LADWP Beacon Energy Storage System",
+    "state": "CA",
+    "owner_type": "muni/coop",
+    "utility": 1,
+    "mw": 20.0,
+    "mwh": 10.0,
+    "cod_year": 2018.0,
+    "kwh": 1920.0,
+    "cost_basis": "board-approved Doosan GridTech contract value",
     "confidence": "Medium"
    },
    {
@@ -1539,112 +2043,112 @@
   ]
  },
  "ols_parsimonious": {
-  "n": 55,
-  "r2": 0.5083670322928668,
-  "adj_r2": 0.47944744595715316,
-  "resid_sd": 0.3474571431388518,
+  "n": 81,
+  "r2": 0.5545111947280387,
+  "adj_r2": 0.5371544880291311,
+  "resid_sd": 0.33189251366759553,
   "coef": {
    "const": {
-    "b": 7.4719095535214635,
-    "se": 0.11463840682314586,
+    "b": 7.4901040803780194,
+    "se": 0.11091831157379121,
     "p": 0.0
    },
    "ln_mwh": {
-    "b": -0.1379818553949906,
-    "se": 0.028137644019139214,
-    "p": 9.399208964400139e-07
+    "b": -0.17721562293117674,
+    "se": 0.025792337052216775,
+    "p": 6.381450873845294e-12
    },
    "ln_dur": {
-    "b": -0.3313608890729214,
-    "se": 0.09524504055175152,
-    "p": 0.0005032216870067198
+    "b": -0.3042083352981701,
+    "se": 0.08433238017013629,
+    "p": 0.0003094544188506502
    },
    "yr": {
-    "b": 0.011583803421613182,
-    "se": 0.020268797061773654,
-    "p": 0.567654544934484
+    "b": 0.027400823156117894,
+    "se": 0.017813360165545005,
+    "p": 0.12399543231950558
    }
   },
   "hp_pred_kwh": {
-   "p50": 1013.88160554235,
-   "pi80_lo": 630.6966342793804,
-   "pi80_hi": 1629.8737842982982
+   "p50": 1061.6281027300658,
+   "pi80_lo": 675.527004054961,
+   "pi80_hi": 1668.4073645330418
   },
   "hp_percentile": {
-   "b3": 0.2977650100360589,
-   "b4": 0.8478361257608449,
-   "b6": 0.9974603948406962,
-   "contract": 0.0818763741172362
+   "b3": 0.24575911496288566,
+   "b4": 0.8284875146738486,
+   "b6": 0.9975375049364822,
+   "contract": 0.05560328286524881
   }
  },
  "ols": {
-  "n": 55,
-  "r2": 0.5175165173445189,
-  "adj_r2": 0.46828350891028614,
-  "resid_sd": 0.35116321680835716,
+  "n": 81,
+  "r2": 0.5784049400571022,
+  "adj_r2": 0.5502986027275757,
+  "resid_sd": 0.32714594864388036,
   "coef": {
    "const": {
-    "b": 7.605538540076944,
-    "se": 0.24334510966268874,
-    "p": 1.9622131654082203e-214
-   },
-   "ln_mwh": {
-    "b": -0.16402079935074187,
-    "se": 0.04384401239336726,
-    "p": 0.0001832837153669653
-   },
-   "ln_dur": {
-    "b": -0.29395817049884243,
-    "se": 0.11427785638704627,
-    "p": 0.01010221398523743
-   },
-   "yr": {
-    "b": 0.015902932979967827,
-    "se": 0.021724510174957076,
-    "p": 0.4641519485318677
-   },
-   "utility": {
-    "b": -0.024623008188387946,
-    "se": 0.14584750175527356,
-    "p": 0.8659326554591317
-   },
-   "ne": {
-    "b": -0.1330225871591615,
-    "se": 0.16554653334555416,
-    "p": 0.42166503980037573
-   }
-  },
-  "hp_pred_kwh": {
-   "p50": 972.62415128689,
-   "pi80_lo": 581.0466865750948,
-   "pi80_hi": 1628.0924778051924
-  },
-  "hp_percentile": {
-   "b3": 0.3498191233862221,
-   "b4": 0.8531162678550754,
-   "b6": 0.9963768721484986,
-   "contract": 0.11902622751392589
-  }
- },
- "ols_utility_only": {
-  "n": 36,
-  "r2": 0.6087919043429381,
-  "coef": {
-   "const": {
-    "b": 7.488702338914957,
+    "b": 7.4206664129389255,
+    "se": 0.17383963150346107,
     "p": 0.0
    },
    "ln_mwh": {
-    "b": -0.13746565280869896,
-    "p": 0.0006785556085609703
+    "b": -0.19185040481248175,
+    "se": 0.04164751419756319,
+    "p": 4.094496262931165e-06
    },
    "ln_dur": {
-    "b": -0.3225844714499717,
-    "p": 0.0010192582706307783
+    "b": -0.3118371788915225,
+    "se": 0.09674968230189622,
+    "p": 0.0012679627553304556
    },
    "yr": {
-    "b": -0.004382993487536513,
-    "p": 0.8639481126223584
+    "b": 0.0387502606878365,
+    "se": 0.01718304120058731,
+    "p": 0.02412418781137074
+   },
+   "utility": {
+    "b": 0.1659091931030122,
+    "se": 0.07469058949892848,
+    "p": 0.026331567200792168
+   },
+   "ne": {
+    "b": -0.00563948350669046,
+    "se": 0.13606560613272534,
+    "p": 0.9669397065050098
+   }
+  },
+  "hp_pred_kwh": {
+   "p50": 1212.0357917067004,
+   "pi80_lo": 766.35920833905,
+   "pi80_hi": 1916.8958164696105
+  },
+  "hp_percentile": {
+   "b3": 0.14713131532375817,
+   "b4": 0.7138465282404984,
+   "b6": 0.9918599737852564,
+   "contract": 0.026117092815244804
+  }
+ },
+ "ols_utility_only": {
+  "n": 52,
+  "r2": 0.6710735184642349,
+  "coef": {
+   "const": {
+    "b": 7.570810475560494,
+    "p": 0.0
+   },
+   "ln_mwh": {
+    "b": -0.16435569843430992,
+    "p": 1.7946672632261362e-05
+   },
+   "ln_dur": {
+    "b": -0.37195193444455543,
+    "p": 1.3618692905085613e-05
+   },
+   "yr": {
+    "b": 0.0196520460974465,
+    "p": 0.39698093822349423
    }
   }
  }

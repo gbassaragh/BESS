@@ -17,7 +17,7 @@ for n in ("Public Projects","Statistics"):
 df=pd.read_csv(f"{S}/bess_projects.csv"); R=json.load(open(f"{B}/stats_results.json"))
 EXCL={"Nantucket BESS":"cost bundles 15 MW diesel generator and control house","Salem Smart Power Center":"2013 demonstration incl. building and smart-grid controls","Arlington Microgrid":"microgrid incl. solar, building, V2G","Essex Solar + Storage":"bundles 4.9 MW solar","Hot Springs Microgrid":"bundles 2 MW solar; MWh not confirmed","Smarter Network Storage (Leighton Buzzard) [UK]":"R&D demonstration incl. trials","SwRI Solar + Storage (5 MW PV + 10 MW BESS)":"bundles 5 MW solar","Glenarm BESS (for Pasadena Water & Power)":"15-year contract value, not capex","Minnesota utility-owned distribution battery program (200 MW)":"program budget, MWh not stated","Morro Bay BESS (proposed, not built)":"proposed, no COD, developer statement"}
 ws=wb.create_sheet("Public Projects",wb.sheetnames.index("Cost Curve")+1)
-ws["A1"]="Public project-level BESS costs (75 compiled; 55 used in the regression). Blue = keyed from source; $/kWh, $/kW and duration are formulas."; ws["A1"].font=title
+ws["A1"]=f"Public project-level BESS costs ({len(df)} compiled; {R['n_total']} used in the regression). Blue = keyed from source; $/kWh, $/kW and duration are formulas."; ws["A1"].font=title
 cols=["Project","Owner","Owner type","State","ISO","MW","MWh","COD year","Cost ($)","Cost basis","Scope","Site type","Confidence","Excluded (reason)","Duration (h)","$/kWh","$/kW","Source URL","Notes"]
 header(ws,3,cols,[40,22,16,8,8,7,8,8,14,26,34,26,9,30,9,9,9,50,50])
 for i,r in enumerate(df.itertuples(index=False),4):
@@ -92,7 +92,7 @@ for i,rr in enumerate(refs,last+1):
     bm.cell(row=i,column=4).font=blue; bm.row_dimensions[i].height=45
 # README rows
 rd=wb["README"]; rr=rd.max_row+1
-for k,v in (("Tab: Public Projects","75 public project costs compiled 29 Sep 2026 and 2 Oct 2026 (55 used in the regression; exclusions and reasons in column N). $/kWh, $/kW and duration are formulas."),("Tab: Statistics","Reference-class, regression and Monte Carlo results as values, with the model parameters. See the Statistical Benchmarking Memo for method and limits.")):
+for k,v in (("Tab: Public Projects",f"{len(df)} public project costs compiled 29 Sep to 3 Oct 2026 ({R['n_total']} used in the regression; exclusions and reasons in column N). $/kWh, $/kW and duration are formulas."),("Tab: Statistics","Reference-class, regression and Monte Carlo results as values, with the model parameters. See the Statistical Benchmarking Memo for method and limits.")):
     rd.cell(row=rr,column=1,value=k).font=bold; c=rd.cell(row=rr,column=2,value=v); c.font=base; c.alignment=Alignment(wrap_text=True,vertical="top"); rr+=1
 from openpyxl.workbook.properties import CalcProperties
 wb.calculation=CalcProperties(fullCalcOnLoad=True)

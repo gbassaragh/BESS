@@ -1,7 +1,8 @@
-import sys
+import sys, json
 sys.path.insert(0,"/tmp/claude-0/-home-user-BESS/078f934e-4ca0-5169-be3f-cb66ff0e2514/scratchpad/build")
 from docx_common import *
 B="/tmp/claude-0/-home-user-BESS/078f934e-4ca0-5169-be3f-cb66ff0e2514/scratchpad/build"
+R=json.load(open(f"{B}/stats_results.json")); RC=R["reference_class"]; RCU=R["reference_class_utility"]
 d=new_doc()
 para(d,"Red Team Report: Hyde Park BESS cost package (Rev 3, $57.2M)",bold=True,size=20,color=NAVY,after=2)
 para(d,"Independent challenge of the estimate, schedule, risk register and the CoE analysis package",size=12,color=BURG,after=2)
@@ -12,7 +13,7 @@ para(d,"For a 10 MW / 20 MWh, two-hour, utility-owned station on a closed landfi
 d.add_heading("Steelman (the defense line)",1)
 bullets(d,["The battery is priced by contract, not by estimate: $12.1M fixed until Final Acceptance with liquidated damages. At $532/kWh equipment-only it sits between BNEF's US turnkey index and every disclosed utility-owned project.",
 "Every dollar between $12.1M and $57.2M has a name: 292 lines in thirteen layers, reconciled to the unrounded total. The station ($3.8M), the landfill platform ($2.7M) and Station 496 protection ($7.3M) are physical scope.",
-"The direct cost is inside the reference class: $1,483/kWh at the 77th percentile of thirteen utility-owned projects under 100 MWh, beside Fairhaven ($1,659 actual), Chateaugay ($1,490) and Provincetown ($1,289).",
+f"The direct cost is inside the reference class: $1,483/kWh at the {RC['hp_rank']['b4']:.0%} percentile of {RC['n']} public projects under 100 MWh ({RCU['hp_rank']['b4']:.0%} of the {RCU['n']} utility-owned members), beside Fairhaven ($1,659 actual), Chateaugay ($1,490), Hinesburg ($1,400) and Provincetown ($1,289).",
 "The loaders make it an outlier, and they are policy, not estimating: indirects at 17.4% and AFUDC at 8.8% are EMA template outputs on a seven-year development window that no public disclosure carries.",
 "Risk plus contingency at 17.9% is inside lead-review guidance."])
 d.add_heading("Kill shots",1)
@@ -37,7 +38,7 @@ rows=[["🔴","1","Construction layers B+D+E = $8.3M direct","Haugland Class 3 b
 ["🟡","10","Engineering $895K, 1.6% of total","First-of-a-kind station; PSCAD pending; re-base came from one email. PF Rev 3 authorized $1.5M Leidos + $402K internal to IFC.","Reconcile PF Rev 3 authorizations to $895K","Medium"],
 ["🟡","11","Nomad $246K labor not visible","To-go built from $11,860,850 material; may be dropped or double-carried in layer G.","Line-level check","High"],
 ["🟡","12","D-Line 24211 at $4.79M (Feb 2024)","HEG take-off reads a larger duct bank; not re-estimated in 2.5 years.","Distribution Engineering re-base","Medium"],
-["🟡","13","Benchmark placement","All public figures are search-excerpt retrievals; n = 13 with mixed scope.","Verify the ten primary sources","High"],
+["🟡","13","Benchmark placement",f"All public figures are search-excerpt retrievals; reference class n = {RC['n']} with mixed scope and gross-of-incentive developer budgets.","Verify the ten primary sources","High"],
 ["⚪","14","AFUDC $5.0M, 8.8%","Correct given the spend curve; every month of siting slip compounds it.","None","High"]]
 table(d,["Sev","#","Claim attacked","Challenge","Evidence to resolve","Conf."],rows,widths=[0.35,0.3,1.6,2.6,1.3,0.55],font=8)
 d.add_heading("Where to be more aggressive",1)
