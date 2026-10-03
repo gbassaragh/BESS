@@ -144,15 +144,16 @@
    "tier": "B",
    "title": "Breaker package price: $332K each including relays and cabinets",
    "layer": "D",
-   "lo": 299325.9309483894,
-   "hi": 598651.8618967788,
+   "lo": 265475.7522123894,
+   "hi": 530951.5044247787,
    "scales": true,
    "conf": "Low",
    "owner": "Substation Eng. + Sourcing",
+   "unit": 331844.6902654867,
    "close": "Budgetary quote for the SDV7-class breaker with relay cabinet; confirm what the project team's number includes",
-   "ev": "Four at $374K furnish. A Siemens SDV7-SE 1200 A lists at about $50K (distributor listings, Medium-Low); Siemens has quoted the skids, so the question is what the skid price includes.",
-   "lo_loaded": 431151.6703052453,
-   "hi_loaded": 862303.3406104906
+   "ev": "Four at $332K furnish. A Siemens SDV7-SE 1200 A lists at about $50K (distributor listings, Medium-Low); Siemens has quoted the skids, so the question is what the skid price includes.",
+   "lo_loaded": 382393.5788966064,
+   "hi_loaded": 764787.1577932128
   },
   {
    "id": "B6",
@@ -164,6 +165,7 @@
    "scales": true,
    "conf": "Low",
    "owner": "Substation Eng. + Sourcing",
+   "unit": 269330.2194,
    "close": "Budgetary quote with the 2026 transformer PPI (1.9x since 2018) and a 29 to 70 week lead time in the schedule",
    "ev": "Four at $269K furnish. 2.5 to 3 MVA pad-mounts list at $80K to $155K in 2026 dealer and vendor guides (Low-Medium); if the bidder-list figure bundles LV gear the gap closes.",
    "lo_loaded": 310356.46952488134,
@@ -225,10 +227,10 @@
   },
   "B": {
    "n": 6,
-   "lo": 3317553.5171598275,
-   "hi": 5309592.977352093,
-   "lo_loaded": 4309204.634128688,
-   "hi_loaded": 6977372.030804324
+   "lo": 3283703.3384238277,
+   "hi": 5241892.619880093,
+   "lo_loaded": 4260446.54272005,
+   "hi_loaded": 6879855.8479870455
   },
   "C": {
    "n": 3,

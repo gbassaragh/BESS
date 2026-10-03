@@ -40,16 +40,20 @@
   "interconnect": "labor"
  },
  "series_ratio_2018": {
-  "transformer": 1.8949676341616204,
-  "switchgear": 1.830704287936014,
-  "engineering": 1.2608992990254744,
+  "transformer": 1.9123503064346048,
+  "switchgear": 1.8239057987113976,
+  "engineering": 1.2468050913380575,
   "labor": 1.3022984028048303,
   "civil": 1.2590851563912493,
-  "eci_construction": 1.2969696969696969,
+  "eci_construction": 1.2958780952380953,
   "hw_dist_station": 1.6071428571428572,
   "hw_line_transformers": 1.9373716632443532,
-  "construction_inputs": 1.420720096936126,
-  "electrical_equipment": 1.2573402417962003,
+  "construction_inputs": 1.4993573515092502,
+  "electrical_equipment": 1.3706944444444444,
+  "transformer_item": 1.9123503064346048,
+  "engineering_industry": 1.2266989269934778,
+  "construction_materials": 1.537289501590668,
+  "switchgear_industry": 1.911441799587806,
   "hw": 1.4926174496644296,
   "bat_installed": 0.7328,
   "bat_pack": 0.6136363636363636,
@@ -62,18 +66,102 @@
  "series_meta": {
   "transformer": {
    "label": "PPI commodity: power and distribution transformers, except parts (WPU117409, Dec 1999 = 100), annual average",
-   "source": "FRED mirror of BLS series (open-datahub/commodity, obs. to Oct 2023); 2025-26 from WPU11740999 anchors (Sep 2025 351.2, Nov 2025 365.1, Jan 2026 366.6) divided by the 1.01 ratio between the two series",
-   "conf": "High 2015-2023; Medium 2025-2026; 2024 interpolated"
+   "source": "FRED fredgraph.csv (BLS data), retrieved 2026-10-03 (overrides excerpt values)",
+   "conf": "High (published observations; the latest year is a partial-year average)",
+   "series_id": "WPU117409",
+   "obs_per_year": {
+    "2014": 12,
+    "2015": 12,
+    "2016": 12,
+    "2017": 12,
+    "2018": 12,
+    "2019": 12,
+    "2020": 12,
+    "2021": 12,
+    "2022": 12,
+    "2023": 12,
+    "2024": 12,
+    "2025": 12,
+    "2026": 7
+   },
+   "bls_check": {
+    "2025": 352.944,
+    "2024": 342.519,
+    "2023": 333.441,
+    "2022": 312.641,
+    "2021": 232.306,
+    "2020": 198.0,
+    "2019": 195.4,
+    "2018": 191.6,
+    "2017": 181.8,
+    "2026": 366.326
+   }
   },
   "switchgear": {
-   "label": "PPI commodity: switchgear, switchboard, industrial controls equipment (WPU1175, 1982 = 100), annual average",
-   "source": "FRED mirror of BLS series (obs. to Nov 2023); Aug 2025 384.1 and Jul 2026 419.3 from search excerpts of the FRED page",
-   "conf": "High 2015-2023; Medium 2025-2026; 2024 interpolated"
+   "label": "PPI commodity: switchgear, switchboard, industrial controls (WPU1175, 1982 = 100), annual average",
+   "source": "FRED fredgraph.csv (BLS data), retrieved 2026-10-03 (overrides excerpt values)",
+   "conf": "High (published observations; the latest year is a partial-year average)",
+   "series_id": "WPU1175",
+   "obs_per_year": {
+    "2014": 12,
+    "2015": 12,
+    "2016": 12,
+    "2017": 12,
+    "2018": 12,
+    "2019": 12,
+    "2020": 12,
+    "2021": 12,
+    "2022": 12,
+    "2023": 12,
+    "2024": 12,
+    "2025": 12,
+    "2026": 8
+   },
+   "bls_check": {
+    "2025": 374.711,
+    "2024": 343.311,
+    "2023": 321.566,
+    "2022": 293.309,
+    "2021": 246.645,
+    "2020": 235.7,
+    "2019": 231.2,
+    "2018": 225.1,
+    "2017": 220.7,
+    "2026": 410.47
+   }
   },
   "engineering": {
    "label": "PPI commodity: engineering services (WPU4532, Mar 2009 = 100), annual average",
-   "source": "FRED mirror of BLS series (obs. to Nov 2023); 2025-26 extended at the industry index's primary-services growth (PCU541330541330P 159.3 Mar 2015 to 207.5 Feb 2025, about 3%/yr)",
-   "conf": "High 2015-2023; Low 2025-2026"
+   "source": "FRED fredgraph.csv (BLS data), retrieved 2026-10-03 (overrides excerpt values)",
+   "conf": "High (published observations; the latest year is a partial-year average)",
+   "series_id": "WPU4532",
+   "obs_per_year": {
+    "2014": 12,
+    "2015": 12,
+    "2016": 12,
+    "2017": 12,
+    "2018": 12,
+    "2019": 12,
+    "2020": 12,
+    "2021": 12,
+    "2022": 12,
+    "2023": 12,
+    "2024": 12,
+    "2025": 12,
+    "2026": 8
+   },
+   "bls_check": {
+    "2025": 143.004,
+    "2024": 139.244,
+    "2023": 135.814,
+    "2022": 130.883,
+    "2021": 124.056,
+    "2020": 120.5,
+    "2019": 120.0,
+    "2018": 117.0,
+    "2017": 114.0,
+    "2026": 145.855
+   }
   },
   "labor": {
    "label": "IBEW Local 103 (Boston) journeyman inside wireman base rate, $/h, Sep or Mar of year",
@@ -86,9 +174,26 @@
    "conf": "Medium 2017-2018 and 2023-2024; Medium-Low 2025; 2019-2022 interpolated (ENR Dec-over-Dec changes 2022 +5.6%, 2023 +2.6%, 2024 +0.9%, 2025 +3.6% as cross-check)"
   },
   "eci_construction": {
-   "label": "BLS Employment Cost Index, total compensation, private industry, construction (CIU2012300000000I, Dec 2005 = 100), December (alternative labor series, not used in the composite)",
-   "source": "BLS/DOL release excerpts: Dec 2020 139.4, Dec 2021 144.8, Dec 2023 160.5; Jun 2025 165.4 and Jun 2026 171.2 from a secondary document citing the BLS API; 2016 from Jun 2016 124.6",
-   "conf": "Medium at the quoted points; gaps interpolated"
+   "label": "ECI: total compensation, private industry, construction (CIU2012300000000I, Dec 2005 = 100), annual average of quarters",
+   "source": "FRED fredgraph.csv (BLS data), retrieved 2026-10-03 (overrides excerpt values)",
+   "conf": "High (published observations; the latest year is a partial-year average)",
+   "series_id": "CIU2012300000000I",
+   "obs_per_year": {
+    "2014": 4,
+    "2015": 4,
+    "2016": 4,
+    "2017": 4,
+    "2018": 4,
+    "2019": 4,
+    "2020": 4,
+    "2021": 4,
+    "2022": 4,
+    "2023": 4,
+    "2024": 4,
+    "2025": 4,
+    "2026": 2
+   },
+   "bls_check": {}
   },
   "hw_dist_station": {
    "label": "Handy-Whitman North Atlantic, distribution station equipment (acct 362), July (1973 = 100); alternative for layer D",
@@ -101,14 +206,202 @@
    "conf": "Medium 2015-2022; Low 2023 (jump to 1,887 not verified)"
   },
   "construction_inputs": {
-   "label": "PPI: net inputs to construction industries, goods (WPUIP2300001, Jun 1986 = 100), annual average; materials cross-check",
-   "source": "FRED mirror of BLS series (obs. to Nov 2023); Aug 2025 328.3 from a secondary document",
-   "conf": "High 2015-2023; Medium 2025"
+   "label": "PPI: net inputs to construction industries, goods (WPUIP2300001, Jun 1986 = 100), annual average",
+   "source": "FRED fredgraph.csv (BLS data), retrieved 2026-10-03 (overrides excerpt values)",
+   "conf": "High (published observations; the latest year is a partial-year average)",
+   "series_id": "WPUIP2300001",
+   "obs_per_year": {
+    "2014": 12,
+    "2015": 12,
+    "2016": 12,
+    "2017": 12,
+    "2018": 12,
+    "2019": 12,
+    "2020": 12,
+    "2021": 12,
+    "2022": 12,
+    "2023": 12,
+    "2024": 12,
+    "2025": 12,
+    "2026": 8
+   },
+   "bls_check": {
+    "2025": 326.436,
+    "2024": 320.445,
+    "2023": 318.772,
+    "2022": 321.113,
+    "2021": 271.156,
+    "2020": 228.2,
+    "2019": 231.2,
+    "2018": 231.1,
+    "2017": 216.4,
+    "2026": 346.464
+   }
   },
   "electrical_equipment": {
-   "label": "PPI commodity: electrical machinery and equipment (WPU117, 1982 = 100), December values",
-   "source": "FRED mirror (2015-2022) and FRED page excerpts (Dec 2023 134.9, Dec 2024 138.7, Dec 2025 145.6)",
-   "conf": "High 2015-2022; Medium 2023-2025"
+   "label": "PPI commodity: electrical machinery and equipment (WPU117, 1982 = 100), annual average",
+   "source": "FRED fredgraph.csv (BLS data), retrieved 2026-10-03 (overrides excerpt values)",
+   "conf": "High (published observations; the latest year is a partial-year average)",
+   "series_id": "WPU117",
+   "obs_per_year": {
+    "2014": 12,
+    "2015": 12,
+    "2016": 12,
+    "2017": 12,
+    "2018": 12,
+    "2019": 12,
+    "2020": 12,
+    "2021": 12,
+    "2022": 12,
+    "2023": 12,
+    "2024": 12,
+    "2025": 12,
+    "2026": 8
+   },
+   "bls_check": {
+    "2025": 142.185,
+    "2024": 137.49,
+    "2023": 134.167,
+    "2022": 129.645,
+    "2021": 120.269,
+    "2020": 117.7,
+    "2019": 116.8,
+    "2018": 115.2,
+    "2017": 113.7,
+    "2026": 157.904
+   }
+  },
+  "transformer_item": {
+   "label": "PPI commodity: power and distribution transformers, 8-digit item (WPU11740999, Dec 1999 = 100), annual average",
+   "series_id": "WPU11740999",
+   "source": "FRED fredgraph.csv (BLS data), retrieved 2026-10-03 (overrides excerpt values)",
+   "conf": "High (published observations; the latest year is a partial-year average)",
+   "obs_per_year": {
+    "2014": 12,
+    "2015": 12,
+    "2016": 12,
+    "2017": 12,
+    "2018": 12,
+    "2019": 12,
+    "2020": 12,
+    "2021": 12,
+    "2022": 12,
+    "2023": 2,
+    "2024": 3,
+    "2025": 12,
+    "2026": 7
+   },
+   "bls_check": {
+    "2025": 352.944,
+    "2022": 312.641,
+    "2021": 232.306,
+    "2020": 198.0,
+    "2019": 195.4,
+    "2018": 191.6,
+    "2017": 181.8,
+    "2026": 366.326,
+    "2024": 344.831,
+    "2023": 329.553
+   }
+  },
+  "engineering_industry": {
+   "label": "PPI industry: engineering services (PCU541330541330, Dec 1996 = 100), annual average",
+   "series_id": "PCU541330541330",
+   "source": "FRED fredgraph.csv (BLS data), retrieved 2026-10-03 (overrides excerpt values)",
+   "conf": "High (published observations; the latest year is a partial-year average)",
+   "obs_per_year": {
+    "2014": 12,
+    "2015": 12,
+    "2016": 12,
+    "2017": 12,
+    "2018": 12,
+    "2019": 12,
+    "2020": 12,
+    "2021": 12,
+    "2022": 12,
+    "2023": 12,
+    "2024": 12,
+    "2025": 12,
+    "2026": 8
+   },
+   "bls_check": {
+    "2025": 205.946,
+    "2024": 200.951,
+    "2023": 196.429,
+    "2022": 189.736,
+    "2021": 180.782,
+    "2020": 176.1,
+    "2019": 175.4,
+    "2018": 171.1,
+    "2017": 166.8,
+    "2026": 209.898
+   }
+  },
+  "construction_materials": {
+   "label": "PPI special index: construction materials (WPUSI012011, 1982 = 100), annual average",
+   "series_id": "WPUSI012011",
+   "source": "FRED fredgraph.csv (BLS data), retrieved 2026-10-03 (overrides excerpt values)",
+   "conf": "High (published observations; the latest year is a partial-year average)",
+   "obs_per_year": {
+    "2014": 12,
+    "2015": 12,
+    "2016": 12,
+    "2017": 12,
+    "2018": 12,
+    "2019": 12,
+    "2020": 12,
+    "2021": 12,
+    "2022": 12,
+    "2023": 12,
+    "2024": 12,
+    "2025": 12,
+    "2026": 8
+   },
+   "bls_check": {
+    "2025": 337.91,
+    "2024": 328.522,
+    "2023": 331.784,
+    "2022": 341.533,
+    "2021": 303.418,
+    "2020": 239.2,
+    "2019": 235.7,
+    "2018": 235.7,
+    "2017": 221.6,
+    "2026": 362.416
+   }
+  },
+  "switchgear_industry": {
+   "label": "PPI industry: switchgear and switchboard apparatus mfg (PCU335313335313, Jun 1985 = 100), annual average",
+   "series_id": "PCU335313335313",
+   "source": "FRED fredgraph.csv (BLS data), retrieved 2026-10-03 (overrides excerpt values)",
+   "conf": "High (published observations; the latest year is a partial-year average)",
+   "obs_per_year": {
+    "2014": 12,
+    "2015": 12,
+    "2016": 12,
+    "2017": 12,
+    "2018": 12,
+    "2019": 12,
+    "2020": 12,
+    "2021": 12,
+    "2022": 12,
+    "2023": 12,
+    "2024": 12,
+    "2025": 12,
+    "2026": 8
+   },
+   "bls_check": {
+    "2025": 353.221,
+    "2024": 322.648,
+    "2023": 299.804,
+    "2022": 274.147,
+    "2021": 231.37,
+    "2020": 219.1,
+    "2019": 211.6,
+    "2018": 204.7,
+    "2017": 200.4,
+    "2026": 391.384
+   }
   },
   "hw_dist": {
    "fallback": "Handy-Whitman (series not retrieved)"
@@ -119,78 +412,78 @@
  },
  "factors": {
   "2015": {
-   "hp_composite": 1.0316144038760715,
-   "dev_composite": 0.96296125328493,
+   "hp_composite": 1.0299227720105733,
+   "dev_composite": 0.9610391670601651,
    "two_component": 1.0382729686670207,
    "naive_battery": 0.2128252788104089,
    "hw_only": 1.5885714285714285
   },
   "2016": {
-   "hp_composite": 1.0567384087388534,
-   "dev_composite": 0.9963018006139609,
+   "hp_composite": 1.0551170686774958,
+   "dev_composite": 0.9944443431016712,
    "two_component": 1.0571597426646477,
    "naive_battery": 0.30676490288010716,
    "hw_only": 1.557422969187675
   },
   "2017": {
-   "hp_composite": 1.131525562260641,
-   "dev_composite": 1.089282725683053,
+   "hp_composite": 1.129907851571353,
+   "dev_composite": 1.0874309497324777,
    "two_component": 1.1580608930577057,
    "naive_battery": 0.5491606714628298,
    "hw_only": 1.5639943741209563
   },
   "2018": {
-   "hp_composite": 1.1736577109292368,
-   "dev_composite": 1.147789911105972,
+   "hp_composite": 1.1720428820583806,
+   "dev_composite": 1.1459479664134387,
    "two_component": 1.1886904697986576,
    "naive_battery": 0.7328,
    "hw_only": 1.4926174496644296
   },
   "2019": {
-   "hp_composite": 1.1623773596759346,
-   "dev_composite": 1.1409915201424787,
+   "hp_composite": 1.160820271791438,
+   "dev_composite": 1.1392126502392887,
    "two_component": 1.1846767630771038,
    "naive_battery": 0.7669550655874966,
    "hw_only": 1.4631578947368422
   },
   "2020": {
-   "hp_composite": 1.1587508128540671,
-   "dev_composite": 1.142197034497904,
+   "hp_composite": 1.1571957076925135,
+   "dev_composite": 1.1404265807801466,
    "two_component": 1.1782625295746363,
    "naive_battery": 0.8044496487119437,
    "hw_only": 1.4274711168164314
   },
   "2021": {
-   "hp_composite": 1.1305816824477763,
-   "dev_composite": 1.1219714037354176,
+   "hp_composite": 1.1289708316557423,
+   "dev_composite": 1.1201669776517398,
    "two_component": 1.1132323749038835,
    "naive_battery": 0.8457987072945522,
    "hw_only": 1.291521486643438
   },
   "2022": {
-   "hp_composite": 1.072873861922556,
-   "dev_composite": 1.0663329072917243,
+   "hp_composite": 1.0712510635419001,
+   "dev_composite": 1.0645726133231894,
    "two_component": 1.0567564567781105,
    "naive_battery": 0.891628812459442,
    "hw_only": 1.166841552990556
   },
   "2023": {
-   "hp_composite": 1.061173964610382,
-   "dev_composite": 1.0578599601253647,
+   "hp_composite": 1.0590550212602339,
+   "dev_composite": 1.055538611830056,
    "two_component": 1.0344239495052767,
    "naive_battery": 0.9427101200686105,
    "hw_only": 1.095566502463054
   },
   "2024": {
-   "hp_composite": 1.0516061881092864,
-   "dev_composite": 1.0521727426278096,
+   "hp_composite": 1.053201618274192,
+   "dev_composite": 1.0545280180410974,
    "two_component": 1.0318181818181817,
    "naive_battery": 1.0,
    "hw_only": 1.053030303030303
   },
   "2025": {
-   "hp_composite": 1.0251170262126252,
-   "dev_composite": 1.0251253203736856,
+   "hp_composite": 1.0257338262536226,
+   "dev_composite": 1.0261890743006044,
    "two_component": 1.0258911819887429,
    "naive_battery": 1.0,
    "hw_only": 1.0431519699812384
@@ -242,8 +535,8 @@
     },
     "layer_developer": {
      "median": 831.6326530612245,
-     "q25": 651.6308372934614,
-     "q75": 1163.4918853293361,
+     "q25": 650.6015349916721,
+     "q75": 1162.8948666043912,
      "hp_pct": {
       "contract": 0.2,
       "installed": 0.509090909090909,
@@ -253,30 +546,30 @@
     },
     "layer_hp": {
      "median": 831.6326530612247,
-     "q25": 658.8207483303939,
-     "q75": 1208.3887918291475,
+     "q25": 657.9090120105939,
+     "q75": 1206.5773592468333,
      "hp_pct": {
       "contract": 0.2,
       "installed": 0.509090909090909,
-      "station_direct": 0.8363636363636363,
+      "station_direct": 0.8545454545454545,
       "approval": 0.9818181818181818
      }
     },
     "layer_developer_pack": {
-     "median": 829.9319727891157,
-     "q25": 637.3470670304434,
-     "q75": 1190.103682836443,
+     "median": 829.2159991975327,
+     "q25": 636.0978894748462,
+     "q75": 1189.5066641114981,
      "hp_pct": {
       "contract": 0.2,
-      "installed": 0.5636363636363636,
+      "installed": 0.5454545454545454,
       "station_direct": 0.8727272727272727,
       "approval": 0.9818181818181818
      }
     },
     "layer_developer_turnkey": {
-     "median": 779.4362988756975,
-     "q25": 557.2007281212681,
-     "q75": 1108.459740333315,
+     "median": 778.0548403562975,
+     "q25": 556.2156221526543,
+     "q75": 1108.1211637557562,
      "hp_pct": {
       "contract": 0.32727272727272727,
       "installed": 0.6,
@@ -323,9 +616,9 @@
      }
     },
     "layer_developer": {
-     "median": 996.301800613961,
-     "q25": 693.0043370405763,
-     "q75": 1528.607642381152,
+     "median": 994.4443431016712,
+     "q25": 691.8898031962246,
+     "q75": 1525.253294094431,
      "hp_pct": {
       "contract": 0.12903225806451613,
       "installed": 0.3870967741935484,
@@ -334,31 +627,31 @@
      }
     },
     "layer_hp": {
-     "median": 1056.7384087388534,
-     "q25": 698.3226191919098,
-     "q75": 1533.396378862002,
+     "median": 1055.1170686774958,
+     "q25": 697.3276503526968,
+     "q75": 1530.334505721038,
      "hp_pct": {
       "contract": 0.12903225806451613,
       "installed": 0.3870967741935484,
-      "station_direct": 0.7096774193548387,
+      "station_direct": 0.7419354838709677,
       "approval": 0.967741935483871
      }
     },
     "layer_developer_pack": {
-     "median": 1036.2795723398908,
-     "q25": 685.9856124996959,
-     "q75": 1424.6692432829886,
+     "median": 1034.422114827601,
+     "q25": 684.8768407753956,
+     "q75": 1421.8280451134901,
      "hp_pct": {
       "contract": 0.12903225806451613,
-      "installed": 0.4838709677419355,
+      "installed": 0.45161290322580644,
       "station_direct": 0.7741935483870968,
       "approval": 0.967741935483871
      }
     },
     "layer_developer_turnkey": {
-     "median": 987.3087689869592,
-     "q25": 612.5687730366378,
-     "q75": 1346.9247766446408,
+     "median": 985.5632512370576,
+     "q25": 611.4600013123376,
+     "q75": 1344.5766947959282,
      "hp_pct": {
       "contract": 0.25806451612903225,
       "installed": 0.4838709677419355,
@@ -374,16 +667,20 @@
    "label": "PPI commodity: power and distribution transformers, except parts (WPU117409, Dec 1999 = 100), annual average",
    "points": [
     [
+     2014,
+     1.0048758078493198
+    ],
+    [
      2015,
-     0.9428377531843809
+     0.9428371563703944
     ],
     [
      2016,
-     0.9144915431196492
+     0.9145167521064116
     ],
     [
      2017,
-     0.9489455001044059
+     0.9489710688146671
     ],
     [
      2018,
@@ -391,48 +688,56 @@
     ],
     [
      2019,
-     1.0199937356441846
+     1.0200148257968866
     ],
     [
      2020,
-     1.033723115472959
+     1.0337182472149427
     ],
     [
      2021,
-     1.2126226769680517
+     1.2126562190041659
     ],
     [
      2022,
-     1.6320735017749006
+     1.632095762119045
     ],
     [
      2023,
-     1.7365838379619964
+     1.7406790632602136
+    ],
+    [
+     2024,
+     1.7880694097871142
     ],
     [
      2025,
-     1.837544372520359
+     1.8424915691331087
     ],
     [
      2026,
-     1.8949676341616204
+     1.9123503064346048
     ]
    ]
   },
   "switchgear": {
-   "label": "PPI commodity: switchgear, switchboard, industrial controls equipment (WPU1175, 1982 = 100), annual average",
+   "label": "PPI commodity: switchgear, switchboard, industrial controls (WPU1175, 1982 = 100), annual average",
    "points": [
     [
+     2014,
+     0.9675983114863363
+    ],
+    [
      2015,
-     0.972806043101533
+     0.9727838258164853
     ],
     [
      2016,
-     0.9761386358586981
+     0.9761164185736503
     ],
     [
      2017,
-     0.9805376582981559
+     0.9805243279271273
     ],
     [
      2018,
@@ -440,31 +745,35 @@
     ],
     [
      2019,
-     1.0271495223283713
+     1.0271406354143522
     ],
     [
      2020,
-     1.0474116862919352
+     1.0473983559209066
     ],
     [
      2021,
-     1.0959786714063542
+     1.0959920017773828
     ],
     [
      2022,
-     1.3033103754721171
+     1.3033059320151077
     ],
     [
      2023,
-     1.425638746945123
+     1.4288646967340588
+    ],
+    [
+     2024,
+     1.5254876694067983
     ],
     [
      2025,
-     1.6885136636303042
+     1.6650122195067762
     ],
     [
      2026,
-     1.830704287936014
+     1.8239057987113976
     ]
    ]
   },
@@ -472,16 +781,20 @@
    "label": "PPI commodity: engineering services (WPU4532, Mar 2009 = 100), annual average",
    "points": [
     [
+     2014,
+     0.9110981937546481
+    ],
+    [
      2015,
-     0.9348606599418704
+     0.9348195891710761
     ],
     [
      2016,
-     0.9528979312703025
+     0.9528478496875614
     ],
     [
      2017,
-     0.9746110446230125
+     0.974568954463469
     ],
     [
      2018,
@@ -489,31 +802,35 @@
     ],
     [
      2019,
-     1.0260728329628996
+     1.0260037783267655
     ],
     [
      2020,
-     1.0303470678748503
+     1.0303462896318267
     ],
     [
      2021,
-     1.0605231663532229
+     1.0604532282468393
     ],
     [
      2022,
-     1.118823730552231
+     1.1188121350965525
     ],
     [
      2023,
-     1.1601983244999146
+     1.1609721070582903
+    ],
+    [
+     2024,
+     1.1902926066180555
     ],
     [
      2025,
-     1.2267054197298684
+     1.2224340288759905
     ],
     [
      2026,
-     1.2608992990254744
+     1.2468050913380575
     ]
    ]
   },
@@ -592,31 +909,59 @@
    ]
   },
   "eci_construction": {
-   "label": "BLS Employment Cost Index, total compensation, private industry, construction (CIU2012300000000I, Dec 2005 = 100), December (alternative labor series, not used in the composite)",
+   "label": "ECI: total compensation, private industry, construction (CIU2012300000000I, Dec 2005 = 100), annual average of quarters",
    "points": [
     [
+     2014,
+     0.9114285714285715
+    ],
+    [
+     2015,
+     0.9300952380952381
+    ],
+    [
      2016,
-     0.9439393939393939
+     0.9500952380952381
+    ],
+    [
+     2017,
+     0.9733333333333334
+    ],
+    [
+     2018,
+     1.0
+    ],
+    [
+     2019,
+     1.0314285714285714
     ],
     [
      2020,
-     1.0560606060606061
+     1.0603809523809524
     ],
     [
      2021,
-     1.0969696969696972
+     1.0927619047619048
+    ],
+    [
+     2022,
+     1.1365714285714286
     ],
     [
      2023,
-     1.2159090909090908
+     1.1855238095238094
+    ],
+    [
+     2024,
+     1.2205714285714284
     ],
     [
      2025,
-     1.2613636363636365
+     1.2648609523809524
     ],
     [
      2026,
-     1.2969696969696969
+     1.2958780952380953
     ]
    ]
   },
@@ -715,19 +1060,23 @@
    ]
   },
   "construction_inputs": {
-   "label": "PPI: net inputs to construction industries, goods (WPUIP2300001, Jun 1986 = 100), annual average; materials cross-check",
+   "label": "PPI: net inputs to construction industries, goods (WPUIP2300001, Jun 1986 = 100), annual average",
    "points": [
     [
+     2014,
+     0.9510245591258251
+    ],
+    [
      2015,
-     0.9147914142288384
+     0.9148198636806232
     ],
     [
      2016,
-     0.8996018694824303
+     0.8995996970680515
     ],
     [
      2017,
-     0.9363856673013674
+     0.9364189116087851
     ],
     [
      2018,
@@ -735,44 +1084,56 @@
     ],
     [
      2019,
-     1.0004327505625756
+     1.0004673807205453
     ],
     [
      2020,
-     0.987320408516531
+     0.9873417721518988
     ],
     [
      2021,
-     1.1734464254803532
+     1.1734718165097913
     ],
     [
      2022,
-     1.389605331486931
+     1.389648382559775
     ],
     [
      2023,
-     1.3813397957417344
+     1.3795174726820296
+    ],
+    [
+     2024,
+     1.3867575462512172
     ],
     [
      2025,
-     1.420720096936126
+     1.4126841934436871
+    ],
+    [
+     2026,
+     1.4993573515092502
     ]
    ]
   },
   "electrical_equipment": {
-   "label": "PPI commodity: electrical machinery and equipment (WPU117, 1982 = 100), December values",
+   "label": "PPI commodity: electrical machinery and equipment (WPU117, 1982 = 100), annual average",
    "points": [
     [
+     2014,
+     0.9871961805555555
+    ],
+    [
      2015,
-     0.9801381692573403
+     0.9881336805555555
     ],
     [
      2016,
-     0.9732297063903282
+     0.981484375
     ],
     [
      2017,
-     0.9801381692573403
+     0.9866927083333333
     ],
     [
      2018,
@@ -780,31 +1141,263 @@
     ],
     [
      2019,
-     1.0103626943005182
+     1.0141753472222221
     ],
     [
      2020,
-     1.0164075993091537
+     1.0219184027777777
     ],
     [
      2021,
-     1.069084628670121
+     1.0440277777777778
     ],
     [
      2022,
-     1.145077720207254
+     1.125390625
     ],
     [
      2023,
-     1.1649395509499136
+     1.1646440972222223
     ],
     [
      2024,
-     1.197754749568221
+     1.1934895833333334
     ],
     [
      2025,
-     1.2573402417962003
+     1.2342447916666666
+    ],
+    [
+     2026,
+     1.3706944444444444
+    ]
+   ]
+  },
+  "transformer_item": {
+   "label": "PPI commodity: power and distribution transformers, 8-digit item (WPU11740999, Dec 1999 = 100), annual average",
+   "points": [
+    [
+     2014,
+     1.0048758078493198
+    ],
+    [
+     2015,
+     0.9428371563703944
+    ],
+    [
+     2016,
+     0.9145167521064116
+    ],
+    [
+     2017,
+     0.9489710688146671
+    ],
+    [
+     2018,
+     1.0
+    ],
+    [
+     2019,
+     1.0200148257968866
+    ],
+    [
+     2020,
+     1.0337182472149427
+    ],
+    [
+     2021,
+     1.2126562190041659
+    ],
+    [
+     2022,
+     1.632095762119045
+    ],
+    [
+     2023,
+     1.7203823385084414
+    ],
+    [
+     2024,
+     1.8001388613370364
+    ],
+    [
+     2025,
+     1.8424915691331087
+    ],
+    [
+     2026,
+     1.9123503064346048
+    ]
+   ]
+  },
+  "engineering_industry": {
+   "label": "PPI industry: engineering services (PCU541330541330, Dec 1996 = 100), annual average",
+   "points": [
+    [
+     2014,
+     0.909998363606611
+    ],
+    [
+     2015,
+     0.9351286906515184
+    ],
+    [
+     2016,
+     0.9536374687331978
+    ],
+    [
+     2017,
+     0.975161886060266
+    ],
+    [
+     2018,
+     1.0
+    ],
+    [
+     2019,
+     1.0252296795006663
+    ],
+    [
+     2020,
+     1.029221310517334
+    ],
+    [
+     2021,
+     1.056514014540524
+    ],
+    [
+     2022,
+     1.1088669144633798
+    ],
+    [
+     2023,
+     1.1479825607218832
+    ],
+    [
+     2024,
+     1.17441031395376
+    ],
+    [
+     2025,
+     1.203602403160577
+    ],
+    [
+     2026,
+     1.2266989269934778
+    ]
+   ]
+  },
+  "construction_materials": {
+   "label": "PPI special index: construction materials (WPUSI012011, 1982 = 100), annual average",
+   "points": [
+    [
+     2014,
+     0.9096500530222693
+    ],
+    [
+     2015,
+     0.9057985153764582
+    ],
+    [
+     2016,
+     0.9072831389183457
+    ],
+    [
+     2017,
+     0.9401569459172853
+    ],
+    [
+     2018,
+     1.0
+    ],
+    [
+     2019,
+     0.9998939554612937
+    ],
+    [
+     2020,
+     1.014562036055143
+    ],
+    [
+     2021,
+     1.2870116648992578
+    ],
+    [
+     2022,
+     1.4487083775185579
+    ],
+    [
+     2023,
+     1.407355249204666
+    ],
+    [
+     2024,
+     1.3935185577942735
+    ],
+    [
+     2025,
+     1.4333404029692471
+    ],
+    [
+     2026,
+     1.537289501590668
+    ]
+   ]
+  },
+  "switchgear_industry": {
+   "label": "PPI industry: switchgear and switchboard apparatus mfg (PCU335313335313, Jun 1985 = 100), annual average",
+   "points": [
+    [
+     2014,
+     0.9785112181209037
+    ],
+    [
+     2015,
+     0.9734662381933794
+    ],
+    [
+     2016,
+     0.9747262622217446
+    ],
+    [
+     2017,
+     0.9788384336631536
+    ],
+    [
+     2018,
+     1.0
+    ],
+    [
+     2019,
+     1.033498080661073
+    ],
+    [
+     2020,
+     1.0701657566493128
+    ],
+    [
+     2021,
+     1.1299485245997714
+    ],
+    [
+     2022,
+     1.3388878578614756
+    ],
+    [
+     2023,
+     1.4641869914728605
+    ],
+    [
+     2024,
+     1.575752839937878
+    ],
+    [
+     2025,
+     1.725065687299153
+    ],
+    [
+     2026,
+     1.911441799587806
     ]
    ]
   }
