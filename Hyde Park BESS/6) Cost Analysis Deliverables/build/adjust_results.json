@@ -28,6 +28,12 @@
      "conf": "High at published points; interpolated 2019-2023",
      "ratio_2018": 0.7328,
      "naive_median": 619.8627525733891,
+     "naive_hp_pct": {
+      "contract": 0.45454545454545453,
+      "installed": 0.6727272727272727,
+      "station_direct": 0.9454545454545454,
+      "approval": 1.0
+     },
      "by_share": {
       "0.3": {
        "median": 843.0616404165818,
@@ -76,6 +82,12 @@
      "conf": "High 2017-2025; Medium 2014-2016",
      "ratio_2018": 0.6136363636363636,
      "naive_median": 607.4350704464438,
+     "naive_hp_pct": {
+      "contract": 0.4909090909090909,
+      "installed": 0.6727272727272727,
+      "station_direct": 0.9636363636363636,
+      "approval": 1.0
+     },
      "by_share": {
       "0.3": {
        "median": 837.0288248337029,
@@ -124,6 +136,12 @@
      "conf": "High 2022-2025; Medium 2021; 2017-2020 not retrieved (held flat)",
      "ratio_2018": 0.49159663865546216,
      "naive_median": 524.0066225165563,
+     "naive_hp_pct": {
+      "contract": 0.5272727272727272,
+      "installed": 0.7818181818181819,
+      "station_direct": 1.0,
+      "approval": 1.0
+     },
      "by_share": {
       "0.3": {
        "median": 829.9319727891157,
@@ -172,6 +190,12 @@
      "conf": "Medium; earlier editions' base years not retrieved (held flat before 2022)",
      "ratio_2018": 0.6929460580912863,
      "naive_median": 693.75,
+     "naive_hp_pct": {
+      "contract": 0.45454545454545453,
+      "installed": 0.6181818181818182,
+      "station_direct": 0.9454545454545454,
+      "approval": 1.0
+     },
      "by_share": {
       "0.3": {
        "median": 862.4660406202227,
@@ -220,6 +244,12 @@
      "conf": "Medium; v8.0 (2023) possibly conflated with 2024 and omitted",
      "ratio_2018": 1.028688524590164,
      "naive_median": 890.3,
+     "naive_hp_pct": {
+      "contract": 0.14545454545454545,
+      "installed": 0.43636363636363634,
+      "station_direct": 0.8,
+      "approval": 1.0
+     },
      "by_share": {
       "0.3": {
        "median": 908.674681362986,
@@ -268,6 +298,12 @@
      "conf": "Medium (2015-2018 seen in excerpt; later years from search summary of the same posting); production-plant line, not distribution plant",
      "ratio_2018": 1.4926174496644296,
      "naive_median": 902.4469696969696,
+     "naive_hp_pct": {
+      "contract": 0.16363636363636364,
+      "installed": 0.41818181818181815,
+      "station_direct": 0.7454545454545455,
+      "approval": 0.9090909090909091
+     },
      "by_share": {
       "0.3": {
        "median": 902.4469696969696,
@@ -1236,6 +1272,12 @@
      "conf": "High at published points; interpolated 2019-2023",
      "ratio_2018": 0.7328,
      "naive_median": 610.4048027444253,
+     "naive_hp_pct": {
+      "contract": 0.4838709677419355,
+      "installed": 0.6451612903225806,
+      "station_direct": 0.9032258064516129,
+      "approval": 1.0
+     },
      "by_share": {
       "0.3": {
        "median": 1182.2255492954046,
@@ -1284,6 +1326,12 @@
      "conf": "High 2017-2025; Medium 2014-2016",
      "ratio_2018": 0.6136363636363636,
      "naive_median": 519.2307692307692,
+     "naive_hp_pct": {
+      "contract": 0.5161290322580645,
+      "installed": 0.6129032258064516,
+      "station_direct": 0.9354838709677419,
+      "approval": 1.0
+     },
      "by_share": {
       "0.3": {
        "median": 1208.8773971126911,
@@ -1332,6 +1380,12 @@
      "conf": "High 2022-2025; Medium 2021; 2017-2020 not retrieved (held flat)",
      "ratio_2018": 0.49159663865546216,
      "naive_median": 491.5966386554622,
+     "naive_hp_pct": {
+      "contract": 0.5483870967741935,
+      "installed": 0.8064516129032258,
+      "station_direct": 1.0,
+      "approval": 1.0
+     },
      "by_share": {
       "0.3": {
        "median": 1130.557945574223,
@@ -1380,6 +1434,12 @@
      "conf": "Medium; earlier editions' base years not retrieved (held flat before 2022)",
      "ratio_2018": 0.6929460580912863,
      "naive_median": 694.7227788911156,
+     "naive_hp_pct": {
+      "contract": 0.41935483870967744,
+      "installed": 0.5483870967741935,
+      "station_direct": 0.9032258064516129,
+      "approval": 1.0
+     },
      "by_share": {
       "0.3": {
        "median": 1190.111999210171,
@@ -1428,6 +1488,12 @@
      "conf": "Medium; v8.0 (2023) possibly conflated with 2024 and omitted",
      "ratio_2018": 1.028688524590164,
      "naive_median": 1028.688524590164,
+     "naive_hp_pct": {
+      "contract": 0.12903225806451613,
+      "installed": 0.3870967741935484,
+      "station_direct": 0.6774193548387096,
+      "approval": 1.0
+     },
      "by_share": {
       "0.3": {
        "median": 1335.9744440109246,
@@ -1476,6 +1542,12 @@
      "conf": "Medium (2015-2018 seen in excerpt; later years from search summary of the same posting); production-plant line, not distribution plant",
      "ratio_2018": 1.4926174496644296,
      "naive_median": 1326.8181818181818,
+     "naive_hp_pct": {
+      "contract": 0.0967741935483871,
+      "installed": 0.2903225806451613,
+      "station_direct": 0.5483870967741935,
+      "approval": 0.8387096774193549
+     },
      "by_share": {
       "0.3": {
        "median": 1326.8181818181818,
@@ -3170,5 +3242,207 @@
    "adj_installed": 516.539821955402,
    "hours": null
   }
- ]
+ ],
+ "indexed_series": {
+  "installed": {
+   "label": "Installed all-in (EIA-860 2015-18, LBNL 2024)",
+   "base_2018": 625.0,
+   "points": [
+    [
+     2015,
+     3.4432
+    ],
+    [
+     2017,
+     1.3344
+    ],
+    [
+     2018,
+     1.0
+    ],
+    [
+     2024,
+     0.7328
+    ]
+   ]
+  },
+  "pack": {
+   "label": "BNEF pack price, as released (real $ of survey year)",
+   "base_2018": 176.0,
+   "points": [
+    [
+     2014,
+     3.0681818181818183
+    ],
+    [
+     2015,
+     1.9886363636363635
+    ],
+    [
+     2016,
+     1.5511363636363635
+    ],
+    [
+     2017,
+     1.1875
+    ],
+    [
+     2018,
+     1.0
+    ],
+    [
+     2019,
+     0.8863636363636364
+    ],
+    [
+     2020,
+     0.7784090909090909
+    ],
+    [
+     2021,
+     0.75
+    ],
+    [
+     2022,
+     0.8579545454545454
+    ],
+    [
+     2023,
+     0.7897727272727273
+    ],
+    [
+     2024,
+     0.6534090909090909
+    ],
+    [
+     2025,
+     0.6136363636363636
+    ]
+   ]
+  },
+  "turnkey": {
+   "label": "BNEF turnkey system, global (4-h to 2023; all durations 2024-25)",
+   "base_2018": 238.0,
+   "points": [
+    [
+     2021,
+     1.0
+    ],
+    [
+     2022,
+     1.361344537815126
+    ],
+    [
+     2023,
+     1.1050420168067228
+    ],
+    [
+     2024,
+     0.6932773109243697
+    ],
+    [
+     2025,
+     0.49159663865546216
+    ]
+   ]
+  },
+  "nrel": {
+   "label": "NREL bottom-up 4-h 60 MW base year (2022 and 2024 editions)",
+   "base_2018": 482.0,
+   "points": [
+    [
+     2022,
+     1.0
+    ],
+    [
+     2024,
+     0.6929460580912863
+    ]
+   ]
+  },
+  "lcos": {
+   "label": "Lazard LCOS midpoint, unsubsidized 100 MW 4-h",
+   "base_2018": 244.0,
+   "points": [
+    [
+     2019,
+     1.0
+    ],
+    [
+     2020,
+     0.7827868852459017
+    ],
+    [
+     2021,
+     0.7438524590163934
+    ],
+    [
+     2024,
+     0.9549180327868853
+    ],
+    [
+     2025,
+     0.7561475409836066
+    ],
+    [
+     2026,
+     1.028688524590164
+    ]
+   ]
+  },
+  "hw": {
+   "label": "Handy-Whitman NA construction (non-battery)",
+   "base_2018": 745.0,
+   "points": [
+    [
+     2015,
+     0.9395973154362416
+    ],
+    [
+     2016,
+     0.9583892617449664
+    ],
+    [
+     2017,
+     0.9543624161073826
+    ],
+    [
+     2018,
+     1.0
+    ],
+    [
+     2019,
+     1.0201342281879195
+    ],
+    [
+     2020,
+     1.0456375838926175
+    ],
+    [
+     2021,
+     1.1557046979865773
+    ],
+    [
+     2022,
+     1.2791946308724833
+    ],
+    [
+     2023,
+     1.3624161073825503
+    ],
+    [
+     2024,
+     1.4174496644295302
+    ],
+    [
+     2025,
+     1.4308724832214765
+    ],
+    [
+     2026,
+     1.4926174496644296
+    ]
+   ]
+  }
+ }
 }

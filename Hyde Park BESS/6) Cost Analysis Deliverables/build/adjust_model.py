@@ -31,7 +31,7 @@ for cname in ("reference_class","reference_class_utility"):
     for key,ix in IDX.items():
         f=ix["f"]
         naive=np.array([p["kwh"]*(f(2026)/f(min(int(p["cod_year"]),2026)) if f else constr(int(p["cod_year"]))) for p in P])
-        blk["indices"][key]={"label":ix["label"],"source":ix["source"],"conf":ix["conf"],"ratio_2018":(f(2026)/f(2018) if f else constr(2018)),"naive_median":float(np.median(naive)),
+        blk["indices"][key]={"label":ix["label"],"source":ix["source"],"conf":ix["conf"],"ratio_2018":(f(2026)/f(2018) if f else constr(2018)),"naive_median":float(np.median(naive)),"naive_hp_pct":{k:float((naive<v).mean()) for k,v in HP.items()},
                              "by_share":{str(s):summarize(P,key,s) for s in SHARES}}
     adjf=np.array([p["kwh"]*factor_flat("installed",int(p["cod_year"])) for p in P])
     blk["indices"]["installed_flat35"]={"label":"Installed index with 3.5%/yr flat non-battery escalation (proxy)","source":"sensitivity","conf":"Assumption","ratio_2018":IDX["installed"]["f"](2026)/IDX["installed"]["f"](2018),"naive_median":float(np.median(adjf)),"by_share":{"0.4":{"median":float(np.median(adjf)),"q25":float(np.percentile(adjf,25)),"q75":float(np.percentile(adjf,75)),"min":float(adjf.min()),"max":float(adjf.max()),"hp_pct":{k:float((adjf<v).mean()) for k,v in HP.items()}}}}
@@ -49,6 +49,12 @@ for p in NY["projects"]:
     out["ny"].append({**{a:p[a] for a in ("project","owner","mw","mwh","cod_year","cost_basis","confidence")},"nominal":k,"kw":p["cost_usd"]/p["mw"]/1000,"adj_installed":k*factor("installed",y),"hours":p["mwh"]/p["mw"]})
 for ix in NY["indices"]:
     out["ny"].append({"project":ix["name"],"owner":"NYSERDA program average","mw":None,"mwh":None,"cod_year":ix["year"],"cost_basis":ix["source"],"confidence":ix["confidence"],"nominal":ix["kwh"],"kw":None,"adj_installed":ix["kwh"]*factor("installed",ix["year"]),"hours":None})
+out["indexed_series"]={}
+for key,ix in IDX.items():
+    if ix["f"] is None: continue
+    pts=sorted(int(y) for y in IXJ["indices"][key]["points"]); base=ix["f"](2018)
+    out["indexed_series"][key]={"label":ix["label"],"base_2018":base,"points":[[y,IXJ["indices"][key]["points"][str(y)]/base] for y in pts]}
+out["indexed_series"]["hw"]={"label":"Handy-Whitman NA construction (non-battery)","base_2018":HW(2018),"points":[[int(y),v/HW(2018)] for y,v in sorted((int(k),v) for k,v in IXJ["construction_index"]["points"].items())]}
 json.dump(out,open(f"{B}/adjust_results.json","w"),indent=1)
 for cname,blk in out["classes"].items():
     print(f"== {cname}: n={blk['n']} nominal median ${blk['nominal']['median']:,.0f}  HP stn pct {blk['nominal']['hp_pct']['station_direct']:.0%}")
