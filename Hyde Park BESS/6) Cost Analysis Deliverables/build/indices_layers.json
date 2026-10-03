@@ -1,0 +1,199 @@
+{
+ "note": "Per-layer escalator series for layer_index_model.py (research pass 3 Oct 2026). Values 2014-2023 for the BLS PPI series are exact FRED observations from a public mirror (annual averages); 2024-2026 are annual anchors from search excerpts of FRED/BLS pages (Medium) or held at the last anchor. Direct access to fred.stlouisfed.org, bls.gov, enr.com and pjm.com is blocked from this environment; fetch_indices.py replaces these values from the FRED/BLS APIs once the hosts are allowed. The model interpolates linearly between points and holds flat outside the span. Verify at source before external use.",
+ "composition_developer": {
+  "note": "Merchant 4-h project structure. Shares are an analyst assumption bracketed by the NREL ATB bottom-up structure (pack, PCS, structural and electrical BOS, labor, EPC and developer overhead, interconnection allowance; line values not retrievable this pass), the IRS Notice 2026-15 safe-harbor table (cells = 52% of BESS equipment cost) and ESS News (Apr 2026: cells 25-45% of project capex). Confidence Medium-Low; sensitivity on the battery share is on slides 15 and 18.",
+  "shares": {
+   "battery": 0.45,
+   "pcs_bos": 0.15,
+   "labor": 0.1,
+   "civil": 0.05,
+   "transformer": 0.05,
+   "soft": 0.12,
+   "interconnect": 0.08
+  },
+  "map": {
+   "battery": "bat_installed",
+   "pcs_bos": "switchgear",
+   "labor": "labor",
+   "civil": "civil",
+   "transformer": "transformer",
+   "soft": "engineering",
+   "interconnect": "labor"
+  }
+ },
+ "series": {
+  "transformer": {
+   "label": "PPI commodity: power and distribution transformers, except parts (WPU117409, Dec 1999 = 100), annual average",
+   "source": "FRED mirror of BLS series (open-datahub/commodity, obs. to Oct 2023); 2025-26 from WPU11740999 anchors (Sep 2025 351.2, Nov 2025 365.1, Jan 2026 366.6) divided by the 1.01 ratio between the two series",
+   "conf": "High 2015-2023; Medium 2025-2026; 2024 interpolated",
+   "points": {
+    "2015": 180.61,
+    "2016": 175.18,
+    "2017": 181.78,
+    "2018": 191.56,
+    "2019": 195.39,
+    "2020": 198.02,
+    "2021": 232.29,
+    "2022": 312.64,
+    "2023": 332.66,
+    "2025": 352,
+    "2026": 363
+   }
+  },
+  "switchgear": {
+   "label": "PPI commodity: switchgear, switchboard, industrial controls equipment (WPU1175, 1982 = 100), annual average",
+   "source": "FRED mirror of BLS series (obs. to Nov 2023); Aug 2025 384.1 and Jul 2026 419.3 from search excerpts of the FRED page",
+   "conf": "High 2015-2023; Medium 2025-2026; 2024 interpolated",
+   "points": {
+    "2015": 218.93,
+    "2016": 219.68,
+    "2017": 220.67,
+    "2018": 225.05,
+    "2019": 231.16,
+    "2020": 235.72,
+    "2021": 246.65,
+    "2022": 293.31,
+    "2023": 320.84,
+    "2025": 380,
+    "2026": 412
+   }
+  },
+  "engineering": {
+   "label": "PPI commodity: engineering services (WPU4532, Mar 2009 = 100), annual average",
+   "source": "FRED mirror of BLS series (obs. to Nov 2023); 2025-26 extended at the industry index's primary-services growth (PCU541330541330P 159.3 Mar 2015 to 207.5 Feb 2025, about 3%/yr)",
+   "conf": "High 2015-2023; Low 2025-2026",
+   "points": {
+    "2015": 109.36,
+    "2016": 111.47,
+    "2017": 114.01,
+    "2018": 116.98,
+    "2019": 120.03,
+    "2020": 120.53,
+    "2021": 124.06,
+    "2022": 130.88,
+    "2023": 135.72,
+    "2025": 143.5,
+    "2026": 147.5
+   }
+  },
+  "labor": {
+   "label": "IBEW Local 103 (Boston) journeyman inside wireman base rate, $/h, Sep or Mar of year",
+   "source": "MA DLS prevailing-wage schedules (2018, 2020), Boston JATC rate sheets (2022-2025), CBA 2023-2026 via secondary sites (2026); 2015-2017 back-cast at the 2018-2022 rate of 3.2%/yr",
+   "conf": "Medium 2018-2025; Medium-Low 2026; Low 2015-2017 (back-cast)",
+   "points": {
+    "2015": 46.7,
+    "2016": 48.2,
+    "2017": 49.7,
+    "2018": 51.34,
+    "2020": 54.45,
+    "2022": 58.28,
+    "2023": 59.23,
+    "2024": 61.86,
+    "2025": 64.26,
+    "2026": 66.86
+   }
+  },
+  "civil": {
+   "label": "ENR Construction Cost Index, 20-city average (1913 = 100), annual average",
+   "source": "MWD reproduction of the ENR table (2017), prior-pass log (2018), City of San Francisco AICCIE proposal (2023, 2024), ENR 2025 monthly points (Jan 13,732; Jun 13,871; Sep 13,928; 2025 = mean of the three); 2026 held at Sep 2025",
+   "conf": "Medium 2017-2018 and 2023-2024; Medium-Low 2025; 2019-2022 interpolated (ENR Dec-over-Dec changes 2022 +5.6%, 2023 +2.6%, 2024 +0.9%, 2025 +3.6% as cross-check)",
+   "points": {
+    "2017": 10737,
+    "2018": 11062,
+    "2023": 13175,
+    "2024": 13532,
+    "2025": 13844,
+    "2026": 13928
+   }
+  },
+  "eci_construction": {
+   "label": "BLS Employment Cost Index, total compensation, private industry, construction (CIU2012300000000I, Dec 2005 = 100), December (alternative labor series, not used in the composite)",
+   "source": "BLS/DOL release excerpts: Dec 2020 139.4, Dec 2021 144.8, Dec 2023 160.5; Jun 2025 165.4 and Jun 2026 171.2 from a secondary document citing the BLS API; 2016 from Jun 2016 124.6",
+   "conf": "Medium at the quoted points; gaps interpolated",
+   "points": {
+    "2016": 124.6,
+    "2020": 139.4,
+    "2021": 144.8,
+    "2023": 160.5,
+    "2025": 166.5,
+    "2026": 171.2
+   }
+  },
+  "hw_dist_station": {
+   "label": "Handy-Whitman North Atlantic, distribution station equipment (acct 362), July (1973 = 100); alternative for layer D",
+   "source": "EstimatingCoE repo docs/HWI_Extracted.csv (Bulletin 198) 2015-2023; 2024-2026 extended at the PJM production-plant line's growth (+4.0%, +0.9%, +4.3%)",
+   "conf": "Medium 2015-2023 (own extraction); Low 2024-2026 (extended)",
+   "points": {
+    "2015": 780,
+    "2016": 791,
+    "2017": 824,
+    "2018": 868,
+    "2019": 894,
+    "2020": 927,
+    "2021": 1003,
+    "2022": 1150,
+    "2023": 1273,
+    "2024": 1324,
+    "2025": 1337,
+    "2026": 1395
+   }
+  },
+  "hw_line_transformers": {
+   "label": "Handy-Whitman North Atlantic, distribution line transformers (acct 368), July (1973 = 100); cross-check for layer C",
+   "source": "EstimatingCoE repo docs/HWI_Extracted.csv (Bulletin 198)",
+   "conf": "Medium 2015-2022; Low 2023 (jump to 1,887 not verified)",
+   "points": {
+    "2015": 835,
+    "2016": 861,
+    "2017": 918,
+    "2018": 974,
+    "2019": 1012,
+    "2020": 1084,
+    "2021": 1161,
+    "2022": 1331,
+    "2023": 1887
+   }
+  },
+  "construction_inputs": {
+   "label": "PPI: net inputs to construction industries, goods (WPUIP2300001, Jun 1986 = 100), annual average; materials cross-check",
+   "source": "FRED mirror of BLS series (obs. to Nov 2023); Aug 2025 328.3 from a secondary document",
+   "conf": "High 2015-2023; Medium 2025",
+   "points": {
+    "2015": 211.39,
+    "2016": 207.88,
+    "2017": 216.38,
+    "2018": 231.08,
+    "2019": 231.18,
+    "2020": 228.15,
+    "2021": 271.16,
+    "2022": 321.11,
+    "2023": 319.2,
+    "2025": 328.3
+   }
+  },
+  "electrical_equipment": {
+   "label": "PPI commodity: electrical machinery and equipment (WPU117, 1982 = 100), December values",
+   "source": "FRED mirror (2015-2022) and FRED page excerpts (Dec 2023 134.9, Dec 2024 138.7, Dec 2025 145.6)",
+   "conf": "High 2015-2022; Medium 2023-2025",
+   "points": {
+    "2015": 113.5,
+    "2016": 112.7,
+    "2017": 113.5,
+    "2018": 115.8,
+    "2019": 117.0,
+    "2020": 117.7,
+    "2021": 123.8,
+    "2022": 132.6,
+    "2023": 134.9,
+    "2024": 138.7,
+    "2025": 145.6
+   }
+  }
+ },
+ "context": {
+  "lithium_carbonate": "USGS annual average US price $/t: 2018 16,000; 2019 13,000; 2020 8,400; 2021 12,600; 2022 37,000; 2024 14,000; 2025 9,000 (Medium). China spot CNY/t: end-2024 75,050; end-2025 117,000-125,000; 2026 Jan-May monthly 149,000-184,000; Sep 2026 119,000-158,000 (Medium). Not used as an escalator: cells are 25-45% of project capex and the series is too volatile.",
+  "anza": "Anza Renewables delivered-equipment price, $/kWh: utility self-integrated DC $177 (May 2025 peak), $154 (Nov 2025), $145 (Feb 2026); distribution-scale AC $203 and DC $175 (Feb 2026); Q2 2025 report: utility AC +56% Jan to May 2025 on tariffs (Medium).",
+  "woodmac": "Wood Mackenzie utility-scale system price $/kW: Q4 2024 1,050; Q4 2025 938; Q2 2026 916 (Medium).",
+  "tariffs_feoc": "China-origin non-EV Li-ion cells: 3.4% MFN + 25% Section 301 (from 1 Jan 2026) + reported 12.5% Section 301 forced-labor action (from 24 Jul 2026), about 41% (Low-Medium on the July action); IEEPA tariffs struck down 20 Feb 2026; no AD/CVD on anode material (ITC negative, 12 Mar 2026). IRS Notice 2026-15 (12 Feb 2026): material-assistance cost ratio for energy storage by construction-start year 2026 55%, 2027 60%, 2028 65%, 2029 70%, 2030+ 75%; failure disallows the whole 48E credit; safe-harbor table puts cells at 52% of BESS equipment cost (High on dates and thresholds)."
+ }
+}
