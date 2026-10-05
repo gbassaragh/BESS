@@ -92,9 +92,31 @@ ws.cell(row=r,column=1,value="Credit, low / high").font=base; c=ws.cell(row=r,co
 ws.cell(row=r,column=1,value="Adder, low / high").font=base; c=ws.cell(row=r,column=2,value=f"=B{r-4}*B{r-3}"); c.number_format='"$"#,##0'; c=ws.cell(row=r,column=3,value=f"=B{r-4}*B{r-2}"); c.number_format='"$"#,##0'; r+=1
 ws.cell(row=r,column=1,value="Assumptions to be confirmed by Tax: 30% with PWA; storage exempt from the 2027 wind/solar cliff (full credit through a 2033 construction start); interconnection property outside the 48E storage definition; FEOC cost ratio 65% for a 2028 construction start (Notice 2026-15); normalization election under section 50(d)(2); brownfield adder needs a Phase II ESA above 5 MW. Research pass 3 Oct 2026, search-excerpt sourced.").font=note
 for col,wd in zip("ABCDEFGHIJKLM",(6,6,52,8,12,12,10,12,12,10,24,48,60)): ws.column_dimensions[col].width=wd
+# ---------- Scope Challenge
+SC=json.load(open(f"{B}/scope_challenge.json"))
+if "Scope Challenge" in wb.sheetnames: del wb["Scope Challenge"]
+ws=wb.create_sheet("Scope Challenge", index=wb.sheetnames.index("Savings Register")+1)
+ws["A1"]="Scope challenge: what the function requires against what Rev 3 carries (deck slides 30-33; 5 Oct 2026)"; ws["A1"].font=title
+ws["A2"]="Reductions and exposures by layer, direct dollars and loaded at the marginal loader; the cost cases and the containment plan. Every row cites its Rev 3 line. Gross of the Haugland reconciliation."; ws["A2"].font=note
+r=4; H(ws,r,1,["Layer","Kind","Rev 3 carries","The function requires","Challenge / alternative","Direct low","Direct high","Loaded low","Loaded high","Owner","Evidence"]); r+=1
+for x in SC["rows"]:
+    vals=[x["layer"],x["kind"],x["carries"],x["requires"],x["challenge"],round(x["lo"]),round(x["hi"]),round(x["lo_loaded"]),round(x["hi_loaded"]),x["owner"],x["ev"]]
+    for j,v in enumerate(vals,1):
+        c=ws.cell(row=r,column=j,value=v); c.font=base; c.alignment=Alignment(wrap_text=True,vertical="top")
+        if j in (6,7,8,9): c.number_format='"$"#,##0'
+    r+=1
+r+=1; ws.cell(row=r,column=1,value="Cost cases (loaded $)").font=bold; r+=1; H(ws,r,1,["Case","Low","High","Note"]); r+=1
+for k,v in SC["cases"].items():
+    lo=v.get("lo",v.get("total")); hi=v.get("hi",v.get("total"))
+    ws.cell(row=r,column=1,value=v["label"]).font=base; c=ws.cell(row=r,column=2,value=round(lo)); c.number_format='"$"#,##0'; c=ws.cell(row=r,column=3,value=round(hi)); c.number_format='"$"#,##0'; ws.cell(row=r,column=4,value=v["note"]).font=note; r+=1
+r+=1; ws.cell(row=r,column=1,value="Containment plan").font=bold; r+=1; H(ws,r,1,["When","What","Who","What it decides"]); r+=1
+for pp in SC["plan"]:
+    for j,v in enumerate(pp,1): c=ws.cell(row=r,column=j,value=v); c.font=base; c.alignment=Alignment(wrap_text=True,vertical="top")
+    r+=1
+for col,wd in zip("ABCDEFGHIJK",(26,10,48,36,52,12,12,12,12,22,48)): ws.column_dimensions[col].width=wd
 # README rows (dedupe by tab name)
 rd=wb["README"]
-for tab,desc in (("Layer Escalators","One published index per cost layer (IBEW 103 labor, PPI transformers, PPI switchgear, ENR CCI, PPI engineering services, Handy-Whitman) with Hyde Park and developer weights, the composite 2018-to-2026 factor, and the 55-project class under seven re-basing methods. Deck slides 17-18. Added 3 Oct 2026."),("Savings Register","Fourteen cost-saving levers in three tiers sized from the Rev 3 rows, direct and loaded at the marginal loader, with owner, closing condition and evidence; Station 496 relay detail; Section 48E assumptions. Deck slides 27-29. Added 3 Oct 2026.")):
+for tab,desc in (("Layer Escalators","One published index per cost layer (IBEW 103 labor, PPI transformers, PPI switchgear, ENR CCI, PPI engineering services, Handy-Whitman) with Hyde Park and developer weights, the composite 2018-to-2026 factor, and the 55-project class under seven re-basing methods. Deck slides 17-18. Added 3 Oct 2026."),("Savings Register","Cost-saving levers in three tiers sized from the Rev 3 rows, direct and loaded at the marginal loader, with owner, closing condition and evidence; Station 496 relay detail; Section 48E assumptions. Deck slides 27-29. Added 3 Oct 2026; levers B5-B8 revised 5 Oct 2026."),("Scope Challenge","Layer-by-layer scope challenge (what the function requires against what Rev 3 carries), reductions and exposures, the cost cases and the five-gate containment plan. Deck slides 30-33. Added 5 Oct 2026.")):
     rows=[i for i in range(1,rd.max_row+1) if rd.cell(row=i,column=1).value in (tab,f"Tab: {tab}")]
     for i in rows[:-1] if rows else []: rd.delete_rows(i)
     tgt=rows[-1] if rows else rd.max_row+1
