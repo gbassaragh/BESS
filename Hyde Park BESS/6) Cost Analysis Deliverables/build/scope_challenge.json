@@ -68,6 +68,19 @@
    "hi_loaded": 666726.6402083813
   },
   {
+   "layer": "D. Two feeders (exposure)",
+   "carries": "Four feeder connections at 2.5 MW each",
+   "requires": "If two feeders carry 5 MW each: voltage regulation and protection coordination on those feeders, and one feeder outage strands 5 MW rather than 2.5 MW",
+   "challenge": "The hosting-capacity study may require voltage mitigation or regulator settings on the two feeders; System Planning has to accept the N-1 position for the Hyde Park load pocket in writing",
+   "lo": -200000.0,
+   "hi": -500000.0,
+   "kind": "exposure",
+   "owner": "System Planning",
+   "ev": "Engineering, 5 Oct 2026; Station 360 Rev 3 topology",
+   "lo_loaded": -288081.73681389843,
+   "hi_loaded": -720204.3420347462
+  },
+  {
    "layer": "E. Site and civil",
    "carries": "Cut and re-place 2,520 CY $456K (2,520 mh); 14-ft retaining wall 280 lf $470K; trap rock 4,900 sy $492K; gravel drive 760 lf $319K; 36 borings $361K; mob/demob $313K",
    "requires": "A stable, drained, accessible pad on a capped construction-debris landfill under a MassDEP post-closure permit; the wall, the platform depth and the cut volume are design outcomes of the geotech, not inputs.",
@@ -95,16 +108,16 @@
   },
   {
    "layer": "F. Station 496 feeder protection",
-   "carries": "20 relays: hardware $91K; install 6,400 mh $1.23M; test 7,800 mh $1.81M; E&S basis $1.46M; siting application $157K; AFUDC, contingency, risk",
-   "requires": "Directional protection on the four feeders that will see reverse flow, and coordination at the source station. Whether all 20 relays, the four SEL-735 meters and a siting application are needed for relay work inside an existing fence is the question.",
-   "challenge": "$363K and 710 man-hours per relay. Benchmark against two recent EMA relay-replacement actuals; confirm the SEL-735 are protection; confirm what the $157K siting line is for; price the outage windows explicitly instead of inside the hours.",
-   "lo": 1222436.4053857692,
-   "hi": 1679247.4267657693,
+   "carries": "20 relays: hardware $91K; install 6,400 mh $1.23M; test 7,800 mh $1.81M; E&S basis $1.46M; siting application $157K; AFUDC, contingency, risk. No line for the RTU, the RTAC/Axion or the transfer trip that the Rev 2 clarifications name.",
+   "requires": "A transfer trip from the Station 496 feeder breakers to the BESS over the dedicated dark fiber, SCADA points at 496, and feeder protection that tolerates the inverter-based injection on each feeder. Whether that needs 20 new relays, or the existing SEL-551 and REF610 relays with an RTAC, is the protection-basis question.",
+   "challenge": "Engineering proposal (5 Oct 2026): remove the relay program; install the RTU, RTAC and transfer trip only. Net $6.1M to $6.6M after a $0.30M to $0.55M direct allowance ($0.67M to $1.14M at the 496 loader) for the scope Rev 2 names but does not price. Needs a protection-basis memo signed by System Protection; if the legacy relays are an asset-condition replacement, the cost transfers to that program and is not a saving to customers.",
+   "lo": 6114963.383539055,
+   "hi": 6580334.818956364,
    "kind": "reduction",
-   "owner": "P&C Engineering + EMA",
-   "ev": "Sta 496 Rev 2 lines 07.03.03.02, 08.01.02.00, 08.02.02.00, 04.02.00.00",
-   "lo_loaded": 1760808.0140403563,
-   "hi_loaded": 2418802.576214763
+   "owner": "P&C Engineering + System Protection",
+   "ev": "Sta 496 Rev 2 Overview and Clarifications; 06.xx, 07.03.xx and 08.xx lines; Engineering, 5 Oct 2026",
+   "lo_loaded": 6114963.383539055,
+   "hi_loaded": 6580334.818956364
   },
   {
    "layer": "G. Testing and commissioning",
@@ -173,14 +186,14 @@
   }
  ],
  "totals": {
-  "reduction_lo": 6737277.493672143,
-  "reduction_hi": 10341341.965552835,
-  "exposure_lo": -1200000.0,
-  "exposure_hi": -2200000.0,
-  "reduction_lo_loaded": 8539390.748417135,
-  "reduction_hi_loaded": 12894637.517771957,
-  "exposure_lo_loaded": -1728490.4208833908,
-  "exposure_hi_loaded": -3168899.104952883
+  "reduction_lo": 11629804.471825428,
+  "reduction_hi": 15242429.35774343,
+  "exposure_lo": -1400000.0,
+  "exposure_hi": -2700000.0,
+  "reduction_lo_loaded": 12893546.117915835,
+  "reduction_hi_loaded": 17056169.76051356,
+  "exposure_lo_loaded": -2016572.1576972893,
+  "exposure_hi_loaded": -3889103.44698763
  },
  "cases": {
   "rev3": {
@@ -196,14 +209,14 @@
   },
   "rescoped": {
    "label": "Re-scoped: every reduction in the register after its study closes",
-   "lo": 42407918.723248236,
-   "hi": 47346588.620297,
-   "note": "adds the relay program at benchmark, two-feeder topology, civil after geotech, crew build-up, commissioning split, siting task budget"
+   "lo": 38488892.49806781,
+   "hi": 42899735.12162409,
+   "note": "adds the Station 496 proposal (RTU, RTAC and transfer trip only), two feeders instead of four, civil after geotech, crew build-up, commissioning split, siting task budget"
   },
   "exposures": {
    "label": "Exposures that go the other way",
-   "lo": 1728490.4208833908,
-   "hi": 3168899.104952883,
+   "lo": 2016572.1576972893,
+   "hi": 3889103.44698763,
    "note": "sound mitigation, screening, police details, NFPA 855 analysis, GSU count"
   },
   "heg": {
@@ -212,10 +225,16 @@
    "hi": 8000000.0,
    "note": "direct; if half the gap is 21334 scope"
   },
+  "engineering": {
+   "label": "Engineering proposal (5 Oct 2026): Station 496 to RTU, RTAC and transfer trip only, and two feeders, on top of the contained case",
+   "lo": 42419188.999054015,
+   "hi": 45031195.64592486,
+   "note": "needs the protection-basis memo and the hosting-capacity study; nothing else in the register"
+  },
   "net": {
    "label": "Re-scoped, with the exposures and the Haugland midpoint added back",
-   "lo": 48136409.14413162,
-   "hi": 58515487.72524989,
+   "lo": 44505464.6557651,
+   "hi": 54788838.56861172,
    "note": "the honest planning range once every study closes"
   }
  },
@@ -228,9 +247,9 @@
   ],
   [
    "Gate 1, design basis (Q1 2027)",
-   "Geotech report, NFPA 855 hazard mitigation analysis, hosting-capacity study for two feeders, GSU count and topology in writing, Haugland-to-Rev 3 scope map signed",
+   "Geotech report, NFPA 855 hazard mitigation analysis, hosting-capacity and protection study for two feeders at 5 MW each, the Station 496 protection-basis memo (RTU, RTAC and transfer trip without the relay program), GSU count and topology in writing, Haugland-to-Rev 3 scope map signed",
    "Substation Eng., Civil, System Planning, HEG",
-   "Decides the two-feeder case ($1.4M to $1.9M), the civil layer (either way) and the GSU exposure"
+   "Decides the two-feeder case ($1.5M to $1.7M) and the Station 496 case ($6.1M to $6.6M), the civil layer (either way) and the GSU exposure"
   ],
   [
    "Gate 2, design-to-cost target (before IFC, mid-2027)",

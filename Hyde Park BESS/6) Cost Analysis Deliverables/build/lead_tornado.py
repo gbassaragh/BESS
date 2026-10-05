@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt, matplotlib.patches as mp
 B=os.path.dirname(os.path.abspath(__file__)); R=json.load(open(f"{B}/mc_scope_results.json"))
 NAVY="#001E60"; GOLD="#FFC72C"; BURG="#6E1F2E"; TEAL="#2A8A8C"; GRAY="#9AA3B2"; INK="#1F2A44"
 rows=sorted(R["tornado"],key=lambda r:-(r["p90"]-r["p10"]))[:10]
-SHORT={"T1":"Haugland reconciliation (threat)","Sc":"Siting and schedule slip","B2":"B2 Two-feeder topology","A4":"A4 E&S overhead basis","A1":"A1 Battery escalation","A2":"A2 Risk lines duplicating escalation","B1":"B1 Relay program at benchmark","T6":"T6 GSU count: twelve, not four","B4":"B4 Install crew build-up","B3":"B3 Civil after geotech"}
+SHORT={"T1":"Haugland reconciliation (threat)","Sc":"Siting and schedule slip","B2":"B2 Two feeders instead of four","A4":"A4 E&S overhead basis","A1":"A1 Battery escalation","A2":"A2 Risk lines duplicating escalation","B1":"B1 Station 496 to RTU/RTAC only","T9":"T9 Two feeders: voltage and N-1","T6":"T6 GSU count: twelve, not four","B4":"B4 Install crew build-up","B3":"B3 Civil after geotech"}
 def lab(r):
     d=r["driver"]; k=d[:2]
     if d.startswith("Accuracy"): return d.replace("Accuracy: ","Estimate accuracy, ").split(" (")[0]
