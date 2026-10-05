@@ -1,0 +1,567 @@
+{
+ "N": 20000,
+ "approval": 57247300.0,
+ "base_ex_reserve": 49663783.0,
+ "reserve": 7583517.0,
+ "marginal_loader": 1.4404086840694923,
+ "cases": {
+  "status_quo": {
+   "10": 53938670.77306591,
+   "50": 60670869.96842012,
+   "80": 64700501.15409297,
+   "90": 66722336.83550707,
+   "p_over_approval": 0.71125,
+   "mean": 60467601.13755391
+  },
+  "managed": {
+   "10": 47219029.69630825,
+   "50": 54309271.18513329,
+   "80": 58644990.78472602,
+   "90": 60741157.30969397,
+   "p_over_approval": 0.28925,
+   "p_under_50": 0.2354,
+   "mean": 54157404.66509536
+  },
+  "ceiling": {
+   "10": 42138644.34269745,
+   "50": 48870843.53805166,
+   "80": 52900474.723724514,
+   "90": 54922310.40513862,
+   "p_over_approval": 0.038,
+   "p_under_50": 0.5852,
+   "mean": 48667574.70718544
+  }
+ },
+ "schedule": {
+  "slip_months": {
+   "10": -0.1035966581313252,
+   "50": 4.862591787819241,
+   "80": 8.570979745925412,
+   "90": 11.446756608772176
+  },
+  "p_slip_gt_0": 0.80065,
+  "p_slip_gt_6": 0.38845,
+  "p_slip_gt_12": 0.09215,
+  "p_efsb": 0.084,
+  "sched_cost": {
+   "10": 0.0,
+   "50": 1794498.6287186646,
+   "80": 3197460.3220377103,
+   "90": 4304905.588659046
+  },
+  "cost_per_month": {
+   "10": 333678.0182686992,
+   "50": 371175.9369206787,
+   "80": 397405.5925131306,
+   "90": 409875.0360016812
+  },
+  "isd_p50": "Dec 2028 + 5 months",
+  "isd_p80": "Dec 2028 + 9 months"
+ },
+ "components": {
+  "accuracy_loaded": {
+   "10": -296213.3837553232,
+   "50": 2282015.09902927,
+   "80": 4176067.14696953,
+   "90": 5181049.424729282
+  },
+  "threats": {
+   "10": 1353711.663338014,
+   "50": 7282330.512403453,
+   "80": 9990822.934493195,
+   "90": 10991771.89543586
+  },
+  "opportunities_managed": {
+   "10": 4064988.839965916,
+   "50": 6303310.954161409,
+   "80": 7799822.02318923,
+   "90": 8573309.914264543
+  },
+  "opportunity_ceiling": 11800026.430368457,
+  "schedule": {
+   "10": 0.0,
+   "50": 1794498.6287186646,
+   "80": 3197460.3220377103,
+   "90": 4304905.588659046
+  }
+ },
+ "tornado": [
+  {
+   "driver": "T1 Haugland reconciliation moves the construction base up",
+   "kind": "threat",
+   "p": 0.6,
+   "p10": 0.0,
+   "p90": 8891678.34313726,
+   "mean": 4312503.788851274,
+   "full": 7202043.4203474615,
+   "rho": 0.7318610628949368,
+   "var_share": 0.5825960745563579
+  },
+  {
+   "driver": "Schedule slip (siting chain, long-lead, construction)",
+   "kind": "schedule",
+   "p": 0.80065,
+   "p10": 0.0,
+   "p90": 4304905.588659046,
+   "mean": 2144266.8637311095,
+   "rho": 0.3525414393320996,
+   "var_share": 0.1351856571548264
+  },
+  {
+   "driver": "Accuracy: E. Landfill platform and civil",
+   "kind": "accuracy",
+   "p": 1.0,
+   "p10": -860818.8382156679,
+   "p90": 2639502.2226611967,
+   "mean": 757768.4501790486,
+   "rho": 0.23875006258187512,
+   "var_share": 0.062000794988153064
+  },
+  {
+   "driver": "Accuracy: F. Station 496 program",
+   "kind": "accuracy",
+   "p": 1.0,
+   "p10": -1116523.858343744,
+   "p90": 1972894.6850928941,
+   "mean": 364998.74276716163,
+   "rho": 0.22630688207576716,
+   "var_share": 0.055706489672726484
+  },
+  {
+   "driver": "B2 Two-feeder topology",
+   "kind": "opportunity",
+   "p": 0.35,
+   "p10": -1725068.7275657277,
+   "p90": 0.0,
+   "mean": -581104.2430229975,
+   "full": -1653032.1951328327,
+   "owner": "System Planning + Substation Eng.",
+   "rho": 0.14185239040377892,
+   "var_share": 0.02188686641549888
+  },
+  {
+   "driver": "A4 E&S overhead basis off the vendor contract",
+   "kind": "opportunity",
+   "p": 0.3,
+   "p10": -1665528.6208245084,
+   "p90": 0.0,
+   "mean": -465303.9335341757,
+   "full": -1571866.6113674527,
+   "owner": "Accounting / Cost Estimating",
+   "rho": 0.12822844173504777,
+   "var_share": 0.017884590442659262
+  },
+  {
+   "driver": "A1 Battery escalation removed",
+   "kind": "opportunity",
+   "p": 0.8,
+   "p10": -1628029.117212964,
+   "p90": 0.0,
+   "mean": -1303807.118520002,
+   "full": -1628029.117212964,
+   "owner": "Cost Estimating / Sourcing",
+   "rho": 0.11804450812262841,
+   "var_share": 0.015156601900435293
+  },
+  {
+   "driver": "A2 Risk lines that duplicate escalation",
+   "kind": "opportunity",
+   "p": 0.7,
+   "p10": -1621456.0333420085,
+   "p90": 0.0,
+   "mean": -1058062.477762044,
+   "full": -1511950.0,
+   "owner": "Cost Estimating + PM",
+   "rho": 0.10448134754486914,
+   "var_share": 0.01187374726098412
+  },
+  {
+   "driver": "Accuracy: H. Owner soft costs",
+   "kind": "accuracy",
+   "p": 1.0,
+   "p10": -335543.707601513,
+   "p90": 1574615.6058735892,
+   "mean": 532897.1097600748,
+   "rho": 0.12350150062025374,
+   "var_share": 0.016590319090374065
+  },
+  {
+   "driver": "B1 Station 496 relay program at benchmark",
+   "kind": "opportunity",
+   "p": 0.5,
+   "p10": -1373113.3142485956,
+   "p90": 0.0,
+   "mean": -652050.7303740204,
+   "full": -1294297.89391,
+   "owner": "P&C Engineering + EMA",
+   "rho": 0.12220786898546555,
+   "var_share": 0.016244584673050514
+  },
+  {
+   "driver": "T6 GSU count: twelve, not four",
+   "kind": "threat",
+   "p": 0.35,
+   "p10": 0.0,
+   "p90": 1221742.1040584154,
+   "mean": 400403.3794339618,
+   "full": 1152326.9472555937,
+   "rho": 0.0915641233177004,
+   "var_share": 0.009119288453813414
+  },
+  {
+   "driver": "Accuracy: D. Switching station (unit library)",
+   "kind": "accuracy",
+   "p": 1.0,
+   "p10": -610881.8478068619,
+   "p90": 1151616.7732610637,
+   "mean": 230719.14011657896,
+   "rho": 0.10948733439371831,
+   "var_share": 0.013038812341480124
+  },
+  {
+   "driver": "Accuracy: B. Install labor basis",
+   "kind": "accuracy",
+   "p": 1.0,
+   "p10": -267433.52381077706,
+   "p90": 963727.2147286816,
+   "mean": 297072.3896630562,
+   "rho": 0.07708527516971318,
+   "var_share": 0.006463282282213553
+  },
+  {
+   "driver": "B4 Battery install crew build-up",
+   "kind": "opportunity",
+   "p": 0.6,
+   "p10": -956034.9616230504,
+   "p90": 0.0,
+   "mean": -534326.6575987935,
+   "full": -886569.8543207429,
+   "owner": "Cost Estimating + Nomad + HEG",
+   "rho": 0.07117796523492712,
+   "var_share": 0.005510631968137859
+  },
+  {
+   "driver": "B3 Platform and wall after geotech",
+   "kind": "opportunity",
+   "p": 0.4,
+   "p10": -891455.2767566491,
+   "p90": 0.0,
+   "mean": -316606.47634695243,
+   "full": -792224.7762382207,
+   "owner": "Civil + Capital Projects Eng.",
+   "rho": 0.07158279035587121,
+   "var_share": 0.00557349373189313
+  },
+  {
+   "driver": "T7 Nomad change orders and tariff pass-through",
+   "kind": "threat",
+   "p": 0.5,
+   "p10": 0.0,
+   "p90": 801682.8415472378,
+   "mean": 323917.2493307241,
+   "full": 600000.0,
+   "rho": 0.059348013918717614,
+   "var_share": 0.0038310926036589205
+  },
+  {
+   "driver": "B8 Siting task budgets",
+   "kind": "opportunity",
+   "p": 0.4,
+   "p10": -698720.4295163583,
+   "p90": 0.0,
+   "mean": -261363.91984082747,
+   "full": -657609.9741875887,
+   "owner": "Siting + PM",
+   "rho": 0.05416917382702311,
+   "var_share": 0.0031916458383070244
+  },
+  {
+   "driver": "T2 Sound mitigation",
+   "kind": "threat",
+   "p": 0.6,
+   "p10": 0.0,
+   "p90": 631753.6981610163,
+   "mean": 344868.4140924087,
+   "full": 576163.4736277969,
+   "rho": 0.055799847344303315,
+   "var_share": 0.003386696598630494
+  },
+  {
+   "driver": "C3 AFUDC: battery payment timing",
+   "kind": "opportunity",
+   "p": 0.5,
+   "p10": -571930.659551545,
+   "p90": 0.0,
+   "mean": -258437.94274671565,
+   "full": -510757.734375,
+   "owner": "PM + Sourcing + Treasury",
+   "rho": 0.0378357562466971,
+   "var_share": 0.0015570949915194282
+  },
+  {
+   "driver": "T5 NFPA 855 hazard-analysis changes",
+   "kind": "threat",
+   "p": 0.4,
+   "p10": 0.0,
+   "p90": 552477.1037701595,
+   "mean": 180122.67294075785,
+   "full": 432122.6052208477,
+   "rho": 0.026853471513267044,
+   "var_share": 0.0007843522471482539
+  },
+  {
+   "driver": "T3 Visual screening or facade",
+   "kind": "threat",
+   "p": 0.7,
+   "p10": 0.0,
+   "p90": 547974.8890170222,
+   "mean": 319573.43850259157,
+   "full": 432122.6052208477,
+   "rho": 0.04453550456922351,
+   "var_share": 0.0021573619966794343
+  },
+  {
+   "driver": "Accuracy: C. GSUs and auxiliaries",
+   "kind": "accuracy",
+   "p": 1.0,
+   "p10": -231817.60693512313,
+   "p90": 447002.27187603427,
+   "mean": 91911.08247097826,
+   "rho": 0.04125697065714242,
+   "var_share": 0.001851419963749459
+  },
+  {
+   "driver": "Accuracy: G. Testing hours",
+   "kind": "accuracy",
+   "p": 1.0,
+   "p10": -196975.0105952883,
+   "p90": 417189.2225922902,
+   "mean": 95459.41112604846,
+   "rho": 0.03922361035105902,
+   "var_share": 0.001673421721242103
+  },
+  {
+   "driver": "A5 Commissioning overlap with Nomad",
+   "kind": "opportunity",
+   "p": 0.5,
+   "p10": -408575.2849020931,
+   "p90": 0.0,
+   "mean": -180455.37759263176,
+   "full": -360102.1710173731,
+   "owner": "Capital Projects Eng. + Nomad",
+   "rho": 0.03458231914739996,
+   "var_share": 0.0013008238736481122
+  },
+  {
+   "driver": "B5 Disconnect and PT double count",
+   "kind": "opportunity",
+   "p": 0.9,
+   "p10": -373726.9967599864,
+   "p90": 0.0,
+   "mean": -335289.17514322186,
+   "full": -373726.9967599864,
+   "owner": "Substation Eng. + Cost Estimating",
+   "rho": 0.03272609186019605,
+   "var_share": 0.0011649265948117618
+  },
+  {
+   "driver": "T8 Outage-window premiums at Station 496",
+   "kind": "threat",
+   "p": 0.5,
+   "p10": 0.0,
+   "p90": 365065.4319769176,
+   "mean": 158136.91862712958,
+   "full": 300000.0,
+   "rho": 0.034496715789558166,
+   "var_share": 0.0012943918544487721
+  },
+  {
+   "driver": "T4 Police details and traffic control",
+   "kind": "threat",
+   "p": 0.8,
+   "p10": 0.0,
+   "p90": 355331.9525978443,
+   "mean": 231306.16758822967,
+   "full": 288081.73681389843,
+   "rho": 0.03262600168569814,
+   "var_share": 0.0011578118189809843
+  },
+  {
+   "driver": "B6 GSU install hours",
+   "kind": "opportunity",
+   "p": 0.6,
+   "p10": -316392.6245498359,
+   "p90": 0.0,
+   "mean": -181914.06521768097,
+   "full": -300666.9946798857,
+   "owner": "Substation Eng. + Nomad",
+   "rho": 0.02865597216009706,
+   "var_share": 0.0008931832356819399
+  },
+  {
+   "driver": "B7 Switchyard lighting",
+   "kind": "opportunity",
+   "p": 0.7,
+   "p10": -273702.39152300265,
+   "p90": 0.0,
+   "mean": -181474.35475847396,
+   "full": -259192.1111664128,
+   "owner": "Substation Eng.",
+   "rho": 0.02912114979628199,
+   "var_share": 0.0009224170175467524
+  },
+  {
+   "driver": "Accuracy: I. Taxes and insurance",
+   "kind": "accuracy",
+   "p": 1.0,
+   "p10": -61468.597846240315,
+   "p90": 105698.00635092307,
+   "mean": 17892.918372762233,
+   "rho": -0.001397638428494096,
+   "var_share": 2.1247113426727326e-06
+  }
+ ],
+ "ranked_opportunities": [
+  {
+   "driver": "A1 Battery escalation removed",
+   "ev": 1303807.118520002,
+   "full": 1628029.117212964,
+   "p": 0.8,
+   "owner": "Cost Estimating / Sourcing"
+  },
+  {
+   "driver": "A2 Risk lines that duplicate escalation",
+   "ev": 1058062.477762044,
+   "full": 1511950.0,
+   "p": 0.7,
+   "owner": "Cost Estimating + PM"
+  },
+  {
+   "driver": "B1 Station 496 relay program at benchmark",
+   "ev": 652050.7303740204,
+   "full": 1294297.89391,
+   "p": 0.5,
+   "owner": "P&C Engineering + EMA"
+  },
+  {
+   "driver": "B2 Two-feeder topology",
+   "ev": 581104.2430229975,
+   "full": 1653032.1951328327,
+   "p": 0.35,
+   "owner": "System Planning + Substation Eng."
+  },
+  {
+   "driver": "B4 Battery install crew build-up",
+   "ev": 534326.6575987935,
+   "full": 886569.8543207429,
+   "p": 0.6,
+   "owner": "Cost Estimating + Nomad + HEG"
+  },
+  {
+   "driver": "A4 E&S overhead basis off the vendor contract",
+   "ev": 465303.9335341757,
+   "full": 1571866.6113674527,
+   "p": 0.3,
+   "owner": "Accounting / Cost Estimating"
+  },
+  {
+   "driver": "B5 Disconnect and PT double count",
+   "ev": 335289.17514322186,
+   "full": 373726.9967599864,
+   "p": 0.9,
+   "owner": "Substation Eng. + Cost Estimating"
+  },
+  {
+   "driver": "B3 Platform and wall after geotech",
+   "ev": 316606.47634695243,
+   "full": 792224.7762382207,
+   "p": 0.4,
+   "owner": "Civil + Capital Projects Eng."
+  },
+  {
+   "driver": "B8 Siting task budgets",
+   "ev": 261363.91984082747,
+   "full": 657609.9741875887,
+   "p": 0.4,
+   "owner": "Siting + PM"
+  },
+  {
+   "driver": "C3 AFUDC: battery payment timing",
+   "ev": 258437.94274671565,
+   "full": 510757.734375,
+   "p": 0.5,
+   "owner": "PM + Sourcing + Treasury"
+  },
+  {
+   "driver": "B6 GSU install hours",
+   "ev": 181914.06521768097,
+   "full": 300666.9946798857,
+   "p": 0.6,
+   "owner": "Substation Eng. + Nomad"
+  },
+  {
+   "driver": "B7 Switchyard lighting",
+   "ev": 181474.35475847396,
+   "full": 259192.1111664128,
+   "p": 0.7,
+   "owner": "Substation Eng."
+  },
+  {
+   "driver": "A5 Commissioning overlap with Nomad",
+   "ev": 180455.37759263176,
+   "full": 360102.1710173731,
+   "p": 0.5,
+   "owner": "Capital Projects Eng. + Nomad"
+  }
+ ],
+ "threat_ev": [
+  {
+   "driver": "T1 Haugland reconciliation moves the construction base up",
+   "ev": 4312503.788851274,
+   "p": 0.6,
+   "full": 7202043.4203474615
+  },
+  {
+   "driver": "T6 GSU count: twelve, not four",
+   "ev": 400403.3794339618,
+   "p": 0.35,
+   "full": 1152326.9472555937
+  },
+  {
+   "driver": "T2 Sound mitigation",
+   "ev": 344868.4140924087,
+   "p": 0.6,
+   "full": 576163.4736277969
+  },
+  {
+   "driver": "T7 Nomad change orders and tariff pass-through",
+   "ev": 323917.2493307241,
+   "p": 0.5,
+   "full": 600000.0
+  },
+  {
+   "driver": "T3 Visual screening or facade",
+   "ev": 319573.43850259157,
+   "p": 0.7,
+   "full": 432122.6052208477
+  },
+  {
+   "driver": "T4 Police details and traffic control",
+   "ev": 231306.16758822967,
+   "p": 0.8,
+   "full": 288081.73681389843
+  },
+  {
+   "driver": "T5 NFPA 855 hazard-analysis changes",
+   "ev": 180122.67294075785,
+   "p": 0.4,
+   "full": 432122.6052208477
+  },
+  {
+   "driver": "T8 Outage-window premiums at Station 496",
+   "ev": 158136.91862712958,
+   "p": 0.5,
+   "full": 300000.0
+  }
+ ]
+}

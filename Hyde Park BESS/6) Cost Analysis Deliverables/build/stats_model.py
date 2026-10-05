@@ -24,9 +24,21 @@ def pct_rank(series,x): return float((series<x).mean())
 def rc_block(rc):
     return {"n":int(len(rc)),"median_kwh":float(rc.kwh.median()),"q25":float(rc.kwh.quantile(.25)),"q75":float(rc.kwh.quantile(.75)),"min":float(rc.kwh.min()),"max":float(rc.kwh.max()),
       "n_utility":int(rc.utility.sum()),"n_developer":int((rc.utility==0).sum()),
-      "hp_rank":{k:pct_rank(rc.kwh,v) for k,v in HP.items()},"projects":rc[["project","state","owner_type","utility","mw","mwh","cod_year","kwh","cost_basis","confidence"]].sort_values("kwh").to_dict("records")}
-rc=df[df.mwh<=100]; rcu=df[(df.utility==1)&(df.mwh<=100)]
-res["reference_class"]=rc_block(rc); res["reference_class_utility"]=rc_block(rcu)
+      "hp_rank":{k:pct_rank(rc.kwh,v) for k,v in HP.items()},"projects":rc[[c for c in ("project","state","owner_type","utility","mw","mwh","cod_year","kwh","cost_basis","confidence","status","cod_actual","cost_type","actual_cost") if c in rc.columns]].sort_values("kwh").to_dict("records")}
+# ---- build status (audit of 5 Oct 2026): built = operating; 'actual' = a final/actual cost is on record ----
+if "status" in df.columns:
+    df["built"]=df.status.fillna("").str.lower().str.startswith("operating").astype(int)
+    df["actual_cost"]=df.cost_type.fillna("").str.lower().str.contains("actual|final|outturn|as-built",regex=True).astype(int)
+else:
+    df["built"]=1; df["actual_cost"]=0
+res["status_counts"]={"total":int(len(df)),"built":int(df.built.sum()),"not_built":int((df.built==0).sum()),"built_with_actual_cost":int(((df.built==1)&(df.actual_cost==1)).sum())}
+res["not_built_list"]=df[df.built==0][["project","state","cod_year","status","cost_basis"]].to_dict("records")
+df["cost_verifiable"]=(~df.cost_type.fillna("").str.lower().str.startswith("not disclosed")).astype(int) if "cost_type" in df.columns else 1
+res["status_counts"]["built_cost_not_verifiable"]=int(((df.built==1)&(df.cost_verifiable==0)).sum())
+df_all=df.copy(); df=df[(df.built==1)&(df.cost_verifiable==1)]                                  # everything downstream (class and regression) uses built projects only
+rc=df[df.mwh<=100]; rcu=df[(df.utility==1)&(df.mwh<=100)]; rca=df[(df.mwh<=100)&(df.actual_cost==1)]
+res["reference_class"]=rc_block(rc); res["reference_class_utility"]=rc_block(rcu); res["reference_class_actuals"]=rc_block(rca)
+res["reference_class_all_status"]=rc_block(df_all[df_all.mwh<=100])   # the pre-audit class, kept for the record
 # ---- regression ----
 y=df.ln_kwh
 m0=sm.OLS(y,sm.add_constant(df[["ln_mwh","ln_dur","yr"]])).fit(cov_type="HC1")

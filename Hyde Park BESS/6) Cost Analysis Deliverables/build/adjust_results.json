@@ -1,5 +1,7 @@
 {
- "share": 0.4,
+ "anchor_year": 2024,
+ "share_utility": 0.4,
+ "share_developer": 0.55,
  "g": 0.035,
  "hp": {
   "contract": 605.3,
@@ -9,364 +11,678 @@
  },
  "classes": {
   "reference_class": {
-   "n": 55,
+   "n": 35,
    "nominal": {
-    "median": 770.5426356589147,
-    "q25": 575.7239382239383,
-    "q75": 1172.4296675191815,
+    "median": 750.0,
+    "q25": 556.4144144144144,
+    "q75": 1274.7368421052631,
     "hp_pct": {
-     "contract": 0.2727272727272727,
-     "installed": 0.5818181818181818,
-     "station_direct": 0.8545454545454545,
+     "contract": 0.3142857142857143,
+     "installed": 0.5714285714285714,
+     "station_direct": 0.7714285714285715,
      "approval": 1.0
     }
    },
    "indices": {
     "installed": {
-     "label": "Installed all-in (EIA-860 2015-18, LBNL 2024)",
-     "source": "EIA Today in Energy #45596 (2015 $2,152; 2017 $834; 2018 $625); LBNL Utility-Scale Solar 2025 (2024 $458)",
-     "conf": "High at published points; interpolated 2019-2023",
-     "ratio_2018": 0.7328,
-     "naive_median": 619.8627525733891,
+     "label": "Installed all-in (EIA-860 2015-22, LBNL 2024)",
+     "source": "EIA, Battery Storage in the United States: 2024 figure data file, Figure 11 (capacity-weighted average cost/kWh of large-scale systems by installation year, 2022 final data), downloaded 5 Oct 2026; LBNL Utility-Scale Solar 2025 (2024 $458, battery share of hybrid plants, a different population)",
+     "conf": "High 2015-2022 (EIA figure data, official); High 2024 (LBNL) but a different sample; 2023 interpolated; held flat after 2024",
+     "ratio_2018": 0.7325655790147152,
+     "naive_median": 549.4241842610364,
      "naive_hp_pct": {
-      "contract": 0.45454545454545453,
-      "installed": 0.6727272727272727,
-      "station_direct": 0.9454545454545454,
+      "contract": 0.5714285714285714,
+      "installed": 0.6857142857142857,
+      "station_direct": 0.8571428571428571,
       "approval": 1.0
+     },
+     "by_owner": {
+      "median": 742.3682728883152,
+      "q25": 541.6179407095638,
+      "q75": 1331.5787766909937,
+      "min": 399.1779364659253,
+      "max": 2953.9167298478474,
+      "hp_pct": {
+       "contract": 0.42857142857142855,
+       "installed": 0.5714285714285714,
+       "station_direct": 0.7714285714285715,
+       "approval": 0.9714285714285714
+      }
+     },
+     "by_owner_minus10": {
+      "median": 762.8381230141663,
+      "q25": 561.291436910419,
+      "q75": 1479.1339917046769,
+      "min": 430.5244673072069,
+      "max": 3185.881058073331,
+      "hp_pct": {
+       "contract": 0.34285714285714286,
+       "installed": 0.5428571428571428,
+       "station_direct": 0.7428571428571429,
+       "approval": 0.9714285714285714
+      }
+     },
+     "by_owner_plus10": {
+      "median": 716.5102508700455,
+      "q25": 506.5429351366388,
+      "q75": 1286.445840874229,
+      "min": 371.8255615119791,
+      "max": 2751.5091551886458,
+      "hp_pct": {
+       "contract": 0.42857142857142855,
+       "installed": 0.6,
+       "station_direct": 0.7714285714285715,
+       "approval": 1.0
+      }
      },
      "by_share": {
       "0.3": {
-       "median": 843.0616404165818,
-       "q25": 682.7240935705918,
-       "q75": 1264.932330868448,
-       "min": 421.9832542733778,
-       "max": 3509.465395973154,
+       "median": 816.0839993008735,
+       "q25": 606.1752047784469,
+       "q75": 1479.133991704677,
+       "min": 430.5244673072069,
+       "max": 3185.881058073331,
        "hp_pct": {
-        "contract": 0.18181818181818182,
-        "installed": 0.4727272727272727,
-        "station_direct": 0.8363636363636363,
-        "approval": 0.9636363636363636
+        "contract": 0.2571428571428571,
+        "installed": 0.5142857142857142,
+        "station_direct": 0.7428571428571429,
+        "approval": 0.9714285714285714
        }
       },
       "0.4": {
-       "median": 831.6326530612245,
-       "q25": 659.1932732157766,
-       "q75": 1222.1198866927691,
-       "min": 415.83842770112125,
-       "max": 3298.6160536912753,
+       "median": 763.3173208030038,
+       "q25": 566.4277360536132,
+       "q75": 1331.5787766909937,
+       "min": 399.1779364659253,
+       "max": 2953.9167298478474,
        "hp_pct": {
-        "contract": 0.18181818181818182,
-        "installed": 0.509090909090909,
-        "station_direct": 0.8545454545454545,
-        "approval": 0.9818181818181818
+        "contract": 0.42857142857142855,
+        "installed": 0.5714285714285714,
+        "station_direct": 0.7714285714285715,
+        "approval": 0.9714285714285714
        }
       },
       "0.5": {
-       "median": 831.6326530612245,
-       "q25": 628.5484151165224,
-       "q75": 1123.066278978317,
-       "min": 409.6936011288646,
-       "max": 3087.766711409396,
+       "median": 737.0906405904016,
+       "q25": 528.5683953591614,
+       "q75": 1286.445840874229,
+       "min": 371.8255615119791,
+       "max": 2751.5091551886458,
        "hp_pct": {
-        "contract": 0.2,
-        "installed": 0.509090909090909,
-        "station_direct": 0.8545454545454545,
-        "approval": 0.9818181818181818
+        "contract": 0.42857142857142855,
+        "installed": 0.6,
+        "station_direct": 0.7714285714285715,
+        "approval": 1.0
        }
       }
-     }
+     },
+     "fixed_share_40": {
+      "median": 838.3522727272726,
+      "q25": 627.6384634186802,
+      "q75": 1492.887851209319,
+      "min": 436.76504657820675,
+      "max": 3298.3558463976087,
+      "hp_pct": {
+       "contract": 0.17142857142857143,
+       "installed": 0.4857142857142857,
+       "station_direct": 0.7142857142857143,
+       "approval": 0.9714285714285714
+      }
+     },
+     "factor_2018": 1.0644744972424676,
+     "factor_2016": 0.6811738629357579,
+     "share_2018": 0.5633075438074678,
+     "share_2016": 0.7321816419955224
     },
     "pack": {
      "label": "BNEF pack price, as released (real $ of survey year)",
      "source": "BloombergNEF Lithium-Ion Battery Price Survey releases 2014-2025",
      "conf": "High 2017-2025; Medium 2014-2016",
      "ratio_2018": 0.6136363636363636,
-     "naive_median": 607.4350704464438,
+     "naive_median": 516.5217391304348,
      "naive_hp_pct": {
-      "contract": 0.4909090909090909,
-      "installed": 0.6727272727272727,
-      "station_direct": 0.9636363636363636,
+      "contract": 0.5428571428571428,
+      "installed": 0.6857142857142857,
+      "station_direct": 0.9428571428571428,
       "approval": 1.0
+     },
+     "by_owner": {
+      "median": 742.858417679774,
+      "q25": 552.1215987107414,
+      "q75": 1280.900499261769,
+      "min": 362.8277803604977,
+      "max": 2699.9642139718194,
+      "hp_pct": {
+       "contract": 0.34285714285714286,
+       "installed": 0.6,
+       "station_direct": 0.8285714285714286,
+       "approval": 1.0
+      }
+     },
+     "by_owner_minus10": {
+      "median": 801.8522534915531,
+      "q25": 590.3664579312456,
+      "q75": 1341.0767775118193,
+      "min": 375.47001321673326,
+      "max": 2966.8533379187465,
+      "hp_pct": {
+       "contract": 0.3142857142857143,
+       "installed": 0.5714285714285714,
+       "station_direct": 0.8,
+       "approval": 0.9714285714285714
+      }
+     },
+     "by_owner_plus10": {
+      "median": 671.6597391883745,
+      "q25": 535.7289697957424,
+      "q75": 1220.1952264762103,
+      "min": 334.11654654533,
+      "max": 2472.4624444354417,
+      "hp_pct": {
+       "contract": 0.37142857142857144,
+       "installed": 0.6285714285714286,
+       "station_direct": 0.8285714285714286,
+       "approval": 1.0
+      }
      },
      "by_share": {
       "0.3": {
-       "median": 837.0288248337029,
-       "q25": 680.0612813857681,
-       "q75": 1251.042785173323,
-       "min": 401.9960109154056,
-       "max": 3410.261668700427,
+       "median": 801.8522534915531,
+       "q25": 641.7138590276293,
+       "q75": 1341.0767775118197,
+       "min": 395.5666674884507,
+       "max": 2966.8533379187465,
        "hp_pct": {
-        "contract": 0.18181818181818182,
-        "installed": 0.4727272727272727,
+        "contract": 0.22857142857142856,
+        "installed": 0.5428571428571428,
         "station_direct": 0.8,
-        "approval": 0.9636363636363636
+        "approval": 0.9714285714285714
        }
       },
       "0.4": {
-       "median": 829.9319727891157,
-       "q25": 647.3897864144581,
-       "q75": 1212.3597016248975,
-       "min": 389.1887698904915,
-       "max": 3166.3444173276384,
+       "median": 747.548668578936,
+       "q25": 602.5836258848228,
+       "q75": 1280.900499261769,
+       "min": 364.8600289151107,
+       "max": 2699.9642139718194,
        "hp_pct": {
-        "contract": 0.2,
-        "installed": 0.5272727272727272,
-        "station_direct": 0.8727272727272727,
-        "approval": 0.9818181818181818
+        "contract": 0.3142857142857143,
+        "installed": 0.5714285714285714,
+        "station_direct": 0.8285714285714286,
+        "approval": 1.0
        }
       },
       "0.5": {
-       "median": 809.3152997364954,
-       "q25": 615.8452425890383,
-       "q75": 1152.6349428751025,
-       "min": 376.3815288655775,
-       "max": 2922.4271659548504,
+       "median": 671.6597391883745,
+       "q25": 559.7839106359042,
+       "q75": 1220.1952264762103,
+       "min": 334.11654654533,
+       "max": 2472.4624444354417,
        "hp_pct": {
-        "contract": 0.2,
-        "installed": 0.5636363636363636,
-        "station_direct": 0.8727272727272727,
-        "approval": 0.9818181818181818
+        "contract": 0.37142857142857144,
+        "installed": 0.6285714285714286,
+        "station_direct": 0.8285714285714286,
+        "approval": 1.0
        }
       }
-     }
+     },
+     "fixed_share_40": {
+      "median": 818.5696640316205,
+      "q25": 647.3897864144581,
+      "q75": 1404.192507292786,
+      "min": 389.1887698904915,
+      "max": 3166.3444173276384,
+      "hp_pct": {
+       "contract": 0.2,
+       "installed": 0.5142857142857142,
+       "station_direct": 0.8,
+       "approval": 0.9714285714285714
+      }
+     },
+     "factor_2018": 0.972960077106962,
+     "factor_2016": 0.7433850281806184,
+     "share_2018": 0.5912042714203237,
+     "share_2016": 0.7006583984075946
     },
     "turnkey": {
      "label": "BNEF turnkey system, global (4-h to 2023; all durations 2024-25)",
      "source": "BloombergNEF Energy Storage System Cost Survey 2021-2025",
      "conf": "High 2022-2025; Medium 2021; 2017-2020 not retrieved (held flat)",
      "ratio_2018": 0.49159663865546216,
-     "naive_median": 524.0066225165563,
+     "naive_median": 390.0,
      "naive_hp_pct": {
-      "contract": 0.5272727272727272,
-      "installed": 0.7818181818181819,
+      "contract": 0.6,
+      "installed": 0.8,
       "station_direct": 1.0,
       "approval": 1.0
      },
+     "by_owner": {
+      "median": 686.4089067292763,
+      "q25": 475.125,
+      "q75": 1156.8426172368245,
+      "min": 265.25701803241935,
+      "max": 2539.712954898322,
+      "hp_pct": {
+       "contract": 0.42857142857142855,
+       "installed": 0.5714285714285714,
+       "station_direct": 0.8285714285714286,
+       "approval": 1.0
+      }
+     },
+     "by_owner_minus10": {
+      "median": 748.1089066202517,
+      "q25": 494.04166666666663,
+      "q75": 1288.1230252049063,
+      "min": 289.82596204273034,
+      "max": 2844.7110765897432,
+      "hp_pct": {
+       "contract": 0.37142857142857144,
+       "installed": 0.5714285714285714,
+       "station_direct": 0.8285714285714286,
+       "approval": 1.0
+      }
+     },
+     "by_owner_plus10": {
+      "median": 615.2896569967374,
+      "q25": 456.20833333333326,
+      "q75": 1036.8117127337564,
+      "min": 242.95353025190943,
+      "max": 2276.571730887929,
+      "hp_pct": {
+       "contract": 0.4857142857142857,
+       "installed": 0.6285714285714286,
+       "station_direct": 0.8571428571428571,
+       "approval": 1.0
+      }
+     },
      "by_share": {
       "0.3": {
-       "median": 829.9319727891157,
-       "q25": 631.0720616102666,
-       "q75": 1194.865053361248,
-       "min": 361.9433643634456,
-       "max": 3308.663597653826,
+       "median": 768.8408315107414,
+       "q25": 554.4470404241604,
+       "q75": 1288.1230252049063,
+       "min": 331.74442597864186,
+       "max": 2844.7110765897432,
        "hp_pct": {
-        "contract": 0.21818181818181817,
-        "installed": 0.5272727272727272,
-        "station_direct": 0.8363636363636363,
-        "approval": 0.9636363636363636
+        "contract": 0.37142857142857144,
+        "installed": 0.5714285714285714,
+        "station_direct": 0.8285714285714286,
+        "approval": 1.0
        }
       },
       "0.4": {
-       "median": 805.9000442282176,
-       "q25": 579.5677694954747,
-       "q75": 1134.692804668976,
-       "min": 335.7852411545449,
-       "max": 3030.880322598838,
+       "median": 691.8480669690028,
+       "q25": 504.124617066076,
+       "q75": 1156.8426172368245,
+       "min": 296.7325714275191,
+       "max": 2539.712954898322,
        "hp_pct": {
-        "contract": 0.32727272727272727,
-        "installed": 0.6,
-        "station_direct": 0.8909090909090909,
-        "approval": 0.9636363636363636
+        "contract": 0.4,
+        "installed": 0.5714285714285714,
+        "station_direct": 0.8285714285714286,
+        "approval": 1.0
        }
       },
       "0.5": {
-       "median": 744.0802831199594,
-       "q25": 531.8479517727766,
-       "q75": 1051.4065998760852,
-       "min": 309.6271179456442,
-       "max": 2753.09704754385,
+       "median": 622.8067658909341,
+       "q25": 470.605693833611,
+       "q75": 1036.9778402806014,
+       "min": 264.436690022304,
+       "max": 2276.571730887929,
        "hp_pct": {
-        "contract": 0.34545454545454546,
-        "installed": 0.6,
-        "station_direct": 0.8909090909090909,
+        "contract": 0.45714285714285713,
+        "installed": 0.6285714285714286,
+        "station_direct": 0.8571428571428571,
         "approval": 1.0
        }
       }
-     }
+     },
+     "fixed_share_40": {
+      "median": 783.0639948287006,
+      "q25": 579.5677694954747,
+      "q75": 1364.5684072915876,
+      "min": 335.7852411545449,
+      "max": 3030.880322598838,
+      "hp_pct": {
+       "contract": 0.37142857142857144,
+       "installed": 0.5714285714285714,
+       "station_direct": 0.8285714285714286,
+       "approval": 0.9428571428571428
+      }
+     },
+     "factor_2018": 0.915211875639035,
+     "factor_2016": 0.9316166833705959,
+     "share_2018": 0.5768167531336389,
+     "share_2016": 0.5871559633027523
     },
     "nrel": {
      "label": "NREL bottom-up 4-h 60 MW base year (2022 and 2024 editions)",
      "source": "NREL Cost Projections for Utility-Scale Battery Storage: 2023 update (2022 base $482, Ramasamy et al.) and 2025 update (2024 base $334)",
      "conf": "Medium; earlier editions' base years not retrieved (held flat before 2022)",
      "ratio_2018": 0.6929460580912863,
-     "naive_median": 693.75,
+     "naive_median": 550.0,
      "naive_hp_pct": {
-      "contract": 0.45454545454545453,
-      "installed": 0.6181818181818182,
-      "station_direct": 0.9454545454545454,
+      "contract": 0.5142857142857142,
+      "installed": 0.6,
+      "station_direct": 0.9142857142857143,
       "approval": 1.0
+     },
+     "by_owner": {
+      "median": 742.3682728883152,
+      "q25": 563.125,
+      "q75": 1309.7462562467304,
+      "min": 372.690044616348,
+      "max": 2861.747353602263,
+      "hp_pct": {
+       "contract": 0.37142857142857144,
+       "installed": 0.5428571428571428,
+       "station_direct": 0.8,
+       "approval": 1.0
+      }
+     },
+     "by_owner_minus10": {
+      "median": 792.3014254619342,
+      "q25": 566.0416666666666,
+      "q75": 1429.4427854528915,
+      "min": 383.66612775876973,
+      "max": 3105.391787654499,
+      "hp_pct": {
+       "contract": 0.2857142857142857,
+       "installed": 0.5142857142857142,
+       "station_direct": 0.7714285714285715,
+       "approval": 0.9428571428571428
+      }
+     },
+     "by_owner_plus10": {
+      "median": 716.6379440026814,
+      "q25": 547.9469173884256,
+      "q75": 1252.1752813255125,
+      "min": 358.3189720013407,
+      "max": 2651.5603928099213,
+      "hp_pct": {
+       "contract": 0.4,
+       "installed": 0.5428571428571428,
+       "station_direct": 0.8,
+       "approval": 1.0
+      }
      },
      "by_share": {
       "0.3": {
-       "median": 862.4660406202227,
-       "q25": 664.3148507591211,
-       "q75": 1302.4263115657427,
-       "min": 407.01888438133875,
-       "max": 3476.28698933415,
+       "median": 839.2950777444594,
+       "q25": 605.2616904017194,
+       "q75": 1429.4427854528917,
+       "min": 401.1614796320617,
+       "max": 3105.3917876544997,
        "hp_pct": {
-        "contract": 0.18181818181818182,
-        "installed": 0.4727272727272727,
-        "station_direct": 0.8,
-        "approval": 0.9636363636363636
+        "contract": 0.2571428571428571,
+        "installed": 0.4857142857142857,
+        "station_direct": 0.7714285714285715,
+        "approval": 0.9428571428571428
        }
       },
       "0.4": {
-       "median": 838.3522727272726,
-       "q25": 630.7853733875988,
-       "q75": 1235.9066865391856,
-       "min": 395.8859345117357,
-       "max": 3254.3781781726034,
+       "median": 773.4452307033143,
+       "q25": 568.127084176922,
+       "q75": 1309.7462562467304,
+       "min": 386.72261535165717,
+       "max": 2861.747353602263,
        "hp_pct": {
-        "contract": 0.2,
-        "installed": 0.4909090909090909,
-        "station_direct": 0.8363636363636363,
-        "approval": 0.9636363636363636
+        "contract": 0.37142857142857144,
+        "installed": 0.5428571428571428,
+        "station_direct": 0.8,
+        "approval": 1.0
        }
       },
       "0.5": {
-       "median": 819.5863154083935,
-       "q25": 590.3591695769314,
-       "q75": 1166.2893856116252,
-       "min": 384.7529846421327,
-       "max": 3032.4693670110555,
+       "median": 725.396681902301,
+       "q25": 548.1307201639227,
+       "q75": 1252.1752813255125,
+       "min": 358.3189720013407,
+       "max": 2651.5603928099213,
        "hp_pct": {
-        "contract": 0.2727272727272727,
-        "installed": 0.5636363636363636,
-        "station_direct": 0.8727272727272727,
-        "approval": 0.9636363636363636
+        "contract": 0.4,
+        "installed": 0.5428571428571428,
+        "station_direct": 0.8,
+        "approval": 1.0
        }
       }
-     }
+     },
+     "fixed_share_40": {
+      "median": 838.8222955955443,
+      "q25": 623.8914883606142,
+      "q75": 1490.939334961342,
+      "min": 395.8859345117357,
+      "max": 3254.3781781726034,
+      "hp_pct": {
+       "contract": 0.2,
+       "installed": 0.45714285714285713,
+       "station_direct": 0.7428571428571429,
+       "approval": 0.9428571428571428
+      }
+     },
+     "factor_2018": 1.0312603076044191,
+     "factor_2016": 1.0497400502592573,
+     "share_2018": 0.5769334090499493,
+     "share_2016": 0.5872718084333096
     },
     "lcos": {
      "label": "Lazard LCOS midpoint, unsubsidized 100 MW 4-h",
      "source": "Lazard LCOS v5.0 (2019, $173-315), v6.0 (2020, $132-250), v7.0 (2021, $131-232), 2024 ($170-296), 2025 ($115-254), 2026 (~$210-292)",
      "conf": "Medium; v8.0 (2023) possibly conflated with 2024 and omitted",
      "ratio_2018": 1.028688524590164,
-     "naive_median": 890.3,
+     "naive_median": 875.2682403433477,
      "naive_hp_pct": {
-      "contract": 0.14545454545454545,
-      "installed": 0.43636363636363634,
-      "station_direct": 0.8,
+      "contract": 0.2,
+      "installed": 0.42857142857142855,
+      "station_direct": 0.7428571428571429,
       "approval": 1.0
+     },
+     "by_owner": {
+      "median": 892.2620122781003,
+      "q25": 757.9458777788467,
+      "q75": 1609.3061328205504,
+      "min": 455.0647891577636,
+      "max": 3501.6837454142187,
+      "hp_pct": {
+       "contract": 0.17142857142857143,
+       "installed": 0.4,
+       "station_direct": 0.6571428571428571,
+       "approval": 0.9428571428571428
+      }
+     },
+     "by_owner_minus10": {
+      "median": 932.1784585084275,
+      "q25": 764.2346707356187,
+      "q75": 1672.417399929965,
+      "min": 452.35751521957553,
+      "max": 3641.45583166129,
+      "hp_pct": {
+       "contract": 0.17142857142857143,
+       "installed": 0.4,
+       "station_direct": 0.6571428571428571,
+       "approval": 0.9428571428571428
+      }
+     },
+     "by_owner_plus10": {
+      "median": 896.5689485648609,
+      "q25": 748.2146285033983,
+      "q75": 1555.1391282049267,
+      "min": 455.7854047197791,
+      "max": 3372.8119949263655,
+      "hp_pct": {
+       "contract": 0.2,
+       "installed": 0.4,
+       "station_direct": 0.6571428571428571,
+       "approval": 0.9428571428571428
+      }
      },
      "by_share": {
       "0.3": {
-       "median": 908.674681362986,
-       "q25": 766.8733309137996,
-       "q75": 1386.323454261595,
-       "min": 448.54229796298756,
-       "max": 3755.7925926944654,
+       "median": 932.1784585084275,
+       "q25": 771.3244267642494,
+       "q75": 1672.4173999299653,
+       "min": 448.3338199617395,
+       "max": 3641.45583166129,
        "hp_pct": {
-        "contract": 0.16363636363636364,
-        "installed": 0.41818181818181815,
-        "station_direct": 0.7636363636363637,
-        "approval": 0.9454545454545454
+        "contract": 0.17142857142857143,
+        "installed": 0.42857142857142855,
+        "station_direct": 0.6571428571428571,
+        "approval": 0.9428571428571428
        }
       },
       "0.4": {
-       "median": 902.5591026747196,
-       "q25": 760.636128566852,
-       "q75": 1354.2997958476785,
-       "min": 451.2504859539342,
-       "max": 3627.0523159863574,
+       "median": 892.2620122781003,
+       "q25": 767.4292950992395,
+       "q75": 1609.3061328205504,
+       "min": 451.0113487653659,
+       "max": 3501.6837454142187,
        "hp_pct": {
-        "contract": 0.14545454545454545,
-        "installed": 0.41818181818181815,
-        "station_direct": 0.7636363636363637,
-        "approval": 0.9636363636363636
+        "contract": 0.17142857142857143,
+        "installed": 0.4,
+        "station_direct": 0.6571428571428571,
+        "approval": 0.9428571428571428
        }
       },
       "0.5": {
-       "median": 895.1924401538672,
-       "q25": 754.3989262199043,
-       "q75": 1346.7875733923452,
-       "min": 453.95867394488084,
-       "max": 3498.3120392782484,
+       "median": 865.4276807777344,
+       "q25": 752.8097434341482,
+       "q75": 1555.1391282049267,
+       "min": 453.70865282129125,
+       "max": 3372.8119949263655,
        "hp_pct": {
-        "contract": 0.14545454545454545,
+        "contract": 0.17142857142857143,
         "installed": 0.4,
-        "station_direct": 0.7636363636363637,
-        "approval": 0.9636363636363636
+        "station_direct": 0.6571428571428571,
+        "approval": 0.9428571428571428
        }
       }
-     }
+     },
+     "fixed_share_40": {
+      "median": 931.7971324721565,
+      "q25": 769.0410164608822,
+      "q75": 1677.4784113483443,
+      "min": 451.2504859539342,
+      "max": 3627.0523159863574,
+      "hp_pct": {
+       "contract": 0.17142857142857143,
+       "installed": 0.4,
+       "station_direct": 0.6571428571428571,
+       "approval": 0.9428571428571428
+      }
+     },
+     "factor_2018": 1.2618680163654843,
+     "factor_2016": 1.2888229066239227,
+     "share_2018": 0.49738100132904417,
+     "share_2016": 0.5080056071781345
     },
     "construction": {
      "label": "Construction index only (Handy-Whitman, no battery deflation)",
      "source": "https://www.pjm.com/-/media/DotCom/committees-groups/subcommittees/cds/postings/handy-whitman-index.ashx",
      "conf": "Medium (2015-2018 seen in excerpt; later years from search summary of the same posting); production-plant line, not distribution plant",
      "ratio_2018": 1.4926174496644296,
-     "naive_median": 902.4469696969696,
+     "naive_median": 1052.2228566767274,
      "naive_hp_pct": {
-      "contract": 0.16363636363636364,
-      "installed": 0.41818181818181815,
-      "station_direct": 0.7454545454545455,
-      "approval": 0.9090909090909091
+      "contract": 0.17142857142857143,
+      "installed": 0.4,
+      "station_direct": 0.6285714285714286,
+      "approval": 0.8571428571428571
+     },
+     "by_owner": {
+      "median": 1052.2228566767271,
+      "q25": 773.0921380105316,
+      "q75": 1823.3965977962678,
+      "min": 440.4177339901477,
+      "max": 4142.013422818792,
+      "hp_pct": {
+       "contract": 0.17142857142857143,
+       "installed": 0.4,
+       "station_direct": 0.6285714285714286,
+       "approval": 0.8571428571428571
+      }
+     },
+     "by_owner_minus10": {
+      "median": 1052.2228566767271,
+      "q25": 773.0921380105316,
+      "q75": 1823.3965977962678,
+      "min": 440.4177339901477,
+      "max": 4142.013422818792,
+      "hp_pct": {
+       "contract": 0.17142857142857143,
+       "installed": 0.4,
+       "station_direct": 0.6285714285714286,
+       "approval": 0.8571428571428571
+      }
+     },
+     "by_owner_plus10": {
+      "median": 1052.2228566767271,
+      "q25": 773.0921380105316,
+      "q75": 1823.3965977962678,
+      "min": 440.4177339901477,
+      "max": 4142.013422818792,
+      "hp_pct": {
+       "contract": 0.17142857142857143,
+       "installed": 0.4,
+       "station_direct": 0.6285714285714286,
+       "approval": 0.8571428571428571
+      }
      },
      "by_share": {
       "0.3": {
-       "median": 902.4469696969696,
-       "q25": 754.7683501167822,
-       "q75": 1455.9886830218406,
-       "min": 427.69230769230774,
+       "median": 1052.2228566767271,
+       "q25": 773.0921380105316,
+       "q75": 1823.3965977962678,
+       "min": 440.4177339901477,
        "max": 4142.013422818792,
        "hp_pct": {
-        "contract": 0.16363636363636364,
-        "installed": 0.41818181818181815,
-        "station_direct": 0.7454545454545455,
-        "approval": 0.9090909090909091
+        "contract": 0.17142857142857143,
+        "installed": 0.4,
+        "station_direct": 0.6285714285714286,
+        "approval": 0.8571428571428571
        }
       },
       "0.4": {
-       "median": 902.4469696969696,
-       "q25": 754.7683501167822,
-       "q75": 1455.9886830218406,
-       "min": 427.69230769230774,
+       "median": 1052.2228566767271,
+       "q25": 773.0921380105316,
+       "q75": 1823.3965977962678,
+       "min": 440.4177339901477,
        "max": 4142.013422818792,
        "hp_pct": {
-        "contract": 0.16363636363636364,
-        "installed": 0.41818181818181815,
-        "station_direct": 0.7454545454545455,
-        "approval": 0.9090909090909091
+        "contract": 0.17142857142857143,
+        "installed": 0.4,
+        "station_direct": 0.6285714285714286,
+        "approval": 0.8571428571428571
        }
       },
       "0.5": {
-       "median": 902.4469696969696,
-       "q25": 754.7683501167822,
-       "q75": 1455.9886830218406,
-       "min": 427.69230769230774,
+       "median": 1052.2228566767271,
+       "q25": 773.0921380105316,
+       "q75": 1823.3965977962678,
+       "min": 440.4177339901477,
        "max": 4142.013422818792,
        "hp_pct": {
-        "contract": 0.16363636363636364,
-        "installed": 0.41818181818181815,
-        "station_direct": 0.7454545454545455,
-        "approval": 0.9090909090909091
+        "contract": 0.17142857142857143,
+        "installed": 0.4,
+        "station_direct": 0.6285714285714286,
+        "approval": 0.8571428571428571
        }
       }
-     }
-    },
-    "installed_flat35": {
-     "label": "Installed index with 3.5%/yr flat non-battery escalation (proxy)",
-     "source": "sensitivity",
-     "conf": "Assumption",
-     "ratio_2018": 0.7328,
-     "naive_median": 816.2612844649129,
-     "by_share": {
-      "0.4": {
-       "median": 816.2612844649129,
-       "q25": 607.4078713714005,
-       "q75": 1160.061007574363,
-       "min": 406.20203331676566,
-       "max": 3005.895046544066,
-       "hp_pct": {
-        "contract": 0.2545454545454545,
-        "installed": 0.5636363636363636,
-        "station_direct": 0.8545454545454545,
-        "approval": 0.9818181818181818
-       }
+     },
+     "fixed_share_40": {
+      "median": 1052.2228566767274,
+      "q25": 773.0921380105316,
+      "q75": 1823.396597796268,
+      "min": 440.4177339901477,
+      "max": 4142.013422818792,
+      "hp_pct": {
+       "contract": 0.17142857142857143,
+       "installed": 0.4,
+       "station_direct": 0.6285714285714286,
+       "approval": 0.8571428571428571
       }
-     }
+     },
+     "factor_2018": 1.4926174496644296,
+     "factor_2016": 1.557422969187675,
+     "share_2018": null,
+     "share_2016": null
     }
    },
    "projects": [
@@ -378,13 +694,16 @@
      "mwh": 40.0,
      "cod_year": 2018,
      "nominal": 375.0,
-     "adj_installed": 445.75892617449665,
-     "adj_pack": 427.88438071995114,
-     "adj_turnkey": 409.578421972816,
-     "adj_nrel": 439.78083488818964,
-     "adj_lcos": 490.1422048630212,
+     "anchor_share": 0.4,
+     "adj_installed": 399.1779364659253,
+     "adj_pack": 364.8600289151107,
+     "adj_turnkey": 343.20445336463814,
+     "adj_nrel": 386.72261535165717,
+     "adj_lcos": 473.2005061370566,
      "adj_construction": 559.7315436241611,
-     "factor_installed": 1.1886904697986578
+     "factor_installed": 1.0644744972424676,
+     "share_installed": 0.5633075438074678,
+     "fixed_share_installed": 445.7237630267039
     },
     {
      "project": "Bouldercombe Battery [AUSTRALIA]",
@@ -394,29 +713,16 @@
      "mwh": 100.0,
      "cod_year": 2023,
      "nominal": 402.0,
-     "adj_installed": 415.83842770112125,
-     "adj_pack": 389.1887698904915,
-     "adj_turnkey": 335.7852411545449,
-     "adj_nrel": 395.8859345117357,
-     "adj_lcos": 451.2504859539342,
+     "anchor_share": 0.55,
+     "adj_installed": 435.4648200000079,
+     "adj_pack": 362.8277803604977,
+     "adj_turnkey": 265.25701803241935,
+     "adj_nrel": 372.690044616348,
+     "adj_lcos": 455.0647891577636,
      "adj_construction": 440.4177339901477,
-     "factor_installed": 1.0344239495052767
-    },
-    {
-     "project": "Convergent SSC Richmond Rd BESS (Staten Island)",
-     "state": "NY",
-     "utility": 0,
-     "mw": 5.0,
-     "mwh": 20.0,
-     "cod_year": 2025,
-     "nominal": 410.0,
-     "adj_installed": 420.61538461538464,
-     "adj_pack": 420.61538461538464,
-     "adj_turnkey": 420.61538461538464,
-     "adj_nrel": 420.61538461538464,
-     "adj_lcos": 479.7264957264958,
-     "adj_construction": 427.69230769230774,
-     "factor_installed": 1.025891181988743
+     "factor_installed": 1.083245820895542,
+     "share_installed": 0.5423857485256763,
+     "fixed_share_installed": 436.76504657820675
     },
     {
      "project": "Soldotna BESS (37 Megapacks)",
@@ -426,29 +732,16 @@
      "mwh": 93.0,
      "cod_year": 2022,
      "nominal": 430.10752688172045,
-     "adj_installed": 454.5189061411228,
-     "adj_pack": 424.1710309789771,
-     "adj_turnkey": 363.2470435435605,
-     "adj_nrel": 420.3369268949885,
-     "adj_lcos": 518.4834663703708,
+     "anchor_share": 0.4,
+     "adj_installed": 500.24313933195776,
+     "adj_pack": 406.2273842005075,
+     "adj_turnkey": 296.7325714275191,
+     "adj_nrel": 396.6959229124982,
+     "adj_lcos": 517.9207194463097,
      "adj_construction": 501.86733461959403,
-     "factor_installed": 1.0567564567781105
-    },
-    {
-     "project": "Martha's Vineyard BESS Phase 2 (cancelled)",
-     "state": "MA",
-     "utility": 1,
-     "mw": 9.8,
-     "mwh": 64.0,
-     "cod_year": 2019,
-     "nominal": 437.5,
-     "adj_installed": 518.296083846233,
-     "adj_pack": 505.2327935222673,
-     "adj_turnkey": 470.10835913312695,
-     "adj_nrel": 505.3445075343962,
-     "adj_lcos": 564.0994391716997,
-     "adj_construction": 640.1315789473684,
-     "factor_installed": 1.184676763077104
+     "factor_installed": 1.1630652989468018,
+     "share_installed": 0.3896468998368379,
+     "fixed_share_installed": 500.1999837043769
     },
     {
      "project": "North Troy BESS (VEC + GMP)",
@@ -458,13 +751,16 @@
      "mwh": 12.0,
      "cod_year": 2024,
      "nominal": 500.0,
+     "anchor_share": 0.4,
      "adj_installed": 515.9090909090909,
      "adj_pack": 503.7351778656126,
      "adj_turnkey": 457.7272727272727,
      "adj_nrel": 515.9090909090909,
      "adj_lcos": 531.3597346859149,
      "adj_construction": 526.5151515151515,
-     "factor_installed": 1.0318181818181817
+     "factor_installed": 1.0318181818181817,
+     "share_installed": 0.4,
+     "fixed_share_installed": 515.9090909090909
     },
     {
      "project": "Lake Bonney BESS [AUSTRALIA]",
@@ -474,45 +770,16 @@
      "mwh": 52.0,
      "cod_year": 2019,
      "nominal": 511.53846153846155,
-     "adj_installed": 606.0077288048263,
-     "adj_pack": 590.733727810651,
-     "adj_turnkey": 549.6651583710408,
-     "adj_nrel": 590.8643472709864,
-     "adj_lcos": 659.562421185372,
-     "adj_construction": 748.4615384615386,
-     "factor_installed": 1.184676763077104
-    },
-    {
-     "project": "Greenbacker Staten Island Energy Storage 3 (Androvette St)",
-     "state": "NY",
-     "utility": 0,
-     "mw": 5.0,
-     "mwh": 20.0,
-     "cod_year": 2023,
-     "nominal": 522.5,
-     "adj_installed": 540.4865136165071,
-     "adj_pack": 505.84858773080055,
-     "adj_turnkey": 436.4372848339545,
-     "adj_nrel": 514.5532357770694,
-     "adj_lcos": 586.5133803754493,
-     "adj_construction": 572.4334975369458,
-     "factor_installed": 1.0344239495052767
-    },
-    {
-     "project": "Elevate Renewables Victory Blvd BESS (Staten Island)",
-     "state": "NY",
-     "utility": 0,
-     "mw": 15.1,
-     "mwh": 60.4,
-     "cod_year": 2025,
-     "nominal": 524.0066225165563,
-     "adj_installed": 537.573773343439,
-     "adj_pack": 537.573773343439,
-     "adj_turnkey": 537.573773343439,
-     "adj_nrel": 537.573773343439,
-     "adj_lcos": 613.1216116032786,
-     "adj_construction": 546.6185405613608,
-     "factor_installed": 1.025891181988743
+     "anchor_share": 0.55,
+     "adj_installed": 507.90998797307657,
+     "adj_pack": 473.49869674281615,
+     "adj_turnkey": 395.5430309163272,
+     "adj_nrel": 468.64421783076915,
+     "adj_lcos": 606.2044483394503,
+     "adj_construction": 748.4615384615385,
+     "factor_installed": 0.9929067434060144,
+     "share_installed": 0.6859284995885527,
+     "fixed_share_installed": 608.1836228287842
     },
     {
      "project": "WindCharger [CANADA]",
@@ -522,13 +789,16 @@
      "mwh": 20.0,
      "cod_year": 2020,
      "nominal": 550.0,
-     "adj_installed": 648.04439126605,
-     "adj_pack": 644.4961254837289,
-     "adj_turnkey": 579.216729053624,
-     "adj_nrel": 623.5136013295054,
-     "adj_lcos": 760.1754161934015,
+     "anchor_share": 0.55,
+     "adj_installed": 508.85848254227125,
+     "adj_pack": 551.7871822366586,
+     "adj_turnkey": 422.2231572569448,
+     "adj_nrel": 500.2563790632077,
+     "adj_lcos": 749.2081836468798,
      "adj_construction": 785.1091142490372,
-     "factor_installed": 1.1782625295746363
+     "factor_installed": 0.9251972409859477,
+     "share_installed": 0.7000296958679025,
+     "fixed_share_installed": 627.2583068690626
     },
     {
      "project": "Broken Hill BESS [AUSTRALIA]",
@@ -536,15 +806,18 @@
      "utility": 0,
      "mw": 50.0,
      "mwh": 50.0,
-     "cod_year": 2023,
+     "cod_year": 2024,
      "nominal": 550.0,
-     "adj_installed": 568.9331722279022,
-     "adj_pack": 532.472197611369,
-     "adj_turnkey": 459.4076682462679,
-     "adj_nrel": 541.6349850284942,
-     "adj_lcos": 617.3825056583676,
-     "adj_construction": 602.5615763546798,
-     "factor_installed": 1.0344239495052767
+     "anchor_share": 0.55,
+     "adj_installed": 563.125,
+     "adj_pack": 544.7119565217392,
+     "adj_turnkey": 475.125,
+     "adj_nrel": 563.125,
+     "adj_lcos": 586.4940987124463,
+     "adj_construction": 579.1666666666666,
+     "factor_installed": 1.0238636363636364,
+     "share_installed": 0.55,
+     "fixed_share_installed": 567.5
     },
     {
      "project": "Wellesley MLP BESS (Citizens Energy)",
@@ -554,13 +827,16 @@
      "mwh": 20.0,
      "cod_year": 2024,
      "nominal": 550.0,
-     "adj_installed": 567.5,
-     "adj_pack": 554.1086956521739,
-     "adj_turnkey": 503.5,
-     "adj_nrel": 567.5,
-     "adj_lcos": 584.4957081545064,
+     "anchor_share": 0.55,
+     "adj_installed": 563.125,
+     "adj_pack": 544.7119565217392,
+     "adj_turnkey": 475.125,
+     "adj_nrel": 563.125,
+     "adj_lcos": 586.4940987124463,
      "adj_construction": 579.1666666666666,
-     "factor_installed": 1.0318181818181817
+     "factor_installed": 1.0238636363636364,
+     "share_installed": 0.55,
+     "fixed_share_installed": 567.5
     },
     {
      "project": "Thurcroft BESS [UK]",
@@ -570,13 +846,16 @@
      "mwh": 75.0,
      "cod_year": 2020,
      "nominal": 550.6666666666666,
-     "adj_installed": 648.8298996190997,
-     "adj_pack": 645.2773329085576,
-     "adj_turnkey": 579.9188099373254,
-     "adj_nrel": 624.2693753917229,
-     "adj_lcos": 761.0968409403025,
+     "anchor_share": 0.55,
+     "adj_installed": 509.4752807029285,
+     "adj_pack": 552.4560151848242,
+     "adj_turnkey": 422.73494290210465,
+     "adj_nrel": 500.8627504317691,
+     "adj_lcos": 750.1163147785729,
      "adj_construction": 786.0607616602481,
-     "factor_installed": 1.1782625295746363
+     "factor_installed": 0.9251972409859477,
+     "share_installed": 0.7000296958679025,
+     "fixed_share_installed": 628.0186199682978
     },
     {
      "project": "Wickham Market BESS [UK]",
@@ -586,13 +865,16 @@
      "mwh": 74.0,
      "cod_year": 2020,
      "nominal": 562.1621621621622,
-     "adj_installed": 662.3746112203361,
-     "adj_pack": 658.7478825583077,
-     "adj_turnkey": 592.0249613914192,
-     "adj_nrel": 637.3013713834748,
-     "adj_lcos": 776.985191981462,
+     "anchor_share": 0.55,
+     "adj_installed": 520.1108814191274,
+     "adj_pack": 563.9888643991401,
+     "adj_turnkey": 431.5597872699976,
+     "adj_nrel": 511.31855943561277,
+     "adj_lcos": 765.7754407791205,
      "adj_construction": 802.4702494535615,
-     "factor_installed": 1.1782625295746363
+     "factor_installed": 0.9251972409859477,
+     "share_installed": 0.7000296958679025,
+     "fixed_share_installed": 641.128883679435
     },
     {
      "project": "Virginia battery pilot portfolio (Scott Solar 10+2 MW, New Kent 2 MW, Hanover/Ashland 2 MW)",
@@ -602,13 +884,16 @@
      "mwh": 56.0,
      "cod_year": 2021,
      "nominal": 589.2857142857143,
-     "adj_installed": 656.0119352112171,
-     "adj_pack": 649.5022399203584,
-     "adj_turnkey": 572.5214476034317,
-     "adj_nrel": 619.9823821847331,
-     "adj_lcos": 782.6191230372416,
+     "anchor_share": 0.4,
+     "adj_installed": 565.3554721072265,
+     "adj_pack": 626.0318353439749,
+     "adj_turnkey": 505.98135299879715,
+     "adj_nrel": 570.1492646150663,
+     "adj_lcos": 782.0320238671645,
      "adj_construction": 761.0751617720259,
-     "factor_installed": 1.1132323749038835
+     "factor_installed": 0.95939110418196,
+     "share_installed": 0.5451345040194562,
+     "fixed_share_installed": 617.4631260474891
     },
     {
      "project": "Pomona (Ladentown) BESS",
@@ -618,13 +903,16 @@
      "mwh": 12.0,
      "cod_year": 2021,
      "nominal": 616.6666666666666,
-     "adj_installed": 686.4932978573947,
-     "adj_pack": 679.6811318762537,
-     "adj_turnkey": 599.1234542597527,
-     "adj_nrel": 648.789644387256,
-     "adj_lcos": 818.9832439056386,
+     "anchor_share": 0.4,
+     "adj_installed": 591.624514245542,
+     "adj_pack": 655.1201832488463,
+     "adj_turnkey": 529.4915976835897,
+     "adj_nrel": 596.6410486274834,
+     "adj_lcos": 818.3688653801842,
      "adj_construction": 796.4382500967866,
-     "factor_installed": 1.1132323749038835
+     "factor_installed": 0.95939110418196,
+     "share_installed": 0.5451345040194562,
+     "fixed_share_installed": 646.1533319042411
     },
     {
      "project": "Wallgrove Grid Battery [AUSTRALIA]",
@@ -634,13 +922,16 @@
      "mwh": 75.0,
      "cod_year": 2021,
      "nominal": 618.6666666666666,
-     "adj_installed": 688.7197626072026,
-     "adj_pack": 681.8855031147714,
-     "adj_turnkey": 601.0665573546491,
-     "adj_nrel": 650.8938270177011,
-     "adj_lcos": 821.639405777765,
+     "anchor_share": 0.4,
+     "adj_installed": 593.5432964539059,
+     "adj_pack": 657.2448973566804,
+     "adj_turnkey": 531.208867730131,
+     "adj_nrel": 598.5761006770861,
+     "adj_lcos": 821.0230346733091,
      "adj_construction": 799.0212930700735,
-     "factor_installed": 1.1132323749038835
+     "factor_installed": 0.95939110418196,
+     "share_installed": 0.5451345040194562,
+     "fixed_share_installed": 648.2489643320387
     },
     {
      "project": "Braintree BELD solar-sited BESS",
@@ -648,31 +939,18 @@
      "utility": 1,
      "mw": 2.0,
      "mwh": 4.2,
-     "cod_year": 2019,
+     "cod_year": 2018,
      "nominal": 619.047619047619,
-     "adj_installed": 733.3713295239215,
-     "adj_pack": 714.8872180451128,
-     "adj_turnkey": 665.187338093132,
-     "adj_nrel": 715.045289572479,
-     "adj_lcos": 798.181519372201,
-     "adj_construction": 905.7644110275689,
-     "factor_installed": 1.184676763077104
-    },
-    {
-     "project": "Whitehorse Grid-Scale BESS [CANADA]",
-     "state": "YT (Canada)",
-     "utility": 1,
-     "mw": 7.0,
-     "mwh": 40.0,
-     "cod_year": 2023,
-     "nominal": 647.5,
-     "adj_installed": 669.7895073046667,
-     "adj_pack": 626.8649962788389,
-     "adj_turnkey": 540.8481185262881,
-     "adj_nrel": 637.6520960108181,
-     "adj_lcos": 726.8275862068964,
-     "adj_construction": 709.3793103448276,
-     "factor_installed": 1.0344239495052767
+     "anchor_share": 0.4,
+     "adj_installed": 658.9604030548609,
+     "adj_pack": 602.3086191614526,
+     "adj_turnkey": 566.5597325384502,
+     "adj_nrel": 638.3992380408308,
+     "adj_lcos": 781.1563910833951,
+     "adj_construction": 924.0012783636945,
+     "factor_installed": 1.0644744972424676,
+     "share_installed": 0.5633075438074678,
+     "fixed_share_installed": 735.7979580123366
     },
     {
      "project": "Sterling MLD Chocksett Road BESS",
@@ -682,45 +960,16 @@
      "mwh": 3.9,
      "cod_year": 2016,
      "nominal": 692.3076923076923,
-     "adj_installed": 731.8798218447562,
-     "adj_pack": 756.4815275222516,
-     "adj_turnkey": 783.0639948287006,
-     "adj_nrel": 838.8222955955443,
-     "adj_lcos": 931.7971324721565,
+     "anchor_share": 0.4,
+     "adj_installed": 471.58190510937084,
+     "adj_pack": 514.6511733558127,
+     "adj_turnkey": 644.9653961796432,
+     "adj_nrel": 726.7431117179473,
+     "adj_lcos": 892.2620122781003,
      "adj_construction": 1078.2159017453134,
-     "factor_installed": 1.057159742664648
-    },
-    {
-     "project": "OSCII Gildersleeve Ave BESS (Bronx)",
-     "state": "NY",
-     "utility": 0,
-     "mw": 5.0,
-     "mwh": 20.0,
-     "cod_year": 2025,
-     "nominal": 693.75,
-     "adj_installed": 711.7120075046905,
-     "adj_pack": 711.7120075046905,
-     "adj_turnkey": 711.7120075046905,
-     "adj_nrel": 711.7120075046905,
-     "adj_lcos": 811.7323327079425,
-     "adj_construction": 723.6866791744841,
-     "factor_installed": 1.025891181988743
-    },
-    {
-     "project": "Concord MLP grid-scale battery (planned)",
-     "state": "MA",
-     "utility": 1,
-     "mw": 4.99,
-     "mwh": 14.97,
-     "cod_year": 2026,
-     "nominal": 694.7227788911156,
-     "adj_installed": 694.7227788911156,
-     "adj_pack": 694.7227788911156,
-     "adj_turnkey": 694.7227788911156,
-     "adj_nrel": 694.7227788911156,
-     "adj_lcos": 694.7227788911156,
-     "adj_construction": 694.7227788911156,
-     "factor_installed": 1.0
+     "factor_installed": 0.6811738629357579,
+     "share_installed": 0.7321816419955224,
+     "fixed_share_installed": 746.8041526156338
     },
     {
      "project": "Ashburnham MLP substation BESS",
@@ -730,13 +979,16 @@
      "mwh": 5.0,
      "cod_year": 2019,
      "nominal": 700.0,
-     "adj_installed": 829.2737341539728,
-     "adj_pack": 808.3724696356277,
-     "adj_turnkey": 752.173374613003,
-     "adj_nrel": 808.551212055034,
-     "adj_lcos": 902.5591026747196,
-     "adj_construction": 1024.2105263157896,
-     "factor_installed": 1.184676763077104
+     "anchor_share": 0.4,
+     "adj_installed": 763.3173208030038,
+     "adj_pack": 723.7374761692288,
+     "adj_turnkey": 635.2358065485131,
+     "adj_nrel": 715.7850726944138,
+     "adj_lcos": 874.458229183388,
+     "adj_construction": 1024.2105263157894,
+     "factor_installed": 1.0904533154328626,
+     "share_installed": 0.5436428856117975,
+     "fixed_share_installed": 832.2512733446521
     },
     {
      "project": "Agilitas AE-ESS NWS 1 (Long Island City)",
@@ -744,15 +996,18 @@
      "utility": 0,
      "mw": 5.0,
      "mwh": 20.6,
-     "cod_year": 2021,
+     "cod_year": 2025,
      "nominal": 728.1553398058253,
-     "adj_installed": 810.6060982309832,
-     "adj_pack": 802.5623441204782,
-     "adj_turnkey": 707.4404471710542,
-     "adj_nrel": 766.0859091426533,
-     "adj_lcos": 967.0492252887364,
-     "adj_construction": 940.4282669733772,
-     "factor_installed": 1.1132323749038835
+     "anchor_share": 0.55,
+     "adj_installed": 742.3682728883152,
+     "adj_pack": 742.858417679774,
+     "adj_turnkey": 745.0618336636227,
+     "adj_nrel": 742.3682728883152,
+     "adj_lcos": 872.6580927229109,
+     "adj_construction": 759.5766771708045,
+     "factor_installed": 1.0195190947666195,
+     "share_installed": 0.5476661951909476,
+     "fixed_share_installed": 747.008142224813
     },
     {
      "project": "Panton battery (Green Mountain Power)",
@@ -762,45 +1017,16 @@
      "mwh": 4.0,
      "cod_year": 2018,
      "nominal": 750.0,
-     "adj_installed": 891.5178523489933,
-     "adj_pack": 855.7687614399023,
-     "adj_turnkey": 819.156843945632,
-     "adj_nrel": 879.5616697763793,
-     "adj_lcos": 980.2844097260424,
+     "anchor_share": 0.4,
+     "adj_installed": 798.3558729318506,
+     "adj_pack": 729.7200578302214,
+     "adj_turnkey": 686.4089067292763,
+     "adj_nrel": 773.4452307033143,
+     "adj_lcos": 946.4010122741132,
      "adj_construction": 1119.4630872483222,
-     "factor_installed": 1.1886904697986578
-    },
-    {
-     "project": "Martha's Vineyard BESS Phase 1 (cancelled)",
-     "state": "MA",
-     "utility": 1,
-     "mw": 4.9,
-     "mwh": 20.0,
-     "cod_year": 2019,
-     "nominal": 750.0,
-     "adj_installed": 888.507572307828,
-     "adj_pack": 866.1133603238867,
-     "adj_turnkey": 805.9000442282176,
-     "adj_nrel": 866.304870058965,
-     "adj_lcos": 967.0276100086281,
-     "adj_construction": 1097.3684210526317,
-     "factor_installed": 1.184676763077104
-    },
-    {
-     "project": "OSCII Gun Hill Rd BESS (Bronx)",
-     "state": "NY",
-     "utility": 0,
-     "mw": 5.0,
-     "mwh": 20.0,
-     "cod_year": 2025,
-     "nominal": 763.125,
-     "adj_installed": 782.8832082551595,
-     "adj_pack": 782.8832082551595,
-     "adj_turnkey": 782.8832082551595,
-     "adj_nrel": 782.8832082551595,
-     "adj_lcos": 892.9055659787368,
-     "adj_construction": 796.0553470919325,
-     "factor_installed": 1.025891181988743
+     "factor_installed": 1.0644744972424676,
+     "share_installed": 0.5633075438074678,
+     "fixed_share_installed": 891.4475260534078
     },
     {
      "project": "Hornsdale Power Reserve expansion [AUSTRALIA]",
@@ -810,29 +1036,16 @@
      "mwh": 64.5,
      "cod_year": 2020,
      "nominal": 770.5426356589147,
-     "adj_installed": 907.9015150365802,
-     "adj_pack": 902.930442185802,
-     "adj_turnkey": 811.4748818594818,
-     "adj_nrel": 873.5342067956706,
-     "adj_lcos": 1064.9955795577746,
+     "anchor_share": 0.55,
+     "adj_installed": 712.9039205736682,
+     "adj_pack": 773.0464540426196,
+     "adj_turnkey": 591.5289898708993,
+     "adj_nrel": 700.8524887791804,
+     "adj_lcos": 1049.6306336081727,
      "adj_construction": 1099.9273566787076,
-     "factor_installed": 1.1782625295746363
-    },
-    {
-     "project": "Soltage Brigis 1A BESS (Maspeth, Queens)",
-     "state": "NY",
-     "utility": 0,
-     "mw": 5.0,
-     "mwh": 20.0,
-     "cod_year": 2025,
-     "nominal": 805.22465,
-     "adj_installed": 826.0728679549719,
-     "adj_pack": 826.0728679549719,
-     "adj_turnkey": 826.0728679549719,
-     "adj_nrel": 826.0728679549719,
-     "adj_lcos": 942.1648771148635,
-     "adj_construction": 839.9716799249532,
-     "factor_installed": 1.025891181988743
+     "factor_installed": 0.9251972409859477,
+     "share_installed": 0.7000296958679025,
+     "fixed_share_installed": 878.7804891160653
     },
     {
      "project": "Chugach BESS (Southcentral Power Project site)",
@@ -842,141 +1055,16 @@
      "mwh": 80.0,
      "cod_year": 2024,
      "nominal": 812.5,
+     "anchor_share": 0.4,
      "adj_installed": 838.3522727272726,
      "adj_pack": 818.5696640316205,
      "adj_turnkey": 743.8068181818181,
      "adj_nrel": 838.3522727272726,
      "adj_lcos": 863.4595688646117,
      "adj_construction": 855.5871212121211,
-     "factor_installed": 1.0318181818181817
-    },
-    {
-     "project": "NineDot Blue Aster BESS (Hinsdale St Brooklyn)",
-     "state": "NY",
-     "utility": 0,
-     "mw": 14.7,
-     "mwh": 58.8,
-     "cod_year": 2026,
-     "nominal": 829.9319727891157,
-     "adj_installed": 829.9319727891157,
-     "adj_pack": 829.9319727891157,
-     "adj_turnkey": 829.9319727891157,
-     "adj_nrel": 829.9319727891157,
-     "adj_lcos": 829.9319727891157,
-     "adj_construction": 829.9319727891157,
-     "factor_installed": 1.0
-    },
-    {
-     "project": "NineDot Eastern Towhee A/B (Centre St Brooklyn)",
-     "state": "NY",
-     "utility": 0,
-     "mw": 9.8,
-     "mwh": 39.2,
-     "cod_year": 2027,
-     "nominal": 831.6326530612245,
-     "adj_installed": 831.6326530612245,
-     "adj_pack": 831.6326530612245,
-     "adj_turnkey": 831.6326530612245,
-     "adj_nrel": 831.6326530612245,
-     "adj_lcos": 831.6326530612245,
-     "adj_construction": 831.6326530612245,
-     "factor_installed": 1.0
-    },
-    {
-     "project": "OSCII Blondell Ave BESS (Bronx)",
-     "state": "NY",
-     "utility": 0,
-     "mw": 5.0,
-     "mwh": 10.0,
-     "cod_year": 2024,
-     "nominal": 857.0,
-     "adj_installed": 884.2681818181818,
-     "adj_pack": 863.40209486166,
-     "adj_turnkey": 784.5445454545454,
-     "adj_nrel": 884.2681818181818,
-     "adj_lcos": 910.7505852516582,
-     "adj_construction": 902.4469696969696,
-     "factor_installed": 1.0318181818181817
-    },
-    {
-     "project": "Convergent 720 E 144th St Energy Storage 1 (Bronx)",
-     "state": "NY",
-     "utility": 0,
-     "mw": 5.0,
-     "mwh": 20.0,
-     "cod_year": 2026,
-     "nominal": 890.3,
-     "adj_installed": 890.3,
-     "adj_pack": 890.3,
-     "adj_turnkey": 890.3,
-     "adj_nrel": 890.3,
-     "adj_lcos": 890.3,
-     "adj_construction": 890.3,
-     "factor_installed": 1.0
-    },
-    {
-     "project": "NineDot Devoe Ave BESS (Bronx)",
-     "state": "NY",
-     "utility": 0,
-     "mw": 9.8,
-     "mwh": 39.2,
-     "cod_year": 2026,
-     "nominal": 892.0918367346939,
-     "adj_installed": 892.0918367346939,
-     "adj_pack": 892.0918367346939,
-     "adj_turnkey": 892.0918367346939,
-     "adj_nrel": 892.0918367346939,
-     "adj_lcos": 892.0918367346939,
-     "adj_construction": 892.0918367346939,
-     "factor_installed": 1.0
-    },
-    {
-     "project": "Convergent East Bay Ave Energy Storage 1 (Bronx)",
-     "state": "NY",
-     "utility": 0,
-     "mw": 5.0,
-     "mwh": 20.0,
-     "cod_year": 2026,
-     "nominal": 975.6725,
-     "adj_installed": 975.6725,
-     "adj_pack": 975.6725,
-     "adj_turnkey": 975.6725,
-     "adj_nrel": 975.6725,
-     "adj_lcos": 975.6725,
-     "adj_construction": 975.6725,
-     "factor_installed": 1.0
-    },
-    {
-     "project": "Westmoreland Clean Innovation Project BESS (withdrawn)",
-     "state": "NH",
-     "utility": 1,
-     "mw": 1.7,
-     "mwh": 7.1,
-     "cod_year": 2020,
-     "nominal": 985.9154929577464,
-     "adj_installed": 1161.6672826792187,
-     "adj_pack": 1155.3067550284513,
-     "adj_turnkey": 1038.2886308259585,
-     "adj_nrel": 1117.6940356738892,
-     "adj_lcos": 1362.6704003466864,
-     "adj_construction": 1407.3658898190167,
-     "factor_installed": 1.1782625295746363
-    },
-    {
-     "project": "NineDot Wintergreen / Hunts Point BESS (Bronx)",
-     "state": "NY",
-     "utility": 0,
-     "mw": 19.6,
-     "mwh": 78.3,
-     "cod_year": 2027,
-     "nominal": 998.7228607918263,
-     "adj_installed": 998.7228607918263,
-     "adj_pack": 998.7228607918263,
-     "adj_turnkey": 998.7228607918263,
-     "adj_nrel": 998.7228607918263,
-     "adj_lcos": 998.7228607918263,
-     "adj_construction": 998.7228607918263,
-     "factor_installed": 1.0
+     "factor_installed": 1.0318181818181817,
+     "share_installed": 0.4,
+     "fixed_share_installed": 838.3522727272726
     },
     {
      "project": "Kingsbery Community Solar + Storage",
@@ -984,31 +1072,18 @@
      "utility": 1,
      "mw": 1.5,
      "mwh": 3.0,
-     "cod_year": 2016,
+     "cod_year": 2018,
      "nominal": 1000.0,
-     "adj_installed": 1057.1597426646479,
-     "adj_pack": 1092.6955397543634,
-     "adj_turnkey": 1131.09243697479,
-     "adj_nrel": 1211.6322047491196,
-     "adj_lcos": 1345.9291913486707,
-     "adj_construction": 1557.422969187675,
-     "factor_installed": 1.057159742664648
-    },
-    {
-     "project": "Soltage Brigis 2 / Maspeth ESS (Queens)",
-     "state": "NY",
-     "utility": 0,
-     "mw": 20.0,
-     "mwh": 80.0,
-     "cod_year": 2027,
-     "nominal": 1008.7193125,
-     "adj_installed": 1008.7193125,
-     "adj_pack": 1008.7193125,
-     "adj_turnkey": 1008.7193125,
-     "adj_nrel": 1008.7193125,
-     "adj_lcos": 1008.7193125,
-     "adj_construction": 1008.7193125,
-     "factor_installed": 1.0
+     "anchor_share": 0.4,
+     "adj_installed": 1064.4744972424676,
+     "adj_pack": 972.960077106962,
+     "adj_turnkey": 915.211875639035,
+     "adj_nrel": 1031.260307604419,
+     "adj_lcos": 1261.8680163654842,
+     "adj_construction": 1492.6174496644296,
+     "factor_installed": 1.0644744972424676,
+     "share_installed": 0.5633075438074678,
+     "fixed_share_installed": 1188.5967014045439
     },
     {
      "project": "NineDot Arthur Kill Road BESS (Staten Island)",
@@ -1017,14 +1092,17 @@
      "mw": 9.8,
      "mwh": 39.1,
      "cod_year": 2025,
-     "nominal": 1109.5652173913043,
-     "adj_installed": 1138.2931723631618,
-     "adj_pack": 1138.2931723631618,
-     "adj_turnkey": 1138.2931723631618,
-     "adj_nrel": 1138.2931723631618,
-     "adj_lcos": 1298.2630085832632,
-     "adj_construction": 1157.4451423444,
-     "factor_installed": 1.025891181988743
+     "nominal": 1008.695652173913,
+     "anchor_share": 0.55,
+     "adj_installed": 1028.3844781993728,
+     "adj_pack": 1029.0634637029493,
+     "adj_turnkey": 1032.1158015783144,
+     "adj_nrel": 1028.3844781993728,
+     "adj_lcos": 1208.8717555771987,
+     "adj_construction": 1052.2228566767271,
+     "factor_installed": 1.0195190947666195,
+     "share_installed": 0.5476661951909476,
+     "fixed_share_installed": 1034.8119748756017
     },
     {
      "project": "Stafford Hill Solar + Storage (Rutland)",
@@ -1034,29 +1112,16 @@
      "mwh": 3.4,
      "cod_year": 2015,
      "nominal": 1235.2941176470588,
-     "adj_installed": 1282.5724907063195,
-     "adj_pack": 1329.8823529411764,
-     "adj_turnkey": 1420.3183391003458,
-     "adj_nrel": 1519.8086404686355,
-     "adj_lcos": 1685.7049180327867,
+     "anchor_share": 0.4,
+     "adj_installed": 570.552825408357,
+     "adj_pack": 770.545408741655,
+     "adj_turnkey": 1160.2125072009217,
+     "adj_nrel": 1307.317449669389,
+     "adj_lcos": 1607.583632361197,
      "adj_construction": 1962.3529411764705,
-     "factor_installed": 1.0382729686670207
-    },
-    {
-     "project": "Ozone Park BESS",
-     "state": "NY",
-     "utility": 1,
-     "mw": 1.5,
-     "mwh": 12.0,
-     "cod_year": 2019,
-     "nominal": 1250.0,
-     "adj_installed": 1480.84595384638,
-     "adj_pack": 1443.5222672064779,
-     "adj_turnkey": 1343.1667403803626,
-     "adj_nrel": 1443.841450098275,
-     "adj_lcos": 1611.7126833477137,
-     "adj_construction": 1828.9473684210527,
-     "factor_installed": 1.184676763077104
+     "factor_installed": 0.4618760967591461,
+     "share_installed": 0.8219640596192719,
+     "fixed_share_installed": 1285.048331817864
     },
     {
      "project": "Harding Street BESS",
@@ -1066,13 +1131,35 @@
      "mwh": 20.0,
      "cod_year": 2016,
      "nominal": 1250.0,
-     "adj_installed": 1321.44967833081,
-     "adj_pack": 1365.8694246929542,
-     "adj_turnkey": 1413.8655462184875,
-     "adj_nrel": 1514.5402559363997,
-     "adj_lcos": 1682.4114891858383,
+     "anchor_share": 0.4,
+     "adj_installed": 851.4673286696974,
+     "adj_pack": 929.2312852257729,
+     "adj_turnkey": 1164.5208542132448,
+     "adj_nrel": 1312.1750628240716,
+     "adj_lcos": 1611.0286332799035,
      "adj_construction": 1946.778711484594,
-     "factor_installed": 1.057159742664648
+     "factor_installed": 0.6811738629357579,
+     "share_installed": 0.7321816419955224,
+     "fixed_share_installed": 1348.3963866671168
+    },
+    {
+     "project": "Ozone Park BESS",
+     "state": "NY",
+     "utility": 1,
+     "mw": 1.5,
+     "mwh": 12.0,
+     "cod_year": 2019,
+     "nominal": 1250.0,
+     "anchor_share": 0.4,
+     "adj_installed": 1363.0666442910783,
+     "adj_pack": 1292.3883503021943,
+     "adj_turnkey": 1134.349654550916,
+     "adj_nrel": 1278.187629811453,
+     "adj_lcos": 1561.5325521131929,
+     "adj_construction": 1828.9473684210525,
+     "factor_installed": 1.0904533154328626,
+     "share_installed": 0.5436428856117975,
+     "fixed_share_installed": 1486.1629881154502
     },
     {
      "project": "Regina BESS [CANADA]",
@@ -1082,13 +1169,16 @@
      "mwh": 20.0,
      "cod_year": 2024,
      "nominal": 1260.0,
+     "anchor_share": 0.4,
      "adj_installed": 1300.090909090909,
      "adj_pack": 1269.4126482213437,
      "adj_turnkey": 1153.4727272727273,
      "adj_nrel": 1300.090909090909,
      "adj_lcos": 1339.0265314085057,
      "adj_construction": 1326.8181818181818,
-     "factor_installed": 1.0318181818181817
+     "factor_installed": 1.0318181818181817,
+     "share_installed": 0.4,
+     "fixed_share_installed": 1300.090909090909
     },
     {
      "project": "Outer Cape (Provincetown) BESS",
@@ -1098,29 +1188,16 @@
      "mwh": 38.0,
      "cod_year": 2022,
      "nominal": 1289.4736842105262,
-     "adj_installed": 1362.6596416349319,
-     "adj_pack": 1271.6759132705254,
-     "adj_turnkey": 1089.024195676319,
-     "adj_nrel": 1260.1811683292515,
-     "adj_lcos": 1554.4270764801183,
+     "anchor_share": 0.4,
+     "adj_installed": 1499.7420960103495,
+     "adj_pack": 1217.8803880274425,
+     "adj_turnkey": 889.6120578915817,
+     "adj_nrel": 1189.304816258062,
+     "adj_lcos": 1552.7399463926533,
      "adj_construction": 1504.6114762246643,
-     "factor_installed": 1.0567564567781105
-    },
-    {
-     "project": "VEC Hinesburg BESS",
-     "state": "VT",
-     "utility": 1,
-     "mw": 1.0,
-     "mwh": 4.0,
-     "cod_year": 2023,
-     "nominal": 1400.0,
-     "adj_installed": 1448.1935293073875,
-     "adj_pack": 1355.3837757380302,
-     "adj_turnkey": 1169.4013373541366,
-     "adj_nrel": 1378.707234617985,
-     "adj_lcos": 1571.5191053122085,
-     "adj_construction": 1533.7931034482758,
-     "factor_installed": 1.0344239495052767
+     "factor_installed": 1.1630652989468018,
+     "share_installed": 0.3896468998368379,
+     "fixed_share_installed": 1499.6127143031879
     },
     {
      "project": "Northern New York (Chateaugay) BESS",
@@ -1130,13 +1207,16 @@
      "mwh": 20.0,
      "cod_year": 2023,
      "nominal": 1490.0,
-     "adj_installed": 1541.2916847628624,
-     "adj_pack": 1442.515589892618,
-     "adj_turnkey": 1244.5771376126168,
-     "adj_nrel": 1467.338413986284,
-     "adj_lcos": 1672.5453335108505,
+     "anchor_share": 0.4,
+     "adj_installed": 1619.1042785569414,
+     "adj_pack": 1415.9169730777653,
+     "adj_turnkey": 1123.321583429516,
+     "adj_nrel": 1443.1331018999044,
+     "adj_lcos": 1671.6589792547143,
      "adj_construction": 1632.3940886699506,
-     "factor_installed": 1.0344239495052767
+     "factor_installed": 1.0866471668167392,
+     "share_installed": 0.39265039960408027,
+     "fixed_share_installed": 1618.8555208993234
     },
     {
      "project": "Fairhaven BESS",
@@ -1146,13 +1226,16 @@
      "mwh": 9.74,
      "cod_year": 2023,
      "nominal": 1659.2747433264888,
-     "adj_installed": 1716.3935333061409,
-     "adj_pack": 1606.3957618547195,
-     "adj_turnkey": 1385.9700742028126,
-     "adj_nrel": 1634.038637745093,
-     "adj_lcos": 1862.5585429282771,
+     "anchor_share": 0.4,
+     "adj_installed": 1803.0461988063012,
+     "adj_pack": 1576.775350386059,
+     "adj_turnkey": 1250.9390147772585,
+     "adj_nrel": 1607.0834276784722,
+     "adj_lcos": 1861.571492437776,
      "adj_construction": 1817.845827171483,
-     "factor_installed": 1.0344239495052767
+     "factor_installed": 1.0866471668167392,
+     "share_installed": 0.39265039960408027,
+     "fixed_share_installed": 1802.7691804851638
     },
     {
      "project": "Asheville Rock Hill substation BESS (Duke Energy Progress)",
@@ -1162,13 +1245,16 @@
      "mwh": 9.0,
      "cod_year": 2020,
      "nominal": 1666.6666666666667,
-     "adj_installed": 1963.7708826243938,
-     "adj_pack": 1953.0185620719058,
-     "adj_turnkey": 1755.2022092534064,
-     "adj_nrel": 1889.4351555439557,
-     "adj_lcos": 2303.5618672527316,
+     "anchor_share": 0.4,
+     "adj_installed": 1709.4067684721108,
+     "adj_pack": 1826.8443412369488,
+     "adj_turnkey": 1496.4520563212839,
+     "adj_nrel": 1686.2102747670058,
+     "adj_lcos": 2298.734166532161,
      "adj_construction": 2379.1185280273858,
-     "factor_installed": 1.1782625295746363
+     "factor_installed": 1.0256440610832664,
+     "share_installed": 0.5600348438414843,
+     "fixed_share_installed": 1900.7827480880687
     },
     {
      "project": "El Centro BESS (IID)",
@@ -1176,15 +1262,18 @@
      "utility": 1,
      "mw": 30.0,
      "mwh": 20.0,
-     "cod_year": 2017,
+     "cod_year": 2016,
      "nominal": 1900.0,
-     "adj_installed": 2200.315696809641,
-     "adj_pack": 2175.6808592251627,
-     "adj_turnkey": 2156.5670318760417,
-     "adj_nrel": 2309.5925906472676,
-     "adj_lcos": 2564.756865186415,
-     "adj_construction": 2971.589310829817,
-     "factor_installed": 1.1580608930577057
+     "anchor_share": 0.4,
+     "adj_installed": 1294.23033957794,
+     "adj_pack": 1412.431553543175,
+     "adj_turnkey": 1770.0716984041321,
+     "adj_nrel": 1994.5060954925889,
+     "adj_lcos": 2448.7635225854533,
+     "adj_construction": 2959.103641456583,
+     "factor_installed": 0.6811738629357579,
+     "share_installed": 0.7321816419955224,
+     "fixed_share_installed": 2049.5625077340173
     },
     {
      "project": "LADWP Beacon Energy Storage System",
@@ -1194,13 +1283,16 @@
      "mwh": 10.0,
      "cod_year": 2018,
      "nominal": 1920.0,
-     "adj_installed": 2282.285702013423,
-     "adj_pack": 2190.76802928615,
-     "adj_turnkey": 2097.0415205008176,
-     "adj_nrel": 2251.677874627531,
-     "adj_lcos": 2509.5280888986686,
+     "anchor_share": 0.4,
+     "adj_installed": 2043.7910347055376,
+     "adj_pack": 1868.083348045367,
+     "adj_turnkey": 1757.2068012269474,
+     "adj_nrel": 1980.0197906004846,
+     "adj_lcos": 2422.78659142173,
      "adj_construction": 2865.8255033557048,
-     "factor_installed": 1.1886904697986578
+     "factor_installed": 1.0644744972424676,
+     "share_installed": 0.5633075438074678,
+     "fixed_share_installed": 2282.1056666967243
     },
     {
      "project": "Power Creek BESS (Cordova)",
@@ -1210,13 +1302,16 @@
      "mwh": 0.92,
      "cod_year": 2019,
      "nominal": 2173.913043478261,
-     "adj_installed": 2575.3842675589217,
-     "adj_pack": 2510.473508185179,
-     "adj_turnkey": 2335.9421571832395,
-     "adj_nrel": 2511.0286088665653,
-     "adj_lcos": 2802.978579735154,
-     "adj_construction": 3180.7780320366137,
-     "factor_installed": 1.184676763077104
+     "anchor_share": 0.4,
+     "adj_installed": 2370.5506857236146,
+     "adj_pack": 2247.6319135690337,
+     "adj_turnkey": 1972.782007914637,
+     "adj_nrel": 2222.9350083677446,
+     "adj_lcos": 2715.708786283814,
+     "adj_construction": 3180.7780320366132,
+     "factor_installed": 1.0904533154328626,
+     "share_installed": 0.5436428856117975,
+     "fixed_share_installed": 2584.631283679044
     },
     {
      "project": "Glacier BESS",
@@ -1226,13 +1321,16 @@
      "mwh": 4.4,
      "cod_year": 2016,
      "nominal": 2545.4545454545455,
-     "adj_installed": 2690.952072237286,
-     "adj_pack": 2781.4068284656523,
-     "adj_turnkey": 2879.144385026738,
-     "adj_nrel": 3084.154702997759,
-     "adj_lcos": 3426.0015779784344,
+     "anchor_share": 0.4,
+     "adj_installed": 1733.8971056546563,
+     "adj_pack": 1892.2527990052104,
+     "adj_turnkey": 2371.3879213069713,
+     "adj_nrel": 2672.0655824781097,
+     "adj_lcos": 3280.6401259518034,
      "adj_construction": 3964.349376114082,
-     "factor_installed": 1.057159742664648
+     "factor_installed": 0.6811738629357579,
+     "share_installed": 0.7321816419955224,
+     "fixed_share_installed": 2745.825369213038
     },
     {
      "project": "Dalrymple ESCRI BESS [AUSTRALIA]",
@@ -1242,375 +1340,692 @@
      "mwh": 8.0,
      "cod_year": 2018,
      "nominal": 2775.0,
-     "adj_installed": 3298.6160536912753,
-     "adj_pack": 3166.3444173276384,
-     "adj_turnkey": 3030.880322598838,
-     "adj_nrel": 3254.3781781726034,
-     "adj_lcos": 3627.0523159863574,
+     "anchor_share": 0.4,
+     "adj_installed": 2953.9167298478474,
+     "adj_pack": 2699.9642139718194,
+     "adj_turnkey": 2539.712954898322,
+     "adj_nrel": 2861.747353602263,
+     "adj_lcos": 3501.6837454142187,
      "adj_construction": 4142.013422818792,
-     "factor_installed": 1.1886904697986578
+     "factor_installed": 1.0644744972424676,
+     "share_installed": 0.5633075438074678,
+     "fixed_share_installed": 3298.3558463976087
     }
    ]
   },
   "reference_class_utility": {
-   "n": 31,
+   "n": 25,
    "nominal": {
-    "median": 985.9154929577464,
-    "q25": 633.2738095238095,
-    "q75": 1445.0,
+    "median": 1235.2941176470588,
+    "q25": 619.047619047619,
+    "q75": 1659.2747433264888,
     "hp_pct": {
-     "contract": 0.16129032258064516,
-     "installed": 0.4838709677419355,
-     "station_direct": 0.7419354838709677,
+     "contract": 0.16,
+     "installed": 0.44,
+     "station_direct": 0.68,
      "approval": 1.0
     }
    },
    "indices": {
     "installed": {
-     "label": "Installed all-in (EIA-860 2015-18, LBNL 2024)",
-     "source": "EIA Today in Energy #45596 (2015 $2,152; 2017 $834; 2018 $625); LBNL Utility-Scale Solar 2025 (2024 $458)",
-     "conf": "High at published points; interpolated 2019-2023",
-     "ratio_2018": 0.7328,
-     "naive_median": 610.4048027444253,
+     "label": "Installed all-in (EIA-860 2015-22, LBNL 2024)",
+     "source": "EIA, Battery Storage in the United States: 2024 figure data file, Figure 11 (capacity-weighted average cost/kWh of large-scale systems by installation year, 2022 final data), downloaded 5 Oct 2026; LBNL Utility-Scale Solar 2025 (2024 $458, battery share of hybrid plants, a different population)",
+     "conf": "High 2015-2022 (EIA figure data, official); High 2024 (LBNL) but a different sample; 2023 interpolated; held flat after 2024",
+     "ratio_2018": 0.7325655790147152,
+     "naive_median": 685.2508071501693,
      "naive_hp_pct": {
-      "contract": 0.4838709677419355,
-      "installed": 0.6451612903225806,
-      "station_direct": 0.9032258064516129,
+      "contract": 0.48,
+      "installed": 0.6,
+      "station_direct": 0.8,
       "approval": 1.0
+     },
+     "by_owner": {
+      "median": 851.4673286696974,
+      "q25": 591.624514245542,
+      "q75": 1619.1042785569414,
+      "min": 399.1779364659253,
+      "max": 2953.9167298478474,
+      "hp_pct": {
+       "contract": 0.32,
+       "installed": 0.44,
+       "station_direct": 0.68,
+       "approval": 0.96
+      }
+     },
+     "by_owner_minus10": {
+      "median": 993.3291585125216,
+      "q25": 634.9935962658056,
+      "q75": 1622.4571612708382,
+      "min": 430.5244673072069,
+      "max": 3185.881058073331,
+      "hp_pct": {
+       "contract": 0.2,
+       "installed": 0.4,
+       "station_direct": 0.64,
+       "approval": 0.96
+      }
+     },
+     "by_owner_plus10": {
+      "median": 834.0435606060605,
+      "q25": 555.0202792259486,
+      "q75": 1515.260081124506,
+      "min": 371.8255615119791,
+      "max": 2751.5091551886458,
+      "hp_pct": {
+       "contract": 0.32,
+       "installed": 0.48,
+       "station_direct": 0.68,
+       "approval": 1.0
+      }
      },
      "by_share": {
       "0.3": {
-       "median": 1182.2255492954046,
-       "q25": 715.1373405700816,
-       "q75": 1565.969296614841,
-       "min": 466.35601326074055,
-       "max": 3509.465395973154,
+       "median": 993.3291585125216,
+       "q25": 634.9935962658056,
+       "q75": 1622.4571612708385,
+       "min": 430.5244673072069,
+       "max": 3185.881058073331,
        "hp_pct": {
-        "contract": 0.12903225806451613,
-        "installed": 0.3548387096774194,
-        "station_direct": 0.7096774193548387,
-        "approval": 0.9354838709677419
+        "contract": 0.2,
+        "installed": 0.4,
+        "station_direct": 0.64,
+        "approval": 0.96
        }
       },
       "0.4": {
-       "median": 1057.1597426646479,
-       "q25": 691.7212707491591,
-       "q75": 1511.0688193046212,
-       "min": 445.75892617449665,
-       "max": 3298.6160536912753,
+       "median": 851.4673286696974,
+       "q25": 591.624514245542,
+       "q75": 1619.1042785569414,
+       "min": 399.1779364659253,
+       "max": 2953.9167298478474,
        "hp_pct": {
-        "contract": 0.12903225806451613,
-        "installed": 0.3870967741935484,
-        "station_direct": 0.7419354838709677,
-        "approval": 0.967741935483871
+        "contract": 0.32,
+        "installed": 0.44,
+        "station_direct": 0.68,
+        "approval": 0.96
        }
       },
       "0.5": {
-       "median": 932.0939360338912,
-       "q25": 660.5182182680555,
-       "q75": 1472.6548597791277,
-       "min": 417.2657718120805,
-       "max": 3087.766711409396,
+       "median": 834.0435606060605,
+       "q25": 555.0202792259486,
+       "q75": 1515.260081124506,
+       "min": 371.8255615119791,
+       "max": 2751.5091551886458,
        "hp_pct": {
-        "contract": 0.12903225806451613,
-        "installed": 0.3870967741935484,
-        "station_direct": 0.7419354838709677,
-        "approval": 0.967741935483871
+        "contract": 0.32,
+        "installed": 0.48,
+        "station_direct": 0.68,
+        "approval": 1.0
        }
       }
-     }
+     },
+     "fixed_share_40": {
+      "median": 1285.048331817864,
+      "q25": 735.7979580123366,
+      "q75": 1802.7691804851638,
+      "min": 445.7237630267039,
+      "max": 3298.3558463976087,
+      "hp_pct": {
+       "contract": 0.12,
+       "installed": 0.36,
+       "station_direct": 0.6,
+       "approval": 0.96
+      }
+     },
+     "factor_2018": 1.0644744972424676,
+     "factor_2016": 0.6811738629357579,
+     "share_2018": 0.5633075438074678,
+     "share_2016": 0.7321816419955224
     },
     "pack": {
      "label": "BNEF pack price, as released (real $ of survey year)",
      "source": "BloombergNEF Lithium-Ion Battery Price Survey releases 2014-2025",
      "conf": "High 2017-2025; Medium 2014-2016",
      "ratio_2018": 0.6136363636363636,
-     "naive_median": 519.2307692307692,
+     "naive_median": 613.6363636363636,
      "naive_hp_pct": {
-      "contract": 0.5161290322580645,
-      "installed": 0.6129032258064516,
-      "station_direct": 0.9354838709677419,
+      "contract": 0.48,
+      "installed": 0.6,
+      "station_direct": 0.92,
       "approval": 1.0
+     },
+     "by_owner": {
+      "median": 929.2312852257729,
+      "q25": 655.1201832488463,
+      "q75": 1415.9169730777653,
+      "min": 364.8600289151107,
+      "max": 2699.9642139718194,
+      "hp_pct": {
+       "contract": 0.2,
+       "installed": 0.48,
+       "station_direct": 0.76,
+       "approval": 1.0
+      }
+     },
+     "by_owner_minus10": {
+      "median": 1069.1363379887375,
+      "q25": 686.5987390527989,
+      "q75": 1632.7208474264016,
+      "min": 400.92612674577657,
+      "max": 2966.8533379187465,
+      "hp_pct": {
+       "contract": 0.16,
+       "installed": 0.44,
+       "station_direct": 0.72,
+       "approval": 0.96
+      }
+     },
+     "by_owner_plus10": {
+      "median": 816.4460931214531,
+      "q25": 625.774131352407,
+      "q75": 1367.97118883985,
+      "min": 334.11654654533,
+      "max": 2472.4624444354417,
+      "hp_pct": {
+       "contract": 0.24,
+       "installed": 0.52,
+       "station_direct": 0.76,
+       "approval": 1.0
+      }
      },
      "by_share": {
       "0.3": {
-       "median": 1208.8773971126911,
-       "q25": 710.0199310174919,
-       "q75": 1525.4876444504926,
-       "min": 443.59510688913133,
-       "max": 3410.261668700427,
+       "median": 1069.1363379887375,
+       "q25": 686.5987390527989,
+       "q75": 1632.720847426402,
+       "min": 400.92612674577657,
+       "max": 2966.8533379187465,
        "hp_pct": {
-        "contract": 0.12903225806451613,
-        "installed": 0.3548387096774194,
-        "station_direct": 0.6451612903225806,
-        "approval": 0.9354838709677419
+        "contract": 0.16,
+        "installed": 0.44,
+        "station_direct": 0.72,
+        "approval": 0.96
        }
       },
       "0.4": {
-       "median": 1092.6955397543634,
-       "q25": 688.3041410029434,
-       "q75": 1443.018928549548,
-       "min": 424.1710309789771,
-       "max": 3166.3444173276384,
+       "median": 929.2312852257729,
+       "q25": 655.1201832488463,
+       "q75": 1415.9169730777653,
+       "min": 364.8600289151107,
+       "max": 2699.9642139718194,
        "hp_pct": {
-        "contract": 0.12903225806451613,
-        "installed": 0.41935483870967744,
-        "station_direct": 0.7741935483870968,
-        "approval": 0.967741935483871
+        "contract": 0.2,
+        "installed": 0.48,
+        "station_direct": 0.76,
+        "approval": 1.0
        }
       },
       "0.5": {
-       "median": 976.5136823960353,
-       "q25": 659.8847377127223,
-       "q75": 1371.1059785505593,
-       "min": 394.9225899938987,
-       "max": 2922.4271659548504,
+       "median": 816.4460931214531,
+       "q25": 625.774131352407,
+       "q75": 1367.97118883985,
+       "min": 334.11654654533,
+       "max": 2472.4624444354417,
        "hp_pct": {
-        "contract": 0.12903225806451613,
-        "installed": 0.4838709677419355,
-        "station_direct": 0.7741935483870968,
-        "approval": 0.967741935483871
+        "contract": 0.24,
+        "installed": 0.52,
+        "station_direct": 0.76,
+        "approval": 1.0
        }
       }
-     }
+     },
+     "fixed_share_40": {
+      "median": 1269.4126482213437,
+      "q25": 706.3488189662686,
+      "q75": 1606.3957618547195,
+      "min": 424.1710309789771,
+      "max": 3166.3444173276384,
+      "hp_pct": {
+       "contract": 0.12,
+       "installed": 0.4,
+       "station_direct": 0.72,
+       "approval": 0.96
+      }
+     },
+     "factor_2018": 0.972960077106962,
+     "factor_2016": 0.7433850281806184,
+     "share_2018": 0.5912042714203237,
+     "share_2016": 0.7006583984075946
     },
     "turnkey": {
      "label": "BNEF turnkey system, global (4-h to 2023; all durations 2024-25)",
      "source": "BloombergNEF Energy Storage System Cost Survey 2021-2025",
      "conf": "High 2022-2025; Medium 2021; 2017-2020 not retrieved (held flat)",
      "ratio_2018": 0.49159663865546216,
-     "naive_median": 491.5966386554622,
+     "naive_median": 576.1363636363636,
      "naive_hp_pct": {
-      "contract": 0.5483870967741935,
-      "installed": 0.8064516129032258,
+      "contract": 0.52,
+      "installed": 0.76,
       "station_direct": 1.0,
       "approval": 1.0
      },
+     "by_owner": {
+      "median": 915.211875639035,
+      "q25": 566.5597325384502,
+      "q75": 1250.9390147772585,
+      "min": 296.7325714275191,
+      "max": 2539.712954898322,
+      "hp_pct": {
+       "contract": 0.28,
+       "installed": 0.44,
+       "station_direct": 0.76,
+       "approval": 1.0
+      }
+     },
+     "by_owner_minus10": {
+      "median": 1025.1211086809885,
+      "q25": 634.5987815644215,
+      "q75": 1369.2914111087173,
+      "min": 334.6429930370009,
+      "max": 2844.7110765897432,
+      "hp_pct": {
+       "contract": 0.24,
+       "installed": 0.44,
+       "station_direct": 0.76,
+       "approval": 1.0
+      }
+     },
+     "by_owner_plus10": {
+      "median": 820.3862093289833,
+      "q25": 507.8581295846087,
+      "q75": 1144.3104448824886,
+      "min": 264.436690022304,
+      "max": 2276.571730887929,
+      "hp_pct": {
+       "contract": 0.36,
+       "installed": 0.52,
+       "station_direct": 0.8,
+       "approval": 1.0
+      }
+     },
      "by_share": {
       "0.3": {
-       "median": 1130.557945574223,
-       "q25": 672.6390100873105,
-       "q75": 1520.516424989997,
-       "min": 397.90211631256886,
-       "max": 3308.663597653826,
+       "median": 1025.1211086809885,
+       "q25": 634.5987815644215,
+       "q75": 1369.2914111087173,
+       "min": 334.64299303700096,
+       "max": 2844.7110765897432,
        "hp_pct": {
-        "contract": 0.16129032258064516,
-        "installed": 0.3870967741935484,
-        "station_direct": 0.7096774193548387,
-        "approval": 0.9354838709677419
+        "contract": 0.24,
+        "installed": 0.44,
+        "station_direct": 0.76,
+        "approval": 1.0
        }
       },
       "0.4": {
-       "median": 1038.2886308259585,
-       "q25": 633.1269477238906,
-       "q75": 1399.91781021065,
-       "min": 363.2470435435605,
-       "max": 3030.880322598838,
+       "median": 915.211875639035,
+       "q25": 566.5597325384502,
+       "q75": 1250.9390147772585,
+       "min": 296.7325714275191,
+       "max": 2539.712954898322,
        "hp_pct": {
-        "contract": 0.25806451612903225,
-        "installed": 0.4838709677419355,
-        "station_direct": 0.8064516129032258,
-        "approval": 0.9354838709677419
+        "contract": 0.28,
+        "installed": 0.44,
+        "station_direct": 0.76,
+        "approval": 1.0
        }
       },
       "0.5": {
-       "median": 946.0193160776939,
-       "q25": 578.310471642658,
-       "q75": 1279.319195431303,
-       "min": 328.5919707745521,
-       "max": 2753.09704754385,
+       "median": 820.3862093289833,
+       "q25": 507.8581295846087,
+       "q75": 1144.3104448824886,
+       "min": 264.436690022304,
+       "max": 2276.571730887929,
        "hp_pct": {
-        "contract": 0.2903225806451613,
-        "installed": 0.4838709677419355,
-        "station_direct": 0.8064516129032258,
+        "contract": 0.36,
+        "installed": 0.52,
+        "station_direct": 0.8,
         "approval": 1.0
        }
       }
-     }
+     },
+     "fixed_share_40": {
+      "median": 1092.2091252608425,
+      "q25": 676.1294584948073,
+      "q75": 1420.3183391003458,
+      "min": 363.2470435435605,
+      "max": 3030.880322598838,
+      "hp_pct": {
+       "contract": 0.24,
+       "installed": 0.44,
+       "station_direct": 0.76,
+       "approval": 0.92
+      }
+     },
+     "factor_2018": 0.915211875639035,
+     "factor_2016": 0.9316166833705959,
+     "share_2018": 0.5768167531336389,
+     "share_2016": 0.5871559633027523
     },
     "nrel": {
      "label": "NREL bottom-up 4-h 60 MW base year (2022 and 2024 editions)",
      "source": "NREL Cost Projections for Utility-Scale Battery Storage: 2023 update (2022 base $482, Ramasamy et al.) and 2025 update (2024 base $334)",
      "conf": "Medium; earlier editions' base years not retrieved (held flat before 2022)",
      "ratio_2018": 0.6929460580912863,
-     "naive_median": 694.7227788911156,
+     "naive_median": 855.9921894068831,
      "naive_hp_pct": {
-      "contract": 0.41935483870967744,
-      "installed": 0.5483870967741935,
-      "station_direct": 0.9032258064516129,
+      "contract": 0.4,
+      "installed": 0.48,
+      "station_direct": 0.88,
       "approval": 1.0
+     },
+     "by_owner": {
+      "median": 1189.304816258062,
+      "q25": 638.3992380408308,
+      "q75": 1607.0834276784722,
+      "min": 386.72261535165717,
+      "max": 2861.747353602263,
+      "hp_pct": {
+       "contract": 0.24,
+       "installed": 0.4,
+       "station_direct": 0.72,
+       "approval": 1.0
+      }
+     },
+     "by_owner_minus10": {
+      "median": 1256.1226158851612,
+      "q25": 692.7514927414584,
+      "q75": 1655.81370932578,
+      "min": 418.98318546092713,
+      "max": 3105.391787654499,
+      "hp_pct": {
+       "contract": 0.12,
+       "installed": 0.36,
+       "station_direct": 0.68,
+       "approval": 0.92
+      }
+     },
+     "by_owner_plus10": {
+      "median": 1128.647576824022,
+      "q25": 591.5106839387212,
+      "q75": 1560.6784016528115,
+      "min": 358.3189720013407,
+      "max": 2651.5603928099213,
+      "hp_pct": {
+       "contract": 0.28,
+       "installed": 0.4,
+       "station_direct": 0.72,
+       "approval": 1.0
+      }
      },
      "by_share": {
       "0.3": {
-       "median": 1190.111999210171,
-       "q25": 691.3242362109548,
-       "q75": 1626.5222927345208,
-       "min": 440.71952882613976,
-       "max": 3476.28698933415,
+       "median": 1256.1226158851612,
+       "q25": 692.7514927414585,
+       "q75": 1655.81370932578,
+       "min": 418.98318546092713,
+       "max": 3105.3917876544997,
        "hp_pct": {
-        "contract": 0.12903225806451613,
-        "installed": 0.3225806451612903,
-        "station_direct": 0.6451612903225806,
-        "approval": 0.9354838709677419
+        "contract": 0.12,
+        "installed": 0.36,
+        "station_direct": 0.68,
+        "approval": 0.92
        }
       },
       "0.4": {
-       "median": 1117.6940356738892,
-       "q25": 672.8083029544084,
-       "q75": 1517.1744482025176,
-       "min": 420.3369268949885,
-       "max": 3254.3781781726034,
+       "median": 1189.304816258062,
+       "q25": 638.3992380408308,
+       "q75": 1607.0834276784722,
+       "min": 386.72261535165717,
+       "max": 2861.747353602263,
        "hp_pct": {
-        "contract": 0.12903225806451613,
-        "installed": 0.3548387096774194,
-        "station_direct": 0.7096774193548387,
-        "approval": 0.9354838709677419
+        "contract": 0.24,
+        "installed": 0.4,
+        "station_direct": 0.72,
+        "approval": 1.0
        }
       },
       "0.5": {
-       "median": 1045.2760721376071,
-       "q25": 643.542900818011,
-       "q75": 1417.6235303035219,
-       "min": 399.95432496383705,
-       "max": 3032.4693670110555,
+       "median": 1128.647576824022,
+       "q25": 591.5106839387212,
+       "q75": 1560.6784016528115,
+       "min": 358.3189720013407,
+       "max": 2651.5603928099213,
        "hp_pct": {
-        "contract": 0.16129032258064516,
-        "installed": 0.45161290322580644,
-        "station_direct": 0.7741935483870968,
-        "approval": 0.9354838709677419
+        "contract": 0.28,
+        "installed": 0.4,
+        "station_direct": 0.72,
+        "approval": 1.0
        }
       }
-     }
+     },
+     "fixed_share_40": {
+      "median": 1260.1811683292515,
+      "q25": 725.9874099741543,
+      "q75": 1634.038637745093,
+      "min": 420.3369268949885,
+      "max": 3254.3781781726034,
+      "hp_pct": {
+       "contract": 0.12,
+       "installed": 0.32,
+       "station_direct": 0.64,
+       "approval": 0.92
+      }
+     },
+     "factor_2018": 1.0312603076044191,
+     "factor_2016": 1.0497400502592573,
+     "share_2018": 0.5769334090499493,
+     "share_2016": 0.5872718084333096
     },
     "lcos": {
      "label": "Lazard LCOS midpoint, unsubsidized 100 MW 4-h",
      "source": "Lazard LCOS v5.0 (2019, $173-315), v6.0 (2020, $132-250), v7.0 (2021, $131-232), 2024 ($170-296), 2025 ($115-254), 2026 (~$210-292)",
      "conf": "Medium; v8.0 (2023) possibly conflated with 2024 and omitted",
      "ratio_2018": 1.028688524590164,
-     "naive_median": 1028.688524590164,
+     "naive_median": 1270.7328833172614,
      "naive_hp_pct": {
-      "contract": 0.12903225806451613,
-      "installed": 0.3870967741935484,
-      "station_direct": 0.6774193548387096,
+      "contract": 0.12,
+      "installed": 0.32,
+      "station_direct": 0.64,
       "approval": 1.0
+     },
+     "by_owner": {
+      "median": 1339.0265314085057,
+      "q25": 821.0230346733091,
+      "q75": 1861.571492437776,
+      "min": 473.2005061370566,
+      "max": 3501.6837454142187,
+      "hp_pct": {
+       "contract": 0.12,
+       "installed": 0.28,
+       "station_direct": 0.52,
+       "approval": 0.92
+      }
+     },
+     "by_owner_minus10": {
+      "median": 1335.9744440109246,
+      "q25": 815.4479913517503,
+      "q75": 1850.5198607999985,
+      "min": 492.08862590017435,
+      "max": 3641.45583166129,
+      "hp_pct": {
+       "contract": 0.12,
+       "installed": 0.28,
+       "station_direct": 0.52,
+       "approval": 0.92
+      }
+     },
+     "by_owner_plus10": {
+      "median": 1342.0786188060865,
+      "q25": 826.6489512937711,
+      "q75": 1872.7047474006345,
+      "min": 455.7854047197791,
+      "max": 3372.8119949263655,
+      "hp_pct": {
+       "contract": 0.12,
+       "installed": 0.28,
+       "station_direct": 0.52,
+       "approval": 0.92
+      }
      },
      "by_share": {
       "0.3": {
        "median": 1335.9744440109246,
-       "q25": 814.6659365271337,
-       "q75": 1751.6851092896172,
-       "min": 507.53953955330616,
-       "max": 3755.7925926944654,
+       "q25": 815.4479913517503,
+       "q75": 1850.5198607999987,
+       "min": 492.08862590017435,
+       "max": 3641.45583166129,
        "hp_pct": {
-        "contract": 0.12903225806451613,
-        "installed": 0.3225806451612903,
-        "station_direct": 0.5806451612903226,
-        "approval": 0.9032258064516129
+        "contract": 0.12,
+        "installed": 0.28,
+        "station_direct": 0.52,
+        "approval": 0.92
        }
       },
       "0.4": {
        "median": 1339.0265314085057,
-       "q25": 808.5823816389197,
-       "q75": 1684.0582036093124,
-       "min": 490.1422048630212,
-       "max": 3627.0523159863574,
+       "q25": 821.0230346733091,
+       "q75": 1861.571492437776,
+       "min": 473.2005061370566,
+       "max": 3501.6837454142187,
        "hp_pct": {
-        "contract": 0.12903225806451613,
-        "installed": 0.3225806451612903,
-        "station_direct": 0.5806451612903226,
-        "approval": 0.9354838709677419
+        "contract": 0.12,
+        "installed": 0.28,
+        "station_direct": 0.52,
+        "approval": 0.92
        }
       },
       "0.5": {
-       "median": 1293.0557468889194,
-       "q25": 806.3123028556986,
-       "q75": 1649.5630284839708,
-       "min": 472.7448701727362,
-       "max": 3498.3120392782484,
+       "median": 1342.0786188060865,
+       "q25": 826.6489512937711,
+       "q75": 1872.7047474006345,
+       "min": 455.7854047197791,
+       "max": 3372.8119949263655,
        "hp_pct": {
-        "contract": 0.12903225806451613,
-        "installed": 0.3225806451612903,
-        "station_direct": 0.5806451612903226,
-        "approval": 0.9354838709677419
+        "contract": 0.12,
+        "installed": 0.28,
+        "station_direct": 0.52,
+        "approval": 0.92
        }
       }
-     }
+     },
+     "fixed_share_40": {
+      "median": 1339.0265314085057,
+      "q25": 821.639405777765,
+      "q75": 1862.5585429282771,
+      "min": 490.1422048630212,
+      "max": 3627.0523159863574,
+      "hp_pct": {
+       "contract": 0.12,
+       "installed": 0.28,
+       "station_direct": 0.52,
+       "approval": 0.92
+      }
+     },
+     "factor_2018": 1.2618680163654843,
+     "factor_2016": 1.2888229066239227,
+     "share_2018": 0.49738100132904417,
+     "share_2016": 0.5080056071781345
     },
     "construction": {
      "label": "Construction index only (Handy-Whitman, no battery deflation)",
      "source": "https://www.pjm.com/-/media/DotCom/committees-groups/subcommittees/cds/postings/handy-whitman-index.ashx",
      "conf": "Medium (2015-2018 seen in excerpt; later years from search summary of the same posting); production-plant line, not distribution plant",
      "ratio_2018": 1.4926174496644296,
-     "naive_median": 1326.8181818181818,
+     "naive_median": 1492.6174496644296,
      "naive_hp_pct": {
-      "contract": 0.0967741935483871,
-      "installed": 0.2903225806451613,
-      "station_direct": 0.5483870967741935,
-      "approval": 0.8387096774193549
+      "contract": 0.12,
+      "installed": 0.24,
+      "station_direct": 0.48,
+      "approval": 0.8
+     },
+     "by_owner": {
+      "median": 1492.6174496644296,
+      "q25": 855.5871212121211,
+      "q75": 1962.3529411764705,
+      "min": 501.86733461959403,
+      "max": 4142.013422818792,
+      "hp_pct": {
+       "contract": 0.12,
+       "installed": 0.24,
+       "station_direct": 0.48,
+       "approval": 0.8
+      }
+     },
+     "by_owner_minus10": {
+      "median": 1492.6174496644296,
+      "q25": 855.5871212121211,
+      "q75": 1962.3529411764705,
+      "min": 501.86733461959403,
+      "max": 4142.013422818792,
+      "hp_pct": {
+       "contract": 0.12,
+       "installed": 0.24,
+       "station_direct": 0.48,
+       "approval": 0.8
+      }
+     },
+     "by_owner_plus10": {
+      "median": 1492.6174496644296,
+      "q25": 855.5871212121211,
+      "q75": 1962.3529411764705,
+      "min": 501.86733461959403,
+      "max": 4142.013422818792,
+      "hp_pct": {
+       "contract": 0.12,
+       "installed": 0.24,
+       "station_direct": 0.48,
+       "approval": 0.8
+      }
      },
      "by_share": {
       "0.3": {
-       "median": 1326.8181818181818,
-       "q25": 797.7297715834301,
-       "q75": 1887.8630399528233,
+       "median": 1492.6174496644296,
+       "q25": 855.5871212121211,
+       "q75": 1962.3529411764705,
        "min": 501.86733461959403,
        "max": 4142.013422818792,
        "hp_pct": {
-        "contract": 0.0967741935483871,
-        "installed": 0.2903225806451613,
-        "station_direct": 0.5483870967741935,
-        "approval": 0.8387096774193549
+        "contract": 0.12,
+        "installed": 0.24,
+        "station_direct": 0.48,
+        "approval": 0.8
        }
       },
       "0.4": {
-       "median": 1326.8181818181818,
-       "q25": 797.7297715834301,
-       "q75": 1887.8630399528233,
+       "median": 1492.6174496644296,
+       "q25": 855.5871212121211,
+       "q75": 1962.3529411764705,
        "min": 501.86733461959403,
        "max": 4142.013422818792,
        "hp_pct": {
-        "contract": 0.0967741935483871,
-        "installed": 0.2903225806451613,
-        "station_direct": 0.5483870967741935,
-        "approval": 0.8387096774193549
+        "contract": 0.12,
+        "installed": 0.24,
+        "station_direct": 0.48,
+        "approval": 0.8
        }
       },
       "0.5": {
-       "median": 1326.8181818181818,
-       "q25": 797.7297715834301,
-       "q75": 1887.8630399528233,
+       "median": 1492.6174496644296,
+       "q25": 855.5871212121211,
+       "q75": 1962.3529411764705,
        "min": 501.86733461959403,
        "max": 4142.013422818792,
        "hp_pct": {
-        "contract": 0.0967741935483871,
-        "installed": 0.2903225806451613,
-        "station_direct": 0.5483870967741935,
-        "approval": 0.8387096774193549
+        "contract": 0.12,
+        "installed": 0.24,
+        "station_direct": 0.48,
+        "approval": 0.8
        }
       }
-     }
-    },
-    "installed_flat35": {
-     "label": "Installed index with 3.5%/yr flat non-battery escalation (proxy)",
-     "source": "sensitivity",
-     "conf": "Assumption",
-     "ratio_2018": 0.7328,
-     "naive_median": 969.0652175247155,
-     "by_share": {
-      "0.4": {
-       "median": 969.0652175247155,
-       "q25": 666.682428187576,
-       "q75": 1506.1448470246567,
-       "min": 406.20203331676566,
-       "max": 3005.895046544066,
-       "hp_pct": {
-        "contract": 0.12903225806451613,
-        "installed": 0.45161290322580644,
-        "station_direct": 0.7419354838709677,
-        "approval": 0.967741935483871
-       }
+     },
+     "fixed_share_40": {
+      "median": 1492.6174496644296,
+      "q25": 855.5871212121211,
+      "q75": 1962.3529411764705,
+      "min": 501.86733461959403,
+      "max": 4142.013422818792,
+      "hp_pct": {
+       "contract": 0.12,
+       "installed": 0.24,
+       "station_direct": 0.48,
+       "approval": 0.8
       }
-     }
+     },
+     "factor_2018": 1.4926174496644296,
+     "factor_2016": 1.557422969187675,
+     "share_2018": null,
+     "share_2016": null
     }
    },
    "projects": [
@@ -1622,13 +2037,16 @@
      "mwh": 40.0,
      "cod_year": 2018,
      "nominal": 375.0,
-     "adj_installed": 445.75892617449665,
-     "adj_pack": 427.88438071995114,
-     "adj_turnkey": 409.578421972816,
-     "adj_nrel": 439.78083488818964,
-     "adj_lcos": 490.1422048630212,
+     "anchor_share": 0.4,
+     "adj_installed": 399.1779364659253,
+     "adj_pack": 364.8600289151107,
+     "adj_turnkey": 343.20445336463814,
+     "adj_nrel": 386.72261535165717,
+     "adj_lcos": 473.2005061370566,
      "adj_construction": 559.7315436241611,
-     "factor_installed": 1.1886904697986578
+     "factor_installed": 1.0644744972424676,
+     "share_installed": 0.5633075438074678,
+     "fixed_share_installed": 445.7237630267039
     },
     {
      "project": "Soldotna BESS (37 Megapacks)",
@@ -1638,29 +2056,16 @@
      "mwh": 93.0,
      "cod_year": 2022,
      "nominal": 430.10752688172045,
-     "adj_installed": 454.5189061411228,
-     "adj_pack": 424.1710309789771,
-     "adj_turnkey": 363.2470435435605,
-     "adj_nrel": 420.3369268949885,
-     "adj_lcos": 518.4834663703708,
+     "anchor_share": 0.4,
+     "adj_installed": 500.24313933195776,
+     "adj_pack": 406.2273842005075,
+     "adj_turnkey": 296.7325714275191,
+     "adj_nrel": 396.6959229124982,
+     "adj_lcos": 517.9207194463097,
      "adj_construction": 501.86733461959403,
-     "factor_installed": 1.0567564567781105
-    },
-    {
-     "project": "Martha's Vineyard BESS Phase 2 (cancelled)",
-     "state": "MA",
-     "utility": 1,
-     "mw": 9.8,
-     "mwh": 64.0,
-     "cod_year": 2019,
-     "nominal": 437.5,
-     "adj_installed": 518.296083846233,
-     "adj_pack": 505.2327935222673,
-     "adj_turnkey": 470.10835913312695,
-     "adj_nrel": 505.3445075343962,
-     "adj_lcos": 564.0994391716997,
-     "adj_construction": 640.1315789473684,
-     "factor_installed": 1.184676763077104
+     "factor_installed": 1.1630652989468018,
+     "share_installed": 0.3896468998368379,
+     "fixed_share_installed": 500.1999837043769
     },
     {
      "project": "North Troy BESS (VEC + GMP)",
@@ -1670,13 +2075,16 @@
      "mwh": 12.0,
      "cod_year": 2024,
      "nominal": 500.0,
+     "anchor_share": 0.4,
      "adj_installed": 515.9090909090909,
      "adj_pack": 503.7351778656126,
      "adj_turnkey": 457.7272727272727,
      "adj_nrel": 515.9090909090909,
      "adj_lcos": 531.3597346859149,
      "adj_construction": 526.5151515151515,
-     "factor_installed": 1.0318181818181817
+     "factor_installed": 1.0318181818181817,
+     "share_installed": 0.4,
+     "fixed_share_installed": 515.9090909090909
     },
     {
      "project": "Virginia battery pilot portfolio (Scott Solar 10+2 MW, New Kent 2 MW, Hanover/Ashland 2 MW)",
@@ -1686,13 +2094,16 @@
      "mwh": 56.0,
      "cod_year": 2021,
      "nominal": 589.2857142857143,
-     "adj_installed": 656.0119352112171,
-     "adj_pack": 649.5022399203584,
-     "adj_turnkey": 572.5214476034317,
-     "adj_nrel": 619.9823821847331,
-     "adj_lcos": 782.6191230372416,
+     "anchor_share": 0.4,
+     "adj_installed": 565.3554721072265,
+     "adj_pack": 626.0318353439749,
+     "adj_turnkey": 505.98135299879715,
+     "adj_nrel": 570.1492646150663,
+     "adj_lcos": 782.0320238671645,
      "adj_construction": 761.0751617720259,
-     "factor_installed": 1.1132323749038835
+     "factor_installed": 0.95939110418196,
+     "share_installed": 0.5451345040194562,
+     "fixed_share_installed": 617.4631260474891
     },
     {
      "project": "Pomona (Ladentown) BESS",
@@ -1702,13 +2113,16 @@
      "mwh": 12.0,
      "cod_year": 2021,
      "nominal": 616.6666666666666,
-     "adj_installed": 686.4932978573947,
-     "adj_pack": 679.6811318762537,
-     "adj_turnkey": 599.1234542597527,
-     "adj_nrel": 648.789644387256,
-     "adj_lcos": 818.9832439056386,
+     "anchor_share": 0.4,
+     "adj_installed": 591.624514245542,
+     "adj_pack": 655.1201832488463,
+     "adj_turnkey": 529.4915976835897,
+     "adj_nrel": 596.6410486274834,
+     "adj_lcos": 818.3688653801842,
      "adj_construction": 796.4382500967866,
-     "factor_installed": 1.1132323749038835
+     "factor_installed": 0.95939110418196,
+     "share_installed": 0.5451345040194562,
+     "fixed_share_installed": 646.1533319042411
     },
     {
      "project": "Wallgrove Grid Battery [AUSTRALIA]",
@@ -1718,13 +2132,16 @@
      "mwh": 75.0,
      "cod_year": 2021,
      "nominal": 618.6666666666666,
-     "adj_installed": 688.7197626072026,
-     "adj_pack": 681.8855031147714,
-     "adj_turnkey": 601.0665573546491,
-     "adj_nrel": 650.8938270177011,
-     "adj_lcos": 821.639405777765,
+     "anchor_share": 0.4,
+     "adj_installed": 593.5432964539059,
+     "adj_pack": 657.2448973566804,
+     "adj_turnkey": 531.208867730131,
+     "adj_nrel": 598.5761006770861,
+     "adj_lcos": 821.0230346733091,
      "adj_construction": 799.0212930700735,
-     "factor_installed": 1.1132323749038835
+     "factor_installed": 0.95939110418196,
+     "share_installed": 0.5451345040194562,
+     "fixed_share_installed": 648.2489643320387
     },
     {
      "project": "Braintree BELD solar-sited BESS",
@@ -1732,31 +2149,18 @@
      "utility": 1,
      "mw": 2.0,
      "mwh": 4.2,
-     "cod_year": 2019,
+     "cod_year": 2018,
      "nominal": 619.047619047619,
-     "adj_installed": 733.3713295239215,
-     "adj_pack": 714.8872180451128,
-     "adj_turnkey": 665.187338093132,
-     "adj_nrel": 715.045289572479,
-     "adj_lcos": 798.181519372201,
-     "adj_construction": 905.7644110275689,
-     "factor_installed": 1.184676763077104
-    },
-    {
-     "project": "Whitehorse Grid-Scale BESS [CANADA]",
-     "state": "YT (Canada)",
-     "utility": 1,
-     "mw": 7.0,
-     "mwh": 40.0,
-     "cod_year": 2023,
-     "nominal": 647.5,
-     "adj_installed": 669.7895073046667,
-     "adj_pack": 626.8649962788389,
-     "adj_turnkey": 540.8481185262881,
-     "adj_nrel": 637.6520960108181,
-     "adj_lcos": 726.8275862068964,
-     "adj_construction": 709.3793103448276,
-     "factor_installed": 1.0344239495052767
+     "anchor_share": 0.4,
+     "adj_installed": 658.9604030548609,
+     "adj_pack": 602.3086191614526,
+     "adj_turnkey": 566.5597325384502,
+     "adj_nrel": 638.3992380408308,
+     "adj_lcos": 781.1563910833951,
+     "adj_construction": 924.0012783636945,
+     "factor_installed": 1.0644744972424676,
+     "share_installed": 0.5633075438074678,
+     "fixed_share_installed": 735.7979580123366
     },
     {
      "project": "Sterling MLD Chocksett Road BESS",
@@ -1766,29 +2170,16 @@
      "mwh": 3.9,
      "cod_year": 2016,
      "nominal": 692.3076923076923,
-     "adj_installed": 731.8798218447562,
-     "adj_pack": 756.4815275222516,
-     "adj_turnkey": 783.0639948287006,
-     "adj_nrel": 838.8222955955443,
-     "adj_lcos": 931.7971324721565,
+     "anchor_share": 0.4,
+     "adj_installed": 471.58190510937084,
+     "adj_pack": 514.6511733558127,
+     "adj_turnkey": 644.9653961796432,
+     "adj_nrel": 726.7431117179473,
+     "adj_lcos": 892.2620122781003,
      "adj_construction": 1078.2159017453134,
-     "factor_installed": 1.057159742664648
-    },
-    {
-     "project": "Concord MLP grid-scale battery (planned)",
-     "state": "MA",
-     "utility": 1,
-     "mw": 4.99,
-     "mwh": 14.97,
-     "cod_year": 2026,
-     "nominal": 694.7227788911156,
-     "adj_installed": 694.7227788911156,
-     "adj_pack": 694.7227788911156,
-     "adj_turnkey": 694.7227788911156,
-     "adj_nrel": 694.7227788911156,
-     "adj_lcos": 694.7227788911156,
-     "adj_construction": 694.7227788911156,
-     "factor_installed": 1.0
+     "factor_installed": 0.6811738629357579,
+     "share_installed": 0.7321816419955224,
+     "fixed_share_installed": 746.8041526156338
     },
     {
      "project": "Ashburnham MLP substation BESS",
@@ -1798,29 +2189,16 @@
      "mwh": 5.0,
      "cod_year": 2019,
      "nominal": 700.0,
-     "adj_installed": 829.2737341539728,
-     "adj_pack": 808.3724696356277,
-     "adj_turnkey": 752.173374613003,
-     "adj_nrel": 808.551212055034,
-     "adj_lcos": 902.5591026747196,
-     "adj_construction": 1024.2105263157896,
-     "factor_installed": 1.184676763077104
-    },
-    {
-     "project": "Martha's Vineyard BESS Phase 1 (cancelled)",
-     "state": "MA",
-     "utility": 1,
-     "mw": 4.9,
-     "mwh": 20.0,
-     "cod_year": 2019,
-     "nominal": 750.0,
-     "adj_installed": 888.507572307828,
-     "adj_pack": 866.1133603238867,
-     "adj_turnkey": 805.9000442282176,
-     "adj_nrel": 866.304870058965,
-     "adj_lcos": 967.0276100086281,
-     "adj_construction": 1097.3684210526317,
-     "factor_installed": 1.184676763077104
+     "anchor_share": 0.4,
+     "adj_installed": 763.3173208030038,
+     "adj_pack": 723.7374761692288,
+     "adj_turnkey": 635.2358065485131,
+     "adj_nrel": 715.7850726944138,
+     "adj_lcos": 874.458229183388,
+     "adj_construction": 1024.2105263157894,
+     "factor_installed": 1.0904533154328626,
+     "share_installed": 0.5436428856117975,
+     "fixed_share_installed": 832.2512733446521
     },
     {
      "project": "Panton battery (Green Mountain Power)",
@@ -1830,13 +2208,16 @@
      "mwh": 4.0,
      "cod_year": 2018,
      "nominal": 750.0,
-     "adj_installed": 891.5178523489933,
-     "adj_pack": 855.7687614399023,
-     "adj_turnkey": 819.156843945632,
-     "adj_nrel": 879.5616697763793,
-     "adj_lcos": 980.2844097260424,
+     "anchor_share": 0.4,
+     "adj_installed": 798.3558729318506,
+     "adj_pack": 729.7200578302214,
+     "adj_turnkey": 686.4089067292763,
+     "adj_nrel": 773.4452307033143,
+     "adj_lcos": 946.4010122741132,
      "adj_construction": 1119.4630872483222,
-     "factor_installed": 1.1886904697986578
+     "factor_installed": 1.0644744972424676,
+     "share_installed": 0.5633075438074678,
+     "fixed_share_installed": 891.4475260534078
     },
     {
      "project": "Chugach BESS (Southcentral Power Project site)",
@@ -1846,29 +2227,16 @@
      "mwh": 80.0,
      "cod_year": 2024,
      "nominal": 812.5,
+     "anchor_share": 0.4,
      "adj_installed": 838.3522727272726,
      "adj_pack": 818.5696640316205,
      "adj_turnkey": 743.8068181818181,
      "adj_nrel": 838.3522727272726,
      "adj_lcos": 863.4595688646117,
      "adj_construction": 855.5871212121211,
-     "factor_installed": 1.0318181818181817
-    },
-    {
-     "project": "Westmoreland Clean Innovation Project BESS (withdrawn)",
-     "state": "NH",
-     "utility": 1,
-     "mw": 1.7,
-     "mwh": 7.1,
-     "cod_year": 2020,
-     "nominal": 985.9154929577464,
-     "adj_installed": 1161.6672826792187,
-     "adj_pack": 1155.3067550284513,
-     "adj_turnkey": 1038.2886308259585,
-     "adj_nrel": 1117.6940356738892,
-     "adj_lcos": 1362.6704003466864,
-     "adj_construction": 1407.3658898190167,
-     "factor_installed": 1.1782625295746363
+     "factor_installed": 1.0318181818181817,
+     "share_installed": 0.4,
+     "fixed_share_installed": 838.3522727272726
     },
     {
      "project": "Kingsbery Community Solar + Storage",
@@ -1876,15 +2244,18 @@
      "utility": 1,
      "mw": 1.5,
      "mwh": 3.0,
-     "cod_year": 2016,
+     "cod_year": 2018,
      "nominal": 1000.0,
-     "adj_installed": 1057.1597426646479,
-     "adj_pack": 1092.6955397543634,
-     "adj_turnkey": 1131.09243697479,
-     "adj_nrel": 1211.6322047491196,
-     "adj_lcos": 1345.9291913486707,
-     "adj_construction": 1557.422969187675,
-     "factor_installed": 1.057159742664648
+     "anchor_share": 0.4,
+     "adj_installed": 1064.4744972424676,
+     "adj_pack": 972.960077106962,
+     "adj_turnkey": 915.211875639035,
+     "adj_nrel": 1031.260307604419,
+     "adj_lcos": 1261.8680163654842,
+     "adj_construction": 1492.6174496644296,
+     "factor_installed": 1.0644744972424676,
+     "share_installed": 0.5633075438074678,
+     "fixed_share_installed": 1188.5967014045439
     },
     {
      "project": "Stafford Hill Solar + Storage (Rutland)",
@@ -1894,13 +2265,16 @@
      "mwh": 3.4,
      "cod_year": 2015,
      "nominal": 1235.2941176470588,
-     "adj_installed": 1282.5724907063195,
-     "adj_pack": 1329.8823529411764,
-     "adj_turnkey": 1420.3183391003458,
-     "adj_nrel": 1519.8086404686355,
-     "adj_lcos": 1685.7049180327867,
+     "anchor_share": 0.4,
+     "adj_installed": 570.552825408357,
+     "adj_pack": 770.545408741655,
+     "adj_turnkey": 1160.2125072009217,
+     "adj_nrel": 1307.317449669389,
+     "adj_lcos": 1607.583632361197,
      "adj_construction": 1962.3529411764705,
-     "factor_installed": 1.0382729686670207
+     "factor_installed": 0.4618760967591461,
+     "share_installed": 0.8219640596192719,
+     "fixed_share_installed": 1285.048331817864
     },
     {
      "project": "Harding Street BESS",
@@ -1910,13 +2284,16 @@
      "mwh": 20.0,
      "cod_year": 2016,
      "nominal": 1250.0,
-     "adj_installed": 1321.44967833081,
-     "adj_pack": 1365.8694246929542,
-     "adj_turnkey": 1413.8655462184875,
-     "adj_nrel": 1514.5402559363997,
-     "adj_lcos": 1682.4114891858383,
+     "anchor_share": 0.4,
+     "adj_installed": 851.4673286696974,
+     "adj_pack": 929.2312852257729,
+     "adj_turnkey": 1164.5208542132448,
+     "adj_nrel": 1312.1750628240716,
+     "adj_lcos": 1611.0286332799035,
      "adj_construction": 1946.778711484594,
-     "factor_installed": 1.057159742664648
+     "factor_installed": 0.6811738629357579,
+     "share_installed": 0.7321816419955224,
+     "fixed_share_installed": 1348.3963866671168
     },
     {
      "project": "Ozone Park BESS",
@@ -1926,13 +2303,16 @@
      "mwh": 12.0,
      "cod_year": 2019,
      "nominal": 1250.0,
-     "adj_installed": 1480.84595384638,
-     "adj_pack": 1443.5222672064779,
-     "adj_turnkey": 1343.1667403803626,
-     "adj_nrel": 1443.841450098275,
-     "adj_lcos": 1611.7126833477137,
-     "adj_construction": 1828.9473684210527,
-     "factor_installed": 1.184676763077104
+     "anchor_share": 0.4,
+     "adj_installed": 1363.0666442910783,
+     "adj_pack": 1292.3883503021943,
+     "adj_turnkey": 1134.349654550916,
+     "adj_nrel": 1278.187629811453,
+     "adj_lcos": 1561.5325521131929,
+     "adj_construction": 1828.9473684210525,
+     "factor_installed": 1.0904533154328626,
+     "share_installed": 0.5436428856117975,
+     "fixed_share_installed": 1486.1629881154502
     },
     {
      "project": "Regina BESS [CANADA]",
@@ -1942,13 +2322,16 @@
      "mwh": 20.0,
      "cod_year": 2024,
      "nominal": 1260.0,
+     "anchor_share": 0.4,
      "adj_installed": 1300.090909090909,
      "adj_pack": 1269.4126482213437,
      "adj_turnkey": 1153.4727272727273,
      "adj_nrel": 1300.090909090909,
      "adj_lcos": 1339.0265314085057,
      "adj_construction": 1326.8181818181818,
-     "factor_installed": 1.0318181818181817
+     "factor_installed": 1.0318181818181817,
+     "share_installed": 0.4,
+     "fixed_share_installed": 1300.090909090909
     },
     {
      "project": "Outer Cape (Provincetown) BESS",
@@ -1958,29 +2341,16 @@
      "mwh": 38.0,
      "cod_year": 2022,
      "nominal": 1289.4736842105262,
-     "adj_installed": 1362.6596416349319,
-     "adj_pack": 1271.6759132705254,
-     "adj_turnkey": 1089.024195676319,
-     "adj_nrel": 1260.1811683292515,
-     "adj_lcos": 1554.4270764801183,
+     "anchor_share": 0.4,
+     "adj_installed": 1499.7420960103495,
+     "adj_pack": 1217.8803880274425,
+     "adj_turnkey": 889.6120578915817,
+     "adj_nrel": 1189.304816258062,
+     "adj_lcos": 1552.7399463926533,
      "adj_construction": 1504.6114762246643,
-     "factor_installed": 1.0567564567781105
-    },
-    {
-     "project": "VEC Hinesburg BESS",
-     "state": "VT",
-     "utility": 1,
-     "mw": 1.0,
-     "mwh": 4.0,
-     "cod_year": 2023,
-     "nominal": 1400.0,
-     "adj_installed": 1448.1935293073875,
-     "adj_pack": 1355.3837757380302,
-     "adj_turnkey": 1169.4013373541366,
-     "adj_nrel": 1378.707234617985,
-     "adj_lcos": 1571.5191053122085,
-     "adj_construction": 1533.7931034482758,
-     "factor_installed": 1.0344239495052767
+     "factor_installed": 1.1630652989468018,
+     "share_installed": 0.3896468998368379,
+     "fixed_share_installed": 1499.6127143031879
     },
     {
      "project": "Northern New York (Chateaugay) BESS",
@@ -1990,13 +2360,16 @@
      "mwh": 20.0,
      "cod_year": 2023,
      "nominal": 1490.0,
-     "adj_installed": 1541.2916847628624,
-     "adj_pack": 1442.515589892618,
-     "adj_turnkey": 1244.5771376126168,
-     "adj_nrel": 1467.338413986284,
-     "adj_lcos": 1672.5453335108505,
+     "anchor_share": 0.4,
+     "adj_installed": 1619.1042785569414,
+     "adj_pack": 1415.9169730777653,
+     "adj_turnkey": 1123.321583429516,
+     "adj_nrel": 1443.1331018999044,
+     "adj_lcos": 1671.6589792547143,
      "adj_construction": 1632.3940886699506,
-     "factor_installed": 1.0344239495052767
+     "factor_installed": 1.0866471668167392,
+     "share_installed": 0.39265039960408027,
+     "fixed_share_installed": 1618.8555208993234
     },
     {
      "project": "Fairhaven BESS",
@@ -2006,13 +2379,16 @@
      "mwh": 9.74,
      "cod_year": 2023,
      "nominal": 1659.2747433264888,
-     "adj_installed": 1716.3935333061409,
-     "adj_pack": 1606.3957618547195,
-     "adj_turnkey": 1385.9700742028126,
-     "adj_nrel": 1634.038637745093,
-     "adj_lcos": 1862.5585429282771,
+     "anchor_share": 0.4,
+     "adj_installed": 1803.0461988063012,
+     "adj_pack": 1576.775350386059,
+     "adj_turnkey": 1250.9390147772585,
+     "adj_nrel": 1607.0834276784722,
+     "adj_lcos": 1861.571492437776,
      "adj_construction": 1817.845827171483,
-     "factor_installed": 1.0344239495052767
+     "factor_installed": 1.0866471668167392,
+     "share_installed": 0.39265039960408027,
+     "fixed_share_installed": 1802.7691804851638
     },
     {
      "project": "Asheville Rock Hill substation BESS (Duke Energy Progress)",
@@ -2022,13 +2398,16 @@
      "mwh": 9.0,
      "cod_year": 2020,
      "nominal": 1666.6666666666667,
-     "adj_installed": 1963.7708826243938,
-     "adj_pack": 1953.0185620719058,
-     "adj_turnkey": 1755.2022092534064,
-     "adj_nrel": 1889.4351555439557,
-     "adj_lcos": 2303.5618672527316,
+     "anchor_share": 0.4,
+     "adj_installed": 1709.4067684721108,
+     "adj_pack": 1826.8443412369488,
+     "adj_turnkey": 1496.4520563212839,
+     "adj_nrel": 1686.2102747670058,
+     "adj_lcos": 2298.734166532161,
      "adj_construction": 2379.1185280273858,
-     "factor_installed": 1.1782625295746363
+     "factor_installed": 1.0256440610832664,
+     "share_installed": 0.5600348438414843,
+     "fixed_share_installed": 1900.7827480880687
     },
     {
      "project": "El Centro BESS (IID)",
@@ -2036,15 +2415,18 @@
      "utility": 1,
      "mw": 30.0,
      "mwh": 20.0,
-     "cod_year": 2017,
+     "cod_year": 2016,
      "nominal": 1900.0,
-     "adj_installed": 2200.315696809641,
-     "adj_pack": 2175.6808592251627,
-     "adj_turnkey": 2156.5670318760417,
-     "adj_nrel": 2309.5925906472676,
-     "adj_lcos": 2564.756865186415,
-     "adj_construction": 2971.589310829817,
-     "factor_installed": 1.1580608930577057
+     "anchor_share": 0.4,
+     "adj_installed": 1294.23033957794,
+     "adj_pack": 1412.431553543175,
+     "adj_turnkey": 1770.0716984041321,
+     "adj_nrel": 1994.5060954925889,
+     "adj_lcos": 2448.7635225854533,
+     "adj_construction": 2959.103641456583,
+     "factor_installed": 0.6811738629357579,
+     "share_installed": 0.7321816419955224,
+     "fixed_share_installed": 2049.5625077340173
     },
     {
      "project": "LADWP Beacon Energy Storage System",
@@ -2054,13 +2436,16 @@
      "mwh": 10.0,
      "cod_year": 2018,
      "nominal": 1920.0,
-     "adj_installed": 2282.285702013423,
-     "adj_pack": 2190.76802928615,
-     "adj_turnkey": 2097.0415205008176,
-     "adj_nrel": 2251.677874627531,
-     "adj_lcos": 2509.5280888986686,
+     "anchor_share": 0.4,
+     "adj_installed": 2043.7910347055376,
+     "adj_pack": 1868.083348045367,
+     "adj_turnkey": 1757.2068012269474,
+     "adj_nrel": 1980.0197906004846,
+     "adj_lcos": 2422.78659142173,
      "adj_construction": 2865.8255033557048,
-     "factor_installed": 1.1886904697986578
+     "factor_installed": 1.0644744972424676,
+     "share_installed": 0.5633075438074678,
+     "fixed_share_installed": 2282.1056666967243
     },
     {
      "project": "Power Creek BESS (Cordova)",
@@ -2070,13 +2455,16 @@
      "mwh": 0.92,
      "cod_year": 2019,
      "nominal": 2173.913043478261,
-     "adj_installed": 2575.3842675589217,
-     "adj_pack": 2510.473508185179,
-     "adj_turnkey": 2335.9421571832395,
-     "adj_nrel": 2511.0286088665653,
-     "adj_lcos": 2802.978579735154,
-     "adj_construction": 3180.7780320366137,
-     "factor_installed": 1.184676763077104
+     "anchor_share": 0.4,
+     "adj_installed": 2370.5506857236146,
+     "adj_pack": 2247.6319135690337,
+     "adj_turnkey": 1972.782007914637,
+     "adj_nrel": 2222.9350083677446,
+     "adj_lcos": 2715.708786283814,
+     "adj_construction": 3180.7780320366132,
+     "factor_installed": 1.0904533154328626,
+     "share_installed": 0.5436428856117975,
+     "fixed_share_installed": 2584.631283679044
     },
     {
      "project": "Glacier BESS",
@@ -2086,13 +2474,16 @@
      "mwh": 4.4,
      "cod_year": 2016,
      "nominal": 2545.4545454545455,
-     "adj_installed": 2690.952072237286,
-     "adj_pack": 2781.4068284656523,
-     "adj_turnkey": 2879.144385026738,
-     "adj_nrel": 3084.154702997759,
-     "adj_lcos": 3426.0015779784344,
+     "anchor_share": 0.4,
+     "adj_installed": 1733.8971056546563,
+     "adj_pack": 1892.2527990052104,
+     "adj_turnkey": 2371.3879213069713,
+     "adj_nrel": 2672.0655824781097,
+     "adj_lcos": 3280.6401259518034,
      "adj_construction": 3964.349376114082,
-     "factor_installed": 1.057159742664648
+     "factor_installed": 0.6811738629357579,
+     "share_installed": 0.7321816419955224,
+     "fixed_share_installed": 2745.825369213038
     },
     {
      "project": "Dalrymple ESCRI BESS [AUSTRALIA]",
@@ -2102,26 +2493,29 @@
      "mwh": 8.0,
      "cod_year": 2018,
      "nominal": 2775.0,
-     "adj_installed": 3298.6160536912753,
-     "adj_pack": 3166.3444173276384,
-     "adj_turnkey": 3030.880322598838,
-     "adj_nrel": 3254.3781781726034,
-     "adj_lcos": 3627.0523159863574,
+     "anchor_share": 0.4,
+     "adj_installed": 2953.9167298478474,
+     "adj_pack": 2699.9642139718194,
+     "adj_turnkey": 2539.712954898322,
+     "adj_nrel": 2861.747353602263,
+     "adj_lcos": 3501.6837454142187,
      "adj_construction": 4142.013422818792,
-     "factor_installed": 1.1886904697986578
+     "factor_installed": 1.0644744972424676,
+     "share_installed": 0.5633075438074678,
+     "fixed_share_installed": 3298.3558463976087
     }
    ]
   }
  },
  "hw_ratio_2018": 1.4926174496644296,
  "nominal": {
-  "median": 770.5426356589147,
-  "q25": 575.7239382239383,
-  "q75": 1172.4296675191815,
+  "median": 750.0,
+  "q25": 556.4144144144144,
+  "q75": 1274.7368421052631,
   "hp_pct": {
-   "contract": 0.2727272727272727,
-   "installed": 0.5818181818181818,
-   "station_direct": 0.8545454545454545,
+   "contract": 0.3142857142857143,
+   "installed": 0.5714285714285714,
+   "station_direct": 0.7714285714285715,
    "approval": 1.0
   }
  },
@@ -2134,13 +2528,16 @@
    "mwh": 40.0,
    "cod_year": 2018,
    "nominal": 375.0,
-   "adj_installed": 445.75892617449665,
-   "adj_pack": 427.88438071995114,
-   "adj_turnkey": 409.578421972816,
-   "adj_nrel": 439.78083488818964,
-   "adj_lcos": 490.1422048630212,
+   "anchor_share": 0.4,
+   "adj_installed": 399.1779364659253,
+   "adj_pack": 364.8600289151107,
+   "adj_turnkey": 343.20445336463814,
+   "adj_nrel": 386.72261535165717,
+   "adj_lcos": 473.2005061370566,
    "adj_construction": 559.7315436241611,
-   "factor_installed": 1.1886904697986578
+   "factor_installed": 1.0644744972424676,
+   "share_installed": 0.5633075438074678,
+   "fixed_share_installed": 445.7237630267039
   },
   {
    "project": "Bouldercombe Battery [AUSTRALIA]",
@@ -2150,29 +2547,16 @@
    "mwh": 100.0,
    "cod_year": 2023,
    "nominal": 402.0,
-   "adj_installed": 415.83842770112125,
-   "adj_pack": 389.1887698904915,
-   "adj_turnkey": 335.7852411545449,
-   "adj_nrel": 395.8859345117357,
-   "adj_lcos": 451.2504859539342,
+   "anchor_share": 0.55,
+   "adj_installed": 435.4648200000079,
+   "adj_pack": 362.8277803604977,
+   "adj_turnkey": 265.25701803241935,
+   "adj_nrel": 372.690044616348,
+   "adj_lcos": 455.0647891577636,
    "adj_construction": 440.4177339901477,
-   "factor_installed": 1.0344239495052767
-  },
-  {
-   "project": "Convergent SSC Richmond Rd BESS (Staten Island)",
-   "state": "NY",
-   "utility": 0,
-   "mw": 5.0,
-   "mwh": 20.0,
-   "cod_year": 2025,
-   "nominal": 410.0,
-   "adj_installed": 420.61538461538464,
-   "adj_pack": 420.61538461538464,
-   "adj_turnkey": 420.61538461538464,
-   "adj_nrel": 420.61538461538464,
-   "adj_lcos": 479.7264957264958,
-   "adj_construction": 427.69230769230774,
-   "factor_installed": 1.025891181988743
+   "factor_installed": 1.083245820895542,
+   "share_installed": 0.5423857485256763,
+   "fixed_share_installed": 436.76504657820675
   },
   {
    "project": "Soldotna BESS (37 Megapacks)",
@@ -2182,29 +2566,16 @@
    "mwh": 93.0,
    "cod_year": 2022,
    "nominal": 430.10752688172045,
-   "adj_installed": 454.5189061411228,
-   "adj_pack": 424.1710309789771,
-   "adj_turnkey": 363.2470435435605,
-   "adj_nrel": 420.3369268949885,
-   "adj_lcos": 518.4834663703708,
+   "anchor_share": 0.4,
+   "adj_installed": 500.24313933195776,
+   "adj_pack": 406.2273842005075,
+   "adj_turnkey": 296.7325714275191,
+   "adj_nrel": 396.6959229124982,
+   "adj_lcos": 517.9207194463097,
    "adj_construction": 501.86733461959403,
-   "factor_installed": 1.0567564567781105
-  },
-  {
-   "project": "Martha's Vineyard BESS Phase 2 (cancelled)",
-   "state": "MA",
-   "utility": 1,
-   "mw": 9.8,
-   "mwh": 64.0,
-   "cod_year": 2019,
-   "nominal": 437.5,
-   "adj_installed": 518.296083846233,
-   "adj_pack": 505.2327935222673,
-   "adj_turnkey": 470.10835913312695,
-   "adj_nrel": 505.3445075343962,
-   "adj_lcos": 564.0994391716997,
-   "adj_construction": 640.1315789473684,
-   "factor_installed": 1.184676763077104
+   "factor_installed": 1.1630652989468018,
+   "share_installed": 0.3896468998368379,
+   "fixed_share_installed": 500.1999837043769
   },
   {
    "project": "North Troy BESS (VEC + GMP)",
@@ -2214,13 +2585,16 @@
    "mwh": 12.0,
    "cod_year": 2024,
    "nominal": 500.0,
+   "anchor_share": 0.4,
    "adj_installed": 515.9090909090909,
    "adj_pack": 503.7351778656126,
    "adj_turnkey": 457.7272727272727,
    "adj_nrel": 515.9090909090909,
    "adj_lcos": 531.3597346859149,
    "adj_construction": 526.5151515151515,
-   "factor_installed": 1.0318181818181817
+   "factor_installed": 1.0318181818181817,
+   "share_installed": 0.4,
+   "fixed_share_installed": 515.9090909090909
   },
   {
    "project": "Lake Bonney BESS [AUSTRALIA]",
@@ -2230,45 +2604,16 @@
    "mwh": 52.0,
    "cod_year": 2019,
    "nominal": 511.53846153846155,
-   "adj_installed": 606.0077288048263,
-   "adj_pack": 590.733727810651,
-   "adj_turnkey": 549.6651583710408,
-   "adj_nrel": 590.8643472709864,
-   "adj_lcos": 659.562421185372,
-   "adj_construction": 748.4615384615386,
-   "factor_installed": 1.184676763077104
-  },
-  {
-   "project": "Greenbacker Staten Island Energy Storage 3 (Androvette St)",
-   "state": "NY",
-   "utility": 0,
-   "mw": 5.0,
-   "mwh": 20.0,
-   "cod_year": 2023,
-   "nominal": 522.5,
-   "adj_installed": 540.4865136165071,
-   "adj_pack": 505.84858773080055,
-   "adj_turnkey": 436.4372848339545,
-   "adj_nrel": 514.5532357770694,
-   "adj_lcos": 586.5133803754493,
-   "adj_construction": 572.4334975369458,
-   "factor_installed": 1.0344239495052767
-  },
-  {
-   "project": "Elevate Renewables Victory Blvd BESS (Staten Island)",
-   "state": "NY",
-   "utility": 0,
-   "mw": 15.1,
-   "mwh": 60.4,
-   "cod_year": 2025,
-   "nominal": 524.0066225165563,
-   "adj_installed": 537.573773343439,
-   "adj_pack": 537.573773343439,
-   "adj_turnkey": 537.573773343439,
-   "adj_nrel": 537.573773343439,
-   "adj_lcos": 613.1216116032786,
-   "adj_construction": 546.6185405613608,
-   "factor_installed": 1.025891181988743
+   "anchor_share": 0.55,
+   "adj_installed": 507.90998797307657,
+   "adj_pack": 473.49869674281615,
+   "adj_turnkey": 395.5430309163272,
+   "adj_nrel": 468.64421783076915,
+   "adj_lcos": 606.2044483394503,
+   "adj_construction": 748.4615384615385,
+   "factor_installed": 0.9929067434060144,
+   "share_installed": 0.6859284995885527,
+   "fixed_share_installed": 608.1836228287842
   },
   {
    "project": "WindCharger [CANADA]",
@@ -2278,13 +2623,16 @@
    "mwh": 20.0,
    "cod_year": 2020,
    "nominal": 550.0,
-   "adj_installed": 648.04439126605,
-   "adj_pack": 644.4961254837289,
-   "adj_turnkey": 579.216729053624,
-   "adj_nrel": 623.5136013295054,
-   "adj_lcos": 760.1754161934015,
+   "anchor_share": 0.55,
+   "adj_installed": 508.85848254227125,
+   "adj_pack": 551.7871822366586,
+   "adj_turnkey": 422.2231572569448,
+   "adj_nrel": 500.2563790632077,
+   "adj_lcos": 749.2081836468798,
    "adj_construction": 785.1091142490372,
-   "factor_installed": 1.1782625295746363
+   "factor_installed": 0.9251972409859477,
+   "share_installed": 0.7000296958679025,
+   "fixed_share_installed": 627.2583068690626
   },
   {
    "project": "Broken Hill BESS [AUSTRALIA]",
@@ -2292,15 +2640,18 @@
    "utility": 0,
    "mw": 50.0,
    "mwh": 50.0,
-   "cod_year": 2023,
+   "cod_year": 2024,
    "nominal": 550.0,
-   "adj_installed": 568.9331722279022,
-   "adj_pack": 532.472197611369,
-   "adj_turnkey": 459.4076682462679,
-   "adj_nrel": 541.6349850284942,
-   "adj_lcos": 617.3825056583676,
-   "adj_construction": 602.5615763546798,
-   "factor_installed": 1.0344239495052767
+   "anchor_share": 0.55,
+   "adj_installed": 563.125,
+   "adj_pack": 544.7119565217392,
+   "adj_turnkey": 475.125,
+   "adj_nrel": 563.125,
+   "adj_lcos": 586.4940987124463,
+   "adj_construction": 579.1666666666666,
+   "factor_installed": 1.0238636363636364,
+   "share_installed": 0.55,
+   "fixed_share_installed": 567.5
   },
   {
    "project": "Wellesley MLP BESS (Citizens Energy)",
@@ -2310,13 +2661,16 @@
    "mwh": 20.0,
    "cod_year": 2024,
    "nominal": 550.0,
-   "adj_installed": 567.5,
-   "adj_pack": 554.1086956521739,
-   "adj_turnkey": 503.5,
-   "adj_nrel": 567.5,
-   "adj_lcos": 584.4957081545064,
+   "anchor_share": 0.55,
+   "adj_installed": 563.125,
+   "adj_pack": 544.7119565217392,
+   "adj_turnkey": 475.125,
+   "adj_nrel": 563.125,
+   "adj_lcos": 586.4940987124463,
    "adj_construction": 579.1666666666666,
-   "factor_installed": 1.0318181818181817
+   "factor_installed": 1.0238636363636364,
+   "share_installed": 0.55,
+   "fixed_share_installed": 567.5
   },
   {
    "project": "Thurcroft BESS [UK]",
@@ -2326,13 +2680,16 @@
    "mwh": 75.0,
    "cod_year": 2020,
    "nominal": 550.6666666666666,
-   "adj_installed": 648.8298996190997,
-   "adj_pack": 645.2773329085576,
-   "adj_turnkey": 579.9188099373254,
-   "adj_nrel": 624.2693753917229,
-   "adj_lcos": 761.0968409403025,
+   "anchor_share": 0.55,
+   "adj_installed": 509.4752807029285,
+   "adj_pack": 552.4560151848242,
+   "adj_turnkey": 422.73494290210465,
+   "adj_nrel": 500.8627504317691,
+   "adj_lcos": 750.1163147785729,
    "adj_construction": 786.0607616602481,
-   "factor_installed": 1.1782625295746363
+   "factor_installed": 0.9251972409859477,
+   "share_installed": 0.7000296958679025,
+   "fixed_share_installed": 628.0186199682978
   },
   {
    "project": "Wickham Market BESS [UK]",
@@ -2342,13 +2699,16 @@
    "mwh": 74.0,
    "cod_year": 2020,
    "nominal": 562.1621621621622,
-   "adj_installed": 662.3746112203361,
-   "adj_pack": 658.7478825583077,
-   "adj_turnkey": 592.0249613914192,
-   "adj_nrel": 637.3013713834748,
-   "adj_lcos": 776.985191981462,
+   "anchor_share": 0.55,
+   "adj_installed": 520.1108814191274,
+   "adj_pack": 563.9888643991401,
+   "adj_turnkey": 431.5597872699976,
+   "adj_nrel": 511.31855943561277,
+   "adj_lcos": 765.7754407791205,
    "adj_construction": 802.4702494535615,
-   "factor_installed": 1.1782625295746363
+   "factor_installed": 0.9251972409859477,
+   "share_installed": 0.7000296958679025,
+   "fixed_share_installed": 641.128883679435
   },
   {
    "project": "Virginia battery pilot portfolio (Scott Solar 10+2 MW, New Kent 2 MW, Hanover/Ashland 2 MW)",
@@ -2358,13 +2718,16 @@
    "mwh": 56.0,
    "cod_year": 2021,
    "nominal": 589.2857142857143,
-   "adj_installed": 656.0119352112171,
-   "adj_pack": 649.5022399203584,
-   "adj_turnkey": 572.5214476034317,
-   "adj_nrel": 619.9823821847331,
-   "adj_lcos": 782.6191230372416,
+   "anchor_share": 0.4,
+   "adj_installed": 565.3554721072265,
+   "adj_pack": 626.0318353439749,
+   "adj_turnkey": 505.98135299879715,
+   "adj_nrel": 570.1492646150663,
+   "adj_lcos": 782.0320238671645,
    "adj_construction": 761.0751617720259,
-   "factor_installed": 1.1132323749038835
+   "factor_installed": 0.95939110418196,
+   "share_installed": 0.5451345040194562,
+   "fixed_share_installed": 617.4631260474891
   },
   {
    "project": "Pomona (Ladentown) BESS",
@@ -2374,13 +2737,16 @@
    "mwh": 12.0,
    "cod_year": 2021,
    "nominal": 616.6666666666666,
-   "adj_installed": 686.4932978573947,
-   "adj_pack": 679.6811318762537,
-   "adj_turnkey": 599.1234542597527,
-   "adj_nrel": 648.789644387256,
-   "adj_lcos": 818.9832439056386,
+   "anchor_share": 0.4,
+   "adj_installed": 591.624514245542,
+   "adj_pack": 655.1201832488463,
+   "adj_turnkey": 529.4915976835897,
+   "adj_nrel": 596.6410486274834,
+   "adj_lcos": 818.3688653801842,
    "adj_construction": 796.4382500967866,
-   "factor_installed": 1.1132323749038835
+   "factor_installed": 0.95939110418196,
+   "share_installed": 0.5451345040194562,
+   "fixed_share_installed": 646.1533319042411
   },
   {
    "project": "Wallgrove Grid Battery [AUSTRALIA]",
@@ -2390,13 +2756,16 @@
    "mwh": 75.0,
    "cod_year": 2021,
    "nominal": 618.6666666666666,
-   "adj_installed": 688.7197626072026,
-   "adj_pack": 681.8855031147714,
-   "adj_turnkey": 601.0665573546491,
-   "adj_nrel": 650.8938270177011,
-   "adj_lcos": 821.639405777765,
+   "anchor_share": 0.4,
+   "adj_installed": 593.5432964539059,
+   "adj_pack": 657.2448973566804,
+   "adj_turnkey": 531.208867730131,
+   "adj_nrel": 598.5761006770861,
+   "adj_lcos": 821.0230346733091,
    "adj_construction": 799.0212930700735,
-   "factor_installed": 1.1132323749038835
+   "factor_installed": 0.95939110418196,
+   "share_installed": 0.5451345040194562,
+   "fixed_share_installed": 648.2489643320387
   },
   {
    "project": "Braintree BELD solar-sited BESS",
@@ -2404,31 +2773,18 @@
    "utility": 1,
    "mw": 2.0,
    "mwh": 4.2,
-   "cod_year": 2019,
+   "cod_year": 2018,
    "nominal": 619.047619047619,
-   "adj_installed": 733.3713295239215,
-   "adj_pack": 714.8872180451128,
-   "adj_turnkey": 665.187338093132,
-   "adj_nrel": 715.045289572479,
-   "adj_lcos": 798.181519372201,
-   "adj_construction": 905.7644110275689,
-   "factor_installed": 1.184676763077104
-  },
-  {
-   "project": "Whitehorse Grid-Scale BESS [CANADA]",
-   "state": "YT (Canada)",
-   "utility": 1,
-   "mw": 7.0,
-   "mwh": 40.0,
-   "cod_year": 2023,
-   "nominal": 647.5,
-   "adj_installed": 669.7895073046667,
-   "adj_pack": 626.8649962788389,
-   "adj_turnkey": 540.8481185262881,
-   "adj_nrel": 637.6520960108181,
-   "adj_lcos": 726.8275862068964,
-   "adj_construction": 709.3793103448276,
-   "factor_installed": 1.0344239495052767
+   "anchor_share": 0.4,
+   "adj_installed": 658.9604030548609,
+   "adj_pack": 602.3086191614526,
+   "adj_turnkey": 566.5597325384502,
+   "adj_nrel": 638.3992380408308,
+   "adj_lcos": 781.1563910833951,
+   "adj_construction": 924.0012783636945,
+   "factor_installed": 1.0644744972424676,
+   "share_installed": 0.5633075438074678,
+   "fixed_share_installed": 735.7979580123366
   },
   {
    "project": "Sterling MLD Chocksett Road BESS",
@@ -2438,45 +2794,16 @@
    "mwh": 3.9,
    "cod_year": 2016,
    "nominal": 692.3076923076923,
-   "adj_installed": 731.8798218447562,
-   "adj_pack": 756.4815275222516,
-   "adj_turnkey": 783.0639948287006,
-   "adj_nrel": 838.8222955955443,
-   "adj_lcos": 931.7971324721565,
+   "anchor_share": 0.4,
+   "adj_installed": 471.58190510937084,
+   "adj_pack": 514.6511733558127,
+   "adj_turnkey": 644.9653961796432,
+   "adj_nrel": 726.7431117179473,
+   "adj_lcos": 892.2620122781003,
    "adj_construction": 1078.2159017453134,
-   "factor_installed": 1.057159742664648
-  },
-  {
-   "project": "OSCII Gildersleeve Ave BESS (Bronx)",
-   "state": "NY",
-   "utility": 0,
-   "mw": 5.0,
-   "mwh": 20.0,
-   "cod_year": 2025,
-   "nominal": 693.75,
-   "adj_installed": 711.7120075046905,
-   "adj_pack": 711.7120075046905,
-   "adj_turnkey": 711.7120075046905,
-   "adj_nrel": 711.7120075046905,
-   "adj_lcos": 811.7323327079425,
-   "adj_construction": 723.6866791744841,
-   "factor_installed": 1.025891181988743
-  },
-  {
-   "project": "Concord MLP grid-scale battery (planned)",
-   "state": "MA",
-   "utility": 1,
-   "mw": 4.99,
-   "mwh": 14.97,
-   "cod_year": 2026,
-   "nominal": 694.7227788911156,
-   "adj_installed": 694.7227788911156,
-   "adj_pack": 694.7227788911156,
-   "adj_turnkey": 694.7227788911156,
-   "adj_nrel": 694.7227788911156,
-   "adj_lcos": 694.7227788911156,
-   "adj_construction": 694.7227788911156,
-   "factor_installed": 1.0
+   "factor_installed": 0.6811738629357579,
+   "share_installed": 0.7321816419955224,
+   "fixed_share_installed": 746.8041526156338
   },
   {
    "project": "Ashburnham MLP substation BESS",
@@ -2486,13 +2813,16 @@
    "mwh": 5.0,
    "cod_year": 2019,
    "nominal": 700.0,
-   "adj_installed": 829.2737341539728,
-   "adj_pack": 808.3724696356277,
-   "adj_turnkey": 752.173374613003,
-   "adj_nrel": 808.551212055034,
-   "adj_lcos": 902.5591026747196,
-   "adj_construction": 1024.2105263157896,
-   "factor_installed": 1.184676763077104
+   "anchor_share": 0.4,
+   "adj_installed": 763.3173208030038,
+   "adj_pack": 723.7374761692288,
+   "adj_turnkey": 635.2358065485131,
+   "adj_nrel": 715.7850726944138,
+   "adj_lcos": 874.458229183388,
+   "adj_construction": 1024.2105263157894,
+   "factor_installed": 1.0904533154328626,
+   "share_installed": 0.5436428856117975,
+   "fixed_share_installed": 832.2512733446521
   },
   {
    "project": "Agilitas AE-ESS NWS 1 (Long Island City)",
@@ -2500,15 +2830,18 @@
    "utility": 0,
    "mw": 5.0,
    "mwh": 20.6,
-   "cod_year": 2021,
+   "cod_year": 2025,
    "nominal": 728.1553398058253,
-   "adj_installed": 810.6060982309832,
-   "adj_pack": 802.5623441204782,
-   "adj_turnkey": 707.4404471710542,
-   "adj_nrel": 766.0859091426533,
-   "adj_lcos": 967.0492252887364,
-   "adj_construction": 940.4282669733772,
-   "factor_installed": 1.1132323749038835
+   "anchor_share": 0.55,
+   "adj_installed": 742.3682728883152,
+   "adj_pack": 742.858417679774,
+   "adj_turnkey": 745.0618336636227,
+   "adj_nrel": 742.3682728883152,
+   "adj_lcos": 872.6580927229109,
+   "adj_construction": 759.5766771708045,
+   "factor_installed": 1.0195190947666195,
+   "share_installed": 0.5476661951909476,
+   "fixed_share_installed": 747.008142224813
   },
   {
    "project": "Panton battery (Green Mountain Power)",
@@ -2518,45 +2851,16 @@
    "mwh": 4.0,
    "cod_year": 2018,
    "nominal": 750.0,
-   "adj_installed": 891.5178523489933,
-   "adj_pack": 855.7687614399023,
-   "adj_turnkey": 819.156843945632,
-   "adj_nrel": 879.5616697763793,
-   "adj_lcos": 980.2844097260424,
+   "anchor_share": 0.4,
+   "adj_installed": 798.3558729318506,
+   "adj_pack": 729.7200578302214,
+   "adj_turnkey": 686.4089067292763,
+   "adj_nrel": 773.4452307033143,
+   "adj_lcos": 946.4010122741132,
    "adj_construction": 1119.4630872483222,
-   "factor_installed": 1.1886904697986578
-  },
-  {
-   "project": "Martha's Vineyard BESS Phase 1 (cancelled)",
-   "state": "MA",
-   "utility": 1,
-   "mw": 4.9,
-   "mwh": 20.0,
-   "cod_year": 2019,
-   "nominal": 750.0,
-   "adj_installed": 888.507572307828,
-   "adj_pack": 866.1133603238867,
-   "adj_turnkey": 805.9000442282176,
-   "adj_nrel": 866.304870058965,
-   "adj_lcos": 967.0276100086281,
-   "adj_construction": 1097.3684210526317,
-   "factor_installed": 1.184676763077104
-  },
-  {
-   "project": "OSCII Gun Hill Rd BESS (Bronx)",
-   "state": "NY",
-   "utility": 0,
-   "mw": 5.0,
-   "mwh": 20.0,
-   "cod_year": 2025,
-   "nominal": 763.125,
-   "adj_installed": 782.8832082551595,
-   "adj_pack": 782.8832082551595,
-   "adj_turnkey": 782.8832082551595,
-   "adj_nrel": 782.8832082551595,
-   "adj_lcos": 892.9055659787368,
-   "adj_construction": 796.0553470919325,
-   "factor_installed": 1.025891181988743
+   "factor_installed": 1.0644744972424676,
+   "share_installed": 0.5633075438074678,
+   "fixed_share_installed": 891.4475260534078
   },
   {
    "project": "Hornsdale Power Reserve expansion [AUSTRALIA]",
@@ -2566,29 +2870,16 @@
    "mwh": 64.5,
    "cod_year": 2020,
    "nominal": 770.5426356589147,
-   "adj_installed": 907.9015150365802,
-   "adj_pack": 902.930442185802,
-   "adj_turnkey": 811.4748818594818,
-   "adj_nrel": 873.5342067956706,
-   "adj_lcos": 1064.9955795577746,
+   "anchor_share": 0.55,
+   "adj_installed": 712.9039205736682,
+   "adj_pack": 773.0464540426196,
+   "adj_turnkey": 591.5289898708993,
+   "adj_nrel": 700.8524887791804,
+   "adj_lcos": 1049.6306336081727,
    "adj_construction": 1099.9273566787076,
-   "factor_installed": 1.1782625295746363
-  },
-  {
-   "project": "Soltage Brigis 1A BESS (Maspeth, Queens)",
-   "state": "NY",
-   "utility": 0,
-   "mw": 5.0,
-   "mwh": 20.0,
-   "cod_year": 2025,
-   "nominal": 805.22465,
-   "adj_installed": 826.0728679549719,
-   "adj_pack": 826.0728679549719,
-   "adj_turnkey": 826.0728679549719,
-   "adj_nrel": 826.0728679549719,
-   "adj_lcos": 942.1648771148635,
-   "adj_construction": 839.9716799249532,
-   "factor_installed": 1.025891181988743
+   "factor_installed": 0.9251972409859477,
+   "share_installed": 0.7000296958679025,
+   "fixed_share_installed": 878.7804891160653
   },
   {
    "project": "Chugach BESS (Southcentral Power Project site)",
@@ -2598,141 +2889,16 @@
    "mwh": 80.0,
    "cod_year": 2024,
    "nominal": 812.5,
+   "anchor_share": 0.4,
    "adj_installed": 838.3522727272726,
    "adj_pack": 818.5696640316205,
    "adj_turnkey": 743.8068181818181,
    "adj_nrel": 838.3522727272726,
    "adj_lcos": 863.4595688646117,
    "adj_construction": 855.5871212121211,
-   "factor_installed": 1.0318181818181817
-  },
-  {
-   "project": "NineDot Blue Aster BESS (Hinsdale St Brooklyn)",
-   "state": "NY",
-   "utility": 0,
-   "mw": 14.7,
-   "mwh": 58.8,
-   "cod_year": 2026,
-   "nominal": 829.9319727891157,
-   "adj_installed": 829.9319727891157,
-   "adj_pack": 829.9319727891157,
-   "adj_turnkey": 829.9319727891157,
-   "adj_nrel": 829.9319727891157,
-   "adj_lcos": 829.9319727891157,
-   "adj_construction": 829.9319727891157,
-   "factor_installed": 1.0
-  },
-  {
-   "project": "NineDot Eastern Towhee A/B (Centre St Brooklyn)",
-   "state": "NY",
-   "utility": 0,
-   "mw": 9.8,
-   "mwh": 39.2,
-   "cod_year": 2027,
-   "nominal": 831.6326530612245,
-   "adj_installed": 831.6326530612245,
-   "adj_pack": 831.6326530612245,
-   "adj_turnkey": 831.6326530612245,
-   "adj_nrel": 831.6326530612245,
-   "adj_lcos": 831.6326530612245,
-   "adj_construction": 831.6326530612245,
-   "factor_installed": 1.0
-  },
-  {
-   "project": "OSCII Blondell Ave BESS (Bronx)",
-   "state": "NY",
-   "utility": 0,
-   "mw": 5.0,
-   "mwh": 10.0,
-   "cod_year": 2024,
-   "nominal": 857.0,
-   "adj_installed": 884.2681818181818,
-   "adj_pack": 863.40209486166,
-   "adj_turnkey": 784.5445454545454,
-   "adj_nrel": 884.2681818181818,
-   "adj_lcos": 910.7505852516582,
-   "adj_construction": 902.4469696969696,
-   "factor_installed": 1.0318181818181817
-  },
-  {
-   "project": "Convergent 720 E 144th St Energy Storage 1 (Bronx)",
-   "state": "NY",
-   "utility": 0,
-   "mw": 5.0,
-   "mwh": 20.0,
-   "cod_year": 2026,
-   "nominal": 890.3,
-   "adj_installed": 890.3,
-   "adj_pack": 890.3,
-   "adj_turnkey": 890.3,
-   "adj_nrel": 890.3,
-   "adj_lcos": 890.3,
-   "adj_construction": 890.3,
-   "factor_installed": 1.0
-  },
-  {
-   "project": "NineDot Devoe Ave BESS (Bronx)",
-   "state": "NY",
-   "utility": 0,
-   "mw": 9.8,
-   "mwh": 39.2,
-   "cod_year": 2026,
-   "nominal": 892.0918367346939,
-   "adj_installed": 892.0918367346939,
-   "adj_pack": 892.0918367346939,
-   "adj_turnkey": 892.0918367346939,
-   "adj_nrel": 892.0918367346939,
-   "adj_lcos": 892.0918367346939,
-   "adj_construction": 892.0918367346939,
-   "factor_installed": 1.0
-  },
-  {
-   "project": "Convergent East Bay Ave Energy Storage 1 (Bronx)",
-   "state": "NY",
-   "utility": 0,
-   "mw": 5.0,
-   "mwh": 20.0,
-   "cod_year": 2026,
-   "nominal": 975.6725,
-   "adj_installed": 975.6725,
-   "adj_pack": 975.6725,
-   "adj_turnkey": 975.6725,
-   "adj_nrel": 975.6725,
-   "adj_lcos": 975.6725,
-   "adj_construction": 975.6725,
-   "factor_installed": 1.0
-  },
-  {
-   "project": "Westmoreland Clean Innovation Project BESS (withdrawn)",
-   "state": "NH",
-   "utility": 1,
-   "mw": 1.7,
-   "mwh": 7.1,
-   "cod_year": 2020,
-   "nominal": 985.9154929577464,
-   "adj_installed": 1161.6672826792187,
-   "adj_pack": 1155.3067550284513,
-   "adj_turnkey": 1038.2886308259585,
-   "adj_nrel": 1117.6940356738892,
-   "adj_lcos": 1362.6704003466864,
-   "adj_construction": 1407.3658898190167,
-   "factor_installed": 1.1782625295746363
-  },
-  {
-   "project": "NineDot Wintergreen / Hunts Point BESS (Bronx)",
-   "state": "NY",
-   "utility": 0,
-   "mw": 19.6,
-   "mwh": 78.3,
-   "cod_year": 2027,
-   "nominal": 998.7228607918263,
-   "adj_installed": 998.7228607918263,
-   "adj_pack": 998.7228607918263,
-   "adj_turnkey": 998.7228607918263,
-   "adj_nrel": 998.7228607918263,
-   "adj_lcos": 998.7228607918263,
-   "adj_construction": 998.7228607918263,
-   "factor_installed": 1.0
+   "factor_installed": 1.0318181818181817,
+   "share_installed": 0.4,
+   "fixed_share_installed": 838.3522727272726
   },
   {
    "project": "Kingsbery Community Solar + Storage",
@@ -2740,31 +2906,18 @@
    "utility": 1,
    "mw": 1.5,
    "mwh": 3.0,
-   "cod_year": 2016,
+   "cod_year": 2018,
    "nominal": 1000.0,
-   "adj_installed": 1057.1597426646479,
-   "adj_pack": 1092.6955397543634,
-   "adj_turnkey": 1131.09243697479,
-   "adj_nrel": 1211.6322047491196,
-   "adj_lcos": 1345.9291913486707,
-   "adj_construction": 1557.422969187675,
-   "factor_installed": 1.057159742664648
-  },
-  {
-   "project": "Soltage Brigis 2 / Maspeth ESS (Queens)",
-   "state": "NY",
-   "utility": 0,
-   "mw": 20.0,
-   "mwh": 80.0,
-   "cod_year": 2027,
-   "nominal": 1008.7193125,
-   "adj_installed": 1008.7193125,
-   "adj_pack": 1008.7193125,
-   "adj_turnkey": 1008.7193125,
-   "adj_nrel": 1008.7193125,
-   "adj_lcos": 1008.7193125,
-   "adj_construction": 1008.7193125,
-   "factor_installed": 1.0
+   "anchor_share": 0.4,
+   "adj_installed": 1064.4744972424676,
+   "adj_pack": 972.960077106962,
+   "adj_turnkey": 915.211875639035,
+   "adj_nrel": 1031.260307604419,
+   "adj_lcos": 1261.8680163654842,
+   "adj_construction": 1492.6174496644296,
+   "factor_installed": 1.0644744972424676,
+   "share_installed": 0.5633075438074678,
+   "fixed_share_installed": 1188.5967014045439
   },
   {
    "project": "NineDot Arthur Kill Road BESS (Staten Island)",
@@ -2773,14 +2926,17 @@
    "mw": 9.8,
    "mwh": 39.1,
    "cod_year": 2025,
-   "nominal": 1109.5652173913043,
-   "adj_installed": 1138.2931723631618,
-   "adj_pack": 1138.2931723631618,
-   "adj_turnkey": 1138.2931723631618,
-   "adj_nrel": 1138.2931723631618,
-   "adj_lcos": 1298.2630085832632,
-   "adj_construction": 1157.4451423444,
-   "factor_installed": 1.025891181988743
+   "nominal": 1008.695652173913,
+   "anchor_share": 0.55,
+   "adj_installed": 1028.3844781993728,
+   "adj_pack": 1029.0634637029493,
+   "adj_turnkey": 1032.1158015783144,
+   "adj_nrel": 1028.3844781993728,
+   "adj_lcos": 1208.8717555771987,
+   "adj_construction": 1052.2228566767271,
+   "factor_installed": 1.0195190947666195,
+   "share_installed": 0.5476661951909476,
+   "fixed_share_installed": 1034.8119748756017
   },
   {
    "project": "Stafford Hill Solar + Storage (Rutland)",
@@ -2790,29 +2946,16 @@
    "mwh": 3.4,
    "cod_year": 2015,
    "nominal": 1235.2941176470588,
-   "adj_installed": 1282.5724907063195,
-   "adj_pack": 1329.8823529411764,
-   "adj_turnkey": 1420.3183391003458,
-   "adj_nrel": 1519.8086404686355,
-   "adj_lcos": 1685.7049180327867,
+   "anchor_share": 0.4,
+   "adj_installed": 570.552825408357,
+   "adj_pack": 770.545408741655,
+   "adj_turnkey": 1160.2125072009217,
+   "adj_nrel": 1307.317449669389,
+   "adj_lcos": 1607.583632361197,
    "adj_construction": 1962.3529411764705,
-   "factor_installed": 1.0382729686670207
-  },
-  {
-   "project": "Ozone Park BESS",
-   "state": "NY",
-   "utility": 1,
-   "mw": 1.5,
-   "mwh": 12.0,
-   "cod_year": 2019,
-   "nominal": 1250.0,
-   "adj_installed": 1480.84595384638,
-   "adj_pack": 1443.5222672064779,
-   "adj_turnkey": 1343.1667403803626,
-   "adj_nrel": 1443.841450098275,
-   "adj_lcos": 1611.7126833477137,
-   "adj_construction": 1828.9473684210527,
-   "factor_installed": 1.184676763077104
+   "factor_installed": 0.4618760967591461,
+   "share_installed": 0.8219640596192719,
+   "fixed_share_installed": 1285.048331817864
   },
   {
    "project": "Harding Street BESS",
@@ -2822,13 +2965,35 @@
    "mwh": 20.0,
    "cod_year": 2016,
    "nominal": 1250.0,
-   "adj_installed": 1321.44967833081,
-   "adj_pack": 1365.8694246929542,
-   "adj_turnkey": 1413.8655462184875,
-   "adj_nrel": 1514.5402559363997,
-   "adj_lcos": 1682.4114891858383,
+   "anchor_share": 0.4,
+   "adj_installed": 851.4673286696974,
+   "adj_pack": 929.2312852257729,
+   "adj_turnkey": 1164.5208542132448,
+   "adj_nrel": 1312.1750628240716,
+   "adj_lcos": 1611.0286332799035,
    "adj_construction": 1946.778711484594,
-   "factor_installed": 1.057159742664648
+   "factor_installed": 0.6811738629357579,
+   "share_installed": 0.7321816419955224,
+   "fixed_share_installed": 1348.3963866671168
+  },
+  {
+   "project": "Ozone Park BESS",
+   "state": "NY",
+   "utility": 1,
+   "mw": 1.5,
+   "mwh": 12.0,
+   "cod_year": 2019,
+   "nominal": 1250.0,
+   "anchor_share": 0.4,
+   "adj_installed": 1363.0666442910783,
+   "adj_pack": 1292.3883503021943,
+   "adj_turnkey": 1134.349654550916,
+   "adj_nrel": 1278.187629811453,
+   "adj_lcos": 1561.5325521131929,
+   "adj_construction": 1828.9473684210525,
+   "factor_installed": 1.0904533154328626,
+   "share_installed": 0.5436428856117975,
+   "fixed_share_installed": 1486.1629881154502
   },
   {
    "project": "Regina BESS [CANADA]",
@@ -2838,13 +3003,16 @@
    "mwh": 20.0,
    "cod_year": 2024,
    "nominal": 1260.0,
+   "anchor_share": 0.4,
    "adj_installed": 1300.090909090909,
    "adj_pack": 1269.4126482213437,
    "adj_turnkey": 1153.4727272727273,
    "adj_nrel": 1300.090909090909,
    "adj_lcos": 1339.0265314085057,
    "adj_construction": 1326.8181818181818,
-   "factor_installed": 1.0318181818181817
+   "factor_installed": 1.0318181818181817,
+   "share_installed": 0.4,
+   "fixed_share_installed": 1300.090909090909
   },
   {
    "project": "Outer Cape (Provincetown) BESS",
@@ -2854,29 +3022,16 @@
    "mwh": 38.0,
    "cod_year": 2022,
    "nominal": 1289.4736842105262,
-   "adj_installed": 1362.6596416349319,
-   "adj_pack": 1271.6759132705254,
-   "adj_turnkey": 1089.024195676319,
-   "adj_nrel": 1260.1811683292515,
-   "adj_lcos": 1554.4270764801183,
+   "anchor_share": 0.4,
+   "adj_installed": 1499.7420960103495,
+   "adj_pack": 1217.8803880274425,
+   "adj_turnkey": 889.6120578915817,
+   "adj_nrel": 1189.304816258062,
+   "adj_lcos": 1552.7399463926533,
    "adj_construction": 1504.6114762246643,
-   "factor_installed": 1.0567564567781105
-  },
-  {
-   "project": "VEC Hinesburg BESS",
-   "state": "VT",
-   "utility": 1,
-   "mw": 1.0,
-   "mwh": 4.0,
-   "cod_year": 2023,
-   "nominal": 1400.0,
-   "adj_installed": 1448.1935293073875,
-   "adj_pack": 1355.3837757380302,
-   "adj_turnkey": 1169.4013373541366,
-   "adj_nrel": 1378.707234617985,
-   "adj_lcos": 1571.5191053122085,
-   "adj_construction": 1533.7931034482758,
-   "factor_installed": 1.0344239495052767
+   "factor_installed": 1.1630652989468018,
+   "share_installed": 0.3896468998368379,
+   "fixed_share_installed": 1499.6127143031879
   },
   {
    "project": "Northern New York (Chateaugay) BESS",
@@ -2886,13 +3041,16 @@
    "mwh": 20.0,
    "cod_year": 2023,
    "nominal": 1490.0,
-   "adj_installed": 1541.2916847628624,
-   "adj_pack": 1442.515589892618,
-   "adj_turnkey": 1244.5771376126168,
-   "adj_nrel": 1467.338413986284,
-   "adj_lcos": 1672.5453335108505,
+   "anchor_share": 0.4,
+   "adj_installed": 1619.1042785569414,
+   "adj_pack": 1415.9169730777653,
+   "adj_turnkey": 1123.321583429516,
+   "adj_nrel": 1443.1331018999044,
+   "adj_lcos": 1671.6589792547143,
    "adj_construction": 1632.3940886699506,
-   "factor_installed": 1.0344239495052767
+   "factor_installed": 1.0866471668167392,
+   "share_installed": 0.39265039960408027,
+   "fixed_share_installed": 1618.8555208993234
   },
   {
    "project": "Fairhaven BESS",
@@ -2902,13 +3060,16 @@
    "mwh": 9.74,
    "cod_year": 2023,
    "nominal": 1659.2747433264888,
-   "adj_installed": 1716.3935333061409,
-   "adj_pack": 1606.3957618547195,
-   "adj_turnkey": 1385.9700742028126,
-   "adj_nrel": 1634.038637745093,
-   "adj_lcos": 1862.5585429282771,
+   "anchor_share": 0.4,
+   "adj_installed": 1803.0461988063012,
+   "adj_pack": 1576.775350386059,
+   "adj_turnkey": 1250.9390147772585,
+   "adj_nrel": 1607.0834276784722,
+   "adj_lcos": 1861.571492437776,
    "adj_construction": 1817.845827171483,
-   "factor_installed": 1.0344239495052767
+   "factor_installed": 1.0866471668167392,
+   "share_installed": 0.39265039960408027,
+   "fixed_share_installed": 1802.7691804851638
   },
   {
    "project": "Asheville Rock Hill substation BESS (Duke Energy Progress)",
@@ -2918,13 +3079,16 @@
    "mwh": 9.0,
    "cod_year": 2020,
    "nominal": 1666.6666666666667,
-   "adj_installed": 1963.7708826243938,
-   "adj_pack": 1953.0185620719058,
-   "adj_turnkey": 1755.2022092534064,
-   "adj_nrel": 1889.4351555439557,
-   "adj_lcos": 2303.5618672527316,
+   "anchor_share": 0.4,
+   "adj_installed": 1709.4067684721108,
+   "adj_pack": 1826.8443412369488,
+   "adj_turnkey": 1496.4520563212839,
+   "adj_nrel": 1686.2102747670058,
+   "adj_lcos": 2298.734166532161,
    "adj_construction": 2379.1185280273858,
-   "factor_installed": 1.1782625295746363
+   "factor_installed": 1.0256440610832664,
+   "share_installed": 0.5600348438414843,
+   "fixed_share_installed": 1900.7827480880687
   },
   {
    "project": "El Centro BESS (IID)",
@@ -2932,15 +3096,18 @@
    "utility": 1,
    "mw": 30.0,
    "mwh": 20.0,
-   "cod_year": 2017,
+   "cod_year": 2016,
    "nominal": 1900.0,
-   "adj_installed": 2200.315696809641,
-   "adj_pack": 2175.6808592251627,
-   "adj_turnkey": 2156.5670318760417,
-   "adj_nrel": 2309.5925906472676,
-   "adj_lcos": 2564.756865186415,
-   "adj_construction": 2971.589310829817,
-   "factor_installed": 1.1580608930577057
+   "anchor_share": 0.4,
+   "adj_installed": 1294.23033957794,
+   "adj_pack": 1412.431553543175,
+   "adj_turnkey": 1770.0716984041321,
+   "adj_nrel": 1994.5060954925889,
+   "adj_lcos": 2448.7635225854533,
+   "adj_construction": 2959.103641456583,
+   "factor_installed": 0.6811738629357579,
+   "share_installed": 0.7321816419955224,
+   "fixed_share_installed": 2049.5625077340173
   },
   {
    "project": "LADWP Beacon Energy Storage System",
@@ -2950,13 +3117,16 @@
    "mwh": 10.0,
    "cod_year": 2018,
    "nominal": 1920.0,
-   "adj_installed": 2282.285702013423,
-   "adj_pack": 2190.76802928615,
-   "adj_turnkey": 2097.0415205008176,
-   "adj_nrel": 2251.677874627531,
-   "adj_lcos": 2509.5280888986686,
+   "anchor_share": 0.4,
+   "adj_installed": 2043.7910347055376,
+   "adj_pack": 1868.083348045367,
+   "adj_turnkey": 1757.2068012269474,
+   "adj_nrel": 1980.0197906004846,
+   "adj_lcos": 2422.78659142173,
    "adj_construction": 2865.8255033557048,
-   "factor_installed": 1.1886904697986578
+   "factor_installed": 1.0644744972424676,
+   "share_installed": 0.5633075438074678,
+   "fixed_share_installed": 2282.1056666967243
   },
   {
    "project": "Power Creek BESS (Cordova)",
@@ -2966,13 +3136,16 @@
    "mwh": 0.92,
    "cod_year": 2019,
    "nominal": 2173.913043478261,
-   "adj_installed": 2575.3842675589217,
-   "adj_pack": 2510.473508185179,
-   "adj_turnkey": 2335.9421571832395,
-   "adj_nrel": 2511.0286088665653,
-   "adj_lcos": 2802.978579735154,
-   "adj_construction": 3180.7780320366137,
-   "factor_installed": 1.184676763077104
+   "anchor_share": 0.4,
+   "adj_installed": 2370.5506857236146,
+   "adj_pack": 2247.6319135690337,
+   "adj_turnkey": 1972.782007914637,
+   "adj_nrel": 2222.9350083677446,
+   "adj_lcos": 2715.708786283814,
+   "adj_construction": 3180.7780320366132,
+   "factor_installed": 1.0904533154328626,
+   "share_installed": 0.5436428856117975,
+   "fixed_share_installed": 2584.631283679044
   },
   {
    "project": "Glacier BESS",
@@ -2982,13 +3155,16 @@
    "mwh": 4.4,
    "cod_year": 2016,
    "nominal": 2545.4545454545455,
-   "adj_installed": 2690.952072237286,
-   "adj_pack": 2781.4068284656523,
-   "adj_turnkey": 2879.144385026738,
-   "adj_nrel": 3084.154702997759,
-   "adj_lcos": 3426.0015779784344,
+   "anchor_share": 0.4,
+   "adj_installed": 1733.8971056546563,
+   "adj_pack": 1892.2527990052104,
+   "adj_turnkey": 2371.3879213069713,
+   "adj_nrel": 2672.0655824781097,
+   "adj_lcos": 3280.6401259518034,
    "adj_construction": 3964.349376114082,
-   "factor_installed": 1.057159742664648
+   "factor_installed": 0.6811738629357579,
+   "share_installed": 0.7321816419955224,
+   "fixed_share_installed": 2745.825369213038
   },
   {
    "project": "Dalrymple ESCRI BESS [AUSTRALIA]",
@@ -2998,32 +3174,39 @@
    "mwh": 8.0,
    "cod_year": 2018,
    "nominal": 2775.0,
-   "adj_installed": 3298.6160536912753,
-   "adj_pack": 3166.3444173276384,
-   "adj_turnkey": 3030.880322598838,
-   "adj_nrel": 3254.3781781726034,
-   "adj_lcos": 3627.0523159863574,
+   "anchor_share": 0.4,
+   "adj_installed": 2953.9167298478474,
+   "adj_pack": 2699.9642139718194,
+   "adj_turnkey": 2539.712954898322,
+   "adj_nrel": 2861.747353602263,
+   "adj_lcos": 3501.6837454142187,
    "adj_construction": 4142.013422818792,
-   "factor_installed": 1.1886904697986578
+   "factor_installed": 1.0644744972424676,
+   "share_installed": 0.5633075438074678,
+   "fixed_share_installed": 3298.3558463976087
   }
  ],
  "indices": {
   "installed": {
-   "label": "Installed all-in (EIA-860 2015-18, LBNL 2024)",
-   "source": "EIA Today in Energy #45596 (2015 $2,152; 2017 $834; 2018 $625); LBNL Utility-Scale Solar 2025 (2024 $458)",
-   "conf": "High at published points; interpolated 2019-2023",
-   "ratio_2018": 0.7328,
-   "naive_median": 619.8627525733891,
-   "median": 831.6326530612245,
-   "q25": 659.1932732157766,
-   "q75": 1222.1198866927691,
-   "min": 415.83842770112125,
-   "max": 3298.6160536912753,
+   "label": "Installed all-in (EIA-860 2015-22, LBNL 2024)",
+   "source": "EIA, Battery Storage in the United States: 2024 figure data file, Figure 11 (capacity-weighted average cost/kWh of large-scale systems by installation year, 2022 final data), downloaded 5 Oct 2026; LBNL Utility-Scale Solar 2025 (2024 $458, battery share of hybrid plants, a different population)",
+   "conf": "High 2015-2022 (EIA figure data, official); High 2024 (LBNL) but a different sample; 2023 interpolated; held flat after 2024",
+   "ratio_2018": 0.7325655790147152,
+   "naive_median": 549.4241842610364,
+   "factor_2018": 1.0644744972424676,
+   "factor_2016": 0.6811738629357579,
+   "share_2018": 0.5633075438074678,
+   "share_2016": 0.7321816419955224,
+   "median": 742.3682728883152,
+   "q25": 541.6179407095638,
+   "q75": 1331.5787766909937,
+   "min": 399.1779364659253,
+   "max": 2953.9167298478474,
    "hp_pct": {
-    "contract": 0.18181818181818182,
-    "installed": 0.509090909090909,
-    "station_direct": 0.8545454545454545,
-    "approval": 0.9818181818181818
+    "contract": 0.42857142857142855,
+    "installed": 0.5714285714285714,
+    "station_direct": 0.7714285714285715,
+    "approval": 0.9714285714285714
    }
   },
   "pack": {
@@ -3031,17 +3214,21 @@
    "source": "BloombergNEF Lithium-Ion Battery Price Survey releases 2014-2025",
    "conf": "High 2017-2025; Medium 2014-2016",
    "ratio_2018": 0.6136363636363636,
-   "naive_median": 607.4350704464438,
-   "median": 829.9319727891157,
-   "q25": 647.3897864144581,
-   "q75": 1212.3597016248975,
-   "min": 389.1887698904915,
-   "max": 3166.3444173276384,
+   "naive_median": 516.5217391304348,
+   "factor_2018": 0.972960077106962,
+   "factor_2016": 0.7433850281806184,
+   "share_2018": 0.5912042714203237,
+   "share_2016": 0.7006583984075946,
+   "median": 742.858417679774,
+   "q25": 552.1215987107414,
+   "q75": 1280.900499261769,
+   "min": 362.8277803604977,
+   "max": 2699.9642139718194,
    "hp_pct": {
-    "contract": 0.2,
-    "installed": 0.5272727272727272,
-    "station_direct": 0.8727272727272727,
-    "approval": 0.9818181818181818
+    "contract": 0.34285714285714286,
+    "installed": 0.6,
+    "station_direct": 0.8285714285714286,
+    "approval": 1.0
    }
   },
   "turnkey": {
@@ -3049,17 +3236,21 @@
    "source": "BloombergNEF Energy Storage System Cost Survey 2021-2025",
    "conf": "High 2022-2025; Medium 2021; 2017-2020 not retrieved (held flat)",
    "ratio_2018": 0.49159663865546216,
-   "naive_median": 524.0066225165563,
-   "median": 805.9000442282176,
-   "q25": 579.5677694954747,
-   "q75": 1134.692804668976,
-   "min": 335.7852411545449,
-   "max": 3030.880322598838,
+   "naive_median": 390.0,
+   "factor_2018": 0.915211875639035,
+   "factor_2016": 0.9316166833705959,
+   "share_2018": 0.5768167531336389,
+   "share_2016": 0.5871559633027523,
+   "median": 686.4089067292763,
+   "q25": 475.125,
+   "q75": 1156.8426172368245,
+   "min": 265.25701803241935,
+   "max": 2539.712954898322,
    "hp_pct": {
-    "contract": 0.32727272727272727,
-    "installed": 0.6,
-    "station_direct": 0.8909090909090909,
-    "approval": 0.9636363636363636
+    "contract": 0.42857142857142855,
+    "installed": 0.5714285714285714,
+    "station_direct": 0.8285714285714286,
+    "approval": 1.0
    }
   },
   "nrel": {
@@ -3067,17 +3258,21 @@
    "source": "NREL Cost Projections for Utility-Scale Battery Storage: 2023 update (2022 base $482, Ramasamy et al.) and 2025 update (2024 base $334)",
    "conf": "Medium; earlier editions' base years not retrieved (held flat before 2022)",
    "ratio_2018": 0.6929460580912863,
-   "naive_median": 693.75,
-   "median": 838.3522727272726,
-   "q25": 630.7853733875988,
-   "q75": 1235.9066865391856,
-   "min": 395.8859345117357,
-   "max": 3254.3781781726034,
+   "naive_median": 550.0,
+   "factor_2018": 1.0312603076044191,
+   "factor_2016": 1.0497400502592573,
+   "share_2018": 0.5769334090499493,
+   "share_2016": 0.5872718084333096,
+   "median": 742.3682728883152,
+   "q25": 563.125,
+   "q75": 1309.7462562467304,
+   "min": 372.690044616348,
+   "max": 2861.747353602263,
    "hp_pct": {
-    "contract": 0.2,
-    "installed": 0.4909090909090909,
-    "station_direct": 0.8363636363636363,
-    "approval": 0.9636363636363636
+    "contract": 0.37142857142857144,
+    "installed": 0.5428571428571428,
+    "station_direct": 0.8,
+    "approval": 1.0
    }
   },
   "lcos": {
@@ -3085,17 +3280,21 @@
    "source": "Lazard LCOS v5.0 (2019, $173-315), v6.0 (2020, $132-250), v7.0 (2021, $131-232), 2024 ($170-296), 2025 ($115-254), 2026 (~$210-292)",
    "conf": "Medium; v8.0 (2023) possibly conflated with 2024 and omitted",
    "ratio_2018": 1.028688524590164,
-   "naive_median": 890.3,
-   "median": 902.5591026747196,
-   "q25": 760.636128566852,
-   "q75": 1354.2997958476785,
-   "min": 451.2504859539342,
-   "max": 3627.0523159863574,
+   "naive_median": 875.2682403433477,
+   "factor_2018": 1.2618680163654843,
+   "factor_2016": 1.2888229066239227,
+   "share_2018": 0.49738100132904417,
+   "share_2016": 0.5080056071781345,
+   "median": 892.2620122781003,
+   "q25": 757.9458777788467,
+   "q75": 1609.3061328205504,
+   "min": 455.0647891577636,
+   "max": 3501.6837454142187,
    "hp_pct": {
-    "contract": 0.14545454545454545,
-    "installed": 0.41818181818181815,
-    "station_direct": 0.7636363636363637,
-    "approval": 0.9636363636363636
+    "contract": 0.17142857142857143,
+    "installed": 0.4,
+    "station_direct": 0.6571428571428571,
+    "approval": 0.9428571428571428
    }
   },
   "construction": {
@@ -3103,64 +3302,398 @@
    "source": "https://www.pjm.com/-/media/DotCom/committees-groups/subcommittees/cds/postings/handy-whitman-index.ashx",
    "conf": "Medium (2015-2018 seen in excerpt; later years from search summary of the same posting); production-plant line, not distribution plant",
    "ratio_2018": 1.4926174496644296,
-   "naive_median": 902.4469696969696,
-   "median": 902.4469696969696,
-   "q25": 754.7683501167822,
-   "q75": 1455.9886830218406,
-   "min": 427.69230769230774,
+   "naive_median": 1052.2228566767274,
+   "factor_2018": 1.4926174496644296,
+   "factor_2016": 1.557422969187675,
+   "share_2018": null,
+   "share_2016": null,
+   "median": 1052.2228566767271,
+   "q25": 773.0921380105316,
+   "q75": 1823.3965977962678,
+   "min": 440.4177339901477,
    "max": 4142.013422818792,
    "hp_pct": {
-    "contract": 0.16363636363636364,
-    "installed": 0.41818181818181815,
-    "station_direct": 0.7454545454545455,
-    "approval": 0.9090909090909091
-   }
-  },
-  "installed_flat35": {
-   "label": "Installed index with 3.5%/yr flat non-battery escalation (proxy)",
-   "source": "sensitivity",
-   "conf": "Assumption",
-   "ratio_2018": 0.7328,
-   "naive_median": 816.2612844649129,
-   "median": 816.2612844649129,
-   "q25": 607.4078713714005,
-   "q75": 1160.061007574363,
-   "min": 406.20203331676566,
-   "max": 3005.895046544066,
-   "hp_pct": {
-    "contract": 0.2545454545454545,
-    "installed": 0.5636363636363636,
-    "station_direct": 0.8545454545454545,
-    "approval": 0.9818181818181818
+    "contract": 0.17142857142857143,
+    "installed": 0.4,
+    "station_direct": 0.6285714285714286,
+    "approval": 0.8571428571428571
    }
   },
   "installed_s30": {
-   "label": "Installed index, battery share 30%",
-   "median": 843.0616404165818,
-   "q25": 682.7240935705918,
-   "q75": 1264.932330868448,
-   "min": 421.9832542733778,
-   "max": 3509.465395973154,
+   "label": "Installed index, uniform anchor share 30%",
+   "median": 816.0839993008735,
+   "q25": 606.1752047784469,
+   "q75": 1479.133991704677,
+   "min": 430.5244673072069,
+   "max": 3185.881058073331,
    "hp_pct": {
-    "contract": 0.18181818181818182,
-    "installed": 0.4727272727272727,
-    "station_direct": 0.8363636363636363,
-    "approval": 0.9636363636363636
+    "contract": 0.2571428571428571,
+    "installed": 0.5142857142857142,
+    "station_direct": 0.7428571428571429,
+    "approval": 0.9714285714285714
    }
   },
   "installed_s50": {
-   "label": "Installed index, battery share 50%",
-   "median": 831.6326530612245,
-   "q25": 628.5484151165224,
-   "q75": 1123.066278978317,
-   "min": 409.6936011288646,
-   "max": 3087.766711409396,
+   "label": "Installed index, uniform anchor share 50%",
+   "median": 737.0906405904016,
+   "q25": 528.5683953591614,
+   "q75": 1286.445840874229,
+   "min": 371.8255615119791,
+   "max": 2751.5091551886458,
    "hp_pct": {
-    "contract": 0.2,
-    "installed": 0.509090909090909,
-    "station_direct": 0.8545454545454545,
-    "approval": 0.9818181818181818
+    "contract": 0.42857142857142855,
+    "installed": 0.6,
+    "station_direct": 0.7714285714285715,
+    "approval": 1.0
    }
+  },
+  "installed_fixed_share": {
+   "label": "Installed index, earlier fixed-share model (40%)",
+   "median": 838.3522727272726,
+   "q25": 627.6384634186802,
+   "q75": 1492.887851209319,
+   "min": 436.76504657820675,
+   "max": 3298.3558463976087,
+   "hp_pct": {
+    "contract": 0.17142857142857143,
+    "installed": 0.4857142857142857,
+    "station_direct": 0.7142857142857143,
+    "approval": 0.9714285714285714
+   }
+  },
+  "installed_flat35": {
+   "label": "(retired) flat 3.5%/yr non-battery escalation",
+   "median": 742.3682728883152,
+   "q25": 541.6179407095638,
+   "q75": 1331.5787766909937,
+   "min": 399.1779364659253,
+   "max": 2953.9167298478474,
+   "hp_pct": {
+    "contract": 0.42857142857142855,
+    "installed": 0.5714285714285714,
+    "station_direct": 0.7714285714285715,
+    "approval": 0.9714285714285714
+   }
+  }
+ },
+ "share_by_year": {
+  "2015": {
+   "installed": 0.8219640596192719,
+   "pack": 0.7537473233404711,
+   "turnkey": 0.5919477693144722,
+   "nrel": 0.5920632040312112
+  },
+  "2016": {
+   "installed": 0.7321816419955224,
+   "pack": 0.7006583984075946,
+   "turnkey": 0.5871559633027523,
+   "nrel": 0.5872718084333096
+  },
+  "2017": {
+   "installed": 0.6432160451651554,
+   "pack": 0.6427931725942656,
+   "turnkey": 0.5881762366297255,
+   "nrel": 0.5882919962136054
+  },
+  "2018": {
+   "installed": 0.5633075438074678,
+   "pack": 0.5912042714203237,
+   "turnkey": 0.5768167531336389,
+   "nrel": 0.5769334090499493
+  },
+  "2019": {
+   "installed": 0.5436428856117975,
+   "pack": 0.5568490650225125,
+   "turnkey": 0.5719435265845599,
+   "nrel": 0.5720605292261215
+  },
+  "2020": {
+   "installed": 0.5600348438414843,
+   "pack": 0.5184456521154849,
+   "turnkey": 0.5658877289445333,
+   "nrel": 0.566005130822633
+  },
+  "2021": {
+   "installed": 0.5451345040194562,
+   "pack": 0.48414373016989426,
+   "turnkey": 0.5411589156926139,
+   "nrel": 0.5412775840562002
+  },
+  "2022": {
+   "installed": 0.3896468998368379,
+   "pack": 0.49237838063168426,
+   "turnkey": 0.5919328594673289,
+   "nrel": 0.5159861928440004
+  },
+  "2023": {
+   "installed": 0.39265039960408027,
+   "pack": 0.4560329199696152,
+   "turnkey": 0.525064728452444,
+   "nrel": 0.45865975134213294
+  },
+  "2024": {
+   "installed": 0.4,
+   "pack": 0.4,
+   "turnkey": 0.4,
+   "nrel": 0.39999999999999997
+  },
+  "2025": {
+   "installed": 0.39774011299435025,
+   "pack": 0.38279747459999397,
+   "turnkey": 0.318936877076412,
+   "nrel": 0.39774011299435025
+  },
+  "2026": {
+   "installed": 0.38766519823788553,
+   "pack": 0.3728667268233356,
+   "turnkey": 0.30983118172790475,
+   "nrel": 0.3876651982378855
+  }
+ },
+ "factor_by_year": {
+  "2015": {
+   "installed": 0.4618760967591461,
+   "pack": 0.6237748546956255,
+   "turnkey": 0.9392196486864604,
+   "nrel": 1.058304602113315,
+   "lcos": 1.3013772261971595,
+   "construction": 1.5885714285714285
+  },
+  "2016": {
+   "installed": 0.6811738629357579,
+   "pack": 0.7433850281806184,
+   "turnkey": 0.9316166833705959,
+   "nrel": 1.0497400502592573,
+   "lcos": 1.2888229066239227,
+   "construction": 1.557422969187675
+  },
+  "2017": {
+   "installed": 0.9112794120676196,
+   "pack": 0.8908305337241863,
+   "turnkey": 0.9332355099046221,
+   "nrel": 1.0515636214853623,
+   "lcos": 1.2914926846037358,
+   "construction": 1.5639943741209563
+  },
+  "2018": {
+   "installed": 1.0644744972424676,
+   "pack": 0.972960077106962,
+   "turnkey": 0.915211875639035,
+   "nrel": 1.0312603076044191,
+   "lcos": 1.2618680163654843,
+   "construction": 1.4926174496644296
+  },
+  "2019": {
+   "installed": 1.0904533154328626,
+   "pack": 1.0339106802417555,
+   "turnkey": 0.9074797236407329,
+   "nrel": 1.0225501038491625,
+   "lcos": 1.2492260416905543,
+   "construction": 1.463157894736842
+  },
+  "2020": {
+   "installed": 1.0256440610832664,
+   "pack": 1.0961066047421693,
+   "turnkey": 0.8978712337927703,
+   "nrel": 1.0117261648602034,
+   "lcos": 1.3792404999192964,
+   "construction": 1.4274711168164314
+  },
+  "2021": {
+   "installed": 0.95939110418196,
+   "pack": 1.0623570539170482,
+   "turnkey": 0.858635023270686,
+   "nrel": 0.9675260248013245,
+   "lcos": 1.3270846465624608,
+   "construction": 1.291521486643438
+  },
+  "2022": {
+   "installed": 1.1630652989468018,
+   "pack": 0.9444786682661799,
+   "turnkey": 0.6899032285689818,
+   "nrel": 0.9223180207715582,
+   "lcos": 1.20416567271267,
+   "construction": 1.166841552990556
+  },
+  "2023": {
+   "installed": 1.0866471668167392,
+   "pack": 0.9502798477031982,
+   "turnkey": 0.7539071029728296,
+   "nrel": 0.9685457059730902,
+   "lcos": 1.1219187780232982,
+   "construction": 1.095566502463054
+  },
+  "2024": {
+   "installed": 1.0318181818181817,
+   "pack": 1.0074703557312252,
+   "turnkey": 0.9154545454545454,
+   "nrel": 1.0318181818181817,
+   "lcos": 1.0627194693718298,
+   "construction": 1.053030303030303
+  },
+  "2025": {
+   "installed": 1.0259887005649715,
+   "pack": 1.0266335048484054,
+   "turnkey": 1.029389215435727,
+   "nrel": 1.0259887005649717,
+   "lcos": 1.1520993163541,
+   "construction": 1.0431519699812382
+  },
+  "2026": {
+   "installed": 1.0,
+   "pack": 1.0,
+   "turnkey": 1.0,
+   "nrel": 1.0,
+   "lcos": 1.0,
+   "construction": 1.0
+  }
+ },
+ "factor_by_year_dev": {
+  "2015": {
+   "installed": 0.36266945558890346,
+   "pack": 0.5021707271246947,
+   "turnkey": 0.7913529268885111,
+   "nrel": 0.9375971685209823
+  },
+  "2016": {
+   "installed": 0.5597175817359684,
+   "pack": 0.6151792331665371,
+   "turnkey": 0.7870515762773281,
+   "nrel": 0.932502676497793
+  },
+  "2017": {
+   "installed": 0.78493598848897,
+   "pack": 0.7603445283881265,
+   "turnkey": 0.7879693532922754,
+   "nrel": 0.9335896873107109
+  },
+  "2018": {
+   "installed": 0.9584426265394388,
+   "pack": 0.8543618146888057,
+   "turnkey": 0.7776915797819285,
+   "nrel": 0.921416690332265
+  },
+  "2019": {
+   "installed": 0.9929067434060144,
+   "pack": 0.9256365500235504,
+   "turnkey": 0.7732420153251509,
+   "nrel": 0.9161465912481201
+  },
+  "2020": {
+   "installed": 0.9251972409859477,
+   "pack": 1.0032494222484702,
+   "turnkey": 0.7676784677398996,
+   "nrel": 0.9095570528421958
+  },
+  "2021": {
+   "installed": 0.872822045578977,
+   "pack": 0.9921635737964164,
+   "turnkey": 0.7445580757584415,
+   "nrel": 0.8821726139655688
+  },
+  "2022": {
+   "installed": 1.1616153867915646,
+   "pack": 0.877781876979431,
+   "turnkey": 0.58129265355279,
+   "nrel": 0.8533473226027131
+  },
+  "2023": {
+   "installed": 1.083245820895542,
+   "pack": 0.9025566675634271,
+   "turnkey": 0.6598433284388541,
+   "nrel": 0.9270896632247463
+  },
+  "2024": {
+   "installed": 1.0238636363636364,
+   "pack": 0.9903853754940712,
+   "turnkey": 0.8638636363636364,
+   "nrel": 1.0238636363636364
+  },
+  "2025": {
+   "installed": 1.0195190947666195,
+   "pack": 1.0201922269468895,
+   "turnkey": 1.0232182515647084,
+   "nrel": 1.0195190947666195
+  },
+  "2026": {
+   "installed": 1.0,
+   "pack": 1.0,
+   "turnkey": 1.0,
+   "nrel": 1.0
+  }
+ },
+ "factor_by_year_fixed": {
+  "2015": {
+   "installed": 1.0402772209954136,
+   "pack": 1.0765714285714285,
+   "turnkey": 1.149781512605042,
+   "nrel": 1.2303212803793717
+  },
+  "2016": {
+   "installed": 1.0787171093336934,
+   "pack": 1.0926955397543634,
+   "turnkey": 1.13109243697479,
+   "nrel": 1.2116322047491197
+  },
+  "2017": {
+   "installed": 1.158087234857512,
+   "pack": 1.1450951890658752,
+   "turnkey": 1.1350352799347587,
+   "nrel": 1.2155750477090883
+  },
+  "2018": {
+   "installed": 1.1885967014045438,
+   "pack": 1.141025015253203,
+   "turnkey": 1.0922091252608426,
+   "nrel": 1.1727488930351724
+  },
+  "2019": {
+   "installed": 1.18893039049236,
+   "pack": 1.1548178137651823,
+   "turnkey": 1.0745333923042901,
+   "nrel": 1.15507316007862
+  },
+  "2020": {
+   "installed": 1.1404696488528412,
+   "pack": 1.1718111372431435,
+   "turnkey": 1.0531213255520437,
+   "nrel": 1.1336610933263733
+  },
+  "2021": {
+   "installed": 1.0478162138987694,
+   "pack": 1.10218561925879,
+   "turnkey": 0.9715515474482477,
+   "nrel": 1.0520913152225773
+  },
+  "2022": {
+   "installed": 1.1629649621126763,
+   "pack": 0.9861976470261218,
+   "turnkey": 0.8445493762387781,
+   "nrel": 0.9772833550308482
+  },
+  "2023": {
+   "installed": 1.0864802153686735,
+   "pack": 0.9681312683843073,
+   "turnkey": 0.8352866695386689,
+   "nrel": 0.9847908818699893
+  },
+  "2024": {
+   "installed": 1.0318181818181817,
+   "pack": 1.0074703557312252,
+   "turnkey": 0.9154545454545454,
+   "nrel": 1.0318181818181817
+  },
+  "2025": {
+   "installed": 1.025891181988743,
+   "pack": 1.025891181988743,
+   "turnkey": 1.025891181988743,
+   "nrel": 1.025891181988743
+  },
+  "2026": {
+   "installed": 1.0,
+   "pack": 1.0,
+   "turnkey": 1.0,
+   "nrel": 1.0
   }
  },
  "ny": [
@@ -3174,7 +3707,7 @@
    "confidence": "High",
    "nominal": 1109.5652173913043,
    "kw": 4426.938775510204,
-   "adj_installed": 1138.2931723631618,
+   "adj_installed": 1131.2229260193099,
    "hours": 3.9897959183673466
   },
   {
@@ -3187,7 +3720,7 @@
    "confidence": "High",
    "nominal": 524.0066225165563,
    "kw": 2096.026490066225,
-   "adj_installed": 537.573773343439,
+   "adj_installed": 534.2347574397932,
    "hours": 4.0
   },
   {
@@ -3200,7 +3733,7 @@
    "confidence": "Medium (cost High; duration assumed)",
    "nominal": 805.22465,
    "kw": 3220.8986,
-   "adj_installed": 826.0728679549719,
+   "adj_installed": 820.941906251768,
    "hours": 4.0
   },
   {
@@ -3226,7 +3759,7 @@
    "confidence": "High",
    "nominal": 567,
    "kw": null,
-   "adj_installed": 586.5183793694919,
+   "adj_installed": 614.2003804477723,
    "hours": null
   },
   {
@@ -3239,30 +3772,50 @@
    "confidence": "High",
    "nominal": 464,
    "kw": null,
-   "adj_installed": 516.539821955402,
+   "adj_installed": 404.98942914864534,
    "hours": null
   }
  ],
  "indexed_series": {
   "installed": {
-   "label": "Installed all-in (EIA-860 2015-18, LBNL 2024)",
-   "base_2018": 625.0,
+   "label": "Installed all-in (EIA-860 2015-22, LBNL 2024)",
+   "base_2018": 625.2,
    "points": [
     [
      2015,
-     3.4432
+     3.3629238643634034
+    ],
+    [
+     2016,
+     2.031190019193858
     ],
     [
      2017,
-     1.3344
+     1.3338131797824695
     ],
     [
      2018,
      1.0
     ],
     [
+     2019,
+     0.9420985284708893
+    ],
+    [
+     2020,
+     1.031829814459373
+    ],
+    [
+     2021,
+     1.0737364043506077
+    ],
+    [
+     2022,
+     0.6330774152271272
+    ],
+    [
      2024,
-     0.7328
+     0.7325655790147152
     ]
    ]
   },

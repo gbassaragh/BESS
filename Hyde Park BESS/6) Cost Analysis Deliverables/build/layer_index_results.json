@@ -55,7 +55,7 @@
   "construction_materials": 1.537289501590668,
   "switchgear_industry": 1.911441799587806,
   "hw": 1.4926174496644296,
-  "bat_installed": 0.7328,
+  "bat_installed": 0.7325655790147152,
   "bat_pack": 0.6136363636363636,
   "bat_turnkey": 0.49159663865546216,
   "bat_nrel": 0.6929460580912863,
@@ -412,251 +412,355 @@
  },
  "factors": {
   "2015": {
-   "hp_composite": 1.0299227720105733,
-   "dev_composite": 0.9610391670601651,
-   "two_component": 1.0382729686670207,
-   "naive_battery": 0.2128252788104089,
-   "hw_only": 1.5885714285714285
+   "hp_composite": 0.4613815913967301,
+   "dev_composite": 0.41242693897428817,
+   "two_component": 0.4618760967591461,
+   "two_component_dev": 0.36266945558890346,
+   "naive_battery": 0.2178359096313912,
+   "hw_only": 1.5885714285714285,
+   "hp_composite_fixed_share": 1.0318390307764553,
+   "two_component_fixed_share": 1.0402772209954136,
+   "hp_battery_share": 0.8100140243667924,
+   "hp_battery_system_share": 0.8394011162513795
   },
   "2016": {
-   "hp_composite": 1.0551170686774958,
-   "dev_composite": 0.9944443431016712,
-   "two_component": 1.0571597426646477,
-   "naive_battery": 0.30676490288010716,
-   "hw_only": 1.557422969187675
+   "hp_composite": 0.6763493901976378,
+   "dev_composite": 0.6203773511859162,
+   "two_component": 0.681173862935758,
+   "two_component_dev": 0.5597175817359684,
+   "naive_battery": 0.36065831955272065,
+   "hw_only": 1.557422969187675,
+   "hp_composite_fixed_share": 1.0757279928928174,
+   "two_component_fixed_share": 1.0787171093336931,
+   "hp_battery_share": 0.7171944119050544,
+   "hp_battery_system_share": 0.7604779627092395
   },
   "2017": {
-   "hp_composite": 1.129907851571353,
-   "dev_composite": 1.0874309497324777,
-   "two_component": 1.1580608930577057,
-   "naive_battery": 0.5491606714628298,
-   "hw_only": 1.5639943741209563
+   "hp_composite": 0.8906447062059706,
+   "dev_composite": 0.8396798525261862,
+   "two_component": 0.9112794120676196,
+   "two_component_dev": 0.78493598848897,
+   "naive_battery": 0.5492265259623457,
+   "hw_only": 1.5639943741209563,
+   "hp_composite_fixed_share": 1.1299330368756548,
+   "two_component_fixed_share": 1.158087234857512,
+   "hp_battery_share": 0.6201756861187671,
+   "hp_battery_system_share": 0.6791058753073244
   },
   "2018": {
-   "hp_composite": 1.1720428820583806,
-   "dev_composite": 1.1459479664134387,
-   "two_component": 1.1886904697986576,
-   "naive_battery": 0.7328,
-   "hw_only": 1.4926174496644296
+   "hp_composite": 1.0397994256476457,
+   "dev_composite": 1.0031690677663596,
+   "two_component": 1.0644744972424676,
+   "two_component_dev": 0.9584426265394388,
+   "naive_battery": 0.7325655790147152,
+   "hw_only": 1.4926174496644296,
+   "hp_composite_fixed_share": 1.1719532304188949,
+   "two_component_fixed_share": 1.1885967014045438,
+   "hp_battery_share": 0.5428312152645541,
+   "hp_battery_system_share": 0.6145104997323432
   },
   "2019": {
-   "hp_composite": 1.160820271791438,
-   "dev_composite": 1.1392126502392887,
-   "two_component": 1.1846767630771038,
-   "naive_battery": 0.7669550655874966,
-   "hw_only": 1.4631578947368422
+   "hp_composite": 1.0590919676376482,
+   "dev_composite": 1.028558074635184,
+   "two_component": 1.0904533154328626,
+   "two_component_dev": 0.9929067434060144,
+   "naive_battery": 0.7775891341256367,
+   "hw_only": 1.4631578947368422,
+   "hp_composite_fixed_share": 1.1648871503504945,
+   "two_component_fixed_share": 1.1889303904923598,
+   "hp_battery_share": 0.5208890646614311,
+   "hp_battery_system_share": 0.5957858853968702
   },
   "2020": {
-   "hp_composite": 1.1571957076925135,
-   "dev_composite": 1.1404265807801466,
-   "two_component": 1.1782625295746363,
-   "naive_battery": 0.8044496487119437,
-   "hw_only": 1.4274711168164314
+   "hp_composite": 0.9990349909916965,
+   "dev_composite": 0.9657164543031271,
+   "two_component": 1.0256440610832664,
+   "two_component_dev": 0.9251972409859477,
+   "naive_battery": 0.7099674469074562,
+   "hw_only": 1.4274711168164314,
+   "hp_composite_fixed_share": 1.1210620642659206,
+   "two_component_fixed_share": 1.1404696488528412,
+   "hp_battery_share": 0.5381508276300586,
+   "hp_battery_system_share": 0.6103934913131328
   },
   "2021": {
-   "hp_composite": 1.1289708316557423,
-   "dev_composite": 1.1201669776517398,
-   "two_component": 1.1132323749038835,
-   "naive_battery": 0.8457987072945522,
-   "hw_only": 1.291521486643438
+   "hp_composite": 0.9573089626615824,
+   "dev_composite": 0.9263649388734267,
+   "two_component": 0.9593911041819598,
+   "two_component_dev": 0.872822045578977,
+   "naive_battery": 0.6822583047817667,
+   "hw_only": 1.291521486643438,
+   "hp_composite_fixed_share": 1.066426664845715,
+   "two_component_fixed_share": 1.0478162138987694,
+   "hp_battery_share": 0.5366177613968026,
+   "hp_battery_system_share": 0.6123389487205564
   },
   "2022": {
-   "hp_composite": 1.0712510635419001,
-   "dev_composite": 1.0645726133231894,
-   "two_component": 1.0567564567781105,
-   "naive_battery": 0.891628812459442,
-   "hw_only": 1.166841552990556
+   "hp_composite": 1.1675896967907193,
+   "dev_composite": 1.1777090191070576,
+   "two_component": 1.163065298946802,
+   "two_component_dev": 1.1616153867915646,
+   "naive_battery": 1.1571500757958564,
+   "hw_only": 1.166841552990556,
+   "hp_composite_fixed_share": 1.1727966506296141,
+   "two_component_fixed_share": 1.1629649621126763,
+   "hp_battery_share": 0.3858889253453229,
+   "hp_battery_system_share": 0.49452053492520415
   },
   "2023": {
-   "hp_composite": 1.0590550212602339,
-   "dev_composite": 1.055538611830056,
-   "two_component": 1.0344239495052767,
-   "naive_battery": 0.9427101200686105,
-   "hw_only": 1.095566502463054
+   "hp_composite": 1.1054488276366894,
+   "dev_composite": 1.1099266546808069,
+   "two_component": 1.0866471668167392,
+   "two_component_dev": 1.083245820895542,
+   "naive_battery": 1.0728507847271025,
+   "hw_only": 1.095566502463054,
+   "hp_composite_fixed_share": 1.1088258382210896,
+   "two_component_fixed_share": 1.0864802153686735,
+   "hp_battery_share": 0.3940588352279361,
+   "hp_battery_system_share": 0.501281785414549
   },
   "2024": {
-   "hp_composite": 1.053201618274192,
-   "dev_composite": 1.0545280180410974,
+   "hp_composite": 1.0499939198615793,
+   "dev_composite": 1.0505452189748197,
    "two_component": 1.0318181818181817,
+   "two_component_dev": 1.0238636363636364,
    "naive_battery": 1.0,
-   "hw_only": 1.053030303030303
+   "hw_only": 1.053030303030303,
+   "hp_composite_fixed_share": 1.053201618274192,
+   "two_component_fixed_share": 1.0318181818181817,
+   "hp_battery_share": 0.40155823187608175,
+   "hp_battery_system_share": 0.5069903959502681
   },
   "2025": {
-   "hp_composite": 1.0257338262536226,
-   "dev_composite": 1.0261890743006044,
-   "two_component": 1.0258911819887429,
+   "hp_composite": 1.0248847215370287,
+   "dev_composite": 1.0251583759980758,
+   "two_component": 1.0259887005649715,
+   "two_component_dev": 1.0195190947666197,
    "naive_battery": 1.0,
-   "hw_only": 1.0431519699812384
+   "hw_only": 1.0431519699812384,
+   "hp_composite_fixed_share": 1.0257338262536226,
+   "two_component_fixed_share": 1.0258911819887429,
+   "hp_battery_share": 0.39195550457232586,
+   "hp_battery_system_share": 0.4984031792697201
   },
   "2026": {
-   "hp_composite": 1.0000000000000002,
+   "hp_composite": 0.9999999999999998,
    "dev_composite": 1.0,
    "two_component": 1.0,
+   "two_component_dev": 1.0,
    "naive_battery": 1.0,
-   "hw_only": 1.0
+   "hw_only": 1.0,
+   "hp_composite_fixed_share": 1.0000000000000002,
+   "two_component_fixed_share": 1.0,
+   "hp_battery_share": 0.3824386258627279,
+   "hp_battery_system_share": 0.4903645300237188
   }
  },
  "classes": {
   "reference_class": {
-   "n": 55,
+   "n": 35,
    "methods": {
     "nominal": {
-     "median": 770.5426356589147,
-     "q25": 575.7239382239383,
-     "q75": 1172.4296675191815,
+     "median": 750.0,
+     "q25": 556.4144144144144,
+     "q75": 1274.7368421052631,
      "hp_pct": {
-      "contract": 0.2727272727272727,
-      "installed": 0.5818181818181818,
-      "station_direct": 0.8545454545454545,
+      "contract": 0.3142857142857143,
+      "installed": 0.5714285714285714,
+      "station_direct": 0.7714285714285715,
       "approval": 1.0
      }
     },
     "naive_battery": {
-     "median": 619.8627525733891,
-     "q25": 483.6738725021496,
-     "q75": 967.1831659921854,
+     "median": 549.4241842610364,
+     "q25": 421.40821292020456,
+     "q75": 990.3410349154794,
      "hp_pct": {
-      "contract": 0.45454545454545453,
-      "installed": 0.6727272727272727,
-      "station_direct": 0.9454545454545454,
+      "contract": 0.5714285714285714,
+      "installed": 0.6857142857142857,
+      "station_direct": 0.8571428571428571,
       "approval": 1.0
      }
     },
     "two_component": {
-     "median": 831.6326530612245,
-     "q25": 659.1932732157766,
-     "q75": 1222.1198866927691,
+     "median": 742.3682728883153,
+     "q25": 541.6179407095638,
+     "q75": 1331.5787766909937,
      "hp_pct": {
-      "contract": 0.18181818181818182,
-      "installed": 0.509090909090909,
-      "station_direct": 0.8545454545454545,
-      "approval": 0.9818181818181818
+      "contract": 0.42857142857142855,
+      "installed": 0.5714285714285714,
+      "station_direct": 0.7714285714285715,
+      "approval": 0.9714285714285714
      }
     },
     "layer_developer": {
-     "median": 831.6326530612245,
-     "q25": 650.6015349916721,
-     "q75": 1162.8948666043912,
+     "median": 744.1257019979134,
+     "q25": 537.3385554114391,
+     "q75": 1304.6922846011264,
      "hp_pct": {
-      "contract": 0.2,
-      "installed": 0.509090909090909,
-      "station_direct": 0.8545454545454545,
-      "approval": 0.9818181818181818
+      "contract": 0.42857142857142855,
+      "installed": 0.6,
+      "station_direct": 0.7714285714285715,
+      "approval": 1.0
      }
     },
     "layer_hp": {
-     "median": 831.6326530612247,
-     "q25": 657.9090120105939,
-     "q75": 1206.5773592468333,
+     "median": 746.2752826725938,
+     "q25": 562.8740832328475,
+     "q75": 1323.4286492863253,
      "hp_pct": {
-      "contract": 0.2,
-      "installed": 0.509090909090909,
-      "station_direct": 0.8545454545454545,
-      "approval": 0.9818181818181818
+      "contract": 0.42857142857142855,
+      "installed": 0.5714285714285714,
+      "station_direct": 0.7714285714285715,
+      "approval": 0.9714285714285714
      }
     },
     "layer_developer_pack": {
-     "median": 829.2159991975327,
-     "q25": 636.0978894748462,
-     "q75": 1189.5066641114981,
+     "median": 679.767585439773,
+     "q25": 563.0866968903599,
+     "q75": 1231.5473819995677,
      "hp_pct": {
-      "contract": 0.2,
-      "installed": 0.5454545454545454,
-      "station_direct": 0.8727272727272727,
-      "approval": 0.9818181818181818
+      "contract": 0.34285714285714286,
+      "installed": 0.6285714285714286,
+      "station_direct": 0.8285714285714286,
+      "approval": 1.0
      }
     },
     "layer_developer_turnkey": {
-     "median": 778.0548403562975,
-     "q25": 556.2156221526543,
-     "q75": 1108.1211637557562,
+     "median": 585.0504259455823,
+     "q25": 451.5665706880412,
+     "q75": 1016.0131063943771,
      "hp_pct": {
-      "contract": 0.32727272727272727,
-      "installed": 0.6,
-      "station_direct": 0.8909090909090909,
-      "approval": 0.9818181818181818
+      "contract": 0.5142857142857142,
+      "installed": 0.6285714285714286,
+      "station_direct": 0.8857142857142857,
+      "approval": 1.0
+     }
+    },
+    "two_component_fixed_share": {
+     "median": 838.3522727272726,
+     "q25": 627.6384634186802,
+     "q75": 1492.8878512093188,
+     "hp_pct": {
+      "contract": 0.17142857142857143,
+      "installed": 0.4857142857142857,
+      "station_direct": 0.7142857142857143,
+      "approval": 0.9714285714285714
+     }
+    },
+    "layer_hp_fixed_share": {
+     "median": 855.7263148477809,
+     "q25": 622.8807544913531,
+     "q75": 1484.199677927626,
+     "hp_pct": {
+      "contract": 0.2,
+      "installed": 0.4857142857142857,
+      "station_direct": 0.7428571428571429,
+      "approval": 0.9714285714285714
      }
     }
    }
   },
   "reference_class_utility": {
-   "n": 31,
+   "n": 25,
    "methods": {
     "nominal": {
-     "median": 985.9154929577464,
-     "q25": 633.2738095238095,
-     "q75": 1445.0,
+     "median": 1235.2941176470588,
+     "q25": 619.047619047619,
+     "q75": 1659.2747433264888,
      "hp_pct": {
-      "contract": 0.16129032258064516,
-      "installed": 0.4838709677419355,
-      "station_direct": 0.7419354838709677,
+      "contract": 0.16,
+      "installed": 0.44,
+      "station_direct": 0.68,
       "approval": 1.0
      }
     },
     "naive_battery": {
-     "median": 610.4048027444253,
-     "q25": 486.5994013192271,
-     "q75": 1204.8659448751664,
+     "median": 685.2508071501693,
+     "q25": 450.8228994409008,
+     "q75": 1260.0,
      "hp_pct": {
-      "contract": 0.4838709677419355,
-      "installed": 0.6451612903225806,
-      "station_direct": 0.9032258064516129,
+      "contract": 0.48,
+      "installed": 0.6,
+      "station_direct": 0.8,
       "approval": 1.0
      }
     },
     "two_component": {
-     "median": 1057.1597426646476,
-     "q25": 691.7212707491591,
-     "q75": 1511.068819304621,
+     "median": 851.4673286696975,
+     "q25": 591.6245142455418,
+     "q75": 1619.1042785569414,
      "hp_pct": {
-      "contract": 0.12903225806451613,
-      "installed": 0.3870967741935484,
-      "station_direct": 0.7419354838709677,
-      "approval": 0.967741935483871
+      "contract": 0.32,
+      "installed": 0.44,
+      "station_direct": 0.68,
+      "approval": 0.96
      }
     },
     "layer_developer": {
-     "median": 994.4443431016712,
-     "q25": 691.8898031962246,
-     "q75": 1525.253294094431,
+     "median": 853.567990417041,
+     "q25": 571.2583789719465,
+     "q75": 1579.1423484732413,
      "hp_pct": {
-      "contract": 0.12903225806451613,
-      "installed": 0.3870967741935484,
-      "station_direct": 0.7419354838709677,
-      "approval": 0.967741935483871
+      "contract": 0.32,
+      "installed": 0.48,
+      "station_direct": 0.68,
+      "approval": 1.0
      }
     },
     "layer_hp": {
-     "median": 1055.1170686774958,
-     "q25": 697.3276503526968,
-     "q75": 1530.334505721038,
+     "median": 853.1200598875332,
+     "q25": 590.3405269746424,
+     "q75": 1647.1187531786672,
      "hp_pct": {
-      "contract": 0.12903225806451613,
-      "installed": 0.3870967741935484,
-      "station_direct": 0.7419354838709677,
-      "approval": 0.967741935483871
+      "contract": 0.32,
+      "installed": 0.44,
+      "station_direct": 0.68,
+      "approval": 0.96
      }
     },
     "layer_developer_pack": {
-     "median": 1034.422114827601,
-     "q25": 684.8768407753956,
-     "q75": 1421.8280451134901,
+     "median": 832.3878409169984,
+     "q25": 635.795239000099,
+     "q75": 1404.7540873158662,
      "hp_pct": {
-      "contract": 0.12903225806451613,
-      "installed": 0.45161290322580644,
-      "station_direct": 0.7741935483870968,
-      "approval": 0.967741935483871
+      "contract": 0.2,
+      "installed": 0.52,
+      "station_direct": 0.76,
+      "approval": 1.0
      }
     },
     "layer_developer_turnkey": {
-     "median": 985.5632512370576,
-     "q25": 611.4600013123376,
-     "q75": 1344.5766947959282,
+     "median": 770.4480279841913,
+     "q25": 476.944017323547,
+     "q75": 1111.3281197319523,
      "hp_pct": {
-      "contract": 0.25806451612903225,
-      "installed": 0.4838709677419355,
-      "station_direct": 0.8064516129032258,
-      "approval": 0.967741935483871
+      "contract": 0.4,
+      "installed": 0.52,
+      "station_direct": 0.84,
+      "approval": 1.0
+     }
+    },
+    "two_component_fixed_share": {
+     "median": 1285.048331817864,
+     "q25": 735.7979580123366,
+     "q75": 1802.7691804851638,
+     "hp_pct": {
+      "contract": 0.12,
+      "installed": 0.36,
+      "station_direct": 0.6,
+      "approval": 0.96
+     }
+    },
+    "layer_hp_fixed_share": {
+     "median": 1274.6246850767977,
+     "q25": 725.4948569259825,
+     "q75": 1839.846708108077,
+     "hp_pct": {
+      "contract": 0.12,
+      "installed": 0.36,
+      "station_direct": 0.64,
+      "approval": 0.96
      }
     }
    }

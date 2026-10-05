@@ -34,22 +34,40 @@ MAP={ "A":("bat_installed","Battery contract: installed-system index (sensitivit
 w_hp={k[0]:v/tot for k,v in LL.items()}
 # developer composition (NREL/PNNL structure, see indices_layers.json 'composition_developer'); shares sum to 1
 w_dev=LJ["composition_developer"]["shares"]; dev_map=LJ["composition_developer"]["map"]
-def comp_factor(y,weights,mapping,bat="bat_installed"):
+def comp_factor(y,weights,mapping,bat="bat_installed",fixed_share=False):
+    """Fixed quantities (default): the weights are 2026 dollar shares, so a project built in year y with the same physical scope
+    cost C(y) = sum_i w_i x I_i(y)/I_i(2026) of its 2026 cost; bringing it to 2026 is 1/C(y). The earlier fixed-share form
+    (sum_i w_i x I_i(2026)/I_i(y)) applied today's shares to yesterday's prices and is kept only for the comparison."""
     f=0.0
     for layer,w in weights.items():
         key=mapping[layer][0] if isinstance(mapping[layer],(list,tuple)) else mapping[layer]
         if key.startswith("bat_") and bat: key=bat
-        f+=w*ratio(key,y)
-    return f
-HW=S["hw"]; two=lambda y,s=0.4: s*ratio("bat_installed",y)+(1-s)*HW(2026)/HW(min(y,2026))
+        f+=w*(ratio(key,y) if fixed_share else 1.0/ratio(key,y))
+    return f if fixed_share else 1.0/f
+def implied_share(y,weights,mapping,layer_set="A",bat="bat_installed"):
+    """share of the named layers in the project's own-year cost"""
+    tot=0.0; part=0.0
+    for layer,w in weights.items():
+        key=mapping[layer][0] if isinstance(mapping[layer],(list,tuple)) else mapping[layer]
+        if key.startswith("bat_") and bat: key=bat
+        c=w/ratio(key,y); tot+=c
+        if layer in layer_set: part+=c
+    return part/tot
+HW=S["hw"]
+def two(y,s0=0.4,y0=2024):   # two-component model, fixed quantities anchored on 2024 shares (adjust_model.py)
+    c=lambda yy: s0*S["bat_installed"](min(yy,2026))/S["bat_installed"](y0)+(1-s0)*HW(min(yy,2026))/HW(y0)
+    return c(2026)/c(y)
+two_fixed=lambda y,s=0.4: s*ratio("bat_installed",y)+(1-s)*HW(2026)/HW(min(y,2026))
 out={"weights_hp":w_hp,"weights_dev":w_dev,"map_hp":{k:v[0] for k,v in MAP.items()},"map_dev":dev_map,"series_ratio_2018":{k:ratio(k,2018) for k in S},"series_meta":{k:{kk:vv for kk,vv in v.items() if kk!="points"} for k,v in LJ["series"].items()},
-     "factors":{str(y):{"hp_composite":comp_factor(y,w_hp,MAP),"dev_composite":comp_factor(y,w_dev,dev_map),"two_component":two(y),"naive_battery":ratio("bat_installed",y),"hw_only":HW(2026)/HW(y)} for y in range(2015,2027)},
+     "factors":{str(y):{"hp_composite":comp_factor(y,w_hp,MAP),"dev_composite":comp_factor(y,w_dev,dev_map),"two_component":two(y),"two_component_dev":two(y,0.55),"naive_battery":ratio("bat_installed",y),"hw_only":HW(2026)/HW(y),
+                        "hp_composite_fixed_share":comp_factor(y,w_hp,MAP,fixed_share=True),"two_component_fixed_share":two_fixed(y),"hp_battery_share":implied_share(y,w_hp,MAP,"A"),"hp_battery_system_share":implied_share(y,w_hp,MAP,"ABC")} for y in range(2015,2027)},
      "classes":{}}
 for cname in ("reference_class","reference_class_utility"):
     P=R[cname]["projects"]; blk={"n":len(P),"methods":{}}
-    for mname,fn in (("nominal",lambda y:1.0),("naive_battery",lambda y:ratio("bat_installed",y)),("two_component",two),("layer_developer",lambda y:comp_factor(y,w_dev,dev_map)),("layer_hp",lambda y:comp_factor(y,w_hp,MAP)),
-                     ("layer_developer_pack",lambda y:comp_factor(y,w_dev,dev_map,"bat_pack")),("layer_developer_turnkey",lambda y:comp_factor(y,w_dev,dev_map,"bat_turnkey"))):
-        adj=np.array([p["kwh"]*fn(int(p["cod_year"])) for p in P])
+    for mname,fn in (("nominal",lambda y,u:1.0),("naive_battery",lambda y,u:ratio("bat_installed",y)),("two_component",lambda y,u: two(y,0.40 if u else 0.55)),("layer_developer",lambda y,u:comp_factor(y,w_dev,dev_map)),("layer_hp",lambda y,u:comp_factor(y,w_hp,MAP)),
+                     ("layer_developer_pack",lambda y,u:comp_factor(y,w_dev,dev_map,"bat_pack")),("layer_developer_turnkey",lambda y,u:comp_factor(y,w_dev,dev_map,"bat_turnkey")),
+                     ("two_component_fixed_share",lambda y,u:two_fixed(y)),("layer_hp_fixed_share",lambda y,u:comp_factor(y,w_hp,MAP,fixed_share=True))):
+        adj=np.array([p["kwh"]*fn(int(p["cod_year"]),p.get("utility")==1) for p in P])
         blk["methods"][mname]={"median":float(np.median(adj)),"q25":float(np.percentile(adj,25)),"q75":float(np.percentile(adj,75)),"hp_pct":{k:float((adj<v).mean()) for k,v in HP.items()}}
     out["classes"][cname]=blk
 # indexed series (2018 = 1.0) for the chart

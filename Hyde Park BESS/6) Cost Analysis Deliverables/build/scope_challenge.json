@@ -1,0 +1,259 @@
+{
+ "target_kwh": 1250,
+ "target_direct": 25000000,
+ "rows": [
+  {
+   "layer": "A. Battery contract",
+   "carries": "Nomad fixed price $12.1M (12 Voyager units, 10-yr warranty $0.80M, spares, support, shipping, training) plus $1.13M escalation on the balance",
+   "requires": "The battery. Price is fixed until Final Acceptance.",
+   "challenge": "Remove the escalation; align Attachment C-2 milestones to the January 2028 delivery; write the tariff and change-in-law clause into the change-order process; treat warranty years 3-10 as a service agreement if Accounting allows",
+   "lo": 1130255,
+   "hi": 1130255,
+   "kind": "reduction",
+   "owner": "Cost Estimating / Sourcing",
+   "ev": "06.08.00.00 note: cover agreement $11,860,850 less actuals and down payment; escalation per the ESF Overview",
+   "lo_loaded": 1628029.117212964,
+   "hi_loaded": 1628029.117212964
+  },
+  {
+   "layer": "B. Battery installation",
+   "carries": "5,557 mh of install labor (25% of a 2023 site total), 12 pads, fire suppression $132K, GSU-to-battery conduit and cable",
+   "requires": "Set, anchor and terminate 12 trailer-mounted units; Nomad supervises (two people, one day per container).",
+   "challenge": "Crew build-up at 200-250 mh per unit (2,400-3,000 mh); confirm whether the Voyager enclosure carries its own suppression before buying $132K of it twice",
+   "lo": 491777.70337413263,
+   "hi": 739219.9490643061,
+   "kind": "reduction",
+   "owner": "Cost Estimating + Nomad",
+   "ev": "07.03.02.11 note '16,801 mhrs x 25%'; 07.01.01.00 fire suppression from the 2023 bidder list",
+   "lo_loaded": 708360.8745718515,
+   "hi_loaded": 1064778.8340696343
+  },
+  {
+   "layer": "C. GSUs and auxiliaries",
+   "carries": "4 x 3 MVA pad-mount GSUs $1,077K furnish (2023 bidder list + 3%/yr) and $363K install (2,098 mh = 524 per unit); comms $355K; AC/DC panels $137K",
+   "requires": "Step 480 V to 13.8 kV for 10 MW. The count follows the topology: one GSU per feeder connection or one per unit.",
+   "challenge": "Settle the count in writing. The PM's 9 Sep email speaks of twelve GSUs; Rev 3 carries four; Haugland priced the larger count ($632K deduct item). Install at 524 mh per pad-mount is three to four times a normal set; re-quote the transformer with the 2026 lead time (29-70 weeks) in the schedule",
+   "lo": 181510.6806025,
+   "hi": 235963.88478325002,
+   "kind": "reduction",
+   "owner": "Substation Eng.",
+   "ev": "06.02.05.00 / 07.03.02.07; Herman email 9 Sep 2026 'GSU transformers (12)'; Haugland Attachment 4-E",
+   "lo_loaded": 261449.56059120497,
+   "hi_loaded": 339884.42876856646
+  },
+  {
+   "layer": "C. GSUs (exposure)",
+   "carries": "Four GSUs",
+   "requires": "If the topology needs one GSU per Voyager unit, twelve",
+   "challenge": "Eight more 1 MVA-class pad-mounts, foundations and cable",
+   "lo": -600000.0,
+   "hi": -1000000.0,
+   "kind": "exposure",
+   "owner": "Substation Eng. + Nomad",
+   "ev": "Herman email 9 Sep 2026; Haugland 4-E GSU count item",
+   "lo_loaded": -864245.2104416954,
+   "hi_loaded": -1440408.6840694924
+  },
+  {
+   "layer": "D. Switching station",
+   "carries": "4 Siemens breaker skids $1,327K furnish (Siemens +/-30% budgetary at $300K each incl. relays, cabinets, DC battery, PTs, disconnects); 8 disconnect switches $238K (1,040 mh); 4 metering transclosures $265K; lighting $313K (1,272 mh); duct bank, 15 kV cable, riser poles, SSVT, grounding",
+   "requires": "Four feeder connections at 2.5 MW each because a 15 kV-class feeder takes about 9 MVA aggregate (National Grid MA limit; Eversource's not retrieved). Each connection needs a breaker, protection, metering and a tie.",
+   "challenge": "(1) The 8 disconnects and the PT cutouts are on the skids per the project team and are priced again as separate lines: $259K and 1,040 mh. (2) Lighting: 12 HPS luminaires and $200 a foot of direct-bury hookup on an unmanned one-acre pad; LED on the fence line at a third of the cost. (3) Hosting-capacity study: if two feeders can take 5 MW each, two skids, two GSUs and two metering sets go away (savings register B2).",
+   "lo": 415931.47381477285,
+   "hi": 462873.24394957285,
+   "kind": "reduction",
+   "owner": "Substation Eng. + System Planning",
+   "ev": "07.03.02.04 and 06.02.09.00 note 'Located on breaker skid'; Fitzgerald email 12 Aug 2026 'Breaker Disconnects are on the skid', 'PTs are on the breaker skid', Siemens $300K each; 07.03.02.99 lighting lines",
+   "lo_loaded": 599111.3068606214,
+   "hi_loaded": 666726.6402083813
+  },
+  {
+   "layer": "E. Site and civil",
+   "carries": "Cut and re-place 2,520 CY $456K (2,520 mh); 14-ft retaining wall 280 lf $470K; trap rock 4,900 sy $492K; gravel drive 760 lf $319K; 36 borings $361K; mob/demob $313K",
+   "requires": "A stable, drained, accessible pad on a capped construction-debris landfill under a MassDEP post-closure permit; the wall, the platform depth and the cut volume are design outcomes of the geotech, not inputs.",
+   "challenge": "Unit rates run two to four times library norms (cut at $181/CY, surfacing $100/sy, drive $420/lf, borings $10K each) on placeholder quantities (2.5-ft platform). No basis is written for either. The reconciliation with Haugland decides which way this layer moves; do not book a deduct before the geotech.",
+   "lo": 300000.0,
+   "hi": 800000.0,
+   "kind": "reduction",
+   "owner": "Civil + Capital Projects Eng.",
+   "ev": "07.03.01.01, 07.03.01.02, 07.01.01.00 lines; constructability review items 7 and 11; Haugland $19.2M Class 3 base for its scope",
+   "lo_loaded": 432122.6052208477,
+   "hi_loaded": 1152326.9472555937
+  },
+  {
+   "layer": "E. Site (exposures)",
+   "carries": "No sound mitigation, no visual screening or faux facade, no police details beyond $12K of traffic control, no NFPA 855 hazard mitigation analysis line",
+   "requires": "Constructability review: visual screening 'likely required' and a sound study to come; Boston public-way work; NFPA 855 for a lithium system next to housing",
+   "challenge": "E-23-373 carried $467K of sound mitigation; Rev 3 dropped it and the risk register does not carry it. Screening and a facade were deferred to 'vendor design'. Price them or register them.",
+   "lo": -600000.0,
+   "hi": -1200000.0,
+   "kind": "exposure",
+   "owner": "Siting + Civil",
+   "ev": "Fitzgerald email 12 Aug 2026 item 6; constructability review environmental and siting sections; risk register 12.xx lines",
+   "lo_loaded": -864245.2104416954,
+   "hi_loaded": -1728490.4208833908
+  },
+  {
+   "layer": "F. Station 496 feeder protection",
+   "carries": "20 relays: hardware $91K; install 6,400 mh $1.23M; test 7,800 mh $1.81M; E&S basis $1.46M; siting application $157K; AFUDC, contingency, risk",
+   "requires": "Directional protection on the four feeders that will see reverse flow, and coordination at the source station. Whether all 20 relays, the four SEL-735 meters and a siting application are needed for relay work inside an existing fence is the question.",
+   "challenge": "$363K and 710 man-hours per relay. Benchmark against two recent EMA relay-replacement actuals; confirm the SEL-735 are protection; confirm what the $157K siting line is for; price the outage windows explicitly instead of inside the hours.",
+   "lo": 1222436.4053857692,
+   "hi": 1679247.4267657693,
+   "kind": "reduction",
+   "owner": "P&C Engineering + EMA",
+   "ev": "Sta 496 Rev 2 lines 07.03.03.02, 08.01.02.00, 08.02.02.00, 04.02.00.00",
+   "lo_loaded": 1760808.0140403563,
+   "hi_loaded": 2418802.576214763
+  },
+  {
+   "layer": "G. Testing and commissioning",
+   "carries": "Field test 3,200 mh, LCE 1,600 mh, SCADA 1,650 mh, telecom 120 mh: $1.26M, hours carried from E-23-373",
+   "requires": "Owner witness and acceptance testing; Nomad commissions its units (contract: $210K support, $246K vendor labor)",
+   "challenge": "Write the split into the test plan; the owner's hours were set in 2023 before the vendor's scope existed",
+   "lo": 150000.0,
+   "hi": 350000.0,
+   "kind": "reduction",
+   "owner": "Capital Projects Eng. + Nomad",
+   "ev": "08.xx lines 'Mhrs from E-23-373 estimate'; Nomad SOV",
+   "lo_loaded": 216061.30261042385,
+   "hi_loaded": 504143.0394243223
+  },
+  {
+   "layer": "H. Owner soft costs",
+   "carries": "Siting external $1,052K plus internal and actuals; PM (contractor and Eversource, three lines plus actuals) $1.30M; CM $356K; engineering $501K contractor plus actuals; outreach, environmental, legal",
+   "requires": "Article 80 Small Project Review and a ZBA conditional use permit; a PM and a CM for the construction window; 30%-to-IFC engineering",
+   "challenge": "Siting at $1,052K external is two to three times a typical Article 80 small-project budget; ask counsel for the task budget. PM hours are duration-driven: every month of siting slip adds about $0.4M across PM, AFUDC and indirects, so the float target on the ZBA chain is the lever, not the rate.",
+   "lo": 200000.0,
+   "hi": 400000.0,
+   "kind": "reduction",
+   "owner": "Siting + PM",
+   "ev": "04.02.00.00; 09.01.xx lines",
+   "lo_loaded": 288081.73681389843,
+   "hi_loaded": 576163.4736277969
+  },
+  {
+   "layer": "J. Risk register",
+   "carries": "$5.3M Sta 360 + $0.77M Sta 496: material $1.0M, labor $0.8M, design changes $0.8M, UG obstructions $0.45M, environmental, P&C and station engineering $0.3M each, soil, weather, outreach, siting, BAR deductibles",
+   "requires": "Risks that the directs and contingency do not already fund",
+   "challenge": "Labor-cost and material-cost lines restate escalation (savings register A2); design-change lines overlap the 17.9% contingency; sound mitigation and screening are the risks that are missing",
+   "lo": 1256950.0,
+   "hi": 1766950.0,
+   "kind": "reduction",
+   "owner": "Cost Estimating + PM",
+   "ev": "12.xx lines; ESF Overview escalation $2.95M",
+   "lo_loaded": 1256950.0,
+   "hi_loaded": 1766950.0
+  },
+  {
+   "layer": "L. Indirects",
+   "carries": "$8.06M: E&S station basis $4.79M (16% of directs, applied to the vendor contract), general services, MDEC, vehicles, non-productive, AS&E, payroll",
+   "requires": "Template basis rates",
+   "challenge": "Whether the E&S basis should load a vendor-furnished, vendor-commissioned contract is a policy question (savings register A4, up to $2.1M); it is the single largest line nobody on the project can change",
+   "lo": 1047911.0742449685,
+   "hi": 2095822.148489937,
+   "kind": "reduction",
+   "owner": "Accounting",
+   "ev": "13.05.00.00",
+   "lo_loaded": 1047911.0742449685,
+   "hi_loaded": 2095822.148489937
+  },
+  {
+   "layer": "M. AFUDC",
+   "carries": "$5.0M over a seven-year development window",
+   "requires": "Capitalized carrying cost on CWIP",
+   "challenge": "Pay the battery at delivery, not a year ahead (C3); protect the siting float; every month costs about $0.4M all-in",
+   "lo": 340505.15625,
+   "hi": 681010.3125,
+   "kind": "reduction",
+   "owner": "PM + Treasury",
+   "ev": "14.01.00.00; Attachment C-2",
+   "lo_loaded": 340505.15625,
+   "hi_loaded": 681010.3125
+  }
+ ],
+ "totals": {
+  "reduction_lo": 6737277.493672143,
+  "reduction_hi": 10341341.965552835,
+  "exposure_lo": -1200000.0,
+  "exposure_hi": -2200000.0,
+  "reduction_lo_loaded": 8539390.748417135,
+  "reduction_hi_loaded": 12894637.517771957,
+  "exposure_lo_loaded": -1728490.4208833908,
+  "exposure_hi_loaded": -3168899.104952883
+ },
+ "cases": {
+  "rev3": {
+   "label": "Rev 3 as estimated",
+   "total": 57247300.0,
+   "note": "24 Sep 2026"
+  },
+  "contained": {
+   "label": "Contained: decisions only, no scope change",
+   "lo": 50701761.55942901,
+   "hi": 52600177.78992398,
+   "note": "battery escalation, risk-register wording, overhead basis ruling, AFUDC timing, the disconnect double count; exposures not yet added"
+  },
+  "rescoped": {
+   "label": "Re-scoped: every reduction in the register after its study closes",
+   "lo": 42407918.723248236,
+   "hi": 47346588.620297,
+   "note": "adds the relay program at benchmark, two-feeder topology, civil after geotech, crew build-up, commissioning split, siting task budget"
+  },
+  "exposures": {
+   "label": "Exposures that go the other way",
+   "lo": 1728490.4208833908,
+   "hi": 3168899.104952883,
+   "note": "sound mitigation, screening, police details, NFPA 855 analysis, GSU count"
+  },
+  "heg": {
+   "label": "Haugland reconciliation (red team KS1)",
+   "lo": 4000000.0,
+   "hi": 8000000.0,
+   "note": "direct; if half the gap is 21334 scope"
+  },
+  "net": {
+   "label": "Re-scoped, with the exposures and the Haugland midpoint added back",
+   "lo": 48136409.14413162,
+   "hi": 58515487.72524989,
+   "note": "the honest planning range once every study closes"
+  }
+ },
+ "plan": [
+  [
+   "Now to Nov 2026 PAF",
+   "Decide A1 (battery escalation), re-word A2, get the Accounting ruling on the E&S basis, strike the disconnect and PT lines that the skids already carry, price or register sound mitigation and screening, open the 48E memo with Tax",
+   "Cost Estimating, PM, Accounting, Tax",
+   "Estimate hygiene: about $3M to $5M loaded; the exposures added honestly"
+  ],
+  [
+   "Gate 1, design basis (Q1 2027)",
+   "Geotech report, NFPA 855 hazard mitigation analysis, hosting-capacity study for two feeders, GSU count and topology in writing, Haugland-to-Rev 3 scope map signed",
+   "Substation Eng., Civil, System Planning, HEG",
+   "Decides the two-feeder case ($1.4M to $1.9M), the civil layer (either way) and the GSU exposure"
+  ],
+  [
+   "Gate 2, design-to-cost target (before IFC, mid-2027)",
+   "Set a station-direct target of $1,250 per kWh ($25M direct, the reference-class 75th percentile) and a loaded target of $50M; monthly trend review against it; change control board with the CoE; no scope added without a funded source",
+   "PM (accountable), Cost Estimating (trend), sponsor",
+   "Turns the estimate into a managed number instead of a forecast"
+  ],
+  [
+   "Gate 3, commercial strategy (before construction pricing, Q3 2027)",
+   "Competitive lump-sum pricing for station, civil and install (Haugland plus two), owner-furnished GSUs and skids on alliance pricing, Nomad milestones aligned to delivery, change-order cap, outage windows at 496 priced explicitly",
+   "Sourcing, PM, Construction",
+   "Converts unit-library construction into a bid; the red team's +25% construction stress test becomes a contract term"
+  ],
+  [
+   "Standing",
+   "Monthly cost-containment report to the sponsor: station-direct $/kWh against target, forecast at completion, open scope questions, exposures register; the 48E position and the FEOC cell-origin answer tracked as milestones",
+   "PM, CoE",
+   "What leadership sees every month until in-service"
+  ]
+ ],
+ "marginal_loader": 1.4404086840694923,
+ "approval": 57247300.0,
+ "double_count_disconnects": 259458.90669877286,
+ "lighting": 312945.134232,
+ "notes": "Reductions and exposures are gross of the Haugland reconciliation. The two-feeder topology (B2) is counted once, in the re-scoped case."
+}
