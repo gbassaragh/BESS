@@ -1,0 +1,23 @@
+{
+ "retrieved": "2026-10-02",
+ "note": "Series plotted as published. Direct access to eia.gov, bnef.com and energy-storage.news was blocked by the research proxy; values come from search-index excerpts of those pages and carry the confidence tag of the excerpt. Verify against the primary pages before external use.",
+ "series": [
+  {"name": "EIA reported all-in, utility-scale (EIA-860, nominal $/kWh)", "kind": "eia", "basis": "Nominal, capacity-weighted average energy-capacity cost of batteries installed in the year", "scope": "Respondent-reported total capitalized construction cost", "confidence": "High", "url": "https://www.eia.gov/todayinenergy/detail.php?id=45596",
+   "points": [[2015, 2152], [2017, 834], [2018, 625]]},
+  {"name": "BNEF turnkey system, global avg, 4-h ($/kWh, real survey-year)", "kind": "bnef", "basis": "Real USD of the survey year", "scope": "Racks, PCS, BOS, EMS, integration, installation, commissioning; excludes grid connection, land, development, owner's costs", "confidence": "Medium", "url": "https://www.bnef.com/insights/30443 ; https://www.bnef.com/insights/33081 ; https://www.bnef.com/insights/35543 ; https://www.bnef.com/insights/38229",
+   "points": [[2022, 324], [2023, 263], [2024, 165], [2025, 117]]},
+  {"name": "BNEF turnkey system, United States, 4-h", "kind": "bnef_us", "basis": "Real USD of the survey year", "scope": "As above", "confidence": "Medium", "url": "https://www.bnef.com/insights/38229",
+   "points": [[2024, 236], [2025, 219]]},
+  {"name": "NREL bottom-up all-in, 4-h 60 MW (2024$), mid-case projection", "kind": "nrel", "basis": "2024 dollars; 2028 point is a linear interpolation between the 2024 base and the 2035 mid case", "scope": "Pack, PCS, BOS, installation, EPC and developer overhead, sales tax, permitting and interconnection allowance, contingency, profit", "confidence": "High (2024 and 2035 points); derived (2028)", "url": "https://docs.nrel.gov/docs/fy25osti/93281.pdf",
+   "points": [[2024, 334], [2028, 302], [2035, 247]]}
+ ],
+ "hyde_park": [
+  {"label": "2023 indicative bids, low ($479) to high ($911)", "x": 2023.5, "y": [479, 911], "kind": "range"},
+  {"label": "Nomad equipment only, $532", "x": 2026.2, "y": 532},
+  {"label": "Nomad contract, $605", "x": 2026.2, "y": 605},
+  {"label": "Battery as carried in Rev 3 (incl. $57 escalation), $650", "x": 2026.75, "y": 650},
+  {"label": "Battery installed A+B+C, $833", "x": 2026.75, "y": 833}
+ ],
+ "adjustment": {"duration_factor_lo": 1.3, "duration_factor_hi": 1.5, "size_elasticity": -0.173, "ref_mwh": 240, "hp_mwh": 20, "note": "Duration factor from NREL's cost structure (pack $/kWh x hours + BOS $/kW); size factor (20/240)^-0.173 = 1.54 from the Appendix B regression."},
+ "escalation": {"total": 2948100, "sta360": 2622100, "sta496": 326100, "battery": 1130255, "rate": 0.03, "spend": {"actuals": 5222044, "2026": 13461842, "2027": 12465452, "2028": 26098206}, "non_battery_material": 3687000}
+}

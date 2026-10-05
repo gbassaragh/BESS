@@ -1,7 +1,8 @@
-import sys
+import sys, json
 sys.path.insert(0,"/tmp/claude-0/-home-user-BESS/078f934e-4ca0-5169-be3f-cb66ff0e2514/scratchpad/build")
 from docx_common import *
 B="/tmp/claude-0/-home-user-BESS/078f934e-4ca0-5169-be3f-cb66ff0e2514/scratchpad/build"
+R=json.load(open(f"{B}/stats_results.json")); RC=R["reference_class"]; RCU=R["reference_class_utility"]
 d=new_doc()
 para(d,"Red Team Report: Hyde Park BESS cost package (Rev 3, $57.2M)",bold=True,size=20,color=NAVY,after=2)
 para(d,"Independent challenge of the estimate, schedule, risk register and the CoE analysis package",size=12,color=BURG,after=2)
@@ -12,7 +13,7 @@ para(d,"For a 10 MW / 20 MWh, two-hour, utility-owned station on a closed landfi
 d.add_heading("Steelman (the defense line)",1)
 bullets(d,["The battery is priced by contract, not by estimate: $12.1M fixed until Final Acceptance with liquidated damages. At $532/kWh equipment-only it sits between BNEF's US turnkey index and every disclosed utility-owned project.",
 "Every dollar between $12.1M and $57.2M has a name: 292 lines in thirteen layers, reconciled to the unrounded total. The station ($3.8M), the landfill platform ($2.7M) and Station 496 protection ($7.3M) are physical scope.",
-"The direct cost is inside the reference class: $1,483/kWh at the 77th percentile of thirteen utility-owned projects under 100 MWh, beside Fairhaven ($1,659 actual), Chateaugay ($1,490) and Provincetown ($1,289).",
+f"The direct cost is inside the reference class: $1,483/kWh at the {RC['hp_rank']['b4']:.0%} percentile of {RC['n']} public projects under 100 MWh ({RCU['hp_rank']['b4']:.0%} of the {RCU['n']} utility-owned members), beside Fairhaven ($1,659 actual), Chateaugay ($1,490), Hinesburg ($1,400) and Provincetown ($1,289).",
 "The loaders make it an outlier, and they are policy, not estimating: indirects at 17.4% and AFUDC at 8.8% are EMA template outputs on a seven-year development window that no public disclosure carries.",
 "Risk plus contingency at 17.9% is inside lead-review guidance."])
 d.add_heading("Kill shots",1)
@@ -37,11 +38,11 @@ rows=[["🔴","1","Construction layers B+D+E = $8.3M direct","Haugland Class 3 b
 ["🟡","10","Engineering $895K, 1.6% of total","First-of-a-kind station; PSCAD pending; re-base came from one email. PF Rev 3 authorized $1.5M Leidos + $402K internal to IFC.","Reconcile PF Rev 3 authorizations to $895K","Medium"],
 ["🟡","11","Nomad $246K labor not visible","To-go built from $11,860,850 material; may be dropped or double-carried in layer G.","Line-level check","High"],
 ["🟡","12","D-Line 24211 at $4.79M (Feb 2024)","HEG take-off reads a larger duct bank; not re-estimated in 2.5 years.","Distribution Engineering re-base","Medium"],
-["🟡","13","Benchmark placement","All public figures are search-excerpt retrievals; n = 13 with mixed scope.","Verify the ten primary sources","High"],
+["🟡","13","Benchmark placement",f"All public figures are search-excerpt retrievals; reference class n = {RC['n']} with mixed scope and gross-of-incentive developer budgets.","Verify the ten primary sources","High"],
 ["⚪","14","AFUDC $5.0M, 8.8%","Correct given the spend curve; every month of siting slip compounds it.","None","High"]]
 table(d,["Sev","#","Claim attacked","Challenge","Evidence to resolve","Conf."],rows,widths=[0.35,0.3,1.6,2.6,1.3,0.55],font=8)
 d.add_heading("Where to be more aggressive",1)
-para(d,"Defensible reductions total about $3M and are conditional on KS1 closing first: escalation on the fixed-price battery ($1.13M); the four written design-basis confirmations Haugland values at $1.47M, of which the GSU count is already at four in Rev 3, so about $0.8M net; the material and tariff risk re-sized on non-battery material (about $0.5M); Station 496 testing hours if the unit-rate comparison shows them heavy. Do not cut layer E, the site risk items, the siting reserve or AFUDC. The Monte Carlo's apparent headroom in the reserve exists only if the Haugland reconciliation does not move the base up; the red team's expectation is that it will.")
+para(d,"Defensible reductions total about $3M and are conditional on KS1 closing first: escalation on the fixed-price battery ($1.13M); the four written design-basis confirmations Haugland values at $1.47M, of which the GSU count is already at four in Rev 3, so about $0.8M net; the material and tariff risk re-sized on non-battery material (about $0.5M); Station 496 testing hours if the unit-rate comparison shows them heavy. Do not cut layer E, the site risk items, the siting reserve or AFUDC. A fuller register (3 Oct 2026; deck slides 27 to 29, workbook tab Savings Register) sizes fourteen levers from the Rev 3 rows: about $5M to $7M loaded in estimate hygiene (the battery escalation, two risk lines that duplicate escalation, the Haugland deducts, the overhead basis on the vendor contract, commissioning overlap), $4M to $7M loaded in value engineering that needs a study first (the 496 relay program at 710 man-hours per relay, the five-feeder topology, the platform after geotech, a crew build-up for the battery install, the breaker and GSU package prices), and a Section 48E credit of $8M to $12M that reduces the revenue requirement rather than the estimate. Tiers A and B together are the same size as the KS1 gap; the honest planning case is a number that holds, not one that falls. The Monte Carlo's apparent headroom in the reserve exists only if the Haugland reconciliation does not move the base up; the red team's expectation is that it will.")
 d.add_heading("Base-rate check",1)
 bullets(d,["This project's own history: $43.9M (Dec 2023) to $57.2M (Sep 2026), +30% before a shovel, with the battery getting cheaper in between. Rev 0 to Rev 3 in five weeks: +21%.",
 "Eversource's own reference: Provincetown approved $35-45M, finished $49M.",

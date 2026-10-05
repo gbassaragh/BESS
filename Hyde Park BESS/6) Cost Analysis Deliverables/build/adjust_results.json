@@ -1,0 +1,3448 @@
+{
+ "share": 0.4,
+ "g": 0.035,
+ "hp": {
+  "contract": 605.3,
+  "installed": 832.9,
+  "station_direct": 1483.3,
+  "approval": 2862.4
+ },
+ "classes": {
+  "reference_class": {
+   "n": 55,
+   "nominal": {
+    "median": 770.5426356589147,
+    "q25": 575.7239382239383,
+    "q75": 1172.4296675191815,
+    "hp_pct": {
+     "contract": 0.2727272727272727,
+     "installed": 0.5818181818181818,
+     "station_direct": 0.8545454545454545,
+     "approval": 1.0
+    }
+   },
+   "indices": {
+    "installed": {
+     "label": "Installed all-in (EIA-860 2015-18, LBNL 2024)",
+     "source": "EIA Today in Energy #45596 (2015 $2,152; 2017 $834; 2018 $625); LBNL Utility-Scale Solar 2025 (2024 $458)",
+     "conf": "High at published points; interpolated 2019-2023",
+     "ratio_2018": 0.7328,
+     "naive_median": 619.8627525733891,
+     "naive_hp_pct": {
+      "contract": 0.45454545454545453,
+      "installed": 0.6727272727272727,
+      "station_direct": 0.9454545454545454,
+      "approval": 1.0
+     },
+     "by_share": {
+      "0.3": {
+       "median": 843.0616404165818,
+       "q25": 682.7240935705918,
+       "q75": 1264.932330868448,
+       "min": 421.9832542733778,
+       "max": 3509.465395973154,
+       "hp_pct": {
+        "contract": 0.18181818181818182,
+        "installed": 0.4727272727272727,
+        "station_direct": 0.8363636363636363,
+        "approval": 0.9636363636363636
+       }
+      },
+      "0.4": {
+       "median": 831.6326530612245,
+       "q25": 659.1932732157766,
+       "q75": 1222.1198866927691,
+       "min": 415.83842770112125,
+       "max": 3298.6160536912753,
+       "hp_pct": {
+        "contract": 0.18181818181818182,
+        "installed": 0.509090909090909,
+        "station_direct": 0.8545454545454545,
+        "approval": 0.9818181818181818
+       }
+      },
+      "0.5": {
+       "median": 831.6326530612245,
+       "q25": 628.5484151165224,
+       "q75": 1123.066278978317,
+       "min": 409.6936011288646,
+       "max": 3087.766711409396,
+       "hp_pct": {
+        "contract": 0.2,
+        "installed": 0.509090909090909,
+        "station_direct": 0.8545454545454545,
+        "approval": 0.9818181818181818
+       }
+      }
+     }
+    },
+    "pack": {
+     "label": "BNEF pack price, as released (real $ of survey year)",
+     "source": "BloombergNEF Lithium-Ion Battery Price Survey releases 2014-2025",
+     "conf": "High 2017-2025; Medium 2014-2016",
+     "ratio_2018": 0.6136363636363636,
+     "naive_median": 607.4350704464438,
+     "naive_hp_pct": {
+      "contract": 0.4909090909090909,
+      "installed": 0.6727272727272727,
+      "station_direct": 0.9636363636363636,
+      "approval": 1.0
+     },
+     "by_share": {
+      "0.3": {
+       "median": 837.0288248337029,
+       "q25": 680.0612813857681,
+       "q75": 1251.042785173323,
+       "min": 401.9960109154056,
+       "max": 3410.261668700427,
+       "hp_pct": {
+        "contract": 0.18181818181818182,
+        "installed": 0.4727272727272727,
+        "station_direct": 0.8,
+        "approval": 0.9636363636363636
+       }
+      },
+      "0.4": {
+       "median": 829.9319727891157,
+       "q25": 647.3897864144581,
+       "q75": 1212.3597016248975,
+       "min": 389.1887698904915,
+       "max": 3166.3444173276384,
+       "hp_pct": {
+        "contract": 0.2,
+        "installed": 0.5272727272727272,
+        "station_direct": 0.8727272727272727,
+        "approval": 0.9818181818181818
+       }
+      },
+      "0.5": {
+       "median": 809.3152997364954,
+       "q25": 615.8452425890383,
+       "q75": 1152.6349428751025,
+       "min": 376.3815288655775,
+       "max": 2922.4271659548504,
+       "hp_pct": {
+        "contract": 0.2,
+        "installed": 0.5636363636363636,
+        "station_direct": 0.8727272727272727,
+        "approval": 0.9818181818181818
+       }
+      }
+     }
+    },
+    "turnkey": {
+     "label": "BNEF turnkey system, global (4-h to 2023; all durations 2024-25)",
+     "source": "BloombergNEF Energy Storage System Cost Survey 2021-2025",
+     "conf": "High 2022-2025; Medium 2021; 2017-2020 not retrieved (held flat)",
+     "ratio_2018": 0.49159663865546216,
+     "naive_median": 524.0066225165563,
+     "naive_hp_pct": {
+      "contract": 0.5272727272727272,
+      "installed": 0.7818181818181819,
+      "station_direct": 1.0,
+      "approval": 1.0
+     },
+     "by_share": {
+      "0.3": {
+       "median": 829.9319727891157,
+       "q25": 631.0720616102666,
+       "q75": 1194.865053361248,
+       "min": 361.9433643634456,
+       "max": 3308.663597653826,
+       "hp_pct": {
+        "contract": 0.21818181818181817,
+        "installed": 0.5272727272727272,
+        "station_direct": 0.8363636363636363,
+        "approval": 0.9636363636363636
+       }
+      },
+      "0.4": {
+       "median": 805.9000442282176,
+       "q25": 579.5677694954747,
+       "q75": 1134.692804668976,
+       "min": 335.7852411545449,
+       "max": 3030.880322598838,
+       "hp_pct": {
+        "contract": 0.32727272727272727,
+        "installed": 0.6,
+        "station_direct": 0.8909090909090909,
+        "approval": 0.9636363636363636
+       }
+      },
+      "0.5": {
+       "median": 744.0802831199594,
+       "q25": 531.8479517727766,
+       "q75": 1051.4065998760852,
+       "min": 309.6271179456442,
+       "max": 2753.09704754385,
+       "hp_pct": {
+        "contract": 0.34545454545454546,
+        "installed": 0.6,
+        "station_direct": 0.8909090909090909,
+        "approval": 1.0
+       }
+      }
+     }
+    },
+    "nrel": {
+     "label": "NREL bottom-up 4-h 60 MW base year (2022 and 2024 editions)",
+     "source": "NREL Cost Projections for Utility-Scale Battery Storage: 2023 update (2022 base $482, Ramasamy et al.) and 2025 update (2024 base $334)",
+     "conf": "Medium; earlier editions' base years not retrieved (held flat before 2022)",
+     "ratio_2018": 0.6929460580912863,
+     "naive_median": 693.75,
+     "naive_hp_pct": {
+      "contract": 0.45454545454545453,
+      "installed": 0.6181818181818182,
+      "station_direct": 0.9454545454545454,
+      "approval": 1.0
+     },
+     "by_share": {
+      "0.3": {
+       "median": 862.4660406202227,
+       "q25": 664.3148507591211,
+       "q75": 1302.4263115657427,
+       "min": 407.01888438133875,
+       "max": 3476.28698933415,
+       "hp_pct": {
+        "contract": 0.18181818181818182,
+        "installed": 0.4727272727272727,
+        "station_direct": 0.8,
+        "approval": 0.9636363636363636
+       }
+      },
+      "0.4": {
+       "median": 838.3522727272726,
+       "q25": 630.7853733875988,
+       "q75": 1235.9066865391856,
+       "min": 395.8859345117357,
+       "max": 3254.3781781726034,
+       "hp_pct": {
+        "contract": 0.2,
+        "installed": 0.4909090909090909,
+        "station_direct": 0.8363636363636363,
+        "approval": 0.9636363636363636
+       }
+      },
+      "0.5": {
+       "median": 819.5863154083935,
+       "q25": 590.3591695769314,
+       "q75": 1166.2893856116252,
+       "min": 384.7529846421327,
+       "max": 3032.4693670110555,
+       "hp_pct": {
+        "contract": 0.2727272727272727,
+        "installed": 0.5636363636363636,
+        "station_direct": 0.8727272727272727,
+        "approval": 0.9636363636363636
+       }
+      }
+     }
+    },
+    "lcos": {
+     "label": "Lazard LCOS midpoint, unsubsidized 100 MW 4-h",
+     "source": "Lazard LCOS v5.0 (2019, $173-315), v6.0 (2020, $132-250), v7.0 (2021, $131-232), 2024 ($170-296), 2025 ($115-254), 2026 (~$210-292)",
+     "conf": "Medium; v8.0 (2023) possibly conflated with 2024 and omitted",
+     "ratio_2018": 1.028688524590164,
+     "naive_median": 890.3,
+     "naive_hp_pct": {
+      "contract": 0.14545454545454545,
+      "installed": 0.43636363636363634,
+      "station_direct": 0.8,
+      "approval": 1.0
+     },
+     "by_share": {
+      "0.3": {
+       "median": 908.674681362986,
+       "q25": 766.8733309137996,
+       "q75": 1386.323454261595,
+       "min": 448.54229796298756,
+       "max": 3755.7925926944654,
+       "hp_pct": {
+        "contract": 0.16363636363636364,
+        "installed": 0.41818181818181815,
+        "station_direct": 0.7636363636363637,
+        "approval": 0.9454545454545454
+       }
+      },
+      "0.4": {
+       "median": 902.5591026747196,
+       "q25": 760.636128566852,
+       "q75": 1354.2997958476785,
+       "min": 451.2504859539342,
+       "max": 3627.0523159863574,
+       "hp_pct": {
+        "contract": 0.14545454545454545,
+        "installed": 0.41818181818181815,
+        "station_direct": 0.7636363636363637,
+        "approval": 0.9636363636363636
+       }
+      },
+      "0.5": {
+       "median": 895.1924401538672,
+       "q25": 754.3989262199043,
+       "q75": 1346.7875733923452,
+       "min": 453.95867394488084,
+       "max": 3498.3120392782484,
+       "hp_pct": {
+        "contract": 0.14545454545454545,
+        "installed": 0.4,
+        "station_direct": 0.7636363636363637,
+        "approval": 0.9636363636363636
+       }
+      }
+     }
+    },
+    "construction": {
+     "label": "Construction index only (Handy-Whitman, no battery deflation)",
+     "source": "https://www.pjm.com/-/media/DotCom/committees-groups/subcommittees/cds/postings/handy-whitman-index.ashx",
+     "conf": "Medium (2015-2018 seen in excerpt; later years from search summary of the same posting); production-plant line, not distribution plant",
+     "ratio_2018": 1.4926174496644296,
+     "naive_median": 902.4469696969696,
+     "naive_hp_pct": {
+      "contract": 0.16363636363636364,
+      "installed": 0.41818181818181815,
+      "station_direct": 0.7454545454545455,
+      "approval": 0.9090909090909091
+     },
+     "by_share": {
+      "0.3": {
+       "median": 902.4469696969696,
+       "q25": 754.7683501167822,
+       "q75": 1455.9886830218406,
+       "min": 427.69230769230774,
+       "max": 4142.013422818792,
+       "hp_pct": {
+        "contract": 0.16363636363636364,
+        "installed": 0.41818181818181815,
+        "station_direct": 0.7454545454545455,
+        "approval": 0.9090909090909091
+       }
+      },
+      "0.4": {
+       "median": 902.4469696969696,
+       "q25": 754.7683501167822,
+       "q75": 1455.9886830218406,
+       "min": 427.69230769230774,
+       "max": 4142.013422818792,
+       "hp_pct": {
+        "contract": 0.16363636363636364,
+        "installed": 0.41818181818181815,
+        "station_direct": 0.7454545454545455,
+        "approval": 0.9090909090909091
+       }
+      },
+      "0.5": {
+       "median": 902.4469696969696,
+       "q25": 754.7683501167822,
+       "q75": 1455.9886830218406,
+       "min": 427.69230769230774,
+       "max": 4142.013422818792,
+       "hp_pct": {
+        "contract": 0.16363636363636364,
+        "installed": 0.41818181818181815,
+        "station_direct": 0.7454545454545455,
+        "approval": 0.9090909090909091
+       }
+      }
+     }
+    },
+    "installed_flat35": {
+     "label": "Installed index with 3.5%/yr flat non-battery escalation (proxy)",
+     "source": "sensitivity",
+     "conf": "Assumption",
+     "ratio_2018": 0.7328,
+     "naive_median": 816.2612844649129,
+     "by_share": {
+      "0.4": {
+       "median": 816.2612844649129,
+       "q25": 607.4078713714005,
+       "q75": 1160.061007574363,
+       "min": 406.20203331676566,
+       "max": 3005.895046544066,
+       "hp_pct": {
+        "contract": 0.2545454545454545,
+        "installed": 0.5636363636363636,
+        "station_direct": 0.8545454545454545,
+        "approval": 0.9818181818181818
+       }
+      }
+     }
+    }
+   },
+   "projects": [
+    {
+     "project": "Babcock Ranch storage add-on (FPL)",
+     "state": "FL",
+     "utility": 1,
+     "mw": 10.0,
+     "mwh": 40.0,
+     "cod_year": 2018,
+     "nominal": 375.0,
+     "adj_installed": 445.75892617449665,
+     "adj_pack": 427.88438071995114,
+     "adj_turnkey": 409.578421972816,
+     "adj_nrel": 439.78083488818964,
+     "adj_lcos": 490.1422048630212,
+     "adj_construction": 559.7315436241611,
+     "factor_installed": 1.1886904697986578
+    },
+    {
+     "project": "Bouldercombe Battery [AUSTRALIA]",
+     "state": "QLD (Australia)",
+     "utility": 0,
+     "mw": 50.0,
+     "mwh": 100.0,
+     "cod_year": 2023,
+     "nominal": 402.0,
+     "adj_installed": 415.83842770112125,
+     "adj_pack": 389.1887698904915,
+     "adj_turnkey": 335.7852411545449,
+     "adj_nrel": 395.8859345117357,
+     "adj_lcos": 451.2504859539342,
+     "adj_construction": 440.4177339901477,
+     "factor_installed": 1.0344239495052767
+    },
+    {
+     "project": "Convergent SSC Richmond Rd BESS (Staten Island)",
+     "state": "NY",
+     "utility": 0,
+     "mw": 5.0,
+     "mwh": 20.0,
+     "cod_year": 2025,
+     "nominal": 410.0,
+     "adj_installed": 420.61538461538464,
+     "adj_pack": 420.61538461538464,
+     "adj_turnkey": 420.61538461538464,
+     "adj_nrel": 420.61538461538464,
+     "adj_lcos": 479.7264957264958,
+     "adj_construction": 427.69230769230774,
+     "factor_installed": 1.025891181988743
+    },
+    {
+     "project": "Soldotna BESS (37 Megapacks)",
+     "state": "AK",
+     "utility": 1,
+     "mw": 46.5,
+     "mwh": 93.0,
+     "cod_year": 2022,
+     "nominal": 430.10752688172045,
+     "adj_installed": 454.5189061411228,
+     "adj_pack": 424.1710309789771,
+     "adj_turnkey": 363.2470435435605,
+     "adj_nrel": 420.3369268949885,
+     "adj_lcos": 518.4834663703708,
+     "adj_construction": 501.86733461959403,
+     "factor_installed": 1.0567564567781105
+    },
+    {
+     "project": "Martha's Vineyard BESS Phase 2 (cancelled)",
+     "state": "MA",
+     "utility": 1,
+     "mw": 9.8,
+     "mwh": 64.0,
+     "cod_year": 2019,
+     "nominal": 437.5,
+     "adj_installed": 518.296083846233,
+     "adj_pack": 505.2327935222673,
+     "adj_turnkey": 470.10835913312695,
+     "adj_nrel": 505.3445075343962,
+     "adj_lcos": 564.0994391716997,
+     "adj_construction": 640.1315789473684,
+     "factor_installed": 1.184676763077104
+    },
+    {
+     "project": "North Troy BESS (VEC + GMP)",
+     "state": "VT",
+     "utility": 1,
+     "mw": 3.0,
+     "mwh": 12.0,
+     "cod_year": 2024,
+     "nominal": 500.0,
+     "adj_installed": 515.9090909090909,
+     "adj_pack": 503.7351778656126,
+     "adj_turnkey": 457.7272727272727,
+     "adj_nrel": 515.9090909090909,
+     "adj_lcos": 531.3597346859149,
+     "adj_construction": 526.5151515151515,
+     "factor_installed": 1.0318181818181817
+    },
+    {
+     "project": "Lake Bonney BESS [AUSTRALIA]",
+     "state": "SA (Australia)",
+     "utility": 0,
+     "mw": 25.0,
+     "mwh": 52.0,
+     "cod_year": 2019,
+     "nominal": 511.53846153846155,
+     "adj_installed": 606.0077288048263,
+     "adj_pack": 590.733727810651,
+     "adj_turnkey": 549.6651583710408,
+     "adj_nrel": 590.8643472709864,
+     "adj_lcos": 659.562421185372,
+     "adj_construction": 748.4615384615386,
+     "factor_installed": 1.184676763077104
+    },
+    {
+     "project": "Greenbacker Staten Island Energy Storage 3 (Androvette St)",
+     "state": "NY",
+     "utility": 0,
+     "mw": 5.0,
+     "mwh": 20.0,
+     "cod_year": 2023,
+     "nominal": 522.5,
+     "adj_installed": 540.4865136165071,
+     "adj_pack": 505.84858773080055,
+     "adj_turnkey": 436.4372848339545,
+     "adj_nrel": 514.5532357770694,
+     "adj_lcos": 586.5133803754493,
+     "adj_construction": 572.4334975369458,
+     "factor_installed": 1.0344239495052767
+    },
+    {
+     "project": "Elevate Renewables Victory Blvd BESS (Staten Island)",
+     "state": "NY",
+     "utility": 0,
+     "mw": 15.1,
+     "mwh": 60.4,
+     "cod_year": 2025,
+     "nominal": 524.0066225165563,
+     "adj_installed": 537.573773343439,
+     "adj_pack": 537.573773343439,
+     "adj_turnkey": 537.573773343439,
+     "adj_nrel": 537.573773343439,
+     "adj_lcos": 613.1216116032786,
+     "adj_construction": 546.6185405613608,
+     "factor_installed": 1.025891181988743
+    },
+    {
+     "project": "WindCharger [CANADA]",
+     "state": "AB (Canada)",
+     "utility": 0,
+     "mw": 10.0,
+     "mwh": 20.0,
+     "cod_year": 2020,
+     "nominal": 550.0,
+     "adj_installed": 648.04439126605,
+     "adj_pack": 644.4961254837289,
+     "adj_turnkey": 579.216729053624,
+     "adj_nrel": 623.5136013295054,
+     "adj_lcos": 760.1754161934015,
+     "adj_construction": 785.1091142490372,
+     "factor_installed": 1.1782625295746363
+    },
+    {
+     "project": "Broken Hill BESS [AUSTRALIA]",
+     "state": "NSW (Australia)",
+     "utility": 0,
+     "mw": 50.0,
+     "mwh": 50.0,
+     "cod_year": 2023,
+     "nominal": 550.0,
+     "adj_installed": 568.9331722279022,
+     "adj_pack": 532.472197611369,
+     "adj_turnkey": 459.4076682462679,
+     "adj_nrel": 541.6349850284942,
+     "adj_lcos": 617.3825056583676,
+     "adj_construction": 602.5615763546798,
+     "factor_installed": 1.0344239495052767
+    },
+    {
+     "project": "Wellesley MLP BESS (Citizens Energy)",
+     "state": "MA",
+     "utility": 0,
+     "mw": 4.99,
+     "mwh": 20.0,
+     "cod_year": 2024,
+     "nominal": 550.0,
+     "adj_installed": 567.5,
+     "adj_pack": 554.1086956521739,
+     "adj_turnkey": 503.5,
+     "adj_nrel": 567.5,
+     "adj_lcos": 584.4957081545064,
+     "adj_construction": 579.1666666666666,
+     "factor_installed": 1.0318181818181817
+    },
+    {
+     "project": "Thurcroft BESS [UK]",
+     "state": "England (UK)",
+     "utility": 0,
+     "mw": 50.0,
+     "mwh": 75.0,
+     "cod_year": 2020,
+     "nominal": 550.6666666666666,
+     "adj_installed": 648.8298996190997,
+     "adj_pack": 645.2773329085576,
+     "adj_turnkey": 579.9188099373254,
+     "adj_nrel": 624.2693753917229,
+     "adj_lcos": 761.0968409403025,
+     "adj_construction": 786.0607616602481,
+     "factor_installed": 1.1782625295746363
+    },
+    {
+     "project": "Wickham Market BESS [UK]",
+     "state": "England (UK)",
+     "utility": 0,
+     "mw": 50.0,
+     "mwh": 74.0,
+     "cod_year": 2020,
+     "nominal": 562.1621621621622,
+     "adj_installed": 662.3746112203361,
+     "adj_pack": 658.7478825583077,
+     "adj_turnkey": 592.0249613914192,
+     "adj_nrel": 637.3013713834748,
+     "adj_lcos": 776.985191981462,
+     "adj_construction": 802.4702494535615,
+     "factor_installed": 1.1782625295746363
+    },
+    {
+     "project": "Virginia battery pilot portfolio (Scott Solar 10+2 MW, New Kent 2 MW, Hanover/Ashland 2 MW)",
+     "state": "VA",
+     "utility": 1,
+     "mw": 16.0,
+     "mwh": 56.0,
+     "cod_year": 2021,
+     "nominal": 589.2857142857143,
+     "adj_installed": 656.0119352112171,
+     "adj_pack": 649.5022399203584,
+     "adj_turnkey": 572.5214476034317,
+     "adj_nrel": 619.9823821847331,
+     "adj_lcos": 782.6191230372416,
+     "adj_construction": 761.0751617720259,
+     "factor_installed": 1.1132323749038835
+    },
+    {
+     "project": "Pomona (Ladentown) BESS",
+     "state": "NY",
+     "utility": 1,
+     "mw": 3.0,
+     "mwh": 12.0,
+     "cod_year": 2021,
+     "nominal": 616.6666666666666,
+     "adj_installed": 686.4932978573947,
+     "adj_pack": 679.6811318762537,
+     "adj_turnkey": 599.1234542597527,
+     "adj_nrel": 648.789644387256,
+     "adj_lcos": 818.9832439056386,
+     "adj_construction": 796.4382500967866,
+     "factor_installed": 1.1132323749038835
+    },
+    {
+     "project": "Wallgrove Grid Battery [AUSTRALIA]",
+     "state": "NSW (Australia)",
+     "utility": 1,
+     "mw": 50.0,
+     "mwh": 75.0,
+     "cod_year": 2021,
+     "nominal": 618.6666666666666,
+     "adj_installed": 688.7197626072026,
+     "adj_pack": 681.8855031147714,
+     "adj_turnkey": 601.0665573546491,
+     "adj_nrel": 650.8938270177011,
+     "adj_lcos": 821.639405777765,
+     "adj_construction": 799.0212930700735,
+     "factor_installed": 1.1132323749038835
+    },
+    {
+     "project": "Braintree BELD solar-sited BESS",
+     "state": "MA",
+     "utility": 1,
+     "mw": 2.0,
+     "mwh": 4.2,
+     "cod_year": 2019,
+     "nominal": 619.047619047619,
+     "adj_installed": 733.3713295239215,
+     "adj_pack": 714.8872180451128,
+     "adj_turnkey": 665.187338093132,
+     "adj_nrel": 715.045289572479,
+     "adj_lcos": 798.181519372201,
+     "adj_construction": 905.7644110275689,
+     "factor_installed": 1.184676763077104
+    },
+    {
+     "project": "Whitehorse Grid-Scale BESS [CANADA]",
+     "state": "YT (Canada)",
+     "utility": 1,
+     "mw": 7.0,
+     "mwh": 40.0,
+     "cod_year": 2023,
+     "nominal": 647.5,
+     "adj_installed": 669.7895073046667,
+     "adj_pack": 626.8649962788389,
+     "adj_turnkey": 540.8481185262881,
+     "adj_nrel": 637.6520960108181,
+     "adj_lcos": 726.8275862068964,
+     "adj_construction": 709.3793103448276,
+     "factor_installed": 1.0344239495052767
+    },
+    {
+     "project": "Sterling MLD Chocksett Road BESS",
+     "state": "MA",
+     "utility": 1,
+     "mw": 2.0,
+     "mwh": 3.9,
+     "cod_year": 2016,
+     "nominal": 692.3076923076923,
+     "adj_installed": 731.8798218447562,
+     "adj_pack": 756.4815275222516,
+     "adj_turnkey": 783.0639948287006,
+     "adj_nrel": 838.8222955955443,
+     "adj_lcos": 931.7971324721565,
+     "adj_construction": 1078.2159017453134,
+     "factor_installed": 1.057159742664648
+    },
+    {
+     "project": "OSCII Gildersleeve Ave BESS (Bronx)",
+     "state": "NY",
+     "utility": 0,
+     "mw": 5.0,
+     "mwh": 20.0,
+     "cod_year": 2025,
+     "nominal": 693.75,
+     "adj_installed": 711.7120075046905,
+     "adj_pack": 711.7120075046905,
+     "adj_turnkey": 711.7120075046905,
+     "adj_nrel": 711.7120075046905,
+     "adj_lcos": 811.7323327079425,
+     "adj_construction": 723.6866791744841,
+     "factor_installed": 1.025891181988743
+    },
+    {
+     "project": "Concord MLP grid-scale battery (planned)",
+     "state": "MA",
+     "utility": 1,
+     "mw": 4.99,
+     "mwh": 14.97,
+     "cod_year": 2026,
+     "nominal": 694.7227788911156,
+     "adj_installed": 694.7227788911156,
+     "adj_pack": 694.7227788911156,
+     "adj_turnkey": 694.7227788911156,
+     "adj_nrel": 694.7227788911156,
+     "adj_lcos": 694.7227788911156,
+     "adj_construction": 694.7227788911156,
+     "factor_installed": 1.0
+    },
+    {
+     "project": "Ashburnham MLP substation BESS",
+     "state": "MA",
+     "utility": 1,
+     "mw": 3.0,
+     "mwh": 5.0,
+     "cod_year": 2019,
+     "nominal": 700.0,
+     "adj_installed": 829.2737341539728,
+     "adj_pack": 808.3724696356277,
+     "adj_turnkey": 752.173374613003,
+     "adj_nrel": 808.551212055034,
+     "adj_lcos": 902.5591026747196,
+     "adj_construction": 1024.2105263157896,
+     "factor_installed": 1.184676763077104
+    },
+    {
+     "project": "Agilitas AE-ESS NWS 1 (Long Island City)",
+     "state": "NY",
+     "utility": 0,
+     "mw": 5.0,
+     "mwh": 20.6,
+     "cod_year": 2021,
+     "nominal": 728.1553398058253,
+     "adj_installed": 810.6060982309832,
+     "adj_pack": 802.5623441204782,
+     "adj_turnkey": 707.4404471710542,
+     "adj_nrel": 766.0859091426533,
+     "adj_lcos": 967.0492252887364,
+     "adj_construction": 940.4282669733772,
+     "factor_installed": 1.1132323749038835
+    },
+    {
+     "project": "Panton battery (Green Mountain Power)",
+     "state": "VT",
+     "utility": 1,
+     "mw": 1.0,
+     "mwh": 4.0,
+     "cod_year": 2018,
+     "nominal": 750.0,
+     "adj_installed": 891.5178523489933,
+     "adj_pack": 855.7687614399023,
+     "adj_turnkey": 819.156843945632,
+     "adj_nrel": 879.5616697763793,
+     "adj_lcos": 980.2844097260424,
+     "adj_construction": 1119.4630872483222,
+     "factor_installed": 1.1886904697986578
+    },
+    {
+     "project": "Martha's Vineyard BESS Phase 1 (cancelled)",
+     "state": "MA",
+     "utility": 1,
+     "mw": 4.9,
+     "mwh": 20.0,
+     "cod_year": 2019,
+     "nominal": 750.0,
+     "adj_installed": 888.507572307828,
+     "adj_pack": 866.1133603238867,
+     "adj_turnkey": 805.9000442282176,
+     "adj_nrel": 866.304870058965,
+     "adj_lcos": 967.0276100086281,
+     "adj_construction": 1097.3684210526317,
+     "factor_installed": 1.184676763077104
+    },
+    {
+     "project": "OSCII Gun Hill Rd BESS (Bronx)",
+     "state": "NY",
+     "utility": 0,
+     "mw": 5.0,
+     "mwh": 20.0,
+     "cod_year": 2025,
+     "nominal": 763.125,
+     "adj_installed": 782.8832082551595,
+     "adj_pack": 782.8832082551595,
+     "adj_turnkey": 782.8832082551595,
+     "adj_nrel": 782.8832082551595,
+     "adj_lcos": 892.9055659787368,
+     "adj_construction": 796.0553470919325,
+     "factor_installed": 1.025891181988743
+    },
+    {
+     "project": "Hornsdale Power Reserve expansion [AUSTRALIA]",
+     "state": "SA (Australia)",
+     "utility": 0,
+     "mw": 50.0,
+     "mwh": 64.5,
+     "cod_year": 2020,
+     "nominal": 770.5426356589147,
+     "adj_installed": 907.9015150365802,
+     "adj_pack": 902.930442185802,
+     "adj_turnkey": 811.4748818594818,
+     "adj_nrel": 873.5342067956706,
+     "adj_lcos": 1064.9955795577746,
+     "adj_construction": 1099.9273566787076,
+     "factor_installed": 1.1782625295746363
+    },
+    {
+     "project": "Soltage Brigis 1A BESS (Maspeth, Queens)",
+     "state": "NY",
+     "utility": 0,
+     "mw": 5.0,
+     "mwh": 20.0,
+     "cod_year": 2025,
+     "nominal": 805.22465,
+     "adj_installed": 826.0728679549719,
+     "adj_pack": 826.0728679549719,
+     "adj_turnkey": 826.0728679549719,
+     "adj_nrel": 826.0728679549719,
+     "adj_lcos": 942.1648771148635,
+     "adj_construction": 839.9716799249532,
+     "factor_installed": 1.025891181988743
+    },
+    {
+     "project": "Chugach BESS (Southcentral Power Project site)",
+     "state": "AK",
+     "utility": 1,
+     "mw": 40.0,
+     "mwh": 80.0,
+     "cod_year": 2024,
+     "nominal": 812.5,
+     "adj_installed": 838.3522727272726,
+     "adj_pack": 818.5696640316205,
+     "adj_turnkey": 743.8068181818181,
+     "adj_nrel": 838.3522727272726,
+     "adj_lcos": 863.4595688646117,
+     "adj_construction": 855.5871212121211,
+     "factor_installed": 1.0318181818181817
+    },
+    {
+     "project": "NineDot Blue Aster BESS (Hinsdale St Brooklyn)",
+     "state": "NY",
+     "utility": 0,
+     "mw": 14.7,
+     "mwh": 58.8,
+     "cod_year": 2026,
+     "nominal": 829.9319727891157,
+     "adj_installed": 829.9319727891157,
+     "adj_pack": 829.9319727891157,
+     "adj_turnkey": 829.9319727891157,
+     "adj_nrel": 829.9319727891157,
+     "adj_lcos": 829.9319727891157,
+     "adj_construction": 829.9319727891157,
+     "factor_installed": 1.0
+    },
+    {
+     "project": "NineDot Eastern Towhee A/B (Centre St Brooklyn)",
+     "state": "NY",
+     "utility": 0,
+     "mw": 9.8,
+     "mwh": 39.2,
+     "cod_year": 2027,
+     "nominal": 831.6326530612245,
+     "adj_installed": 831.6326530612245,
+     "adj_pack": 831.6326530612245,
+     "adj_turnkey": 831.6326530612245,
+     "adj_nrel": 831.6326530612245,
+     "adj_lcos": 831.6326530612245,
+     "adj_construction": 831.6326530612245,
+     "factor_installed": 1.0
+    },
+    {
+     "project": "OSCII Blondell Ave BESS (Bronx)",
+     "state": "NY",
+     "utility": 0,
+     "mw": 5.0,
+     "mwh": 10.0,
+     "cod_year": 2024,
+     "nominal": 857.0,
+     "adj_installed": 884.2681818181818,
+     "adj_pack": 863.40209486166,
+     "adj_turnkey": 784.5445454545454,
+     "adj_nrel": 884.2681818181818,
+     "adj_lcos": 910.7505852516582,
+     "adj_construction": 902.4469696969696,
+     "factor_installed": 1.0318181818181817
+    },
+    {
+     "project": "Convergent 720 E 144th St Energy Storage 1 (Bronx)",
+     "state": "NY",
+     "utility": 0,
+     "mw": 5.0,
+     "mwh": 20.0,
+     "cod_year": 2026,
+     "nominal": 890.3,
+     "adj_installed": 890.3,
+     "adj_pack": 890.3,
+     "adj_turnkey": 890.3,
+     "adj_nrel": 890.3,
+     "adj_lcos": 890.3,
+     "adj_construction": 890.3,
+     "factor_installed": 1.0
+    },
+    {
+     "project": "NineDot Devoe Ave BESS (Bronx)",
+     "state": "NY",
+     "utility": 0,
+     "mw": 9.8,
+     "mwh": 39.2,
+     "cod_year": 2026,
+     "nominal": 892.0918367346939,
+     "adj_installed": 892.0918367346939,
+     "adj_pack": 892.0918367346939,
+     "adj_turnkey": 892.0918367346939,
+     "adj_nrel": 892.0918367346939,
+     "adj_lcos": 892.0918367346939,
+     "adj_construction": 892.0918367346939,
+     "factor_installed": 1.0
+    },
+    {
+     "project": "Convergent East Bay Ave Energy Storage 1 (Bronx)",
+     "state": "NY",
+     "utility": 0,
+     "mw": 5.0,
+     "mwh": 20.0,
+     "cod_year": 2026,
+     "nominal": 975.6725,
+     "adj_installed": 975.6725,
+     "adj_pack": 975.6725,
+     "adj_turnkey": 975.6725,
+     "adj_nrel": 975.6725,
+     "adj_lcos": 975.6725,
+     "adj_construction": 975.6725,
+     "factor_installed": 1.0
+    },
+    {
+     "project": "Westmoreland Clean Innovation Project BESS (withdrawn)",
+     "state": "NH",
+     "utility": 1,
+     "mw": 1.7,
+     "mwh": 7.1,
+     "cod_year": 2020,
+     "nominal": 985.9154929577464,
+     "adj_installed": 1161.6672826792187,
+     "adj_pack": 1155.3067550284513,
+     "adj_turnkey": 1038.2886308259585,
+     "adj_nrel": 1117.6940356738892,
+     "adj_lcos": 1362.6704003466864,
+     "adj_construction": 1407.3658898190167,
+     "factor_installed": 1.1782625295746363
+    },
+    {
+     "project": "NineDot Wintergreen / Hunts Point BESS (Bronx)",
+     "state": "NY",
+     "utility": 0,
+     "mw": 19.6,
+     "mwh": 78.3,
+     "cod_year": 2027,
+     "nominal": 998.7228607918263,
+     "adj_installed": 998.7228607918263,
+     "adj_pack": 998.7228607918263,
+     "adj_turnkey": 998.7228607918263,
+     "adj_nrel": 998.7228607918263,
+     "adj_lcos": 998.7228607918263,
+     "adj_construction": 998.7228607918263,
+     "factor_installed": 1.0
+    },
+    {
+     "project": "Kingsbery Community Solar + Storage",
+     "state": "TX",
+     "utility": 1,
+     "mw": 1.5,
+     "mwh": 3.0,
+     "cod_year": 2016,
+     "nominal": 1000.0,
+     "adj_installed": 1057.1597426646479,
+     "adj_pack": 1092.6955397543634,
+     "adj_turnkey": 1131.09243697479,
+     "adj_nrel": 1211.6322047491196,
+     "adj_lcos": 1345.9291913486707,
+     "adj_construction": 1557.422969187675,
+     "factor_installed": 1.057159742664648
+    },
+    {
+     "project": "Soltage Brigis 2 / Maspeth ESS (Queens)",
+     "state": "NY",
+     "utility": 0,
+     "mw": 20.0,
+     "mwh": 80.0,
+     "cod_year": 2027,
+     "nominal": 1008.7193125,
+     "adj_installed": 1008.7193125,
+     "adj_pack": 1008.7193125,
+     "adj_turnkey": 1008.7193125,
+     "adj_nrel": 1008.7193125,
+     "adj_lcos": 1008.7193125,
+     "adj_construction": 1008.7193125,
+     "factor_installed": 1.0
+    },
+    {
+     "project": "NineDot Arthur Kill Road BESS (Staten Island)",
+     "state": "NY",
+     "utility": 0,
+     "mw": 9.8,
+     "mwh": 39.1,
+     "cod_year": 2025,
+     "nominal": 1109.5652173913043,
+     "adj_installed": 1138.2931723631618,
+     "adj_pack": 1138.2931723631618,
+     "adj_turnkey": 1138.2931723631618,
+     "adj_nrel": 1138.2931723631618,
+     "adj_lcos": 1298.2630085832632,
+     "adj_construction": 1157.4451423444,
+     "factor_installed": 1.025891181988743
+    },
+    {
+     "project": "Stafford Hill Solar + Storage (Rutland)",
+     "state": "VT",
+     "utility": 1,
+     "mw": 4.0,
+     "mwh": 3.4,
+     "cod_year": 2015,
+     "nominal": 1235.2941176470588,
+     "adj_installed": 1282.5724907063195,
+     "adj_pack": 1329.8823529411764,
+     "adj_turnkey": 1420.3183391003458,
+     "adj_nrel": 1519.8086404686355,
+     "adj_lcos": 1685.7049180327867,
+     "adj_construction": 1962.3529411764705,
+     "factor_installed": 1.0382729686670207
+    },
+    {
+     "project": "Ozone Park BESS",
+     "state": "NY",
+     "utility": 1,
+     "mw": 1.5,
+     "mwh": 12.0,
+     "cod_year": 2019,
+     "nominal": 1250.0,
+     "adj_installed": 1480.84595384638,
+     "adj_pack": 1443.5222672064779,
+     "adj_turnkey": 1343.1667403803626,
+     "adj_nrel": 1443.841450098275,
+     "adj_lcos": 1611.7126833477137,
+     "adj_construction": 1828.9473684210527,
+     "factor_installed": 1.184676763077104
+    },
+    {
+     "project": "Harding Street BESS",
+     "state": "IN",
+     "utility": 1,
+     "mw": 20.0,
+     "mwh": 20.0,
+     "cod_year": 2016,
+     "nominal": 1250.0,
+     "adj_installed": 1321.44967833081,
+     "adj_pack": 1365.8694246929542,
+     "adj_turnkey": 1413.8655462184875,
+     "adj_nrel": 1514.5402559363997,
+     "adj_lcos": 1682.4114891858383,
+     "adj_construction": 1946.778711484594,
+     "factor_installed": 1.057159742664648
+    },
+    {
+     "project": "Regina BESS [CANADA]",
+     "state": "SK (Canada)",
+     "utility": 1,
+     "mw": 20.0,
+     "mwh": 20.0,
+     "cod_year": 2024,
+     "nominal": 1260.0,
+     "adj_installed": 1300.090909090909,
+     "adj_pack": 1269.4126482213437,
+     "adj_turnkey": 1153.4727272727273,
+     "adj_nrel": 1300.090909090909,
+     "adj_lcos": 1339.0265314085057,
+     "adj_construction": 1326.8181818181818,
+     "factor_installed": 1.0318181818181817
+    },
+    {
+     "project": "Outer Cape (Provincetown) BESS",
+     "state": "MA",
+     "utility": 1,
+     "mw": 25.0,
+     "mwh": 38.0,
+     "cod_year": 2022,
+     "nominal": 1289.4736842105262,
+     "adj_installed": 1362.6596416349319,
+     "adj_pack": 1271.6759132705254,
+     "adj_turnkey": 1089.024195676319,
+     "adj_nrel": 1260.1811683292515,
+     "adj_lcos": 1554.4270764801183,
+     "adj_construction": 1504.6114762246643,
+     "factor_installed": 1.0567564567781105
+    },
+    {
+     "project": "VEC Hinesburg BESS",
+     "state": "VT",
+     "utility": 1,
+     "mw": 1.0,
+     "mwh": 4.0,
+     "cod_year": 2023,
+     "nominal": 1400.0,
+     "adj_installed": 1448.1935293073875,
+     "adj_pack": 1355.3837757380302,
+     "adj_turnkey": 1169.4013373541366,
+     "adj_nrel": 1378.707234617985,
+     "adj_lcos": 1571.5191053122085,
+     "adj_construction": 1533.7931034482758,
+     "factor_installed": 1.0344239495052767
+    },
+    {
+     "project": "Northern New York (Chateaugay) BESS",
+     "state": "NY",
+     "utility": 1,
+     "mw": 20.0,
+     "mwh": 20.0,
+     "cod_year": 2023,
+     "nominal": 1490.0,
+     "adj_installed": 1541.2916847628624,
+     "adj_pack": 1442.515589892618,
+     "adj_turnkey": 1244.5771376126168,
+     "adj_nrel": 1467.338413986284,
+     "adj_lcos": 1672.5453335108505,
+     "adj_construction": 1632.3940886699506,
+     "factor_installed": 1.0344239495052767
+    },
+    {
+     "project": "Fairhaven BESS",
+     "state": "MD",
+     "utility": 1,
+     "mw": 2.5,
+     "mwh": 9.74,
+     "cod_year": 2023,
+     "nominal": 1659.2747433264888,
+     "adj_installed": 1716.3935333061409,
+     "adj_pack": 1606.3957618547195,
+     "adj_turnkey": 1385.9700742028126,
+     "adj_nrel": 1634.038637745093,
+     "adj_lcos": 1862.5585429282771,
+     "adj_construction": 1817.845827171483,
+     "factor_installed": 1.0344239495052767
+    },
+    {
+     "project": "Asheville Rock Hill substation BESS (Duke Energy Progress)",
+     "state": "NC",
+     "utility": 1,
+     "mw": 9.0,
+     "mwh": 9.0,
+     "cod_year": 2020,
+     "nominal": 1666.6666666666667,
+     "adj_installed": 1963.7708826243938,
+     "adj_pack": 1953.0185620719058,
+     "adj_turnkey": 1755.2022092534064,
+     "adj_nrel": 1889.4351555439557,
+     "adj_lcos": 2303.5618672527316,
+     "adj_construction": 2379.1185280273858,
+     "factor_installed": 1.1782625295746363
+    },
+    {
+     "project": "El Centro BESS (IID)",
+     "state": "CA",
+     "utility": 1,
+     "mw": 30.0,
+     "mwh": 20.0,
+     "cod_year": 2017,
+     "nominal": 1900.0,
+     "adj_installed": 2200.315696809641,
+     "adj_pack": 2175.6808592251627,
+     "adj_turnkey": 2156.5670318760417,
+     "adj_nrel": 2309.5925906472676,
+     "adj_lcos": 2564.756865186415,
+     "adj_construction": 2971.589310829817,
+     "factor_installed": 1.1580608930577057
+    },
+    {
+     "project": "LADWP Beacon Energy Storage System",
+     "state": "CA",
+     "utility": 1,
+     "mw": 20.0,
+     "mwh": 10.0,
+     "cod_year": 2018,
+     "nominal": 1920.0,
+     "adj_installed": 2282.285702013423,
+     "adj_pack": 2190.76802928615,
+     "adj_turnkey": 2097.0415205008176,
+     "adj_nrel": 2251.677874627531,
+     "adj_lcos": 2509.5280888986686,
+     "adj_construction": 2865.8255033557048,
+     "factor_installed": 1.1886904697986578
+    },
+    {
+     "project": "Power Creek BESS (Cordova)",
+     "state": "AK",
+     "utility": 1,
+     "mw": 1.0,
+     "mwh": 0.92,
+     "cod_year": 2019,
+     "nominal": 2173.913043478261,
+     "adj_installed": 2575.3842675589217,
+     "adj_pack": 2510.473508185179,
+     "adj_turnkey": 2335.9421571832395,
+     "adj_nrel": 2511.0286088665653,
+     "adj_lcos": 2802.978579735154,
+     "adj_construction": 3180.7780320366137,
+     "factor_installed": 1.184676763077104
+    },
+    {
+     "project": "Glacier BESS",
+     "state": "WA",
+     "utility": 1,
+     "mw": 2.0,
+     "mwh": 4.4,
+     "cod_year": 2016,
+     "nominal": 2545.4545454545455,
+     "adj_installed": 2690.952072237286,
+     "adj_pack": 2781.4068284656523,
+     "adj_turnkey": 2879.144385026738,
+     "adj_nrel": 3084.154702997759,
+     "adj_lcos": 3426.0015779784344,
+     "adj_construction": 3964.349376114082,
+     "factor_installed": 1.057159742664648
+    },
+    {
+     "project": "Dalrymple ESCRI BESS [AUSTRALIA]",
+     "state": "SA (Australia)",
+     "utility": 1,
+     "mw": 30.0,
+     "mwh": 8.0,
+     "cod_year": 2018,
+     "nominal": 2775.0,
+     "adj_installed": 3298.6160536912753,
+     "adj_pack": 3166.3444173276384,
+     "adj_turnkey": 3030.880322598838,
+     "adj_nrel": 3254.3781781726034,
+     "adj_lcos": 3627.0523159863574,
+     "adj_construction": 4142.013422818792,
+     "factor_installed": 1.1886904697986578
+    }
+   ]
+  },
+  "reference_class_utility": {
+   "n": 31,
+   "nominal": {
+    "median": 985.9154929577464,
+    "q25": 633.2738095238095,
+    "q75": 1445.0,
+    "hp_pct": {
+     "contract": 0.16129032258064516,
+     "installed": 0.4838709677419355,
+     "station_direct": 0.7419354838709677,
+     "approval": 1.0
+    }
+   },
+   "indices": {
+    "installed": {
+     "label": "Installed all-in (EIA-860 2015-18, LBNL 2024)",
+     "source": "EIA Today in Energy #45596 (2015 $2,152; 2017 $834; 2018 $625); LBNL Utility-Scale Solar 2025 (2024 $458)",
+     "conf": "High at published points; interpolated 2019-2023",
+     "ratio_2018": 0.7328,
+     "naive_median": 610.4048027444253,
+     "naive_hp_pct": {
+      "contract": 0.4838709677419355,
+      "installed": 0.6451612903225806,
+      "station_direct": 0.9032258064516129,
+      "approval": 1.0
+     },
+     "by_share": {
+      "0.3": {
+       "median": 1182.2255492954046,
+       "q25": 715.1373405700816,
+       "q75": 1565.969296614841,
+       "min": 466.35601326074055,
+       "max": 3509.465395973154,
+       "hp_pct": {
+        "contract": 0.12903225806451613,
+        "installed": 0.3548387096774194,
+        "station_direct": 0.7096774193548387,
+        "approval": 0.9354838709677419
+       }
+      },
+      "0.4": {
+       "median": 1057.1597426646479,
+       "q25": 691.7212707491591,
+       "q75": 1511.0688193046212,
+       "min": 445.75892617449665,
+       "max": 3298.6160536912753,
+       "hp_pct": {
+        "contract": 0.12903225806451613,
+        "installed": 0.3870967741935484,
+        "station_direct": 0.7419354838709677,
+        "approval": 0.967741935483871
+       }
+      },
+      "0.5": {
+       "median": 932.0939360338912,
+       "q25": 660.5182182680555,
+       "q75": 1472.6548597791277,
+       "min": 417.2657718120805,
+       "max": 3087.766711409396,
+       "hp_pct": {
+        "contract": 0.12903225806451613,
+        "installed": 0.3870967741935484,
+        "station_direct": 0.7419354838709677,
+        "approval": 0.967741935483871
+       }
+      }
+     }
+    },
+    "pack": {
+     "label": "BNEF pack price, as released (real $ of survey year)",
+     "source": "BloombergNEF Lithium-Ion Battery Price Survey releases 2014-2025",
+     "conf": "High 2017-2025; Medium 2014-2016",
+     "ratio_2018": 0.6136363636363636,
+     "naive_median": 519.2307692307692,
+     "naive_hp_pct": {
+      "contract": 0.5161290322580645,
+      "installed": 0.6129032258064516,
+      "station_direct": 0.9354838709677419,
+      "approval": 1.0
+     },
+     "by_share": {
+      "0.3": {
+       "median": 1208.8773971126911,
+       "q25": 710.0199310174919,
+       "q75": 1525.4876444504926,
+       "min": 443.59510688913133,
+       "max": 3410.261668700427,
+       "hp_pct": {
+        "contract": 0.12903225806451613,
+        "installed": 0.3548387096774194,
+        "station_direct": 0.6451612903225806,
+        "approval": 0.9354838709677419
+       }
+      },
+      "0.4": {
+       "median": 1092.6955397543634,
+       "q25": 688.3041410029434,
+       "q75": 1443.018928549548,
+       "min": 424.1710309789771,
+       "max": 3166.3444173276384,
+       "hp_pct": {
+        "contract": 0.12903225806451613,
+        "installed": 0.41935483870967744,
+        "station_direct": 0.7741935483870968,
+        "approval": 0.967741935483871
+       }
+      },
+      "0.5": {
+       "median": 976.5136823960353,
+       "q25": 659.8847377127223,
+       "q75": 1371.1059785505593,
+       "min": 394.9225899938987,
+       "max": 2922.4271659548504,
+       "hp_pct": {
+        "contract": 0.12903225806451613,
+        "installed": 0.4838709677419355,
+        "station_direct": 0.7741935483870968,
+        "approval": 0.967741935483871
+       }
+      }
+     }
+    },
+    "turnkey": {
+     "label": "BNEF turnkey system, global (4-h to 2023; all durations 2024-25)",
+     "source": "BloombergNEF Energy Storage System Cost Survey 2021-2025",
+     "conf": "High 2022-2025; Medium 2021; 2017-2020 not retrieved (held flat)",
+     "ratio_2018": 0.49159663865546216,
+     "naive_median": 491.5966386554622,
+     "naive_hp_pct": {
+      "contract": 0.5483870967741935,
+      "installed": 0.8064516129032258,
+      "station_direct": 1.0,
+      "approval": 1.0
+     },
+     "by_share": {
+      "0.3": {
+       "median": 1130.557945574223,
+       "q25": 672.6390100873105,
+       "q75": 1520.516424989997,
+       "min": 397.90211631256886,
+       "max": 3308.663597653826,
+       "hp_pct": {
+        "contract": 0.16129032258064516,
+        "installed": 0.3870967741935484,
+        "station_direct": 0.7096774193548387,
+        "approval": 0.9354838709677419
+       }
+      },
+      "0.4": {
+       "median": 1038.2886308259585,
+       "q25": 633.1269477238906,
+       "q75": 1399.91781021065,
+       "min": 363.2470435435605,
+       "max": 3030.880322598838,
+       "hp_pct": {
+        "contract": 0.25806451612903225,
+        "installed": 0.4838709677419355,
+        "station_direct": 0.8064516129032258,
+        "approval": 0.9354838709677419
+       }
+      },
+      "0.5": {
+       "median": 946.0193160776939,
+       "q25": 578.310471642658,
+       "q75": 1279.319195431303,
+       "min": 328.5919707745521,
+       "max": 2753.09704754385,
+       "hp_pct": {
+        "contract": 0.2903225806451613,
+        "installed": 0.4838709677419355,
+        "station_direct": 0.8064516129032258,
+        "approval": 1.0
+       }
+      }
+     }
+    },
+    "nrel": {
+     "label": "NREL bottom-up 4-h 60 MW base year (2022 and 2024 editions)",
+     "source": "NREL Cost Projections for Utility-Scale Battery Storage: 2023 update (2022 base $482, Ramasamy et al.) and 2025 update (2024 base $334)",
+     "conf": "Medium; earlier editions' base years not retrieved (held flat before 2022)",
+     "ratio_2018": 0.6929460580912863,
+     "naive_median": 694.7227788911156,
+     "naive_hp_pct": {
+      "contract": 0.41935483870967744,
+      "installed": 0.5483870967741935,
+      "station_direct": 0.9032258064516129,
+      "approval": 1.0
+     },
+     "by_share": {
+      "0.3": {
+       "median": 1190.111999210171,
+       "q25": 691.3242362109548,
+       "q75": 1626.5222927345208,
+       "min": 440.71952882613976,
+       "max": 3476.28698933415,
+       "hp_pct": {
+        "contract": 0.12903225806451613,
+        "installed": 0.3225806451612903,
+        "station_direct": 0.6451612903225806,
+        "approval": 0.9354838709677419
+       }
+      },
+      "0.4": {
+       "median": 1117.6940356738892,
+       "q25": 672.8083029544084,
+       "q75": 1517.1744482025176,
+       "min": 420.3369268949885,
+       "max": 3254.3781781726034,
+       "hp_pct": {
+        "contract": 0.12903225806451613,
+        "installed": 0.3548387096774194,
+        "station_direct": 0.7096774193548387,
+        "approval": 0.9354838709677419
+       }
+      },
+      "0.5": {
+       "median": 1045.2760721376071,
+       "q25": 643.542900818011,
+       "q75": 1417.6235303035219,
+       "min": 399.95432496383705,
+       "max": 3032.4693670110555,
+       "hp_pct": {
+        "contract": 0.16129032258064516,
+        "installed": 0.45161290322580644,
+        "station_direct": 0.7741935483870968,
+        "approval": 0.9354838709677419
+       }
+      }
+     }
+    },
+    "lcos": {
+     "label": "Lazard LCOS midpoint, unsubsidized 100 MW 4-h",
+     "source": "Lazard LCOS v5.0 (2019, $173-315), v6.0 (2020, $132-250), v7.0 (2021, $131-232), 2024 ($170-296), 2025 ($115-254), 2026 (~$210-292)",
+     "conf": "Medium; v8.0 (2023) possibly conflated with 2024 and omitted",
+     "ratio_2018": 1.028688524590164,
+     "naive_median": 1028.688524590164,
+     "naive_hp_pct": {
+      "contract": 0.12903225806451613,
+      "installed": 0.3870967741935484,
+      "station_direct": 0.6774193548387096,
+      "approval": 1.0
+     },
+     "by_share": {
+      "0.3": {
+       "median": 1335.9744440109246,
+       "q25": 814.6659365271337,
+       "q75": 1751.6851092896172,
+       "min": 507.53953955330616,
+       "max": 3755.7925926944654,
+       "hp_pct": {
+        "contract": 0.12903225806451613,
+        "installed": 0.3225806451612903,
+        "station_direct": 0.5806451612903226,
+        "approval": 0.9032258064516129
+       }
+      },
+      "0.4": {
+       "median": 1339.0265314085057,
+       "q25": 808.5823816389197,
+       "q75": 1684.0582036093124,
+       "min": 490.1422048630212,
+       "max": 3627.0523159863574,
+       "hp_pct": {
+        "contract": 0.12903225806451613,
+        "installed": 0.3225806451612903,
+        "station_direct": 0.5806451612903226,
+        "approval": 0.9354838709677419
+       }
+      },
+      "0.5": {
+       "median": 1293.0557468889194,
+       "q25": 806.3123028556986,
+       "q75": 1649.5630284839708,
+       "min": 472.7448701727362,
+       "max": 3498.3120392782484,
+       "hp_pct": {
+        "contract": 0.12903225806451613,
+        "installed": 0.3225806451612903,
+        "station_direct": 0.5806451612903226,
+        "approval": 0.9354838709677419
+       }
+      }
+     }
+    },
+    "construction": {
+     "label": "Construction index only (Handy-Whitman, no battery deflation)",
+     "source": "https://www.pjm.com/-/media/DotCom/committees-groups/subcommittees/cds/postings/handy-whitman-index.ashx",
+     "conf": "Medium (2015-2018 seen in excerpt; later years from search summary of the same posting); production-plant line, not distribution plant",
+     "ratio_2018": 1.4926174496644296,
+     "naive_median": 1326.8181818181818,
+     "naive_hp_pct": {
+      "contract": 0.0967741935483871,
+      "installed": 0.2903225806451613,
+      "station_direct": 0.5483870967741935,
+      "approval": 0.8387096774193549
+     },
+     "by_share": {
+      "0.3": {
+       "median": 1326.8181818181818,
+       "q25": 797.7297715834301,
+       "q75": 1887.8630399528233,
+       "min": 501.86733461959403,
+       "max": 4142.013422818792,
+       "hp_pct": {
+        "contract": 0.0967741935483871,
+        "installed": 0.2903225806451613,
+        "station_direct": 0.5483870967741935,
+        "approval": 0.8387096774193549
+       }
+      },
+      "0.4": {
+       "median": 1326.8181818181818,
+       "q25": 797.7297715834301,
+       "q75": 1887.8630399528233,
+       "min": 501.86733461959403,
+       "max": 4142.013422818792,
+       "hp_pct": {
+        "contract": 0.0967741935483871,
+        "installed": 0.2903225806451613,
+        "station_direct": 0.5483870967741935,
+        "approval": 0.8387096774193549
+       }
+      },
+      "0.5": {
+       "median": 1326.8181818181818,
+       "q25": 797.7297715834301,
+       "q75": 1887.8630399528233,
+       "min": 501.86733461959403,
+       "max": 4142.013422818792,
+       "hp_pct": {
+        "contract": 0.0967741935483871,
+        "installed": 0.2903225806451613,
+        "station_direct": 0.5483870967741935,
+        "approval": 0.8387096774193549
+       }
+      }
+     }
+    },
+    "installed_flat35": {
+     "label": "Installed index with 3.5%/yr flat non-battery escalation (proxy)",
+     "source": "sensitivity",
+     "conf": "Assumption",
+     "ratio_2018": 0.7328,
+     "naive_median": 969.0652175247155,
+     "by_share": {
+      "0.4": {
+       "median": 969.0652175247155,
+       "q25": 666.682428187576,
+       "q75": 1506.1448470246567,
+       "min": 406.20203331676566,
+       "max": 3005.895046544066,
+       "hp_pct": {
+        "contract": 0.12903225806451613,
+        "installed": 0.45161290322580644,
+        "station_direct": 0.7419354838709677,
+        "approval": 0.967741935483871
+       }
+      }
+     }
+    }
+   },
+   "projects": [
+    {
+     "project": "Babcock Ranch storage add-on (FPL)",
+     "state": "FL",
+     "utility": 1,
+     "mw": 10.0,
+     "mwh": 40.0,
+     "cod_year": 2018,
+     "nominal": 375.0,
+     "adj_installed": 445.75892617449665,
+     "adj_pack": 427.88438071995114,
+     "adj_turnkey": 409.578421972816,
+     "adj_nrel": 439.78083488818964,
+     "adj_lcos": 490.1422048630212,
+     "adj_construction": 559.7315436241611,
+     "factor_installed": 1.1886904697986578
+    },
+    {
+     "project": "Soldotna BESS (37 Megapacks)",
+     "state": "AK",
+     "utility": 1,
+     "mw": 46.5,
+     "mwh": 93.0,
+     "cod_year": 2022,
+     "nominal": 430.10752688172045,
+     "adj_installed": 454.5189061411228,
+     "adj_pack": 424.1710309789771,
+     "adj_turnkey": 363.2470435435605,
+     "adj_nrel": 420.3369268949885,
+     "adj_lcos": 518.4834663703708,
+     "adj_construction": 501.86733461959403,
+     "factor_installed": 1.0567564567781105
+    },
+    {
+     "project": "Martha's Vineyard BESS Phase 2 (cancelled)",
+     "state": "MA",
+     "utility": 1,
+     "mw": 9.8,
+     "mwh": 64.0,
+     "cod_year": 2019,
+     "nominal": 437.5,
+     "adj_installed": 518.296083846233,
+     "adj_pack": 505.2327935222673,
+     "adj_turnkey": 470.10835913312695,
+     "adj_nrel": 505.3445075343962,
+     "adj_lcos": 564.0994391716997,
+     "adj_construction": 640.1315789473684,
+     "factor_installed": 1.184676763077104
+    },
+    {
+     "project": "North Troy BESS (VEC + GMP)",
+     "state": "VT",
+     "utility": 1,
+     "mw": 3.0,
+     "mwh": 12.0,
+     "cod_year": 2024,
+     "nominal": 500.0,
+     "adj_installed": 515.9090909090909,
+     "adj_pack": 503.7351778656126,
+     "adj_turnkey": 457.7272727272727,
+     "adj_nrel": 515.9090909090909,
+     "adj_lcos": 531.3597346859149,
+     "adj_construction": 526.5151515151515,
+     "factor_installed": 1.0318181818181817
+    },
+    {
+     "project": "Virginia battery pilot portfolio (Scott Solar 10+2 MW, New Kent 2 MW, Hanover/Ashland 2 MW)",
+     "state": "VA",
+     "utility": 1,
+     "mw": 16.0,
+     "mwh": 56.0,
+     "cod_year": 2021,
+     "nominal": 589.2857142857143,
+     "adj_installed": 656.0119352112171,
+     "adj_pack": 649.5022399203584,
+     "adj_turnkey": 572.5214476034317,
+     "adj_nrel": 619.9823821847331,
+     "adj_lcos": 782.6191230372416,
+     "adj_construction": 761.0751617720259,
+     "factor_installed": 1.1132323749038835
+    },
+    {
+     "project": "Pomona (Ladentown) BESS",
+     "state": "NY",
+     "utility": 1,
+     "mw": 3.0,
+     "mwh": 12.0,
+     "cod_year": 2021,
+     "nominal": 616.6666666666666,
+     "adj_installed": 686.4932978573947,
+     "adj_pack": 679.6811318762537,
+     "adj_turnkey": 599.1234542597527,
+     "adj_nrel": 648.789644387256,
+     "adj_lcos": 818.9832439056386,
+     "adj_construction": 796.4382500967866,
+     "factor_installed": 1.1132323749038835
+    },
+    {
+     "project": "Wallgrove Grid Battery [AUSTRALIA]",
+     "state": "NSW (Australia)",
+     "utility": 1,
+     "mw": 50.0,
+     "mwh": 75.0,
+     "cod_year": 2021,
+     "nominal": 618.6666666666666,
+     "adj_installed": 688.7197626072026,
+     "adj_pack": 681.8855031147714,
+     "adj_turnkey": 601.0665573546491,
+     "adj_nrel": 650.8938270177011,
+     "adj_lcos": 821.639405777765,
+     "adj_construction": 799.0212930700735,
+     "factor_installed": 1.1132323749038835
+    },
+    {
+     "project": "Braintree BELD solar-sited BESS",
+     "state": "MA",
+     "utility": 1,
+     "mw": 2.0,
+     "mwh": 4.2,
+     "cod_year": 2019,
+     "nominal": 619.047619047619,
+     "adj_installed": 733.3713295239215,
+     "adj_pack": 714.8872180451128,
+     "adj_turnkey": 665.187338093132,
+     "adj_nrel": 715.045289572479,
+     "adj_lcos": 798.181519372201,
+     "adj_construction": 905.7644110275689,
+     "factor_installed": 1.184676763077104
+    },
+    {
+     "project": "Whitehorse Grid-Scale BESS [CANADA]",
+     "state": "YT (Canada)",
+     "utility": 1,
+     "mw": 7.0,
+     "mwh": 40.0,
+     "cod_year": 2023,
+     "nominal": 647.5,
+     "adj_installed": 669.7895073046667,
+     "adj_pack": 626.8649962788389,
+     "adj_turnkey": 540.8481185262881,
+     "adj_nrel": 637.6520960108181,
+     "adj_lcos": 726.8275862068964,
+     "adj_construction": 709.3793103448276,
+     "factor_installed": 1.0344239495052767
+    },
+    {
+     "project": "Sterling MLD Chocksett Road BESS",
+     "state": "MA",
+     "utility": 1,
+     "mw": 2.0,
+     "mwh": 3.9,
+     "cod_year": 2016,
+     "nominal": 692.3076923076923,
+     "adj_installed": 731.8798218447562,
+     "adj_pack": 756.4815275222516,
+     "adj_turnkey": 783.0639948287006,
+     "adj_nrel": 838.8222955955443,
+     "adj_lcos": 931.7971324721565,
+     "adj_construction": 1078.2159017453134,
+     "factor_installed": 1.057159742664648
+    },
+    {
+     "project": "Concord MLP grid-scale battery (planned)",
+     "state": "MA",
+     "utility": 1,
+     "mw": 4.99,
+     "mwh": 14.97,
+     "cod_year": 2026,
+     "nominal": 694.7227788911156,
+     "adj_installed": 694.7227788911156,
+     "adj_pack": 694.7227788911156,
+     "adj_turnkey": 694.7227788911156,
+     "adj_nrel": 694.7227788911156,
+     "adj_lcos": 694.7227788911156,
+     "adj_construction": 694.7227788911156,
+     "factor_installed": 1.0
+    },
+    {
+     "project": "Ashburnham MLP substation BESS",
+     "state": "MA",
+     "utility": 1,
+     "mw": 3.0,
+     "mwh": 5.0,
+     "cod_year": 2019,
+     "nominal": 700.0,
+     "adj_installed": 829.2737341539728,
+     "adj_pack": 808.3724696356277,
+     "adj_turnkey": 752.173374613003,
+     "adj_nrel": 808.551212055034,
+     "adj_lcos": 902.5591026747196,
+     "adj_construction": 1024.2105263157896,
+     "factor_installed": 1.184676763077104
+    },
+    {
+     "project": "Martha's Vineyard BESS Phase 1 (cancelled)",
+     "state": "MA",
+     "utility": 1,
+     "mw": 4.9,
+     "mwh": 20.0,
+     "cod_year": 2019,
+     "nominal": 750.0,
+     "adj_installed": 888.507572307828,
+     "adj_pack": 866.1133603238867,
+     "adj_turnkey": 805.9000442282176,
+     "adj_nrel": 866.304870058965,
+     "adj_lcos": 967.0276100086281,
+     "adj_construction": 1097.3684210526317,
+     "factor_installed": 1.184676763077104
+    },
+    {
+     "project": "Panton battery (Green Mountain Power)",
+     "state": "VT",
+     "utility": 1,
+     "mw": 1.0,
+     "mwh": 4.0,
+     "cod_year": 2018,
+     "nominal": 750.0,
+     "adj_installed": 891.5178523489933,
+     "adj_pack": 855.7687614399023,
+     "adj_turnkey": 819.156843945632,
+     "adj_nrel": 879.5616697763793,
+     "adj_lcos": 980.2844097260424,
+     "adj_construction": 1119.4630872483222,
+     "factor_installed": 1.1886904697986578
+    },
+    {
+     "project": "Chugach BESS (Southcentral Power Project site)",
+     "state": "AK",
+     "utility": 1,
+     "mw": 40.0,
+     "mwh": 80.0,
+     "cod_year": 2024,
+     "nominal": 812.5,
+     "adj_installed": 838.3522727272726,
+     "adj_pack": 818.5696640316205,
+     "adj_turnkey": 743.8068181818181,
+     "adj_nrel": 838.3522727272726,
+     "adj_lcos": 863.4595688646117,
+     "adj_construction": 855.5871212121211,
+     "factor_installed": 1.0318181818181817
+    },
+    {
+     "project": "Westmoreland Clean Innovation Project BESS (withdrawn)",
+     "state": "NH",
+     "utility": 1,
+     "mw": 1.7,
+     "mwh": 7.1,
+     "cod_year": 2020,
+     "nominal": 985.9154929577464,
+     "adj_installed": 1161.6672826792187,
+     "adj_pack": 1155.3067550284513,
+     "adj_turnkey": 1038.2886308259585,
+     "adj_nrel": 1117.6940356738892,
+     "adj_lcos": 1362.6704003466864,
+     "adj_construction": 1407.3658898190167,
+     "factor_installed": 1.1782625295746363
+    },
+    {
+     "project": "Kingsbery Community Solar + Storage",
+     "state": "TX",
+     "utility": 1,
+     "mw": 1.5,
+     "mwh": 3.0,
+     "cod_year": 2016,
+     "nominal": 1000.0,
+     "adj_installed": 1057.1597426646479,
+     "adj_pack": 1092.6955397543634,
+     "adj_turnkey": 1131.09243697479,
+     "adj_nrel": 1211.6322047491196,
+     "adj_lcos": 1345.9291913486707,
+     "adj_construction": 1557.422969187675,
+     "factor_installed": 1.057159742664648
+    },
+    {
+     "project": "Stafford Hill Solar + Storage (Rutland)",
+     "state": "VT",
+     "utility": 1,
+     "mw": 4.0,
+     "mwh": 3.4,
+     "cod_year": 2015,
+     "nominal": 1235.2941176470588,
+     "adj_installed": 1282.5724907063195,
+     "adj_pack": 1329.8823529411764,
+     "adj_turnkey": 1420.3183391003458,
+     "adj_nrel": 1519.8086404686355,
+     "adj_lcos": 1685.7049180327867,
+     "adj_construction": 1962.3529411764705,
+     "factor_installed": 1.0382729686670207
+    },
+    {
+     "project": "Harding Street BESS",
+     "state": "IN",
+     "utility": 1,
+     "mw": 20.0,
+     "mwh": 20.0,
+     "cod_year": 2016,
+     "nominal": 1250.0,
+     "adj_installed": 1321.44967833081,
+     "adj_pack": 1365.8694246929542,
+     "adj_turnkey": 1413.8655462184875,
+     "adj_nrel": 1514.5402559363997,
+     "adj_lcos": 1682.4114891858383,
+     "adj_construction": 1946.778711484594,
+     "factor_installed": 1.057159742664648
+    },
+    {
+     "project": "Ozone Park BESS",
+     "state": "NY",
+     "utility": 1,
+     "mw": 1.5,
+     "mwh": 12.0,
+     "cod_year": 2019,
+     "nominal": 1250.0,
+     "adj_installed": 1480.84595384638,
+     "adj_pack": 1443.5222672064779,
+     "adj_turnkey": 1343.1667403803626,
+     "adj_nrel": 1443.841450098275,
+     "adj_lcos": 1611.7126833477137,
+     "adj_construction": 1828.9473684210527,
+     "factor_installed": 1.184676763077104
+    },
+    {
+     "project": "Regina BESS [CANADA]",
+     "state": "SK (Canada)",
+     "utility": 1,
+     "mw": 20.0,
+     "mwh": 20.0,
+     "cod_year": 2024,
+     "nominal": 1260.0,
+     "adj_installed": 1300.090909090909,
+     "adj_pack": 1269.4126482213437,
+     "adj_turnkey": 1153.4727272727273,
+     "adj_nrel": 1300.090909090909,
+     "adj_lcos": 1339.0265314085057,
+     "adj_construction": 1326.8181818181818,
+     "factor_installed": 1.0318181818181817
+    },
+    {
+     "project": "Outer Cape (Provincetown) BESS",
+     "state": "MA",
+     "utility": 1,
+     "mw": 25.0,
+     "mwh": 38.0,
+     "cod_year": 2022,
+     "nominal": 1289.4736842105262,
+     "adj_installed": 1362.6596416349319,
+     "adj_pack": 1271.6759132705254,
+     "adj_turnkey": 1089.024195676319,
+     "adj_nrel": 1260.1811683292515,
+     "adj_lcos": 1554.4270764801183,
+     "adj_construction": 1504.6114762246643,
+     "factor_installed": 1.0567564567781105
+    },
+    {
+     "project": "VEC Hinesburg BESS",
+     "state": "VT",
+     "utility": 1,
+     "mw": 1.0,
+     "mwh": 4.0,
+     "cod_year": 2023,
+     "nominal": 1400.0,
+     "adj_installed": 1448.1935293073875,
+     "adj_pack": 1355.3837757380302,
+     "adj_turnkey": 1169.4013373541366,
+     "adj_nrel": 1378.707234617985,
+     "adj_lcos": 1571.5191053122085,
+     "adj_construction": 1533.7931034482758,
+     "factor_installed": 1.0344239495052767
+    },
+    {
+     "project": "Northern New York (Chateaugay) BESS",
+     "state": "NY",
+     "utility": 1,
+     "mw": 20.0,
+     "mwh": 20.0,
+     "cod_year": 2023,
+     "nominal": 1490.0,
+     "adj_installed": 1541.2916847628624,
+     "adj_pack": 1442.515589892618,
+     "adj_turnkey": 1244.5771376126168,
+     "adj_nrel": 1467.338413986284,
+     "adj_lcos": 1672.5453335108505,
+     "adj_construction": 1632.3940886699506,
+     "factor_installed": 1.0344239495052767
+    },
+    {
+     "project": "Fairhaven BESS",
+     "state": "MD",
+     "utility": 1,
+     "mw": 2.5,
+     "mwh": 9.74,
+     "cod_year": 2023,
+     "nominal": 1659.2747433264888,
+     "adj_installed": 1716.3935333061409,
+     "adj_pack": 1606.3957618547195,
+     "adj_turnkey": 1385.9700742028126,
+     "adj_nrel": 1634.038637745093,
+     "adj_lcos": 1862.5585429282771,
+     "adj_construction": 1817.845827171483,
+     "factor_installed": 1.0344239495052767
+    },
+    {
+     "project": "Asheville Rock Hill substation BESS (Duke Energy Progress)",
+     "state": "NC",
+     "utility": 1,
+     "mw": 9.0,
+     "mwh": 9.0,
+     "cod_year": 2020,
+     "nominal": 1666.6666666666667,
+     "adj_installed": 1963.7708826243938,
+     "adj_pack": 1953.0185620719058,
+     "adj_turnkey": 1755.2022092534064,
+     "adj_nrel": 1889.4351555439557,
+     "adj_lcos": 2303.5618672527316,
+     "adj_construction": 2379.1185280273858,
+     "factor_installed": 1.1782625295746363
+    },
+    {
+     "project": "El Centro BESS (IID)",
+     "state": "CA",
+     "utility": 1,
+     "mw": 30.0,
+     "mwh": 20.0,
+     "cod_year": 2017,
+     "nominal": 1900.0,
+     "adj_installed": 2200.315696809641,
+     "adj_pack": 2175.6808592251627,
+     "adj_turnkey": 2156.5670318760417,
+     "adj_nrel": 2309.5925906472676,
+     "adj_lcos": 2564.756865186415,
+     "adj_construction": 2971.589310829817,
+     "factor_installed": 1.1580608930577057
+    },
+    {
+     "project": "LADWP Beacon Energy Storage System",
+     "state": "CA",
+     "utility": 1,
+     "mw": 20.0,
+     "mwh": 10.0,
+     "cod_year": 2018,
+     "nominal": 1920.0,
+     "adj_installed": 2282.285702013423,
+     "adj_pack": 2190.76802928615,
+     "adj_turnkey": 2097.0415205008176,
+     "adj_nrel": 2251.677874627531,
+     "adj_lcos": 2509.5280888986686,
+     "adj_construction": 2865.8255033557048,
+     "factor_installed": 1.1886904697986578
+    },
+    {
+     "project": "Power Creek BESS (Cordova)",
+     "state": "AK",
+     "utility": 1,
+     "mw": 1.0,
+     "mwh": 0.92,
+     "cod_year": 2019,
+     "nominal": 2173.913043478261,
+     "adj_installed": 2575.3842675589217,
+     "adj_pack": 2510.473508185179,
+     "adj_turnkey": 2335.9421571832395,
+     "adj_nrel": 2511.0286088665653,
+     "adj_lcos": 2802.978579735154,
+     "adj_construction": 3180.7780320366137,
+     "factor_installed": 1.184676763077104
+    },
+    {
+     "project": "Glacier BESS",
+     "state": "WA",
+     "utility": 1,
+     "mw": 2.0,
+     "mwh": 4.4,
+     "cod_year": 2016,
+     "nominal": 2545.4545454545455,
+     "adj_installed": 2690.952072237286,
+     "adj_pack": 2781.4068284656523,
+     "adj_turnkey": 2879.144385026738,
+     "adj_nrel": 3084.154702997759,
+     "adj_lcos": 3426.0015779784344,
+     "adj_construction": 3964.349376114082,
+     "factor_installed": 1.057159742664648
+    },
+    {
+     "project": "Dalrymple ESCRI BESS [AUSTRALIA]",
+     "state": "SA (Australia)",
+     "utility": 1,
+     "mw": 30.0,
+     "mwh": 8.0,
+     "cod_year": 2018,
+     "nominal": 2775.0,
+     "adj_installed": 3298.6160536912753,
+     "adj_pack": 3166.3444173276384,
+     "adj_turnkey": 3030.880322598838,
+     "adj_nrel": 3254.3781781726034,
+     "adj_lcos": 3627.0523159863574,
+     "adj_construction": 4142.013422818792,
+     "factor_installed": 1.1886904697986578
+    }
+   ]
+  }
+ },
+ "hw_ratio_2018": 1.4926174496644296,
+ "nominal": {
+  "median": 770.5426356589147,
+  "q25": 575.7239382239383,
+  "q75": 1172.4296675191815,
+  "hp_pct": {
+   "contract": 0.2727272727272727,
+   "installed": 0.5818181818181818,
+   "station_direct": 0.8545454545454545,
+   "approval": 1.0
+  }
+ },
+ "projects": [
+  {
+   "project": "Babcock Ranch storage add-on (FPL)",
+   "state": "FL",
+   "utility": 1,
+   "mw": 10.0,
+   "mwh": 40.0,
+   "cod_year": 2018,
+   "nominal": 375.0,
+   "adj_installed": 445.75892617449665,
+   "adj_pack": 427.88438071995114,
+   "adj_turnkey": 409.578421972816,
+   "adj_nrel": 439.78083488818964,
+   "adj_lcos": 490.1422048630212,
+   "adj_construction": 559.7315436241611,
+   "factor_installed": 1.1886904697986578
+  },
+  {
+   "project": "Bouldercombe Battery [AUSTRALIA]",
+   "state": "QLD (Australia)",
+   "utility": 0,
+   "mw": 50.0,
+   "mwh": 100.0,
+   "cod_year": 2023,
+   "nominal": 402.0,
+   "adj_installed": 415.83842770112125,
+   "adj_pack": 389.1887698904915,
+   "adj_turnkey": 335.7852411545449,
+   "adj_nrel": 395.8859345117357,
+   "adj_lcos": 451.2504859539342,
+   "adj_construction": 440.4177339901477,
+   "factor_installed": 1.0344239495052767
+  },
+  {
+   "project": "Convergent SSC Richmond Rd BESS (Staten Island)",
+   "state": "NY",
+   "utility": 0,
+   "mw": 5.0,
+   "mwh": 20.0,
+   "cod_year": 2025,
+   "nominal": 410.0,
+   "adj_installed": 420.61538461538464,
+   "adj_pack": 420.61538461538464,
+   "adj_turnkey": 420.61538461538464,
+   "adj_nrel": 420.61538461538464,
+   "adj_lcos": 479.7264957264958,
+   "adj_construction": 427.69230769230774,
+   "factor_installed": 1.025891181988743
+  },
+  {
+   "project": "Soldotna BESS (37 Megapacks)",
+   "state": "AK",
+   "utility": 1,
+   "mw": 46.5,
+   "mwh": 93.0,
+   "cod_year": 2022,
+   "nominal": 430.10752688172045,
+   "adj_installed": 454.5189061411228,
+   "adj_pack": 424.1710309789771,
+   "adj_turnkey": 363.2470435435605,
+   "adj_nrel": 420.3369268949885,
+   "adj_lcos": 518.4834663703708,
+   "adj_construction": 501.86733461959403,
+   "factor_installed": 1.0567564567781105
+  },
+  {
+   "project": "Martha's Vineyard BESS Phase 2 (cancelled)",
+   "state": "MA",
+   "utility": 1,
+   "mw": 9.8,
+   "mwh": 64.0,
+   "cod_year": 2019,
+   "nominal": 437.5,
+   "adj_installed": 518.296083846233,
+   "adj_pack": 505.2327935222673,
+   "adj_turnkey": 470.10835913312695,
+   "adj_nrel": 505.3445075343962,
+   "adj_lcos": 564.0994391716997,
+   "adj_construction": 640.1315789473684,
+   "factor_installed": 1.184676763077104
+  },
+  {
+   "project": "North Troy BESS (VEC + GMP)",
+   "state": "VT",
+   "utility": 1,
+   "mw": 3.0,
+   "mwh": 12.0,
+   "cod_year": 2024,
+   "nominal": 500.0,
+   "adj_installed": 515.9090909090909,
+   "adj_pack": 503.7351778656126,
+   "adj_turnkey": 457.7272727272727,
+   "adj_nrel": 515.9090909090909,
+   "adj_lcos": 531.3597346859149,
+   "adj_construction": 526.5151515151515,
+   "factor_installed": 1.0318181818181817
+  },
+  {
+   "project": "Lake Bonney BESS [AUSTRALIA]",
+   "state": "SA (Australia)",
+   "utility": 0,
+   "mw": 25.0,
+   "mwh": 52.0,
+   "cod_year": 2019,
+   "nominal": 511.53846153846155,
+   "adj_installed": 606.0077288048263,
+   "adj_pack": 590.733727810651,
+   "adj_turnkey": 549.6651583710408,
+   "adj_nrel": 590.8643472709864,
+   "adj_lcos": 659.562421185372,
+   "adj_construction": 748.4615384615386,
+   "factor_installed": 1.184676763077104
+  },
+  {
+   "project": "Greenbacker Staten Island Energy Storage 3 (Androvette St)",
+   "state": "NY",
+   "utility": 0,
+   "mw": 5.0,
+   "mwh": 20.0,
+   "cod_year": 2023,
+   "nominal": 522.5,
+   "adj_installed": 540.4865136165071,
+   "adj_pack": 505.84858773080055,
+   "adj_turnkey": 436.4372848339545,
+   "adj_nrel": 514.5532357770694,
+   "adj_lcos": 586.5133803754493,
+   "adj_construction": 572.4334975369458,
+   "factor_installed": 1.0344239495052767
+  },
+  {
+   "project": "Elevate Renewables Victory Blvd BESS (Staten Island)",
+   "state": "NY",
+   "utility": 0,
+   "mw": 15.1,
+   "mwh": 60.4,
+   "cod_year": 2025,
+   "nominal": 524.0066225165563,
+   "adj_installed": 537.573773343439,
+   "adj_pack": 537.573773343439,
+   "adj_turnkey": 537.573773343439,
+   "adj_nrel": 537.573773343439,
+   "adj_lcos": 613.1216116032786,
+   "adj_construction": 546.6185405613608,
+   "factor_installed": 1.025891181988743
+  },
+  {
+   "project": "WindCharger [CANADA]",
+   "state": "AB (Canada)",
+   "utility": 0,
+   "mw": 10.0,
+   "mwh": 20.0,
+   "cod_year": 2020,
+   "nominal": 550.0,
+   "adj_installed": 648.04439126605,
+   "adj_pack": 644.4961254837289,
+   "adj_turnkey": 579.216729053624,
+   "adj_nrel": 623.5136013295054,
+   "adj_lcos": 760.1754161934015,
+   "adj_construction": 785.1091142490372,
+   "factor_installed": 1.1782625295746363
+  },
+  {
+   "project": "Broken Hill BESS [AUSTRALIA]",
+   "state": "NSW (Australia)",
+   "utility": 0,
+   "mw": 50.0,
+   "mwh": 50.0,
+   "cod_year": 2023,
+   "nominal": 550.0,
+   "adj_installed": 568.9331722279022,
+   "adj_pack": 532.472197611369,
+   "adj_turnkey": 459.4076682462679,
+   "adj_nrel": 541.6349850284942,
+   "adj_lcos": 617.3825056583676,
+   "adj_construction": 602.5615763546798,
+   "factor_installed": 1.0344239495052767
+  },
+  {
+   "project": "Wellesley MLP BESS (Citizens Energy)",
+   "state": "MA",
+   "utility": 0,
+   "mw": 4.99,
+   "mwh": 20.0,
+   "cod_year": 2024,
+   "nominal": 550.0,
+   "adj_installed": 567.5,
+   "adj_pack": 554.1086956521739,
+   "adj_turnkey": 503.5,
+   "adj_nrel": 567.5,
+   "adj_lcos": 584.4957081545064,
+   "adj_construction": 579.1666666666666,
+   "factor_installed": 1.0318181818181817
+  },
+  {
+   "project": "Thurcroft BESS [UK]",
+   "state": "England (UK)",
+   "utility": 0,
+   "mw": 50.0,
+   "mwh": 75.0,
+   "cod_year": 2020,
+   "nominal": 550.6666666666666,
+   "adj_installed": 648.8298996190997,
+   "adj_pack": 645.2773329085576,
+   "adj_turnkey": 579.9188099373254,
+   "adj_nrel": 624.2693753917229,
+   "adj_lcos": 761.0968409403025,
+   "adj_construction": 786.0607616602481,
+   "factor_installed": 1.1782625295746363
+  },
+  {
+   "project": "Wickham Market BESS [UK]",
+   "state": "England (UK)",
+   "utility": 0,
+   "mw": 50.0,
+   "mwh": 74.0,
+   "cod_year": 2020,
+   "nominal": 562.1621621621622,
+   "adj_installed": 662.3746112203361,
+   "adj_pack": 658.7478825583077,
+   "adj_turnkey": 592.0249613914192,
+   "adj_nrel": 637.3013713834748,
+   "adj_lcos": 776.985191981462,
+   "adj_construction": 802.4702494535615,
+   "factor_installed": 1.1782625295746363
+  },
+  {
+   "project": "Virginia battery pilot portfolio (Scott Solar 10+2 MW, New Kent 2 MW, Hanover/Ashland 2 MW)",
+   "state": "VA",
+   "utility": 1,
+   "mw": 16.0,
+   "mwh": 56.0,
+   "cod_year": 2021,
+   "nominal": 589.2857142857143,
+   "adj_installed": 656.0119352112171,
+   "adj_pack": 649.5022399203584,
+   "adj_turnkey": 572.5214476034317,
+   "adj_nrel": 619.9823821847331,
+   "adj_lcos": 782.6191230372416,
+   "adj_construction": 761.0751617720259,
+   "factor_installed": 1.1132323749038835
+  },
+  {
+   "project": "Pomona (Ladentown) BESS",
+   "state": "NY",
+   "utility": 1,
+   "mw": 3.0,
+   "mwh": 12.0,
+   "cod_year": 2021,
+   "nominal": 616.6666666666666,
+   "adj_installed": 686.4932978573947,
+   "adj_pack": 679.6811318762537,
+   "adj_turnkey": 599.1234542597527,
+   "adj_nrel": 648.789644387256,
+   "adj_lcos": 818.9832439056386,
+   "adj_construction": 796.4382500967866,
+   "factor_installed": 1.1132323749038835
+  },
+  {
+   "project": "Wallgrove Grid Battery [AUSTRALIA]",
+   "state": "NSW (Australia)",
+   "utility": 1,
+   "mw": 50.0,
+   "mwh": 75.0,
+   "cod_year": 2021,
+   "nominal": 618.6666666666666,
+   "adj_installed": 688.7197626072026,
+   "adj_pack": 681.8855031147714,
+   "adj_turnkey": 601.0665573546491,
+   "adj_nrel": 650.8938270177011,
+   "adj_lcos": 821.639405777765,
+   "adj_construction": 799.0212930700735,
+   "factor_installed": 1.1132323749038835
+  },
+  {
+   "project": "Braintree BELD solar-sited BESS",
+   "state": "MA",
+   "utility": 1,
+   "mw": 2.0,
+   "mwh": 4.2,
+   "cod_year": 2019,
+   "nominal": 619.047619047619,
+   "adj_installed": 733.3713295239215,
+   "adj_pack": 714.8872180451128,
+   "adj_turnkey": 665.187338093132,
+   "adj_nrel": 715.045289572479,
+   "adj_lcos": 798.181519372201,
+   "adj_construction": 905.7644110275689,
+   "factor_installed": 1.184676763077104
+  },
+  {
+   "project": "Whitehorse Grid-Scale BESS [CANADA]",
+   "state": "YT (Canada)",
+   "utility": 1,
+   "mw": 7.0,
+   "mwh": 40.0,
+   "cod_year": 2023,
+   "nominal": 647.5,
+   "adj_installed": 669.7895073046667,
+   "adj_pack": 626.8649962788389,
+   "adj_turnkey": 540.8481185262881,
+   "adj_nrel": 637.6520960108181,
+   "adj_lcos": 726.8275862068964,
+   "adj_construction": 709.3793103448276,
+   "factor_installed": 1.0344239495052767
+  },
+  {
+   "project": "Sterling MLD Chocksett Road BESS",
+   "state": "MA",
+   "utility": 1,
+   "mw": 2.0,
+   "mwh": 3.9,
+   "cod_year": 2016,
+   "nominal": 692.3076923076923,
+   "adj_installed": 731.8798218447562,
+   "adj_pack": 756.4815275222516,
+   "adj_turnkey": 783.0639948287006,
+   "adj_nrel": 838.8222955955443,
+   "adj_lcos": 931.7971324721565,
+   "adj_construction": 1078.2159017453134,
+   "factor_installed": 1.057159742664648
+  },
+  {
+   "project": "OSCII Gildersleeve Ave BESS (Bronx)",
+   "state": "NY",
+   "utility": 0,
+   "mw": 5.0,
+   "mwh": 20.0,
+   "cod_year": 2025,
+   "nominal": 693.75,
+   "adj_installed": 711.7120075046905,
+   "adj_pack": 711.7120075046905,
+   "adj_turnkey": 711.7120075046905,
+   "adj_nrel": 711.7120075046905,
+   "adj_lcos": 811.7323327079425,
+   "adj_construction": 723.6866791744841,
+   "factor_installed": 1.025891181988743
+  },
+  {
+   "project": "Concord MLP grid-scale battery (planned)",
+   "state": "MA",
+   "utility": 1,
+   "mw": 4.99,
+   "mwh": 14.97,
+   "cod_year": 2026,
+   "nominal": 694.7227788911156,
+   "adj_installed": 694.7227788911156,
+   "adj_pack": 694.7227788911156,
+   "adj_turnkey": 694.7227788911156,
+   "adj_nrel": 694.7227788911156,
+   "adj_lcos": 694.7227788911156,
+   "adj_construction": 694.7227788911156,
+   "factor_installed": 1.0
+  },
+  {
+   "project": "Ashburnham MLP substation BESS",
+   "state": "MA",
+   "utility": 1,
+   "mw": 3.0,
+   "mwh": 5.0,
+   "cod_year": 2019,
+   "nominal": 700.0,
+   "adj_installed": 829.2737341539728,
+   "adj_pack": 808.3724696356277,
+   "adj_turnkey": 752.173374613003,
+   "adj_nrel": 808.551212055034,
+   "adj_lcos": 902.5591026747196,
+   "adj_construction": 1024.2105263157896,
+   "factor_installed": 1.184676763077104
+  },
+  {
+   "project": "Agilitas AE-ESS NWS 1 (Long Island City)",
+   "state": "NY",
+   "utility": 0,
+   "mw": 5.0,
+   "mwh": 20.6,
+   "cod_year": 2021,
+   "nominal": 728.1553398058253,
+   "adj_installed": 810.6060982309832,
+   "adj_pack": 802.5623441204782,
+   "adj_turnkey": 707.4404471710542,
+   "adj_nrel": 766.0859091426533,
+   "adj_lcos": 967.0492252887364,
+   "adj_construction": 940.4282669733772,
+   "factor_installed": 1.1132323749038835
+  },
+  {
+   "project": "Panton battery (Green Mountain Power)",
+   "state": "VT",
+   "utility": 1,
+   "mw": 1.0,
+   "mwh": 4.0,
+   "cod_year": 2018,
+   "nominal": 750.0,
+   "adj_installed": 891.5178523489933,
+   "adj_pack": 855.7687614399023,
+   "adj_turnkey": 819.156843945632,
+   "adj_nrel": 879.5616697763793,
+   "adj_lcos": 980.2844097260424,
+   "adj_construction": 1119.4630872483222,
+   "factor_installed": 1.1886904697986578
+  },
+  {
+   "project": "Martha's Vineyard BESS Phase 1 (cancelled)",
+   "state": "MA",
+   "utility": 1,
+   "mw": 4.9,
+   "mwh": 20.0,
+   "cod_year": 2019,
+   "nominal": 750.0,
+   "adj_installed": 888.507572307828,
+   "adj_pack": 866.1133603238867,
+   "adj_turnkey": 805.9000442282176,
+   "adj_nrel": 866.304870058965,
+   "adj_lcos": 967.0276100086281,
+   "adj_construction": 1097.3684210526317,
+   "factor_installed": 1.184676763077104
+  },
+  {
+   "project": "OSCII Gun Hill Rd BESS (Bronx)",
+   "state": "NY",
+   "utility": 0,
+   "mw": 5.0,
+   "mwh": 20.0,
+   "cod_year": 2025,
+   "nominal": 763.125,
+   "adj_installed": 782.8832082551595,
+   "adj_pack": 782.8832082551595,
+   "adj_turnkey": 782.8832082551595,
+   "adj_nrel": 782.8832082551595,
+   "adj_lcos": 892.9055659787368,
+   "adj_construction": 796.0553470919325,
+   "factor_installed": 1.025891181988743
+  },
+  {
+   "project": "Hornsdale Power Reserve expansion [AUSTRALIA]",
+   "state": "SA (Australia)",
+   "utility": 0,
+   "mw": 50.0,
+   "mwh": 64.5,
+   "cod_year": 2020,
+   "nominal": 770.5426356589147,
+   "adj_installed": 907.9015150365802,
+   "adj_pack": 902.930442185802,
+   "adj_turnkey": 811.4748818594818,
+   "adj_nrel": 873.5342067956706,
+   "adj_lcos": 1064.9955795577746,
+   "adj_construction": 1099.9273566787076,
+   "factor_installed": 1.1782625295746363
+  },
+  {
+   "project": "Soltage Brigis 1A BESS (Maspeth, Queens)",
+   "state": "NY",
+   "utility": 0,
+   "mw": 5.0,
+   "mwh": 20.0,
+   "cod_year": 2025,
+   "nominal": 805.22465,
+   "adj_installed": 826.0728679549719,
+   "adj_pack": 826.0728679549719,
+   "adj_turnkey": 826.0728679549719,
+   "adj_nrel": 826.0728679549719,
+   "adj_lcos": 942.1648771148635,
+   "adj_construction": 839.9716799249532,
+   "factor_installed": 1.025891181988743
+  },
+  {
+   "project": "Chugach BESS (Southcentral Power Project site)",
+   "state": "AK",
+   "utility": 1,
+   "mw": 40.0,
+   "mwh": 80.0,
+   "cod_year": 2024,
+   "nominal": 812.5,
+   "adj_installed": 838.3522727272726,
+   "adj_pack": 818.5696640316205,
+   "adj_turnkey": 743.8068181818181,
+   "adj_nrel": 838.3522727272726,
+   "adj_lcos": 863.4595688646117,
+   "adj_construction": 855.5871212121211,
+   "factor_installed": 1.0318181818181817
+  },
+  {
+   "project": "NineDot Blue Aster BESS (Hinsdale St Brooklyn)",
+   "state": "NY",
+   "utility": 0,
+   "mw": 14.7,
+   "mwh": 58.8,
+   "cod_year": 2026,
+   "nominal": 829.9319727891157,
+   "adj_installed": 829.9319727891157,
+   "adj_pack": 829.9319727891157,
+   "adj_turnkey": 829.9319727891157,
+   "adj_nrel": 829.9319727891157,
+   "adj_lcos": 829.9319727891157,
+   "adj_construction": 829.9319727891157,
+   "factor_installed": 1.0
+  },
+  {
+   "project": "NineDot Eastern Towhee A/B (Centre St Brooklyn)",
+   "state": "NY",
+   "utility": 0,
+   "mw": 9.8,
+   "mwh": 39.2,
+   "cod_year": 2027,
+   "nominal": 831.6326530612245,
+   "adj_installed": 831.6326530612245,
+   "adj_pack": 831.6326530612245,
+   "adj_turnkey": 831.6326530612245,
+   "adj_nrel": 831.6326530612245,
+   "adj_lcos": 831.6326530612245,
+   "adj_construction": 831.6326530612245,
+   "factor_installed": 1.0
+  },
+  {
+   "project": "OSCII Blondell Ave BESS (Bronx)",
+   "state": "NY",
+   "utility": 0,
+   "mw": 5.0,
+   "mwh": 10.0,
+   "cod_year": 2024,
+   "nominal": 857.0,
+   "adj_installed": 884.2681818181818,
+   "adj_pack": 863.40209486166,
+   "adj_turnkey": 784.5445454545454,
+   "adj_nrel": 884.2681818181818,
+   "adj_lcos": 910.7505852516582,
+   "adj_construction": 902.4469696969696,
+   "factor_installed": 1.0318181818181817
+  },
+  {
+   "project": "Convergent 720 E 144th St Energy Storage 1 (Bronx)",
+   "state": "NY",
+   "utility": 0,
+   "mw": 5.0,
+   "mwh": 20.0,
+   "cod_year": 2026,
+   "nominal": 890.3,
+   "adj_installed": 890.3,
+   "adj_pack": 890.3,
+   "adj_turnkey": 890.3,
+   "adj_nrel": 890.3,
+   "adj_lcos": 890.3,
+   "adj_construction": 890.3,
+   "factor_installed": 1.0
+  },
+  {
+   "project": "NineDot Devoe Ave BESS (Bronx)",
+   "state": "NY",
+   "utility": 0,
+   "mw": 9.8,
+   "mwh": 39.2,
+   "cod_year": 2026,
+   "nominal": 892.0918367346939,
+   "adj_installed": 892.0918367346939,
+   "adj_pack": 892.0918367346939,
+   "adj_turnkey": 892.0918367346939,
+   "adj_nrel": 892.0918367346939,
+   "adj_lcos": 892.0918367346939,
+   "adj_construction": 892.0918367346939,
+   "factor_installed": 1.0
+  },
+  {
+   "project": "Convergent East Bay Ave Energy Storage 1 (Bronx)",
+   "state": "NY",
+   "utility": 0,
+   "mw": 5.0,
+   "mwh": 20.0,
+   "cod_year": 2026,
+   "nominal": 975.6725,
+   "adj_installed": 975.6725,
+   "adj_pack": 975.6725,
+   "adj_turnkey": 975.6725,
+   "adj_nrel": 975.6725,
+   "adj_lcos": 975.6725,
+   "adj_construction": 975.6725,
+   "factor_installed": 1.0
+  },
+  {
+   "project": "Westmoreland Clean Innovation Project BESS (withdrawn)",
+   "state": "NH",
+   "utility": 1,
+   "mw": 1.7,
+   "mwh": 7.1,
+   "cod_year": 2020,
+   "nominal": 985.9154929577464,
+   "adj_installed": 1161.6672826792187,
+   "adj_pack": 1155.3067550284513,
+   "adj_turnkey": 1038.2886308259585,
+   "adj_nrel": 1117.6940356738892,
+   "adj_lcos": 1362.6704003466864,
+   "adj_construction": 1407.3658898190167,
+   "factor_installed": 1.1782625295746363
+  },
+  {
+   "project": "NineDot Wintergreen / Hunts Point BESS (Bronx)",
+   "state": "NY",
+   "utility": 0,
+   "mw": 19.6,
+   "mwh": 78.3,
+   "cod_year": 2027,
+   "nominal": 998.7228607918263,
+   "adj_installed": 998.7228607918263,
+   "adj_pack": 998.7228607918263,
+   "adj_turnkey": 998.7228607918263,
+   "adj_nrel": 998.7228607918263,
+   "adj_lcos": 998.7228607918263,
+   "adj_construction": 998.7228607918263,
+   "factor_installed": 1.0
+  },
+  {
+   "project": "Kingsbery Community Solar + Storage",
+   "state": "TX",
+   "utility": 1,
+   "mw": 1.5,
+   "mwh": 3.0,
+   "cod_year": 2016,
+   "nominal": 1000.0,
+   "adj_installed": 1057.1597426646479,
+   "adj_pack": 1092.6955397543634,
+   "adj_turnkey": 1131.09243697479,
+   "adj_nrel": 1211.6322047491196,
+   "adj_lcos": 1345.9291913486707,
+   "adj_construction": 1557.422969187675,
+   "factor_installed": 1.057159742664648
+  },
+  {
+   "project": "Soltage Brigis 2 / Maspeth ESS (Queens)",
+   "state": "NY",
+   "utility": 0,
+   "mw": 20.0,
+   "mwh": 80.0,
+   "cod_year": 2027,
+   "nominal": 1008.7193125,
+   "adj_installed": 1008.7193125,
+   "adj_pack": 1008.7193125,
+   "adj_turnkey": 1008.7193125,
+   "adj_nrel": 1008.7193125,
+   "adj_lcos": 1008.7193125,
+   "adj_construction": 1008.7193125,
+   "factor_installed": 1.0
+  },
+  {
+   "project": "NineDot Arthur Kill Road BESS (Staten Island)",
+   "state": "NY",
+   "utility": 0,
+   "mw": 9.8,
+   "mwh": 39.1,
+   "cod_year": 2025,
+   "nominal": 1109.5652173913043,
+   "adj_installed": 1138.2931723631618,
+   "adj_pack": 1138.2931723631618,
+   "adj_turnkey": 1138.2931723631618,
+   "adj_nrel": 1138.2931723631618,
+   "adj_lcos": 1298.2630085832632,
+   "adj_construction": 1157.4451423444,
+   "factor_installed": 1.025891181988743
+  },
+  {
+   "project": "Stafford Hill Solar + Storage (Rutland)",
+   "state": "VT",
+   "utility": 1,
+   "mw": 4.0,
+   "mwh": 3.4,
+   "cod_year": 2015,
+   "nominal": 1235.2941176470588,
+   "adj_installed": 1282.5724907063195,
+   "adj_pack": 1329.8823529411764,
+   "adj_turnkey": 1420.3183391003458,
+   "adj_nrel": 1519.8086404686355,
+   "adj_lcos": 1685.7049180327867,
+   "adj_construction": 1962.3529411764705,
+   "factor_installed": 1.0382729686670207
+  },
+  {
+   "project": "Ozone Park BESS",
+   "state": "NY",
+   "utility": 1,
+   "mw": 1.5,
+   "mwh": 12.0,
+   "cod_year": 2019,
+   "nominal": 1250.0,
+   "adj_installed": 1480.84595384638,
+   "adj_pack": 1443.5222672064779,
+   "adj_turnkey": 1343.1667403803626,
+   "adj_nrel": 1443.841450098275,
+   "adj_lcos": 1611.7126833477137,
+   "adj_construction": 1828.9473684210527,
+   "factor_installed": 1.184676763077104
+  },
+  {
+   "project": "Harding Street BESS",
+   "state": "IN",
+   "utility": 1,
+   "mw": 20.0,
+   "mwh": 20.0,
+   "cod_year": 2016,
+   "nominal": 1250.0,
+   "adj_installed": 1321.44967833081,
+   "adj_pack": 1365.8694246929542,
+   "adj_turnkey": 1413.8655462184875,
+   "adj_nrel": 1514.5402559363997,
+   "adj_lcos": 1682.4114891858383,
+   "adj_construction": 1946.778711484594,
+   "factor_installed": 1.057159742664648
+  },
+  {
+   "project": "Regina BESS [CANADA]",
+   "state": "SK (Canada)",
+   "utility": 1,
+   "mw": 20.0,
+   "mwh": 20.0,
+   "cod_year": 2024,
+   "nominal": 1260.0,
+   "adj_installed": 1300.090909090909,
+   "adj_pack": 1269.4126482213437,
+   "adj_turnkey": 1153.4727272727273,
+   "adj_nrel": 1300.090909090909,
+   "adj_lcos": 1339.0265314085057,
+   "adj_construction": 1326.8181818181818,
+   "factor_installed": 1.0318181818181817
+  },
+  {
+   "project": "Outer Cape (Provincetown) BESS",
+   "state": "MA",
+   "utility": 1,
+   "mw": 25.0,
+   "mwh": 38.0,
+   "cod_year": 2022,
+   "nominal": 1289.4736842105262,
+   "adj_installed": 1362.6596416349319,
+   "adj_pack": 1271.6759132705254,
+   "adj_turnkey": 1089.024195676319,
+   "adj_nrel": 1260.1811683292515,
+   "adj_lcos": 1554.4270764801183,
+   "adj_construction": 1504.6114762246643,
+   "factor_installed": 1.0567564567781105
+  },
+  {
+   "project": "VEC Hinesburg BESS",
+   "state": "VT",
+   "utility": 1,
+   "mw": 1.0,
+   "mwh": 4.0,
+   "cod_year": 2023,
+   "nominal": 1400.0,
+   "adj_installed": 1448.1935293073875,
+   "adj_pack": 1355.3837757380302,
+   "adj_turnkey": 1169.4013373541366,
+   "adj_nrel": 1378.707234617985,
+   "adj_lcos": 1571.5191053122085,
+   "adj_construction": 1533.7931034482758,
+   "factor_installed": 1.0344239495052767
+  },
+  {
+   "project": "Northern New York (Chateaugay) BESS",
+   "state": "NY",
+   "utility": 1,
+   "mw": 20.0,
+   "mwh": 20.0,
+   "cod_year": 2023,
+   "nominal": 1490.0,
+   "adj_installed": 1541.2916847628624,
+   "adj_pack": 1442.515589892618,
+   "adj_turnkey": 1244.5771376126168,
+   "adj_nrel": 1467.338413986284,
+   "adj_lcos": 1672.5453335108505,
+   "adj_construction": 1632.3940886699506,
+   "factor_installed": 1.0344239495052767
+  },
+  {
+   "project": "Fairhaven BESS",
+   "state": "MD",
+   "utility": 1,
+   "mw": 2.5,
+   "mwh": 9.74,
+   "cod_year": 2023,
+   "nominal": 1659.2747433264888,
+   "adj_installed": 1716.3935333061409,
+   "adj_pack": 1606.3957618547195,
+   "adj_turnkey": 1385.9700742028126,
+   "adj_nrel": 1634.038637745093,
+   "adj_lcos": 1862.5585429282771,
+   "adj_construction": 1817.845827171483,
+   "factor_installed": 1.0344239495052767
+  },
+  {
+   "project": "Asheville Rock Hill substation BESS (Duke Energy Progress)",
+   "state": "NC",
+   "utility": 1,
+   "mw": 9.0,
+   "mwh": 9.0,
+   "cod_year": 2020,
+   "nominal": 1666.6666666666667,
+   "adj_installed": 1963.7708826243938,
+   "adj_pack": 1953.0185620719058,
+   "adj_turnkey": 1755.2022092534064,
+   "adj_nrel": 1889.4351555439557,
+   "adj_lcos": 2303.5618672527316,
+   "adj_construction": 2379.1185280273858,
+   "factor_installed": 1.1782625295746363
+  },
+  {
+   "project": "El Centro BESS (IID)",
+   "state": "CA",
+   "utility": 1,
+   "mw": 30.0,
+   "mwh": 20.0,
+   "cod_year": 2017,
+   "nominal": 1900.0,
+   "adj_installed": 2200.315696809641,
+   "adj_pack": 2175.6808592251627,
+   "adj_turnkey": 2156.5670318760417,
+   "adj_nrel": 2309.5925906472676,
+   "adj_lcos": 2564.756865186415,
+   "adj_construction": 2971.589310829817,
+   "factor_installed": 1.1580608930577057
+  },
+  {
+   "project": "LADWP Beacon Energy Storage System",
+   "state": "CA",
+   "utility": 1,
+   "mw": 20.0,
+   "mwh": 10.0,
+   "cod_year": 2018,
+   "nominal": 1920.0,
+   "adj_installed": 2282.285702013423,
+   "adj_pack": 2190.76802928615,
+   "adj_turnkey": 2097.0415205008176,
+   "adj_nrel": 2251.677874627531,
+   "adj_lcos": 2509.5280888986686,
+   "adj_construction": 2865.8255033557048,
+   "factor_installed": 1.1886904697986578
+  },
+  {
+   "project": "Power Creek BESS (Cordova)",
+   "state": "AK",
+   "utility": 1,
+   "mw": 1.0,
+   "mwh": 0.92,
+   "cod_year": 2019,
+   "nominal": 2173.913043478261,
+   "adj_installed": 2575.3842675589217,
+   "adj_pack": 2510.473508185179,
+   "adj_turnkey": 2335.9421571832395,
+   "adj_nrel": 2511.0286088665653,
+   "adj_lcos": 2802.978579735154,
+   "adj_construction": 3180.7780320366137,
+   "factor_installed": 1.184676763077104
+  },
+  {
+   "project": "Glacier BESS",
+   "state": "WA",
+   "utility": 1,
+   "mw": 2.0,
+   "mwh": 4.4,
+   "cod_year": 2016,
+   "nominal": 2545.4545454545455,
+   "adj_installed": 2690.952072237286,
+   "adj_pack": 2781.4068284656523,
+   "adj_turnkey": 2879.144385026738,
+   "adj_nrel": 3084.154702997759,
+   "adj_lcos": 3426.0015779784344,
+   "adj_construction": 3964.349376114082,
+   "factor_installed": 1.057159742664648
+  },
+  {
+   "project": "Dalrymple ESCRI BESS [AUSTRALIA]",
+   "state": "SA (Australia)",
+   "utility": 1,
+   "mw": 30.0,
+   "mwh": 8.0,
+   "cod_year": 2018,
+   "nominal": 2775.0,
+   "adj_installed": 3298.6160536912753,
+   "adj_pack": 3166.3444173276384,
+   "adj_turnkey": 3030.880322598838,
+   "adj_nrel": 3254.3781781726034,
+   "adj_lcos": 3627.0523159863574,
+   "adj_construction": 4142.013422818792,
+   "factor_installed": 1.1886904697986578
+  }
+ ],
+ "indices": {
+  "installed": {
+   "label": "Installed all-in (EIA-860 2015-18, LBNL 2024)",
+   "source": "EIA Today in Energy #45596 (2015 $2,152; 2017 $834; 2018 $625); LBNL Utility-Scale Solar 2025 (2024 $458)",
+   "conf": "High at published points; interpolated 2019-2023",
+   "ratio_2018": 0.7328,
+   "naive_median": 619.8627525733891,
+   "median": 831.6326530612245,
+   "q25": 659.1932732157766,
+   "q75": 1222.1198866927691,
+   "min": 415.83842770112125,
+   "max": 3298.6160536912753,
+   "hp_pct": {
+    "contract": 0.18181818181818182,
+    "installed": 0.509090909090909,
+    "station_direct": 0.8545454545454545,
+    "approval": 0.9818181818181818
+   }
+  },
+  "pack": {
+   "label": "BNEF pack price, as released (real $ of survey year)",
+   "source": "BloombergNEF Lithium-Ion Battery Price Survey releases 2014-2025",
+   "conf": "High 2017-2025; Medium 2014-2016",
+   "ratio_2018": 0.6136363636363636,
+   "naive_median": 607.4350704464438,
+   "median": 829.9319727891157,
+   "q25": 647.3897864144581,
+   "q75": 1212.3597016248975,
+   "min": 389.1887698904915,
+   "max": 3166.3444173276384,
+   "hp_pct": {
+    "contract": 0.2,
+    "installed": 0.5272727272727272,
+    "station_direct": 0.8727272727272727,
+    "approval": 0.9818181818181818
+   }
+  },
+  "turnkey": {
+   "label": "BNEF turnkey system, global (4-h to 2023; all durations 2024-25)",
+   "source": "BloombergNEF Energy Storage System Cost Survey 2021-2025",
+   "conf": "High 2022-2025; Medium 2021; 2017-2020 not retrieved (held flat)",
+   "ratio_2018": 0.49159663865546216,
+   "naive_median": 524.0066225165563,
+   "median": 805.9000442282176,
+   "q25": 579.5677694954747,
+   "q75": 1134.692804668976,
+   "min": 335.7852411545449,
+   "max": 3030.880322598838,
+   "hp_pct": {
+    "contract": 0.32727272727272727,
+    "installed": 0.6,
+    "station_direct": 0.8909090909090909,
+    "approval": 0.9636363636363636
+   }
+  },
+  "nrel": {
+   "label": "NREL bottom-up 4-h 60 MW base year (2022 and 2024 editions)",
+   "source": "NREL Cost Projections for Utility-Scale Battery Storage: 2023 update (2022 base $482, Ramasamy et al.) and 2025 update (2024 base $334)",
+   "conf": "Medium; earlier editions' base years not retrieved (held flat before 2022)",
+   "ratio_2018": 0.6929460580912863,
+   "naive_median": 693.75,
+   "median": 838.3522727272726,
+   "q25": 630.7853733875988,
+   "q75": 1235.9066865391856,
+   "min": 395.8859345117357,
+   "max": 3254.3781781726034,
+   "hp_pct": {
+    "contract": 0.2,
+    "installed": 0.4909090909090909,
+    "station_direct": 0.8363636363636363,
+    "approval": 0.9636363636363636
+   }
+  },
+  "lcos": {
+   "label": "Lazard LCOS midpoint, unsubsidized 100 MW 4-h",
+   "source": "Lazard LCOS v5.0 (2019, $173-315), v6.0 (2020, $132-250), v7.0 (2021, $131-232), 2024 ($170-296), 2025 ($115-254), 2026 (~$210-292)",
+   "conf": "Medium; v8.0 (2023) possibly conflated with 2024 and omitted",
+   "ratio_2018": 1.028688524590164,
+   "naive_median": 890.3,
+   "median": 902.5591026747196,
+   "q25": 760.636128566852,
+   "q75": 1354.2997958476785,
+   "min": 451.2504859539342,
+   "max": 3627.0523159863574,
+   "hp_pct": {
+    "contract": 0.14545454545454545,
+    "installed": 0.41818181818181815,
+    "station_direct": 0.7636363636363637,
+    "approval": 0.9636363636363636
+   }
+  },
+  "construction": {
+   "label": "Construction index only (Handy-Whitman, no battery deflation)",
+   "source": "https://www.pjm.com/-/media/DotCom/committees-groups/subcommittees/cds/postings/handy-whitman-index.ashx",
+   "conf": "Medium (2015-2018 seen in excerpt; later years from search summary of the same posting); production-plant line, not distribution plant",
+   "ratio_2018": 1.4926174496644296,
+   "naive_median": 902.4469696969696,
+   "median": 902.4469696969696,
+   "q25": 754.7683501167822,
+   "q75": 1455.9886830218406,
+   "min": 427.69230769230774,
+   "max": 4142.013422818792,
+   "hp_pct": {
+    "contract": 0.16363636363636364,
+    "installed": 0.41818181818181815,
+    "station_direct": 0.7454545454545455,
+    "approval": 0.9090909090909091
+   }
+  },
+  "installed_flat35": {
+   "label": "Installed index with 3.5%/yr flat non-battery escalation (proxy)",
+   "source": "sensitivity",
+   "conf": "Assumption",
+   "ratio_2018": 0.7328,
+   "naive_median": 816.2612844649129,
+   "median": 816.2612844649129,
+   "q25": 607.4078713714005,
+   "q75": 1160.061007574363,
+   "min": 406.20203331676566,
+   "max": 3005.895046544066,
+   "hp_pct": {
+    "contract": 0.2545454545454545,
+    "installed": 0.5636363636363636,
+    "station_direct": 0.8545454545454545,
+    "approval": 0.9818181818181818
+   }
+  },
+  "installed_s30": {
+   "label": "Installed index, battery share 30%",
+   "median": 843.0616404165818,
+   "q25": 682.7240935705918,
+   "q75": 1264.932330868448,
+   "min": 421.9832542733778,
+   "max": 3509.465395973154,
+   "hp_pct": {
+    "contract": 0.18181818181818182,
+    "installed": 0.4727272727272727,
+    "station_direct": 0.8363636363636363,
+    "approval": 0.9636363636363636
+   }
+  },
+  "installed_s50": {
+   "label": "Installed index, battery share 50%",
+   "median": 831.6326530612245,
+   "q25": 628.5484151165224,
+   "q75": 1123.066278978317,
+   "min": 409.6936011288646,
+   "max": 3087.766711409396,
+   "hp_pct": {
+    "contract": 0.2,
+    "installed": 0.509090909090909,
+    "station_direct": 0.8545454545454545,
+    "approval": 0.9818181818181818
+   }
+  }
+ },
+ "ny": [
+  {
+   "project": "NineDot Arthur Kill Road (two 4.9 MW systems)",
+   "owner": "NineDot Energy",
+   "mw": 9.8,
+   "mwh": 39.1,
+   "cod_year": 2025,
+   "cost_basis": "NYCIDA project budget (inducement resolution, Apr 2024)",
+   "confidence": "High",
+   "nominal": 1109.5652173913043,
+   "kw": 4426.938775510204,
+   "adj_installed": 1138.2931723631618,
+   "hours": 3.9897959183673466
+  },
+  {
+   "project": "Elevate Renewables, 4401 Victory Blvd, Staten Island",
+   "owner": "Elevate Renewables (ArcLight)",
+   "mw": 15.1,
+   "mwh": 60.4,
+   "cod_year": 2025,
+   "cost_basis": "NYCIDA total project cost (public hearing notice, Apr 2024)",
+   "confidence": "High",
+   "nominal": 524.0066225165563,
+   "kw": 2096.026490066225,
+   "adj_installed": 537.573773343439,
+   "hours": 4.0
+  },
+  {
+   "project": "Soltage Brigis 1A, Maspeth, Queens",
+   "owner": "Soltage",
+   "mw": 5.0,
+   "mwh": 20.0,
+   "cod_year": 2025,
+   "cost_basis": "NYCIDA total project cost (public hearing notice, Mar 2024); 4-h duration assumed (MWh not stated)",
+   "confidence": "Medium (cost High; duration assumed)",
+   "nominal": 805.22465,
+   "kw": 3220.8986,
+   "adj_installed": 826.0728679549719,
+   "hours": 4.0
+  },
+  {
+   "project": "NineDot 28-project NYC portfolio (financing proxy)",
+   "owner": "NineDot Energy",
+   "mw": 124,
+   "mwh": 494,
+   "cod_year": 2027,
+   "cost_basis": "Natixis construction/term loan + tax-credit bridge + LC facility, Feb 2026; a floor on total cost, not the cost itself",
+   "confidence": "Low-Medium (financing, not capex)",
+   "nominal": 872.4696356275304,
+   "kw": 3475.8064516129034,
+   "adj_installed": 872.4696356275304,
+   "hours": 3.9838709677419355
+  },
+  {
+   "project": "NYSERDA retail (<= 5 MW) average total installed cost, 2022-23 installs",
+   "owner": "NYSERDA program average",
+   "mw": null,
+   "mwh": null,
+   "cod_year": 2023,
+   "cost_basis": "New York's 6 GW Energy Storage Roadmap, NYSERDA/DPS, Dec 2022",
+   "confidence": "High",
+   "nominal": 567,
+   "kw": null,
+   "adj_installed": 586.5183793694919,
+   "hours": null
+  },
+  {
+   "project": "NYSERDA retail (<= 5 MW) average total installed cost, 2020-21 installs",
+   "owner": "NYSERDA program average",
+   "mw": null,
+   "mwh": null,
+   "cod_year": 2021,
+   "cost_basis": "as above",
+   "confidence": "High",
+   "nominal": 464,
+   "kw": null,
+   "adj_installed": 516.539821955402,
+   "hours": null
+  }
+ ],
+ "indexed_series": {
+  "installed": {
+   "label": "Installed all-in (EIA-860 2015-18, LBNL 2024)",
+   "base_2018": 625.0,
+   "points": [
+    [
+     2015,
+     3.4432
+    ],
+    [
+     2017,
+     1.3344
+    ],
+    [
+     2018,
+     1.0
+    ],
+    [
+     2024,
+     0.7328
+    ]
+   ]
+  },
+  "pack": {
+   "label": "BNEF pack price, as released (real $ of survey year)",
+   "base_2018": 176.0,
+   "points": [
+    [
+     2014,
+     3.0681818181818183
+    ],
+    [
+     2015,
+     1.9886363636363635
+    ],
+    [
+     2016,
+     1.5511363636363635
+    ],
+    [
+     2017,
+     1.1875
+    ],
+    [
+     2018,
+     1.0
+    ],
+    [
+     2019,
+     0.8863636363636364
+    ],
+    [
+     2020,
+     0.7784090909090909
+    ],
+    [
+     2021,
+     0.75
+    ],
+    [
+     2022,
+     0.8579545454545454
+    ],
+    [
+     2023,
+     0.7897727272727273
+    ],
+    [
+     2024,
+     0.6534090909090909
+    ],
+    [
+     2025,
+     0.6136363636363636
+    ]
+   ]
+  },
+  "turnkey": {
+   "label": "BNEF turnkey system, global (4-h to 2023; all durations 2024-25)",
+   "base_2018": 238.0,
+   "points": [
+    [
+     2021,
+     1.0
+    ],
+    [
+     2022,
+     1.361344537815126
+    ],
+    [
+     2023,
+     1.1050420168067228
+    ],
+    [
+     2024,
+     0.6932773109243697
+    ],
+    [
+     2025,
+     0.49159663865546216
+    ]
+   ]
+  },
+  "nrel": {
+   "label": "NREL bottom-up 4-h 60 MW base year (2022 and 2024 editions)",
+   "base_2018": 482.0,
+   "points": [
+    [
+     2022,
+     1.0
+    ],
+    [
+     2024,
+     0.6929460580912863
+    ]
+   ]
+  },
+  "lcos": {
+   "label": "Lazard LCOS midpoint, unsubsidized 100 MW 4-h",
+   "base_2018": 244.0,
+   "points": [
+    [
+     2019,
+     1.0
+    ],
+    [
+     2020,
+     0.7827868852459017
+    ],
+    [
+     2021,
+     0.7438524590163934
+    ],
+    [
+     2024,
+     0.9549180327868853
+    ],
+    [
+     2025,
+     0.7561475409836066
+    ],
+    [
+     2026,
+     1.028688524590164
+    ]
+   ]
+  },
+  "hw": {
+   "label": "Handy-Whitman NA construction (non-battery)",
+   "base_2018": 745.0,
+   "points": [
+    [
+     2015,
+     0.9395973154362416
+    ],
+    [
+     2016,
+     0.9583892617449664
+    ],
+    [
+     2017,
+     0.9543624161073826
+    ],
+    [
+     2018,
+     1.0
+    ],
+    [
+     2019,
+     1.0201342281879195
+    ],
+    [
+     2020,
+     1.0456375838926175
+    ],
+    [
+     2021,
+     1.1557046979865773
+    ],
+    [
+     2022,
+     1.2791946308724833
+    ],
+    [
+     2023,
+     1.3624161073825503
+    ],
+    [
+     2024,
+     1.4174496644295302
+    ],
+    [
+     2025,
+     1.4308724832214765
+    ],
+    [
+     2026,
+     1.4926174496644296
+    ]
+   ]
+  }
+ }
+}
