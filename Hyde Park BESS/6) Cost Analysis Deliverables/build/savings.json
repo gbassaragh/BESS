@@ -82,32 +82,32 @@
   {
    "id": "B1",
    "tier": "B",
-   "title": "Station 496 relay program: 710 man-hours per relay",
+   "title": "Station 496: relay program out; RTU, RTAC and transfer trip only (Engineering, 5 Oct 2026)",
    "layer": "F",
-   "lo": 1065892.38322,
-   "hi": 1522703.4046,
+   "lo": 6114963.383539055,
+   "hi": 6580334.818956364,
    "scales": false,
    "conf": "Medium",
-   "owner": "P&C Engineering + EMA",
-   "close": "Two recent relay-replacement actuals; confirm the four SEL-735 are protection, not metering; outage windows priced",
-   "ev": "20 relays: hardware $91K, install 6,400 mh ($1.23M), test 7,800 mh ($1.81M), E&S basis $1.46M; $363K per relay all-in. Loaded effect includes the E&S basis on the hours.",
-   "lo_loaded": 1065892.38322,
-   "hi_loaded": 1522703.4046
+   "owner": "P&C Engineering + System Protection",
+   "close": "Protection-basis memo signed by System Protection (existing SEL-551 and REF610 relays plus an RTAC transfer trip meet the interconnection requirement); RTU, RTAC, Axion and fiber scope priced (no line in Rev 2); asset-condition relays, if any, to the asset program",
+   "ev": "Sta 496 Rev 2 is 20 relays: hardware $91K, install 6,400 mh ($1.23M), test 7,800 mh ($1.81M), removals, cable, E&S basis $1.46M, risk, contingency and AFUDC: $7.25M on $3.90M of directs (loader 1.86). The Rev 2 clarifications name the RTU (Orion+), the SEL RTAC/Axion and the dark-fiber transfer trip but price none of them; allowance $0.30M to $0.55M direct, $0.67M to $1.14M at the 496 loader with PM and internal siting retained. Superseded sizing (3 Oct): the relay hours benchmarked 35% to 50% below Rev 2, $1.07M to $1.52M.",
+   "lo_loaded": 6114963.383539055,
+   "hi_loaded": 6580334.818956364
   },
   {
    "id": "B2",
    "tier": "B",
-   "title": "Interconnection topology: five feeder cabinets, four GSUs, four breakers, four metering sets for 10 MW",
+   "title": "Two feeders instead of four: two skids, two metering sets, two duct-bank runs (Engineering, 5 Oct 2026)",
    "layer": "C/D",
-   "lo": 945093.3240973057,
-   "hi": 1350133.320139008,
+   "lo": 1009448.7603005309,
+   "hi": 1181774.1452442566,
    "scales": true,
-   "conf": "Low",
+   "conf": "Medium",
    "owner": "System Planning + Substation Eng.",
-   "close": "Hosting-capacity study: can two feeders take 5 MW each? If not, the item is zero",
-   "ev": "Breakers $1.50M, metering $245K, disconnects $238K, GSUs $1.44M scale with the number of feeder connections.",
-   "lo_loaded": 1361320.6312858623,
-   "hi_loaded": 1944743.7589798032
+   "close": "Hosting-capacity and protection study at 5 MW per feeder; N-1 position accepted in writing; D-Line 24211 to two tie-ins; four GSUs unchanged",
+   "ev": "Lines that follow the feeder count: breaker skids $1.50M, metering $245K, duct bank to the feeder manholes and riser poles; half of them is $1.01M, and half the 15 kV cable and terminations adds $0.17M. Disconnects are not counted here (B5). Superseded sizing (3 Oct): 35% to 50% of breakers, metering, disconnects and half the GSUs, $0.9M to $1.4M.",
+   "lo_loaded": 1454018.760460068,
+   "hi_loaded": 1702237.7414186287
   },
   {
    "id": "B3",
@@ -255,10 +255,10 @@
   },
   "B": {
    "n": 8,
-   "lo": 3756749.6805757075,
-   "hi": 5667437.9180031335,
-   "lo_loaded": 4941826.601922926,
-   "hi_loaded": 7492814.990868416
+   "lo": 8870176.117097989,
+   "hi": 10556710.157464746,
+   "lo_loaded": 10083595.731416184,
+   "hi_loaded": 12307940.387663603
   },
   "C": {
    "n": 3,
@@ -277,6 +277,19 @@
   "hi": 12365280.942930387,
   "ec_lo": 2807216.4976326544,
   "ec_hi": 4121760.3143101293
+ },
+ "rtac": {
+  "lo": 300000.0,
+  "hi": 550000.0,
+  "f_new_lo": 672765.1810436357,
+  "f_new_hi": 1138136.616460945,
+  "load496": 1.8614857416692376,
+  "d496": 3896403.7368859868,
+  "keep496": 114319.45854286439
+ },
+ "feeders": {
+  "core": 2018897.5206010619,
+  "cable": 344650.7698874514
  },
  "relay": {
   "n": 20,

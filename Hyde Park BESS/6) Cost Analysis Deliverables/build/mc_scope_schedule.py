@@ -23,7 +23,7 @@ acc={"B. Install labor basis":Bv*(pert(0.8,1.0,1.9)-1),"C. GSUs and auxiliaries"
 SVI={i["id"]:i for i in SV["items"]}
 OPP=[("A1 Battery escalation removed",0.80,SVI["A1"]["lo_loaded"],SVI["A1"]["hi_loaded"]),("A2 Risk lines that duplicate escalation",0.70,SVI["A2"]["lo"],SVI["A2"]["hi"]),
      ("A4 E&S overhead basis off the vendor contract",0.30,SVI["A4"]["lo"],SVI["A4"]["hi"]),("A5 Commissioning overlap with Nomad",0.50,SVI["A5"]["lo_loaded"],SVI["A5"]["hi_loaded"]),
-     ("B1 Station 496 relay program at benchmark",0.50,SVI["B1"]["lo"],SVI["B1"]["hi"]),("B2 Two-feeder topology",0.35,SVI["B2"]["lo_loaded"],SVI["B2"]["hi_loaded"]),
+     ("B1 Station 496 to RTU, RTAC and transfer trip only",0.60,SVI["B1"]["lo"],SVI["B1"]["hi"]),("B2 Two feeders instead of four",0.60,SVI["B2"]["lo_loaded"],SVI["B2"]["hi_loaded"]),
      ("B3 Platform and wall after geotech",0.40,SVI["B3"]["lo_loaded"],SVI["B3"]["hi_loaded"]),("B4 Battery install crew build-up",0.60,SVI["B4"]["lo_loaded"],SVI["B4"]["hi_loaded"]),
      ("B5 Disconnect and PT double count",0.90,SVI["B5"]["lo_loaded"],SVI["B5"]["hi_loaded"]),("B6 GSU install hours",0.60,SVI["B6"]["lo_loaded"],SVI["B6"]["hi_loaded"]),
      ("B7 Switchyard lighting",0.70,SVI["B7"]["lo_loaded"],SVI["B7"]["hi_loaded"]),("B8 Siting task budgets",0.40,SVI["B8"]["lo_loaded"],SVI["B8"]["hi_loaded"]),("C3 AFUDC: battery payment timing",0.50,SVI["C3"]["lo"],SVI["C3"]["hi"])]
@@ -31,7 +31,7 @@ OPP=[("A1 Battery escalation removed",0.80,SVI["A1"]["lo_loaded"],SVI["A1"]["hi_
 THR=[("T1 Haugland reconciliation moves the construction base up",0.60,2.0e6*MARG,5.0e6*MARG,8.0e6*MARG),("T2 Sound mitigation",0.60,0.3e6*MARG,0.4e6*MARG,0.5e6*MARG),
      ("T3 Visual screening or facade",0.70,0.2e6*MARG,0.3e6*MARG,0.5e6*MARG),("T4 Police details and traffic control",0.80,0.1e6*MARG,0.2e6*MARG,0.3e6*MARG),
      ("T5 NFPA 855 hazard-analysis changes",0.40,0.1e6*MARG,0.3e6*MARG,0.6e6*MARG),("T6 GSU count: twelve, not four",0.35,0.6e6*MARG,0.8e6*MARG,1.0e6*MARG),
-     ("T7 Nomad change orders and tariff pass-through",0.50,0.3e6,0.6e6,1.2e6),("T8 Outage-window premiums at Station 496",0.50,0.2e6,0.3e6,0.5e6)]
+     ("T7 Nomad change orders and tariff pass-through",0.50,0.3e6,0.6e6,1.2e6),("T8 Outage-window premiums at Station 496",0.30,0.1e6,0.2e6,0.4e6),("T9 Two feeders: voltage mitigation and the N-1 position",0.40,0.2e6*MARG,0.3e6*MARG,0.5e6*MARG)]
 # ---------------- schedule ----------------
 siting_slip=np.where(bern(0.50),pert(2,6,14),0.0); efsb=bern(0.08); siting_slip=np.where(efsb,pert(18,21,24),siting_slip)
 equip_slip=np.where(bern(0.30),pert(2,4,6),0.0)                 # GSU / transformer lead time (29-70 weeks reported)
@@ -42,6 +42,7 @@ sched_cost=np.maximum(slip,0)*cost_per_month
 # ---------------- assemble ----------------
 acc_sum=sum(acc.values())
 opp_draw={lab:np.where(bern(p),pert(lo,0.5*(lo+hi),hi),0.0) for lab,p,lo,hi in OPP}
+acc["F. Station 496 program"]=acc["F. Station 496 program"]*(1-opp_draw["B1 Station 496 to RTU, RTAC and transfer trip only"]/SV["relay"]["sta496"]); acc_sum=sum(acc.values())   # accuracy on F shrinks with the program
 opp_mid={lab:0.5*(lo+hi) for lab,p,lo,hi in OPP}
 thr_draw={lab:np.where(bern(p),pert(lo,md,hi),0.0) for lab,p,lo,md,hi in THR}
 acc_loaded=acc_sum*MARG   # accuracy ranges sit in the directs: contingency, basis indirects and AFUDC scale with them
