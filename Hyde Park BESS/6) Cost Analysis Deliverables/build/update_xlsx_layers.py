@@ -33,7 +33,7 @@ for j in range(2,2+len(keys)):
 rr=r; r+=1
 ws.cell(row=r,column=1,value="Confidence: "+"; ".join(f"{k[1]}: {LJ['series'].get(k[0],{}).get('conf', IXJ['indices'].get('installed',{}).get('conf','') if k[0]=='bat_installed' else IXJ['construction_index']['conf'])}" for k in keys)).font=note; r+=2
 ws.cell(row=r,column=1,value="B. Layer map and weights (Hyde Park = Rev 3 loaded layers; blue = editable)").font=bold; r+=1
-H(ws,r,1,["Layer","Loaded $ (Rev 3)","Weight","Escalator column","2018 to 2026 ratio","Weighted"]); r+=1; m0=r
+H(ws,r,1,["Layer","Loaded $ (Rev 3)","Weight","Escalator column","2018 to 2026 ratio","Weight / ratio"]); r+=1; m0=r
 LL=D["layers_loaded"]; tot=sum(LL.values()); colof={k[0]:openpyxl.utils.get_column_letter(j) for j,k in enumerate(keys,2)}
 for layer in "ABCDEFGHI":
     name=[k for k in LL if k[0]==layer][0]; esc=LX["map_hp"][layer]
@@ -41,12 +41,12 @@ for layer in "ABCDEFGHI":
     w=ws.cell(row=r,column=3,value=f"=B{r}/SUM($B${m0}:$B${m0+8})"); w.number_format="0.0%"
     ws.cell(row=r,column=4,value=[k[1] for k in keys if k[0]==esc][0]).font=blue
     ws.cell(row=r,column=5,value=f"={colof[esc]}{rr}").number_format="0.00"
-    ws.cell(row=r,column=6,value=f"=C{r}*E{r}").number_format="0.000"; r+=1
-ws.cell(row=r,column=1,value="Composite, Hyde Park weights (2018 project in 2026 dollars)").font=bold; c=ws.cell(row=r,column=6,value=f"=SUM(F{m0}:F{r-1})"); c.font=bold; c.number_format="0.00"; r+=1
-ws.cell(row=r,column=1,value=f"Two-component model (40% battery + 60% Handy-Whitman): {LX['factors']['2018']['two_component']:.3f}; whole cost at the battery rate: {LX['factors']['2018']['naive_battery']:.3f}; Handy-Whitman only: {LX['factors']['2018']['hw_only']:.3f}").font=note; r+=2
+    ws.cell(row=r,column=6,value=f"=C{r}/E{r}").number_format="0.000"; r+=1
+ws.cell(row=r,column=1,value="Composite, Hyde Park scope, quantities fixed: a 2018 project in 2026 dollars = 1 / SUM(weight / ratio)").font=bold; c=ws.cell(row=r,column=6,value=f"=1/SUM(F{m0}:F{r-1})"); c.font=bold; c.number_format="0.00"; r+=1
+ws.cell(row=r,column=1,value=f"Two-component model, fixed quantities (anchor 40%): {LX['factors']['2018']['two_component']:.3f} for 2018, {LX['factors']['2016']['two_component']:.3f} for 2016; earlier fixed-share form: {LX['factors']['2018']['two_component_fixed_share']:.3f} / {LX['factors']['2016']['two_component_fixed_share']:.3f}; whole cost at the battery rate: {LX['factors']['2018']['naive_battery']:.3f}; Handy-Whitman only: {LX['factors']['2018']['hw_only']:.3f}").font=note; r+=2
 ws.cell(row=r,column=1,value="C. Reference class (55 projects) under each method, 2026 $/kWh (values from layer_index_model.py)").font=bold; r+=1
 H(ws,r,1,["Method","Class median","Q25","Q75","HP installed pct","HP station pct","Utility subclass median","HP station pct (utility)"]); r+=1
-labs={"nominal":"As published","naive_battery":"Whole cost at the battery rate","two_component":"Battery 40% + Handy-Whitman 60%","layer_developer":"One index per layer, developer weights","layer_hp":"One index per layer, Hyde Park weights","layer_developer_pack":"Layer method, BNEF pack for the battery","layer_developer_turnkey":"Layer method, BNEF turnkey for the battery"}
+labs={"nominal":"As published","naive_battery":"Whole cost at the battery rate","two_component":"Battery 40% + Handy-Whitman 60%","layer_developer":"One index per layer, developer weights","layer_hp":"One index per layer, Hyde Park weights","layer_developer_pack":"Layer method, BNEF pack for the battery","layer_developer_turnkey":"Layer method, BNEF turnkey for the battery","two_component_fixed_share":"Earlier version: today's 40% share held fixed (superseded 5 Oct 2026)","layer_hp_fixed_share":"Earlier layer version, fixed shares (superseded)"}
 M=LX["classes"]["reference_class"]["methods"]; MU=LX["classes"]["reference_class_utility"]["methods"]
 for k,lab in labs.items():
     v=M[k]; u=MU[k]; vals=[lab,round(v["median"]),round(v["q25"]),round(v["q75"]),v["hp_pct"]["installed"],v["hp_pct"]["station_direct"],round(u["median"]),u["hp_pct"]["station_direct"]]
