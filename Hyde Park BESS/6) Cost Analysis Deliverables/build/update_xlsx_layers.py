@@ -114,9 +114,37 @@ for pp in SC["plan"]:
     for j,v in enumerate(pp,1): c=ws.cell(row=r,column=j,value=v); c.font=base; c.alignment=Alignment(wrap_text=True,vertical="top")
     r+=1
 for col,wd in zip("ABCDEFGHIJK",(26,10,48,36,52,12,12,12,12,22,48)): ws.column_dimensions[col].width=wd
+# ---------- MC Scope Schedule
+MS=json.load(open(f"{B}/mc_scope_results.json"))
+if "MC Scope Schedule" in wb.sheetnames: del wb["MC Scope Schedule"]
+ws=wb.create_sheet("MC Scope Schedule", index=wb.sheetnames.index("Scope Challenge")+1)
+ws["A1"]="Integrated Monte Carlo on cost, scope and schedule (deck slides 34-36; mc_scope_schedule.py, 20,000 trials, 5 Oct 2026)"; ws["A1"].font=title
+ws["A2"]="Values from the Python model. Base = approval less reserves; plus estimate-accuracy ranges (loaded), threats not in the estimate, schedule cost; less savings levers at assessed odds. Compared to the $57.2M approval."; ws["A2"].font=note
+r=4; H(ws,r,1,["Posture","P10","P50","P80","P90","Mean","P(over approval)","P(under $50M)"]); r+=1
+for k,lab in (("status_quo","Status quo: no lever pursued"),("managed","Managed: levers at assessed odds"),("ceiling","Ceiling: every lever realized")):
+    v=MS["cases"][k]; vals=[lab,v["10"],v["50"],v["80"],v["90"],v["mean"],v["p_over_approval"],v.get("p_under_50","")]
+    for j,x in enumerate(vals,1):
+        c=ws.cell(row=r,column=j,value=x); c.font=base
+        if j in (2,3,4,5,6): c.number_format='"$"#,##0'
+        if j in (7,8) and x!="": c.number_format="0%"
+    r+=1
+r+=1; ws.cell(row=r,column=1,value="Schedule").font=bold; r+=1
+sch=MS["schedule"]
+for lab,v,fmt in (("Slip months P50",sch["slip_months"]["50"],"0.0"),("Slip months P80",sch["slip_months"]["80"],"0.0"),("Slip months P90",sch["slip_months"]["90"],"0.0"),("P(slip > 0)",sch["p_slip_gt_0"],"0%"),("P(slip > 6 months)",sch["p_slip_gt_6"],"0%"),("P(slip > 12 months)",sch["p_slip_gt_12"],"0%"),("P(EFSB path)",sch["p_efsb"],"0%"),("Schedule cost P50 $",sch["sched_cost"]["50"],'"$"#,##0'),("Schedule cost P80 $",sch["sched_cost"]["80"],'"$"#,##0'),("Cost per month P50 $",sch["cost_per_month"]["50"],'"$"#,##0')):
+    ws.cell(row=r,column=1,value=lab).font=base; c=ws.cell(row=r,column=2,value=v); c.number_format=fmt; r+=1
+r+=1; ws.cell(row=r,column=1,value="Tornado (effect on the managed total; P10 to P90 of each driver's contribution)").font=bold; r+=1
+H(ws,r,1,["Driver","Kind","Probability","P10 $","Mean $","P90 $","Variance share","Full value if realized $"]); r+=1
+for t in MS["tornado"]:
+    vals=[t["driver"],t["kind"],t["p"],t["p10"],t["mean"],t["p90"],t["var_share"],t.get("full","")]
+    for j,x in enumerate(vals,1):
+        c=ws.cell(row=r,column=j,value=x); c.font=base
+        if j in (4,5,6,8) and x!="": c.number_format='"$"#,##0'
+        if j in (3,7): c.number_format="0%"
+    r+=1
+for col,wd in zip("ABCDEFGH",(52,12,12,14,14,14,14,16)): ws.column_dimensions[col].width=wd
 # README rows (dedupe by tab name)
 rd=wb["README"]
-for tab,desc in (("Layer Escalators","One published index per cost layer (IBEW 103 labor, PPI transformers, PPI switchgear, ENR CCI, PPI engineering services, Handy-Whitman) with Hyde Park and developer weights, the composite 2018-to-2026 factor, and the 55-project class under seven re-basing methods. Deck slides 17-18. Added 3 Oct 2026."),("Savings Register","Cost-saving levers in three tiers sized from the Rev 3 rows, direct and loaded at the marginal loader, with owner, closing condition and evidence; Station 496 relay detail; Section 48E assumptions. Deck slides 27-29. Added 3 Oct 2026; levers B5-B8 revised 5 Oct 2026."),("Scope Challenge","Layer-by-layer scope challenge (what the function requires against what Rev 3 carries), reductions and exposures, the cost cases and the five-gate containment plan. Deck slides 30-33. Added 5 Oct 2026.")):
+for tab,desc in (("Layer Escalators","One published index per cost layer (IBEW 103 labor, PPI transformers, PPI switchgear, ENR CCI, PPI engineering services, Handy-Whitman) with Hyde Park and developer weights, the composite 2018-to-2026 factor, and the 55-project class under seven re-basing methods. Deck slides 17-18. Added 3 Oct 2026."),("Savings Register","Cost-saving levers in three tiers sized from the Rev 3 rows, direct and loaded at the marginal loader, with owner, closing condition and evidence; Station 496 relay detail; Section 48E assumptions. Deck slides 27-29. Added 3 Oct 2026; levers B5-B8 revised 5 Oct 2026."),("MC Scope Schedule","Integrated Monte Carlo on cost, scope and schedule: three postures (status quo, managed, ceiling) against the $57.2M approval, schedule slip and its cost, and the tornado table of opportunities, threats, accuracy ranges and schedule. Deck slides 34-36. Added 5 Oct 2026."),("Scope Challenge","Layer-by-layer scope challenge (what the function requires against what Rev 3 carries), reductions and exposures, the cost cases and the five-gate containment plan. Deck slides 30-33. Added 5 Oct 2026.")):
     rows=[i for i in range(1,rd.max_row+1) if rd.cell(row=i,column=1).value in (tab,f"Tab: {tab}")]
     for i in rows[:-1] if rows else []: rd.delete_rows(i)
     tgt=rows[-1] if rows else rd.max_row+1
